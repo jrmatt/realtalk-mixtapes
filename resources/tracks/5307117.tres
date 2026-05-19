@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Track" load_steps=3 format=3 uid="uid://did8devfibj1j"]
+
+[ext_resource type="AudioStream" uid="uid://c25yya122aql6" path="res://track_audio/5307117.mp3" id="1_8pplt"]
+[ext_resource type="Script" uid="uid://c3ejljwk35a7s" path="res://track.gd" id="2_y2etw"]
+
+[resource]
+script = ExtResource("2_y2etw")
+id = "5307117"
+speakers = PackedStringArray("Adana")
+frequencies = PackedStringArray("Hubs and Resources", " Art to Thrive")
+audio = ExtResource("1_8pplt")

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Track" load_steps=3 format=3 uid="uid://br1151rqny727"]
+
+[ext_resource type="AudioStream" uid="uid://c4dxl6vuyytx" path="res://track_audio/5307949.mp3" id="1_mcqvb"]
+[ext_resource type="Script" uid="uid://c3ejljwk35a7s" path="res://track.gd" id="2_od605"]
+
+[resource]
+script = ExtResource("2_od605")
+id = "5307949"
+speakers = PackedStringArray("Ray Sam", " Lilly")
+frequencies = PackedStringArray("Change in the Community", " The Art Economy", " Hubs and Resources")
+audio = ExtResource("1_mcqvb")

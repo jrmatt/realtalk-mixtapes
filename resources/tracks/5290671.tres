@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Track" load_steps=3 format=3 uid="uid://d122dowjm8xnu"]
+
+[ext_resource type="AudioStream" uid="uid://cghqrgjikpleh" path="res://track_audio/5290671.mp3" id="1_f5q2h"]
+[ext_resource type="Script" uid="uid://c3ejljwk35a7s" path="res://track.gd" id="2_rbdhy"]
+
+[resource]
+script = ExtResource("2_rbdhy")
+id = "5290671"
+speakers = PackedStringArray("Raffi")
+frequencies = PackedStringArray("Getting My Start", " Local Scene")
+audio = ExtResource("1_f5q2h")

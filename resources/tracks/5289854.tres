@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Track" load_steps=3 format=3 uid="uid://dm81kqwsadsm6"]
+
+[ext_resource type="AudioStream" uid="uid://dck2rby0nxa56" path="res://track_audio/5289854.mp3" id="1_5dwnp"]
+[ext_resource type="Script" uid="uid://c3ejljwk35a7s" path="res://track.gd" id="2_4qtqg"]
+
+[resource]
+script = ExtResource("2_4qtqg")
+id = "5289854"
+speakers = PackedStringArray("Tyler")
+frequencies = PackedStringArray("The Art Economy", " Getting My Start", " Arts Education")
+audio = ExtResource("1_5dwnp")

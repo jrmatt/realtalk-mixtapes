@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Track" load_steps=3 format=3 uid="uid://xtatg33w8kd3"]
+
+[ext_resource type="AudioStream" uid="uid://b4cpjv1a7lxsu" path="res://track_audio/5307969.mp3" id="1_qplwj"]
+[ext_resource type="Script" uid="uid://c3ejljwk35a7s" path="res://track.gd" id="2_wj74k"]
+
+[resource]
+script = ExtResource("2_wj74k")
+id = "5307969"
+speakers = PackedStringArray("Shari")
+frequencies = PackedStringArray("Black Art is Everything", " Across Generations")
+audio = ExtResource("1_qplwj")

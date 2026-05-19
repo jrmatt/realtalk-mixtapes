@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Track" load_steps=3 format=3 uid="uid://fgsc2wwlemw5"]
+
+[ext_resource type="AudioStream" uid="uid://f6qy1b1ndi1x" path="res://track_audio/5308057.mp3" id="1_2nrwg"]
+[ext_resource type="Script" uid="uid://c3ejljwk35a7s" path="res://track.gd" id="2_q3ddb"]
+
+[resource]
+script = ExtResource("2_q3ddb")
+id = "5308057"
+speakers = PackedStringArray("Kyle")
+frequencies = PackedStringArray("The Art Economy")
+audio = ExtResource("1_2nrwg")

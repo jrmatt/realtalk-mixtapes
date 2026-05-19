@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Track" load_steps=3 format=3 uid="uid://btba48qntjd6j"]
+
+[ext_resource type="AudioStream" uid="uid://dn88m2oor5yxy" path="res://track_audio/5307903.mp3" id="1_prw51"]
+[ext_resource type="Script" uid="uid://c3ejljwk35a7s" path="res://track.gd" id="2_gqvq1"]
+
+[resource]
+script = ExtResource("2_gqvq1")
+id = "5307903"
+speakers = PackedStringArray("Athena", " Ava")
+frequencies = PackedStringArray("Getting My Start")
+audio = ExtResource("1_prw51")

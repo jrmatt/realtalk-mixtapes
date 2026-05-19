@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Track" load_steps=3 format=3 uid="uid://d6d2k8yxikq2"]
+
+[ext_resource type="AudioStream" uid="uid://cc1huuhe68dvy" path="res://track_audio/5307918.mp3" id="1_7wgaw"]
+[ext_resource type="Script" uid="uid://c3ejljwk35a7s" path="res://track.gd" id="2_1vqs1"]
+
+[resource]
+script = ExtResource("2_1vqs1")
+id = "5307918"
+speakers = PackedStringArray("Zebino")
+frequencies = PackedStringArray("Loss in the Community", " Hubs and Resources")
+audio = ExtResource("1_7wgaw")

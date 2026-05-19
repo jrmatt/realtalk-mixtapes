@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Track" load_steps=3 format=3 uid="uid://bi7efxykyb1k"]
+
+[ext_resource type="AudioStream" uid="uid://bridvacniseyj" path="res://track_audio/5289030.mp3" id="1_1pjjj"]
+[ext_resource type="Script" uid="uid://c3ejljwk35a7s" path="res://track.gd" id="2_arkx2"]
+
+[resource]
+script = ExtResource("2_arkx2")
+id = "5289030"
+speakers = PackedStringArray("Michelle")
+frequencies = PackedStringArray("Art to Thrive", " Loss in the Community")
+audio = ExtResource("1_1pjjj")

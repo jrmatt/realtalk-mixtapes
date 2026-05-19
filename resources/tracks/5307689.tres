@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Track" load_steps=3 format=3 uid="uid://do40js82ufooc"]
+
+[ext_resource type="AudioStream" uid="uid://c4j31ovhjfj4q" path="res://track_audio/5307689.mp3" id="1_x3g1l"]
+[ext_resource type="Script" uid="uid://c3ejljwk35a7s" path="res://track.gd" id="2_e8j7o"]
+
+[resource]
+script = ExtResource("2_e8j7o")
+id = "5307689"
+speakers = PackedStringArray("Nick")
+frequencies = PackedStringArray("Hubs and Resources", " Across Generations", " Art to Thrive")
+audio = ExtResource("1_x3g1l")
