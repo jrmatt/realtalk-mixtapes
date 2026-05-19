@@ -5,7 +5,7 @@ func _run():
 	var track_data = FileAccess.open("res://data/track_data.tsv", FileAccess.READ)
 	track_data.get_line() # skips the header row
 
-	var tracks_array = []
+	var tracks_array: Array[Track] = []
 
 	# iterate through tracks data and save a new track resource per track
 	while not track_data.eof_reached():

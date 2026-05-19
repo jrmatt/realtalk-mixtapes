@@ -1,4 +1,4 @@
-class_name TrackLibrary
+class_name Mixtape
 extends Resource
 
 @export var tracks: Array[Track] = []
