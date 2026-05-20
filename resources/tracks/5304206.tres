@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Track" load_steps=3 format=3 uid="uid://pej5bwk3yn2x"]
 
 [ext_resource type="AudioStream" uid="uid://xfppi7d2cw40" path="res://track_audio/5304206.mp3" id="1_8sjrk"]
-[ext_resource type="Script" uid="uid://c3ejljwk35a7s" path="res://track.gd" id="2_2t5g5"]
+[ext_resource type="Script" uid="uid://c3ejljwk35a7s" path="res://resource_types/track.gd" id="2_2t5g5"]
 
 [resource]
 script = ExtResource("2_2t5g5")
