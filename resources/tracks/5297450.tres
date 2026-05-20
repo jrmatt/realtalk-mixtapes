@@ -7,5 +7,5 @@
 script = ExtResource("2_4lg8h")
 id = "5297450"
 speakers = PackedStringArray("Whitney")
-frequencies = PackedStringArray("The Art Economy", " Art to Thrive")
+frequencies = PackedStringArray("The Art Economy", "Art to Thrive")
 audio = ExtResource("1_8qlyq")

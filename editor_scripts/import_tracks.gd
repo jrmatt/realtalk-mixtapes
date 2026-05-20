@@ -12,19 +12,29 @@ func _run():
 		var line = track_data.get_line().strip_edges()
 
 		if line == "": continue
-
 		var cols = line.split("\t")
-		var id = cols[0]
-		var speakers = cols[1].split(",")
+
+		var clean_freqs: Array = []
 		var frequencies = cols[2].split(",")
+		for freq in frequencies:
+			var clean_freq = freq.strip_edges()
+			clean_freqs.append(clean_freq)
+		
+		var clean_speakers: Array = []
+		var speakers = cols[1].split(",")
+		for speaker in speakers:
+			var clean_speaker = speaker.strip_edges()
+			clean_speakers.append(clean_speaker)
+
+		var id = cols[0]
 		var audio = load("res://track_audio/%s.mp3" % id)
 		if audio == null:
 			print("AUDIO NOT FOUND FOR: ", id)
 
 		var track = Track.new()
 		track.id = id
-		track.speakers = speakers
-		track.frequencies = frequencies
+		track.speakers = clean_speakers
+		track.frequencies = clean_freqs
 		track.audio = audio
 
 		tracks_array.append(track)

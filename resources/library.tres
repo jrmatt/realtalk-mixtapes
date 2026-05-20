@@ -2,270 +2,358 @@
 
 [ext_resource type="Script" uid="uid://b2fuw17njss81" path="res://resource_types/track_library.gd" id="1_rw2oa"]
 [ext_resource type="Script" uid="uid://c3ejljwk35a7s" path="res://resource_types/track.gd" id="2_std0o"]
-[ext_resource type="AudioStream" uid="uid://cvtr4j821uf3w" path="res://track_audio/5307939.mp3" id="3_std0o"]
-[ext_resource type="AudioStream" uid="uid://b4cpjv1a7lxsu" path="res://track_audio/5307969.mp3" id="4_sa18n"]
-[ext_resource type="AudioStream" uid="uid://cpwyrrljn3he7" path="res://track_audio/5307929.mp3" id="5_7wysp"]
-[ext_resource type="AudioStream" uid="uid://f6qy1b1ndi1x" path="res://track_audio/5308057.mp3" id="6_qlamp"]
-[ext_resource type="AudioStream" uid="uid://b12gnkagg3661" path="res://track_audio/5308056.mp3" id="7_ycje8"]
-[ext_resource type="AudioStream" uid="uid://4nuilacfsq3y" path="res://track_audio/5307942.mp3" id="8_d5f0m"]
-[ext_resource type="AudioStream" uid="uid://cc1huuhe68dvy" path="res://track_audio/5307918.mp3" id="9_rlth3"]
-[ext_resource type="AudioStream" uid="uid://5pi7wsctlgwx" path="res://track_audio/5288875.mp3" id="10_0ipvf"]
-[ext_resource type="AudioStream" uid="uid://e16t6xaa10w5" path="res://track_audio/5307961.mp3" id="11_3rmac"]
-[ext_resource type="AudioStream" uid="uid://dwedel5thhi5e" path="res://track_audio/5307919.mp3" id="12_8ebk7"]
-[ext_resource type="AudioStream" uid="uid://kp51yjujbnvt" path="res://track_audio/5307924.mp3" id="13_m1scw"]
-[ext_resource type="AudioStream" uid="uid://bqltn2xb3jqpc" path="res://track_audio/5288971.mp3" id="14_thk15"]
-[ext_resource type="AudioStream" uid="uid://cj43d2b6vrn4g" path="res://track_audio/5307959.mp3" id="15_4aqd8"]
-[ext_resource type="AudioStream" uid="uid://cnhu60kiq3fwj" path="res://track_audio/5308047.mp3" id="16_ofxge"]
-[ext_resource type="AudioStream" uid="uid://cl5uk8j3c7dd2" path="res://track_audio/5308049.mp3" id="17_0vufw"]
-[ext_resource type="AudioStream" uid="uid://bgepu3rq5elex" path="res://track_audio/5308104.mp3" id="18_3s8i5"]
-[ext_resource type="AudioStream" uid="uid://dn88m2oor5yxy" path="res://track_audio/5307903.mp3" id="19_fnbgf"]
-[ext_resource type="AudioStream" uid="uid://bfgtnr7qc3iqr" path="res://track_audio/5308044.mp3" id="20_08gy4"]
-[ext_resource type="AudioStream" uid="uid://d3xkebtt1b648" path="res://track_audio/5307666.mp3" id="21_qgx86"]
-[ext_resource type="AudioStream" uid="uid://c4dxl6vuyytx" path="res://track_audio/5307949.mp3" id="22_jai5g"]
-[ext_resource type="AudioStream" uid="uid://bfs5qefygfx6a" path="res://track_audio/5307965.mp3" id="23_8vd3x"]
-[ext_resource type="AudioStream" uid="uid://d3h8e0gk5s5sd" path="res://track_audio/5289306.mp3" id="24_wjfyf"]
-[ext_resource type="AudioStream" uid="uid://dlv525vtgpkf6" path="res://track_audio/5289307.mp3" id="25_4a2s6"]
-[ext_resource type="AudioStream" uid="uid://ce1657o801n4k" path="res://track_audio/5290057.mp3" id="26_sdj51"]
-[ext_resource type="AudioStream" uid="uid://dck2rby0nxa56" path="res://track_audio/5289854.mp3" id="27_brbvo"]
-[ext_resource type="AudioStream" uid="uid://b2em1yucq4kt1" path="res://track_audio/5291325.mp3" id="28_7texf"]
-[ext_resource type="AudioStream" uid="uid://dwia6e01rvrh5" path="res://track_audio/5289040.mp3" id="29_x4bct"]
-[ext_resource type="AudioStream" uid="uid://dcal6gfpjveuk" path="res://track_audio/5289044.mp3" id="30_roitt"]
-[ext_resource type="AudioStream" uid="uid://s4d60kdyjvom" path="res://track_audio/5289047.mp3" id="31_o70ig"]
-[ext_resource type="AudioStream" uid="uid://d0scgpj2tgawt" path="res://track_audio/5289029.mp3" id="32_a0u13"]
-[ext_resource type="AudioStream" uid="uid://bridvacniseyj" path="res://track_audio/5289030.mp3" id="33_2cpom"]
-[ext_resource type="AudioStream" uid="uid://dx4gkj7qoc0np" path="res://track_audio/5289032.mp3" id="34_763kf"]
-[ext_resource type="AudioStream" uid="uid://cgj0hbx80fqbv" path="res://track_audio/5289033.mp3" id="35_5xn34"]
-[ext_resource type="AudioStream" uid="uid://binxnw53gqhtg" path="res://track_audio/5288882.mp3" id="36_pph68"]
-[ext_resource type="AudioStream" uid="uid://dp48ly8i4kpr6" path="res://track_audio/5289235.mp3" id="37_mhb3l"]
-[ext_resource type="AudioStream" uid="uid://cghqrgjikpleh" path="res://track_audio/5290671.mp3" id="38_namhw"]
-[ext_resource type="AudioStream" uid="uid://bhlvjqdr0v0d" path="res://track_audio/5297450.mp3" id="39_1t3hk"]
-[ext_resource type="AudioStream" uid="uid://xfppi7d2cw40" path="res://track_audio/5304206.mp3" id="40_upwdp"]
-[ext_resource type="AudioStream" uid="uid://xyl7x6qjb3ng" path="res://track_audio/5304247.mp3" id="41_fwg78"]
-[ext_resource type="AudioStream" uid="uid://codovhxsdueo6" path="res://track_audio/5308023.mp3" id="42_u57aq"]
-[ext_resource type="AudioStream" uid="uid://djkqe2jre4fpa" path="res://track_audio/5308033.mp3" id="43_w6gen"]
-[ext_resource type="AudioStream" uid="uid://c4j31ovhjfj4q" path="res://track_audio/5307689.mp3" id="44_x0gug"]
-[ext_resource type="AudioStream" uid="uid://dhg0sfelfcelo" path="res://track_audio/5307116.mp3" id="45_eh0em"]
-[ext_resource type="AudioStream" uid="uid://c25yya122aql6" path="res://track_audio/5307117.mp3" id="46_f8a00"]
+[ext_resource type="AudioStream" uid="uid://cvtr4j821uf3w" path="res://track_audio/5307939.mp3" id="3_sa18n"]
+[ext_resource type="AudioStream" uid="uid://b4cpjv1a7lxsu" path="res://track_audio/5307969.mp3" id="4_7wysp"]
+[ext_resource type="AudioStream" uid="uid://cpwyrrljn3he7" path="res://track_audio/5307929.mp3" id="5_qlamp"]
+[ext_resource type="AudioStream" uid="uid://f6qy1b1ndi1x" path="res://track_audio/5308057.mp3" id="6_ycje8"]
+[ext_resource type="AudioStream" uid="uid://b12gnkagg3661" path="res://track_audio/5308056.mp3" id="7_d5f0m"]
+[ext_resource type="AudioStream" uid="uid://4nuilacfsq3y" path="res://track_audio/5307942.mp3" id="8_rlth3"]
+[ext_resource type="AudioStream" uid="uid://cc1huuhe68dvy" path="res://track_audio/5307918.mp3" id="9_0ipvf"]
+[ext_resource type="AudioStream" uid="uid://5pi7wsctlgwx" path="res://track_audio/5288875.mp3" id="10_3rmac"]
+[ext_resource type="AudioStream" uid="uid://e16t6xaa10w5" path="res://track_audio/5307961.mp3" id="11_8ebk7"]
+[ext_resource type="AudioStream" uid="uid://dwedel5thhi5e" path="res://track_audio/5307919.mp3" id="12_m1scw"]
+[ext_resource type="AudioStream" uid="uid://kp51yjujbnvt" path="res://track_audio/5307924.mp3" id="13_thk15"]
+[ext_resource type="AudioStream" uid="uid://bqltn2xb3jqpc" path="res://track_audio/5288971.mp3" id="14_4aqd8"]
+[ext_resource type="AudioStream" uid="uid://cj43d2b6vrn4g" path="res://track_audio/5307959.mp3" id="15_ofxge"]
+[ext_resource type="AudioStream" uid="uid://cnhu60kiq3fwj" path="res://track_audio/5308047.mp3" id="16_0vufw"]
+[ext_resource type="AudioStream" uid="uid://cl5uk8j3c7dd2" path="res://track_audio/5308049.mp3" id="17_3s8i5"]
+[ext_resource type="AudioStream" uid="uid://bgepu3rq5elex" path="res://track_audio/5308104.mp3" id="18_fnbgf"]
+[ext_resource type="AudioStream" uid="uid://dn88m2oor5yxy" path="res://track_audio/5307903.mp3" id="19_08gy4"]
+[ext_resource type="AudioStream" uid="uid://bfgtnr7qc3iqr" path="res://track_audio/5308044.mp3" id="20_qgx86"]
+[ext_resource type="AudioStream" uid="uid://d3xkebtt1b648" path="res://track_audio/5307666.mp3" id="21_jai5g"]
+[ext_resource type="AudioStream" uid="uid://c4dxl6vuyytx" path="res://track_audio/5307949.mp3" id="22_8vd3x"]
+[ext_resource type="AudioStream" uid="uid://bfs5qefygfx6a" path="res://track_audio/5307965.mp3" id="23_wjfyf"]
+[ext_resource type="AudioStream" uid="uid://d3h8e0gk5s5sd" path="res://track_audio/5289306.mp3" id="24_4a2s6"]
+[ext_resource type="AudioStream" uid="uid://dlv525vtgpkf6" path="res://track_audio/5289307.mp3" id="25_sdj51"]
+[ext_resource type="AudioStream" uid="uid://ce1657o801n4k" path="res://track_audio/5290057.mp3" id="26_brbvo"]
+[ext_resource type="AudioStream" uid="uid://dck2rby0nxa56" path="res://track_audio/5289854.mp3" id="27_7texf"]
+[ext_resource type="AudioStream" uid="uid://b2em1yucq4kt1" path="res://track_audio/5291325.mp3" id="28_x4bct"]
+[ext_resource type="AudioStream" uid="uid://dwia6e01rvrh5" path="res://track_audio/5289040.mp3" id="29_roitt"]
+[ext_resource type="AudioStream" uid="uid://dcal6gfpjveuk" path="res://track_audio/5289044.mp3" id="30_o70ig"]
+[ext_resource type="AudioStream" uid="uid://s4d60kdyjvom" path="res://track_audio/5289047.mp3" id="31_a0u13"]
+[ext_resource type="AudioStream" uid="uid://d0scgpj2tgawt" path="res://track_audio/5289029.mp3" id="32_2cpom"]
+[ext_resource type="AudioStream" uid="uid://bridvacniseyj" path="res://track_audio/5289030.mp3" id="33_763kf"]
+[ext_resource type="AudioStream" uid="uid://dx4gkj7qoc0np" path="res://track_audio/5289032.mp3" id="34_5xn34"]
+[ext_resource type="AudioStream" uid="uid://cgj0hbx80fqbv" path="res://track_audio/5289033.mp3" id="35_pph68"]
+[ext_resource type="AudioStream" uid="uid://binxnw53gqhtg" path="res://track_audio/5288882.mp3" id="36_mhb3l"]
+[ext_resource type="AudioStream" uid="uid://dp48ly8i4kpr6" path="res://track_audio/5289235.mp3" id="37_namhw"]
+[ext_resource type="AudioStream" uid="uid://cghqrgjikpleh" path="res://track_audio/5290671.mp3" id="38_1t3hk"]
+[ext_resource type="AudioStream" uid="uid://bhlvjqdr0v0d" path="res://track_audio/5297450.mp3" id="39_upwdp"]
+[ext_resource type="AudioStream" uid="uid://xfppi7d2cw40" path="res://track_audio/5304206.mp3" id="40_fwg78"]
+[ext_resource type="AudioStream" uid="uid://xyl7x6qjb3ng" path="res://track_audio/5304247.mp3" id="41_u57aq"]
+[ext_resource type="AudioStream" uid="uid://codovhxsdueo6" path="res://track_audio/5308023.mp3" id="42_w6gen"]
+[ext_resource type="AudioStream" uid="uid://djkqe2jre4fpa" path="res://track_audio/5308033.mp3" id="43_x0gug"]
+[ext_resource type="AudioStream" uid="uid://c4j31ovhjfj4q" path="res://track_audio/5307689.mp3" id="44_eh0em"]
+[ext_resource type="AudioStream" uid="uid://dhg0sfelfcelo" path="res://track_audio/5307116.mp3" id="45_f8a00"]
+[ext_resource type="AudioStream" uid="uid://c25yya122aql6" path="res://track_audio/5307117.mp3" id="46_cf3w8"]
 
 [sub_resource type="Resource" id="Resource_rw2oa"]
 script = ExtResource("2_std0o")
 id = "5307939"
-audio = ExtResource("3_std0o")
+speakers = PackedStringArray("Lilly")
+frequencies = PackedStringArray("Black Art is Everything", "Local Scene")
+audio = ExtResource("3_sa18n")
 
 [sub_resource type="Resource" id="Resource_std0o"]
 script = ExtResource("2_std0o")
 id = "5307969"
-audio = ExtResource("4_sa18n")
+speakers = PackedStringArray("Shari")
+frequencies = PackedStringArray("Black Art is Everything", "Across Generations")
+audio = ExtResource("4_7wysp")
 
 [sub_resource type="Resource" id="Resource_sa18n"]
 script = ExtResource("2_std0o")
 id = "5307929"
-audio = ExtResource("5_7wysp")
+speakers = PackedStringArray("Jacob", "Kadaj")
+frequencies = PackedStringArray("Across Generations", "Local Scene", "Loss in the Community")
+audio = ExtResource("5_qlamp")
 
 [sub_resource type="Resource" id="Resource_7wysp"]
 script = ExtResource("2_std0o")
 id = "5308057"
-audio = ExtResource("6_qlamp")
+speakers = PackedStringArray("Kyle")
+frequencies = PackedStringArray("The Art Economy")
+audio = ExtResource("6_ycje8")
 
 [sub_resource type="Resource" id="Resource_qlamp"]
 script = ExtResource("2_std0o")
 id = "5308056"
-audio = ExtResource("7_ycje8")
+speakers = PackedStringArray("Aparna")
+frequencies = PackedStringArray("The Art Economy")
+audio = ExtResource("7_d5f0m")
 
 [sub_resource type="Resource" id="Resource_ycje8"]
 script = ExtResource("2_std0o")
 id = "5307942"
-audio = ExtResource("8_d5f0m")
+speakers = PackedStringArray("Grace")
+frequencies = PackedStringArray("Local Scene")
+audio = ExtResource("8_rlth3")
 
 [sub_resource type="Resource" id="Resource_d5f0m"]
 script = ExtResource("2_std0o")
 id = "5307918"
-audio = ExtResource("9_rlth3")
+speakers = PackedStringArray("Zebino")
+frequencies = PackedStringArray("Loss in the Community", "Hubs and Resources")
+audio = ExtResource("9_0ipvf")
 
 [sub_resource type="Resource" id="Resource_rlth3"]
 script = ExtResource("2_std0o")
 id = "5288875"
-audio = ExtResource("10_0ipvf")
+speakers = PackedStringArray("Jacob")
+frequencies = PackedStringArray("Loss in the Community", "Change in the Community")
+audio = ExtResource("10_3rmac")
 
 [sub_resource type="Resource" id="Resource_0ipvf"]
 script = ExtResource("2_std0o")
 id = "5307961"
-audio = ExtResource("11_3rmac")
+speakers = PackedStringArray("Shari")
+frequencies = PackedStringArray("The Art Economy")
+audio = ExtResource("11_8ebk7")
 
 [sub_resource type="Resource" id="Resource_3rmac"]
 script = ExtResource("2_std0o")
 id = "5307919"
-audio = ExtResource("12_8ebk7")
+speakers = PackedStringArray("Prophet")
+frequencies = PackedStringArray("Loss in the Community")
+audio = ExtResource("12_m1scw")
 
 [sub_resource type="Resource" id="Resource_8ebk7"]
 script = ExtResource("2_std0o")
 id = "5307924"
-audio = ExtResource("13_m1scw")
+speakers = PackedStringArray("Athena")
+frequencies = PackedStringArray("Loss in the Community", "Local Scene", "Black Art is Everything", "Across Generations")
+audio = ExtResource("13_thk15")
 
 [sub_resource type="Resource" id="Resource_m1scw"]
 script = ExtResource("2_std0o")
 id = "5288971"
-audio = ExtResource("14_thk15")
+speakers = PackedStringArray("Kadaj")
+frequencies = PackedStringArray("Change in the Community")
+audio = ExtResource("14_4aqd8")
 
 [sub_resource type="Resource" id="Resource_thk15"]
 script = ExtResource("2_std0o")
 id = "5307959"
-audio = ExtResource("15_4aqd8")
+speakers = PackedStringArray("Michelle", "Lily")
+frequencies = PackedStringArray("The Art Economy")
+audio = ExtResource("15_ofxge")
 
 [sub_resource type="Resource" id="Resource_4aqd8"]
 script = ExtResource("2_std0o")
 id = "5308047"
-audio = ExtResource("16_ofxge")
+speakers = PackedStringArray("Emmanuel")
+frequencies = PackedStringArray("Hubs and Resources")
+audio = ExtResource("16_0vufw")
 
 [sub_resource type="Resource" id="Resource_ofxge"]
 script = ExtResource("2_std0o")
 id = "5308049"
-audio = ExtResource("17_0vufw")
+speakers = PackedStringArray("Kyle")
+frequencies = PackedStringArray("Hubs and Resources", "Getting My Start")
+audio = ExtResource("17_3s8i5")
 
 [sub_resource type="Resource" id="Resource_0vufw"]
 script = ExtResource("2_std0o")
 id = "5308104"
-audio = ExtResource("18_3s8i5")
+speakers = PackedStringArray("Sheri")
+frequencies = PackedStringArray("Getting My Start", "Arts Education")
+audio = ExtResource("18_fnbgf")
 
 [sub_resource type="Resource" id="Resource_3s8i5"]
 script = ExtResource("2_std0o")
 id = "5307903"
-audio = ExtResource("19_fnbgf")
+speakers = PackedStringArray("Athena", "Ava")
+frequencies = PackedStringArray("Getting My Start")
+audio = ExtResource("19_08gy4")
 
 [sub_resource type="Resource" id="Resource_fnbgf"]
 script = ExtResource("2_std0o")
 id = "5308044"
-audio = ExtResource("20_08gy4")
+speakers = PackedStringArray("Kyle", "Nate", "Ava", "Jordan")
+frequencies = PackedStringArray("The Art Economy", "Hubs and Resources")
+audio = ExtResource("20_qgx86")
 
 [sub_resource type="Resource" id="Resource_08gy4"]
 script = ExtResource("2_std0o")
 id = "5307666"
-audio = ExtResource("21_qgx86")
+speakers = PackedStringArray("George")
+frequencies = PackedStringArray("Change in the Community", "Art to Thrive", "Arts Education")
+audio = ExtResource("21_jai5g")
 
 [sub_resource type="Resource" id="Resource_qgx86"]
 script = ExtResource("2_std0o")
 id = "5307949"
-audio = ExtResource("22_jai5g")
+speakers = PackedStringArray("Ray Sam", "Lilly")
+frequencies = PackedStringArray("Change in the Community", "The Art Economy", "Hubs and Resources")
+audio = ExtResource("22_8vd3x")
 
 [sub_resource type="Resource" id="Resource_jai5g"]
 script = ExtResource("2_std0o")
 id = "5307965"
-audio = ExtResource("23_8vd3x")
+speakers = PackedStringArray("Grace", "Ava", "Lilly")
+frequencies = PackedStringArray("The Art Economy", "Hubs and Resources")
+audio = ExtResource("23_wjfyf")
 
 [sub_resource type="Resource" id="Resource_8vd3x"]
 script = ExtResource("2_std0o")
 id = "5289306"
-audio = ExtResource("24_wjfyf")
+speakers = PackedStringArray("Olivia")
+frequencies = PackedStringArray("Art to Thrive", "Black Art is Everything")
+audio = ExtResource("24_4a2s6")
 
 [sub_resource type="Resource" id="Resource_wjfyf"]
 script = ExtResource("2_std0o")
 id = "5289307"
-audio = ExtResource("25_4a2s6")
+speakers = PackedStringArray("Ivy")
+frequencies = PackedStringArray("Getting My Start")
+audio = ExtResource("25_sdj51")
 
 [sub_resource type="Resource" id="Resource_4a2s6"]
 script = ExtResource("2_std0o")
 id = "5290057"
-audio = ExtResource("26_sdj51")
+speakers = PackedStringArray("Sophia")
+frequencies = PackedStringArray("The Art Economy", "Art to Thrive")
+audio = ExtResource("26_brbvo")
 
 [sub_resource type="Resource" id="Resource_sdj51"]
 script = ExtResource("2_std0o")
 id = "5289854"
-audio = ExtResource("27_brbvo")
+speakers = PackedStringArray("Tyler")
+frequencies = PackedStringArray("The Art Economy", "Getting My Start", "Arts Education")
+audio = ExtResource("27_7texf")
 
 [sub_resource type="Resource" id="Resource_brbvo"]
 script = ExtResource("2_std0o")
 id = "5291325"
-audio = ExtResource("28_7texf")
+speakers = PackedStringArray("Dominic")
+frequencies = PackedStringArray("Art to Thrive", "The Art Economy")
+audio = ExtResource("28_x4bct")
 
 [sub_resource type="Resource" id="Resource_7texf"]
 script = ExtResource("2_std0o")
 id = "5289040"
-audio = ExtResource("29_x4bct")
+speakers = PackedStringArray("Nate")
+frequencies = PackedStringArray("The Art Economy")
+audio = ExtResource("29_roitt")
 
 [sub_resource type="Resource" id="Resource_x4bct"]
 script = ExtResource("2_std0o")
 id = "5289044"
-audio = ExtResource("30_roitt")
+speakers = PackedStringArray("Aaron")
+frequencies = PackedStringArray("Loss in the Community", "Hubs and Resources")
+audio = ExtResource("30_o70ig")
 
 [sub_resource type="Resource" id="Resource_roitt"]
 script = ExtResource("2_std0o")
 id = "5289047"
-audio = ExtResource("31_o70ig")
+speakers = PackedStringArray("Aparna")
+frequencies = PackedStringArray("Art to Thrive")
+audio = ExtResource("31_a0u13")
 
 [sub_resource type="Resource" id="Resource_o70ig"]
 script = ExtResource("2_std0o")
 id = "5289029"
-audio = ExtResource("32_a0u13")
+speakers = PackedStringArray("Michelle")
+frequencies = PackedStringArray("Getting My Start")
+audio = ExtResource("32_2cpom")
 
 [sub_resource type="Resource" id="Resource_a0u13"]
 script = ExtResource("2_std0o")
 id = "5289030"
-audio = ExtResource("33_2cpom")
+speakers = PackedStringArray("Michelle")
+frequencies = PackedStringArray("Art to Thrive", "Loss in the Community")
+audio = ExtResource("33_763kf")
 
 [sub_resource type="Resource" id="Resource_2cpom"]
 script = ExtResource("2_std0o")
 id = "5289032"
-audio = ExtResource("34_763kf")
+speakers = PackedStringArray("Michelle")
+frequencies = PackedStringArray("Arts Education", "Loss in the Community")
+audio = ExtResource("34_5xn34")
 
 [sub_resource type="Resource" id="Resource_763kf"]
 script = ExtResource("2_std0o")
 id = "5289033"
-audio = ExtResource("35_5xn34")
+speakers = PackedStringArray("Grace")
+frequencies = PackedStringArray("Black Art is Everything")
+audio = ExtResource("35_pph68")
 
 [sub_resource type="Resource" id="Resource_5xn34"]
 script = ExtResource("2_std0o")
 id = "5288882"
-audio = ExtResource("36_pph68")
+speakers = PackedStringArray("Kadaj")
+frequencies = PackedStringArray("Art to Thrive", "Change in the Community", "Loss in the Community")
+audio = ExtResource("36_mhb3l")
 
 [sub_resource type="Resource" id="Resource_pph68"]
 script = ExtResource("2_std0o")
 id = "5289235"
-audio = ExtResource("37_mhb3l")
+speakers = PackedStringArray("Madeline")
+frequencies = PackedStringArray("Art to Thrive")
+audio = ExtResource("37_namhw")
 
 [sub_resource type="Resource" id="Resource_mhb3l"]
 script = ExtResource("2_std0o")
 id = "5290671"
-audio = ExtResource("38_namhw")
+speakers = PackedStringArray("Raffi")
+frequencies = PackedStringArray("Getting My Start", "Local Scene")
+audio = ExtResource("38_1t3hk")
 
 [sub_resource type="Resource" id="Resource_namhw"]
 script = ExtResource("2_std0o")
 id = "5297450"
-audio = ExtResource("39_1t3hk")
+speakers = PackedStringArray("Whitney")
+frequencies = PackedStringArray("The Art Economy", "Art to Thrive")
+audio = ExtResource("39_upwdp")
 
 [sub_resource type="Resource" id="Resource_1t3hk"]
 script = ExtResource("2_std0o")
 id = "5304206"
-audio = ExtResource("40_upwdp")
+speakers = PackedStringArray("Joanna")
+frequencies = PackedStringArray("Art to Thrive", "Local Scene", "Hubs and Resources")
+audio = ExtResource("40_fwg78")
 
 [sub_resource type="Resource" id="Resource_upwdp"]
 script = ExtResource("2_std0o")
 id = "5304247"
-audio = ExtResource("41_fwg78")
+speakers = PackedStringArray("Sarah")
+frequencies = PackedStringArray("Art to Thrive")
+audio = ExtResource("41_u57aq")
 
 [sub_resource type="Resource" id="Resource_fwg78"]
 script = ExtResource("2_std0o")
 id = "5308023"
-audio = ExtResource("42_u57aq")
+speakers = PackedStringArray("Farah")
+frequencies = PackedStringArray("Hubs and Resources")
+audio = ExtResource("42_w6gen")
 
 [sub_resource type="Resource" id="Resource_u57aq"]
 script = ExtResource("2_std0o")
 id = "5308033"
-audio = ExtResource("43_w6gen")
+speakers = PackedStringArray("Farah")
+frequencies = PackedStringArray("Getting My Start")
+audio = ExtResource("43_x0gug")
 
 [sub_resource type="Resource" id="Resource_w6gen"]
 script = ExtResource("2_std0o")
 id = "5307689"
-audio = ExtResource("44_x0gug")
+speakers = PackedStringArray("Nick")
+frequencies = PackedStringArray("Hubs and Resources", "Across Generations", "Art to Thrive")
+audio = ExtResource("44_eh0em")
 
 [sub_resource type="Resource" id="Resource_x0gug"]
 script = ExtResource("2_std0o")
 id = "5307116"
-audio = ExtResource("45_eh0em")
+speakers = PackedStringArray("Bianca")
+frequencies = PackedStringArray("Art to Thrive", "Arts Education")
+audio = ExtResource("45_f8a00")
 
 [sub_resource type="Resource" id="Resource_eh0em"]
 script = ExtResource("2_std0o")
 id = "5307117"
-audio = ExtResource("46_f8a00")
+speakers = PackedStringArray("Adana")
+frequencies = PackedStringArray("Hubs and Resources", "Art to Thrive")
+audio = ExtResource("46_cf3w8")
 
 [resource]
 script = ExtResource("1_rw2oa")
