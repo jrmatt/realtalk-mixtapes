@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Frequencies" load_steps=2 format=3 uid="uid://dnqq5h25ymwta"]
+
+[ext_resource type="Script" uid="uid://b5pe135pcqxv0" path="res://frequencies.gd" id="1_u35y0"]
+
+[resource]
+script = ExtResource("1_u35y0")
+frequencies = PackedStringArray("Black Art is Everything", "Local Scene", "Across Generations", "Loss in the Community", "The Art Economy", "Hubs and Resources", "Change in the Community", "Getting My Start", "Arts Education", "Art to Thrive")
