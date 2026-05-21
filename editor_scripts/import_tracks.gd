@@ -13,19 +13,9 @@ func _run():
 
 		if line == "": continue
 		var cols = line.split("\t")
-
-		var clean_freqs: Array = []
-		var frequencies = cols[2].split(",")
-		for freq in frequencies:
-			var clean_freq = freq.strip_edges()
-			clean_freqs.append(clean_freq)
 		
-		var clean_speakers: Array = []
-		var speakers = cols[1].split(",")
-		for speaker in speakers:
-			var clean_speaker = speaker.strip_edges()
-			clean_speakers.append(clean_speaker)
-
+		var speakers = _clean_col(1, cols)
+		var freq = cols[2]
 		var id = cols[0]
 		var audio = load("res://track_audio/%s.mp3" % id)
 		if audio == null:
@@ -33,14 +23,14 @@ func _run():
 
 		var track = Track.new()
 		track.id = id
-		track.speakers = clean_speakers
-		track.frequencies = clean_freqs
+		track.speakers = speakers
+		track.frequency = freq
 		track.audio = audio
 
 		tracks_array.append(track)
 
 		ResourceSaver.save(track, "res://resources/tracks/%s.tres" % id)
-		print("Saved Track: ", id)
+		#print("Saved Track: ", track.id, track.speakers)
 
 	track_data.close()
 
@@ -48,5 +38,34 @@ func _run():
 	var library = TrackLibrary.new()
 	library.tracks = tracks_array
 	ResourceSaver.save(library, "res://resources/library.tres")
+	
+	# create frequencies resource (unique frequencies)
+	var unique_freqs: Array = []
+	
+	for track in tracks_array:
+		print(track.frequency)
+		if track.frequency not in unique_freqs:
+			unique_freqs.append(track.frequency)
+				
+	var unique_frequencies = Frequencies.new()
+	unique_frequencies.frequencies = unique_freqs
+	print(unique_frequencies.frequencies)
+	ResourceSaver.save(unique_frequencies, "res://resources/frequencies.tres")
+	
+	for freq in unique_freqs:
+		var frequency = Frequency.new()
+		frequency.frequency = freq
+		for track in tracks_array:
+			if track.frequency == freq:
+				frequency.tracks.append(track)
+		ResourceSaver.save(frequency, "res://resources/frequencies/frequency_%s.tres" % freq)
 
-	print("Done!")
+func _clean_col(col, cols):
+	var clean_items: Array = []
+	var items = cols[col].split(",")
+	
+	for item in items:
+		var clean_item = item.strip_edges()
+		clean_items.append(clean_item)
+		
+	return clean_items
