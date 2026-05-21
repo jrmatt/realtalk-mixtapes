@@ -1,5 +1,5 @@
-extends AudioStreamPlayer
 class_name FreqStation
+extends AudioStreamPlayer
 
 #var tracks: Array = []
 var freq: Frequency
