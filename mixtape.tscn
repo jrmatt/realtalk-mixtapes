@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dt78ncg2jpsx1"]
+
+[ext_resource type="Script" uid="uid://b015jre3mi13x" path="res://mixtape.gd" id="1_x0xp4"]
+
+[node name="Mixtape" type="Node2D"]
+script = ExtResource("1_x0xp4")

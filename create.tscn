@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://brsbf0hkg1vcy"]
+[gd_scene load_steps=19 format=3 uid="uid://brsbf0hkg1vcy"]
 
 [ext_resource type="Texture2D" uid="uid://bbma21pro7p8l" path="res://sprites/radio_sprite (1).png" id="1_33tbc"]
 [ext_resource type="Texture2D" uid="uid://bie3fowjw6l75" path="res://sprites/dial_sprite.png" id="2_0xa77"]
@@ -7,6 +7,11 @@
 [ext_resource type="Texture2D" uid="uid://cqgyt7dyjfohj" path="res://sprites/levels_frame_1_sprite.png" id="4_fpcy6"]
 [ext_resource type="Texture2D" uid="uid://dyeodkfuottla" path="res://sprites/levels_frame_2_sprite.png" id="5_wkoss"]
 [ext_resource type="AudioStream" uid="uid://bpgtxeb1k3bi6" path="res://sounds/static.mp3" id="6_0xa77"]
+[ext_resource type="Script" uid="uid://dljp5jxnewx7g" path="res://record.gd" id="8_fpcy6"]
+[ext_resource type="Script" uid="uid://617ue6pyp6cn" path="res://frequency_label.gd" id="9_wkoss"]
+[ext_resource type="Script" uid="uid://da4uga58owk0m" path="res://recorder.gd" id="10_5sdnf"]
+[ext_resource type="Script" uid="uid://cj5533k1wb4kl" path="res://playback_btn.gd" id="11_gp06y"]
+[ext_resource type="Script" uid="uid://dv4tp7ir77rqr" path="res://playback_player.gd" id="12_7x741"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vlguu"]
 
@@ -37,42 +42,104 @@ animations = [{
 [node name="Radio" type="Node2D" parent="."]
 
 [node name="RadioBody" type="Sprite2D" parent="Radio"]
-position = Vector2(589, 325)
-scale = Vector2(0.82721716, 0.82721716)
+position = Vector2(844, 394.00003)
+scale = Vector2(0.6062692, 0.6062692)
 texture = ExtResource("1_33tbc")
 
 [node name="Dial" type="Button" parent="Radio"]
-offset_left = 810.0
-offset_top = 164.0
-offset_right = 890.0
-offset_bottom = 224.00003
+offset_left = 1011.0
+offset_top = 277.0
+offset_right = 1065.0
+offset_bottom = 314.0
 theme_override_icons/icon = ExtResource("2_0xa77")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_vlguu")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_fpcy6")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_wkoss")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_5sdnf")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_gp06y")
+expand_icon = true
 script = ExtResource("3_fpcy6")
 
-[node name="PlayButton" type="Sprite2D" parent="Radio"]
-position = Vector2(605.99994, 214)
-scale = Vector2(0.8500004, 0.8500005)
+[node name="Btn1" type="Sprite2D" parent="Radio"]
+position = Vector2(857.99994, 312)
+scale = Vector2(0.7272729, 0.61666715)
 texture = ExtResource("3_vlguu")
 
-[node name="RecordButton" type="Sprite2D" parent="Radio"]
-position = Vector2(640, 214.00002)
-scale = Vector2(0.8499999, 0.8500001)
+[node name="Btn2" type="Sprite2D" parent="Radio"]
+position = Vector2(887.00006, 312)
+scale = Vector2(0.72727036, 0.6166668)
 texture = ExtResource("3_vlguu")
 
 [node name="Levels" type="AnimatedSprite2D" parent="Radio"]
-position = Vector2(384, 159)
+position = Vector2(697, 273)
+scale = Vector2(0.80588233, 0.7222222)
 sprite_frames = SubResource("SpriteFrames_5sdnf")
 autoplay = "default"
 frame_progress = 0.09082031
 speed_scale = 0.5
 
 [node name="Static" type="AudioStreamPlayer2D" parent="Radio"]
-position = Vector2(384, 159)
+position = Vector2(991, 473)
 stream = ExtResource("6_0xa77")
 autoplay = true
 parameters/looping = true
+
+[node name="RecordBtn" type="Button" parent="Radio"]
+offset_left = 806.0
+offset_top = 499.0
+offset_right = 885.0
+offset_bottom = 552.0
+text = "Record"
+script = ExtResource("8_fpcy6")
+
+[node name="FrequencyLabel" type="Label" parent="Radio"]
+offset_left = 800.0
+offset_top = 260.0
+offset_right = 836.0
+offset_bottom = 283.0
+script = ExtResource("9_wkoss")
+
+[node name="Recorder" type="Node" parent="Radio"]
+script = ExtResource("10_5sdnf")
+
+[node name="PlaybackBtn" type="Button" parent="Radio"]
+offset_left = 125.0
+offset_top = 274.0
+offset_right = 166.0
+offset_bottom = 305.0
+text = "Playback
+"
+script = ExtResource("11_gp06y")
+
+[node name="PlaybackPlayer" type="AudioStreamPlayer" parent="Radio"]
+script = ExtResource("12_7x741")
+
+[node name="FlowContainer" type="FlowContainer" parent="."]
+offset_left = 125.0
+offset_top = 359.0
+offset_right = 443.0
+offset_bottom = 463.0
+
+[node name="CanYouRecord" type="Label" parent="FlowContainer"]
+layout_mode = 2
+text = "Can you record..."
+
+[node name="Guide1" type="Label" parent="FlowContainer"]
+layout_mode = 2
+text = "A speaker you relate to?"
+
+[node name="Guide2" type="Label" parent="FlowContainer"]
+layout_mode = 2
+text = "An idea that surprised you?"
+
+[node name="Guide3" type="Label" parent="FlowContainer"]
+layout_mode = 2
+text = "Something you think others should hear?"
+
+[connection signal="freq_changed" from="Radio/Dial" to="Radio/FrequencyLabel" method="_on_dial_freq_changed"]
+[connection signal="pressed" from="Radio/RecordBtn" to="Radio/Recorder" method="_on_record_btn_pressed"]
+[connection signal="new_recording" from="Radio/Recorder" to="Radio/PlaybackPlayer" method="_on_recorder_new_recording"]
+[connection signal="started_recording" from="Radio/Recorder" to="Radio/RecordBtn" method="_on_recorder_started_recording"]
+[connection signal="stopped_recording" from="Radio/Recorder" to="Radio/RecordBtn" method="_on_recorder_stopped_recording"]
+[connection signal="stopped_recording" from="Radio/Recorder" to="Radio/PlaybackBtn" method="_on_recorder_stopped_recording"]
+[connection signal="pressed" from="Radio/PlaybackBtn" to="Radio/Recorder" method="_on_playback_btn_pressed"]

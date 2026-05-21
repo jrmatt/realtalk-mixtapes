@@ -4,6 +4,7 @@ var frequencies = load("res://resources/frequencies.tres")
 var freq_names = frequencies.frequency_names
 var current_index := -1
 var current_freq: String
+signal freq_changed(new_freq)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -22,11 +23,12 @@ func _button_pressed():
 	var new_freq_name = freq_names[current_index]
 	current_freq = new_freq_name
 	_change_station(current_freq)
-	print(new_freq_name)
+	print("Dial sets new freq: ", new_freq_name)
 	
 
 func _change_station(freq):
 	var stations = self.get_children()
+	freq_changed.emit(freq)
 	for station in stations:
 		station.volume_db = -80
 		if station.freq.frequency_name == freq:
