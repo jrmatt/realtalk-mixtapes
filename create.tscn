@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://brsbf0hkg1vcy"]
+[gd_scene load_steps=17 format=3 uid="uid://brsbf0hkg1vcy"]
 
 [ext_resource type="Texture2D" uid="uid://bbma21pro7p8l" path="res://sprites/radio_sprite (1).png" id="1_33tbc"]
 [ext_resource type="Texture2D" uid="uid://bie3fowjw6l75" path="res://sprites/dial_sprite.png" id="2_0xa77"]
@@ -20,9 +20,6 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5sdnf"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gp06y"]
-
-[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_fpcy6"]
-streams_count = 1
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5sdnf"]
 animations = [{
@@ -61,7 +58,6 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_gp06y")
 script = ExtResource("3_fpcy6")
 
 [node name="TrackPlayer" type="AudioStreamPlayer" parent="Radio/Dial"]
-stream = SubResource("AudioStreamRandomizer_fpcy6")
 script = ExtResource("7_vlguu")
 
 [node name="PlayButton" type="Sprite2D" parent="Radio"]
@@ -103,4 +99,3 @@ script = ExtResource("10_5sdnf")
 
 [connection signal="pressed" from="Radio/Dial" to="Radio/Dial/TrackPlayer" method="_on_dial_pressed"]
 [connection signal="current_freq" from="Radio/Dial/TrackPlayer" to="Radio/FrequencyLabel" method="_on_track_player_current_freq"]
-[connection signal="current_track" from="Radio/Dial/TrackPlayer" to="Radio/TrackLabel" method="_on_track_player_current_track"]
