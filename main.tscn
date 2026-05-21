@@ -9,8 +9,8 @@
 [node name="UI" type="Control" parent="CanvasLayer"]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 1151.0
-offset_bottom = 645.0
+offset_right = 1152.0
+offset_bottom = 648.0
 
 [node name="ListenButton" type="Button" parent="CanvasLayer/UI"]
 layout_mode = 1

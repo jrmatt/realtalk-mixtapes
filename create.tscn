@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://brsbf0hkg1vcy"]
+[gd_scene load_steps=18 format=3 uid="uid://brsbf0hkg1vcy"]
 
 [ext_resource type="Texture2D" uid="uid://bbma21pro7p8l" path="res://sprites/radio_sprite (1).png" id="1_33tbc"]
 [ext_resource type="Texture2D" uid="uid://bie3fowjw6l75" path="res://sprites/dial_sprite.png" id="2_0xa77"]
@@ -9,6 +9,7 @@
 [ext_resource type="AudioStream" uid="uid://bpgtxeb1k3bi6" path="res://sounds/static.mp3" id="6_0xa77"]
 [ext_resource type="Script" uid="uid://corgppuutowa0" path="res://track_player.gd" id="7_vlguu"]
 [ext_resource type="Script" uid="uid://617ue6pyp6cn" path="res://frequency_label.gd" id="9_wkoss"]
+[ext_resource type="Script" uid="uid://5y3xihrkxg2h" path="res://track_label.gd" id="10_5sdnf"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vlguu"]
 
@@ -93,5 +94,13 @@ offset_right = 575.0
 offset_bottom = 170.0
 script = ExtResource("9_wkoss")
 
+[node name="TrackLabel" type="Label" parent="Radio"]
+offset_left = 721.0
+offset_top = 147.0
+offset_right = 761.0
+offset_bottom = 170.0
+script = ExtResource("10_5sdnf")
+
 [connection signal="pressed" from="Radio/Dial" to="Radio/Dial/TrackPlayer" method="_on_dial_pressed"]
 [connection signal="current_freq" from="Radio/Dial/TrackPlayer" to="Radio/FrequencyLabel" method="_on_track_player_current_freq"]
+[connection signal="current_track" from="Radio/Dial/TrackPlayer" to="Radio/TrackLabel" method="_on_track_player_current_track"]
