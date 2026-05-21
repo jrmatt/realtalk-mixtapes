@@ -4,4 +4,4 @@
 
 [resource]
 script = ExtResource("1_u35y0")
-frequencies = PackedStringArray("Black Art", "Across Generations", "Art Economy", "Local Scene", "Gentrification", "Art to Thrive", "Beginnings")
+frequency_names = Array[String](["Black Art", "Across Generations", "Art Economy", "Local Scene", "Gentrification", "Art to Thrive", "Beginnings"])

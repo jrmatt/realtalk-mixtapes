@@ -15,58 +15,67 @@
 [sub_resource type="Resource" id="Resource_ycje8"]
 script = ExtResource("2_aij4h")
 id = "5307942"
+speakers = PackedStringArray("Grace")
 frequency = "Local Scene"
 audio = ExtResource("3_pwbpw")
 
 [sub_resource type="Resource" id="Resource_m1scw"]
 script = ExtResource("2_aij4h")
 id = "5288971"
+speakers = PackedStringArray("Kadaj")
 frequency = "Local Scene"
 audio = ExtResource("4_tuih8")
 
 [sub_resource type="Resource" id="Resource_ofxge"]
 script = ExtResource("2_aij4h")
 id = "5308049"
+speakers = PackedStringArray("Kyle")
 frequency = "Local Scene"
 audio = ExtResource("5_spvjf")
 
 [sub_resource type="Resource" id="Resource_qgx86"]
 script = ExtResource("2_aij4h")
 id = "5307949"
+speakers = PackedStringArray("Ray Sam", "Lilly")
 frequency = "Local Scene"
 audio = ExtResource("6_wvssj")
 
 [sub_resource type="Resource" id="Resource_jai5g"]
 script = ExtResource("2_aij4h")
 id = "5307965"
+speakers = PackedStringArray("Grace", "Ava", "Lilly")
 frequency = "Local Scene"
 audio = ExtResource("7_nj6aa")
 
 [sub_resource type="Resource" id="Resource_mhb3l"]
 script = ExtResource("2_aij4h")
 id = "5290671"
+speakers = PackedStringArray("Raffi")
 frequency = "Local Scene"
 audio = ExtResource("8_wxfhd")
 
 [sub_resource type="Resource" id="Resource_1t3hk"]
 script = ExtResource("2_aij4h")
 id = "5304206"
+speakers = PackedStringArray("Joanna")
 frequency = "Local Scene"
 audio = ExtResource("9_c8rfl")
 
 [sub_resource type="Resource" id="Resource_fwg78"]
 script = ExtResource("2_aij4h")
 id = "5308023"
+speakers = PackedStringArray("Farah")
 frequency = "Local Scene"
 audio = ExtResource("10_3spe1")
 
 [sub_resource type="Resource" id="Resource_w6gen"]
 script = ExtResource("2_aij4h")
 id = "5307689"
+speakers = PackedStringArray("Nick")
 frequency = "Local Scene"
 audio = ExtResource("11_6pce1")
 
 [resource]
 script = ExtResource("1_aa0xa")
-frequency = "Local Scene"
+frequency_name = "Local Scene"
 tracks = Array[ExtResource("2_aij4h")]([SubResource("Resource_ycje8"), SubResource("Resource_m1scw"), SubResource("Resource_ofxge"), SubResource("Resource_qgx86"), SubResource("Resource_jai5g"), SubResource("Resource_mhb3l"), SubResource("Resource_1t3hk"), SubResource("Resource_fwg78"), SubResource("Resource_w6gen")])

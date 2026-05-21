@@ -40,25 +40,24 @@ func _run():
 	ResourceSaver.save(library, "res://resources/library.tres")
 	
 	# create frequencies resource (unique frequencies)
-	var unique_freqs: Array = []
+	var unique_freqs: Array[String] = []
 	
 	for track in tracks_array:
-		print(track.frequency)
+		#print(track.frequency)
 		if track.frequency not in unique_freqs:
 			unique_freqs.append(track.frequency)
 				
-	var unique_frequencies = Frequencies.new()
-	unique_frequencies.frequencies = unique_freqs
-	print(unique_frequencies.frequencies)
-	ResourceSaver.save(unique_frequencies, "res://resources/frequencies.tres")
+	var freqs_to_save = Frequencies.new()
+	freqs_to_save.frequency_names = unique_freqs
+	ResourceSaver.save(freqs_to_save, "res://resources/frequencies.tres")
 	
 	for freq in unique_freqs:
-		var frequency = Frequency.new()
-		frequency.frequency = freq
+		var frequency_to_save = Frequency.new()
+		frequency_to_save.frequency_name = freq
 		for track in tracks_array:
 			if track.frequency == freq:
-				frequency.tracks.append(track)
-		ResourceSaver.save(frequency, "res://resources/frequencies/frequency_%s.tres" % freq)
+				frequency_to_save.tracks.append(track)
+		ResourceSaver.save(frequency_to_save, "res://resources/frequencies/frequency_%s.tres" % freq)
 
 func _clean_col(col, cols):
 	var clean_items: Array = []

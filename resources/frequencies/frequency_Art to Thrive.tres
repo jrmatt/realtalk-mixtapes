@@ -77,5 +77,5 @@ audio = ExtResource("11_uwqhg")
 
 [resource]
 script = ExtResource("1_an304")
-frequency = "Art to Thrive"
+frequency_name = "Art to Thrive"
 tracks = Array[ExtResource("2_hy6jk")]([SubResource("Resource_4aqd8"), SubResource("Resource_08gy4"), SubResource("Resource_roitt"), SubResource("Resource_a0u13"), SubResource("Resource_pph68"), SubResource("Resource_namhw"), SubResource("Resource_upwdp"), SubResource("Resource_x0gug"), SubResource("Resource_eh0em")])

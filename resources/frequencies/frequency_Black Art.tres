@@ -10,28 +10,32 @@
 [sub_resource type="Resource" id="Resource_rw2oa"]
 script = ExtResource("2_0rh33")
 id = "5307939"
+speakers = PackedStringArray("Lilly")
 frequency = "Black Art"
 audio = ExtResource("3_5d81t")
 
 [sub_resource type="Resource" id="Resource_std0o"]
 script = ExtResource("2_0rh33")
 id = "5307969"
+speakers = PackedStringArray("Shari")
 frequency = "Black Art"
 audio = ExtResource("4_pjtba")
 
 [sub_resource type="Resource" id="Resource_8vd3x"]
 script = ExtResource("2_0rh33")
 id = "5289306"
+speakers = PackedStringArray("Olivia")
 frequency = "Black Art"
 audio = ExtResource("5_fle5o")
 
 [sub_resource type="Resource" id="Resource_763kf"]
 script = ExtResource("2_0rh33")
 id = "5289033"
+speakers = PackedStringArray("Grace")
 frequency = "Black Art"
 audio = ExtResource("6_gx0od")
 
 [resource]
 script = ExtResource("1_6d1lx")
-frequency = "Black Art"
+frequency_name = "Black Art"
 tracks = Array[ExtResource("2_0rh33")]([SubResource("Resource_rw2oa"), SubResource("Resource_std0o"), SubResource("Resource_8vd3x"), SubResource("Resource_763kf")])

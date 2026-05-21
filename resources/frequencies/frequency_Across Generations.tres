@@ -9,22 +9,25 @@
 [sub_resource type="Resource" id="Resource_sa18n"]
 script = ExtResource("2_b2ier")
 id = "5307929"
+speakers = PackedStringArray("Jacob", "Kadaj")
 frequency = "Across Generations"
 audio = ExtResource("3_lm7j7")
 
 [sub_resource type="Resource" id="Resource_8ebk7"]
 script = ExtResource("2_b2ier")
 id = "5307924"
+speakers = PackedStringArray("Athena")
 frequency = "Across Generations"
 audio = ExtResource("4_3oiar")
 
 [sub_resource type="Resource" id="Resource_2cpom"]
 script = ExtResource("2_b2ier")
 id = "5289032"
+speakers = PackedStringArray("Michelle")
 frequency = "Across Generations"
 audio = ExtResource("5_j5lm8")
 
 [resource]
 script = ExtResource("1_r8maa")
-frequency = "Across Generations"
+frequency_name = "Across Generations"
 tracks = Array[ExtResource("2_b2ier")]([SubResource("Resource_sa18n"), SubResource("Resource_8ebk7"), SubResource("Resource_2cpom")])

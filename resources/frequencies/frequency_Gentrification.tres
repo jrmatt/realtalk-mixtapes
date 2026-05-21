@@ -12,40 +12,46 @@
 [sub_resource type="Resource" id="Resource_d5f0m"]
 script = ExtResource("2_2fk04")
 id = "5307918"
+speakers = PackedStringArray("Zebino")
 frequency = "Gentrification"
 audio = ExtResource("3_026br")
 
 [sub_resource type="Resource" id="Resource_rlth3"]
 script = ExtResource("2_2fk04")
 id = "5288875"
+speakers = PackedStringArray("Jacob")
 frequency = "Gentrification"
 audio = ExtResource("4_85oec")
 
 [sub_resource type="Resource" id="Resource_3rmac"]
 script = ExtResource("2_2fk04")
 id = "5307919"
+speakers = PackedStringArray("Prophet")
 frequency = "Gentrification"
 audio = ExtResource("5_2x8yw")
 
 [sub_resource type="Resource" id="Resource_fnbgf"]
 script = ExtResource("2_2fk04")
 id = "5308044"
+speakers = PackedStringArray("Kyle", "Nate", "Ava", "Jordan")
 frequency = "Gentrification"
 audio = ExtResource("6_etoxn")
 
 [sub_resource type="Resource" id="Resource_x4bct"]
 script = ExtResource("2_2fk04")
 id = "5289044"
+speakers = PackedStringArray("Aaron")
 frequency = "Gentrification"
 audio = ExtResource("7_gelwl")
 
 [sub_resource type="Resource" id="Resource_5xn34"]
 script = ExtResource("2_2fk04")
 id = "5288882"
+speakers = PackedStringArray("Kadaj")
 frequency = "Gentrification"
 audio = ExtResource("8_nmmge")
 
 [resource]
 script = ExtResource("1_xiy8p")
-frequency = "Gentrification"
+frequency_name = "Gentrification"
 tracks = Array[ExtResource("2_2fk04")]([SubResource("Resource_d5f0m"), SubResource("Resource_rlth3"), SubResource("Resource_3rmac"), SubResource("Resource_fnbgf"), SubResource("Resource_x4bct"), SubResource("Resource_5xn34")])

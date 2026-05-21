@@ -13,46 +13,53 @@
 [sub_resource type="Resource" id="Resource_7wysp"]
 script = ExtResource("2_a680e")
 id = "5308057"
+speakers = PackedStringArray("Kyle")
 frequency = "Art Economy"
 audio = ExtResource("3_lfatn")
 
 [sub_resource type="Resource" id="Resource_qlamp"]
 script = ExtResource("2_a680e")
 id = "5308056"
+speakers = PackedStringArray("Aparna")
 frequency = "Art Economy"
 audio = ExtResource("4_oi6ld")
 
 [sub_resource type="Resource" id="Resource_0ipvf"]
 script = ExtResource("2_a680e")
 id = "5307961"
+speakers = PackedStringArray("Shari")
 frequency = "Art Economy"
 audio = ExtResource("5_8heev")
 
 [sub_resource type="Resource" id="Resource_thk15"]
 script = ExtResource("2_a680e")
 id = "5307959"
+speakers = PackedStringArray("Michelle", "Lily")
 frequency = "Art Economy"
 audio = ExtResource("6_hhoeb")
 
 [sub_resource type="Resource" id="Resource_4a2s6"]
 script = ExtResource("2_a680e")
 id = "5290057"
+speakers = PackedStringArray("Sophia")
 frequency = "Art Economy"
 audio = ExtResource("7_cmddq")
 
 [sub_resource type="Resource" id="Resource_brbvo"]
 script = ExtResource("2_a680e")
 id = "5291325"
+speakers = PackedStringArray("Dominic")
 frequency = "Art Economy"
 audio = ExtResource("8_j25f2")
 
 [sub_resource type="Resource" id="Resource_7texf"]
 script = ExtResource("2_a680e")
 id = "5289040"
+speakers = PackedStringArray("Nate")
 frequency = "Art Economy"
 audio = ExtResource("9_ll65a")
 
 [resource]
 script = ExtResource("1_84jot")
-frequency = "Art Economy"
+frequency_name = "Art Economy"
 tracks = Array[ExtResource("2_a680e")]([SubResource("Resource_7wysp"), SubResource("Resource_qlamp"), SubResource("Resource_0ipvf"), SubResource("Resource_thk15"), SubResource("Resource_4a2s6"), SubResource("Resource_brbvo"), SubResource("Resource_7texf")])
