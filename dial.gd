@@ -5,6 +5,7 @@ var freq_names = frequencies.frequency_names
 var current_index := -1
 var current_freq: String
 signal freq_changed(new_freq)
+signal track_changed(new_track)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -32,4 +33,5 @@ func _change_station(freq):
 	for station in stations:
 		station.volume_db = -80
 		if station.freq.frequency_name == freq:
+			track_changed.emit(station.current_track)
 			station.volume_db = 0.0
