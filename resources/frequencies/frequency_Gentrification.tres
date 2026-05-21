@@ -1,0 +1,51 @@
+[gd_resource type="Resource" script_class="Frequency" load_steps=15 format=3 uid="uid://3bvjkxylwnie"]
+
+[ext_resource type="Script" uid="uid://cnw7m05sc7dsw" path="res://resource_types/frequency.gd" id="1_xiy8p"]
+[ext_resource type="Script" uid="uid://c3ejljwk35a7s" path="res://resource_types/track.gd" id="2_2fk04"]
+[ext_resource type="AudioStream" uid="uid://cc1huuhe68dvy" path="res://track_audio/5307918.mp3" id="3_026br"]
+[ext_resource type="AudioStream" uid="uid://5pi7wsctlgwx" path="res://track_audio/5288875.mp3" id="4_85oec"]
+[ext_resource type="AudioStream" uid="uid://dwedel5thhi5e" path="res://track_audio/5307919.mp3" id="5_2x8yw"]
+[ext_resource type="AudioStream" uid="uid://bfgtnr7qc3iqr" path="res://track_audio/5308044.mp3" id="6_etoxn"]
+[ext_resource type="AudioStream" uid="uid://dcal6gfpjveuk" path="res://track_audio/5289044.mp3" id="7_gelwl"]
+[ext_resource type="AudioStream" uid="uid://binxnw53gqhtg" path="res://track_audio/5288882.mp3" id="8_nmmge"]
+
+[sub_resource type="Resource" id="Resource_d5f0m"]
+script = ExtResource("2_2fk04")
+id = "5307918"
+frequency = "Gentrification"
+audio = ExtResource("3_026br")
+
+[sub_resource type="Resource" id="Resource_rlth3"]
+script = ExtResource("2_2fk04")
+id = "5288875"
+frequency = "Gentrification"
+audio = ExtResource("4_85oec")
+
+[sub_resource type="Resource" id="Resource_3rmac"]
+script = ExtResource("2_2fk04")
+id = "5307919"
+frequency = "Gentrification"
+audio = ExtResource("5_2x8yw")
+
+[sub_resource type="Resource" id="Resource_fnbgf"]
+script = ExtResource("2_2fk04")
+id = "5308044"
+frequency = "Gentrification"
+audio = ExtResource("6_etoxn")
+
+[sub_resource type="Resource" id="Resource_x4bct"]
+script = ExtResource("2_2fk04")
+id = "5289044"
+frequency = "Gentrification"
+audio = ExtResource("7_gelwl")
+
+[sub_resource type="Resource" id="Resource_5xn34"]
+script = ExtResource("2_2fk04")
+id = "5288882"
+frequency = "Gentrification"
+audio = ExtResource("8_nmmge")
+
+[resource]
+script = ExtResource("1_xiy8p")
+frequency = "Gentrification"
+tracks = Array[ExtResource("2_2fk04")]([SubResource("Resource_d5f0m"), SubResource("Resource_rlth3"), SubResource("Resource_3rmac"), SubResource("Resource_fnbgf"), SubResource("Resource_x4bct"), SubResource("Resource_5xn34")])

@@ -51,308 +51,308 @@
 script = ExtResource("2_std0o")
 id = "5307939"
 speakers = PackedStringArray("Lilly")
-frequencies = PackedStringArray("Black Art is Everything", "Local Scene")
+frequency = "Black Art"
 audio = ExtResource("3_sa18n")
 
 [sub_resource type="Resource" id="Resource_std0o"]
 script = ExtResource("2_std0o")
 id = "5307969"
 speakers = PackedStringArray("Shari")
-frequencies = PackedStringArray("Black Art is Everything", "Across Generations")
+frequency = "Black Art"
 audio = ExtResource("4_7wysp")
 
 [sub_resource type="Resource" id="Resource_sa18n"]
 script = ExtResource("2_std0o")
 id = "5307929"
 speakers = PackedStringArray("Jacob", "Kadaj")
-frequencies = PackedStringArray("Across Generations", "Local Scene", "Loss in the Community")
+frequency = "Across Generations"
 audio = ExtResource("5_qlamp")
 
 [sub_resource type="Resource" id="Resource_7wysp"]
 script = ExtResource("2_std0o")
 id = "5308057"
 speakers = PackedStringArray("Kyle")
-frequencies = PackedStringArray("The Art Economy")
+frequency = "Art Economy"
 audio = ExtResource("6_ycje8")
 
 [sub_resource type="Resource" id="Resource_qlamp"]
 script = ExtResource("2_std0o")
 id = "5308056"
 speakers = PackedStringArray("Aparna")
-frequencies = PackedStringArray("The Art Economy")
+frequency = "Art Economy"
 audio = ExtResource("7_d5f0m")
 
 [sub_resource type="Resource" id="Resource_ycje8"]
 script = ExtResource("2_std0o")
 id = "5307942"
 speakers = PackedStringArray("Grace")
-frequencies = PackedStringArray("Local Scene")
+frequency = "Local Scene"
 audio = ExtResource("8_rlth3")
 
 [sub_resource type="Resource" id="Resource_d5f0m"]
 script = ExtResource("2_std0o")
 id = "5307918"
 speakers = PackedStringArray("Zebino")
-frequencies = PackedStringArray("Loss in the Community", "Hubs and Resources")
+frequency = "Gentrification"
 audio = ExtResource("9_0ipvf")
 
 [sub_resource type="Resource" id="Resource_rlth3"]
 script = ExtResource("2_std0o")
 id = "5288875"
 speakers = PackedStringArray("Jacob")
-frequencies = PackedStringArray("Loss in the Community", "Change in the Community")
+frequency = "Gentrification"
 audio = ExtResource("10_3rmac")
 
 [sub_resource type="Resource" id="Resource_0ipvf"]
 script = ExtResource("2_std0o")
 id = "5307961"
 speakers = PackedStringArray("Shari")
-frequencies = PackedStringArray("The Art Economy")
+frequency = "Art Economy"
 audio = ExtResource("11_8ebk7")
 
 [sub_resource type="Resource" id="Resource_3rmac"]
 script = ExtResource("2_std0o")
 id = "5307919"
 speakers = PackedStringArray("Prophet")
-frequencies = PackedStringArray("Loss in the Community")
+frequency = "Gentrification"
 audio = ExtResource("12_m1scw")
 
 [sub_resource type="Resource" id="Resource_8ebk7"]
 script = ExtResource("2_std0o")
 id = "5307924"
 speakers = PackedStringArray("Athena")
-frequencies = PackedStringArray("Loss in the Community", "Local Scene", "Black Art is Everything", "Across Generations")
+frequency = "Across Generations"
 audio = ExtResource("13_thk15")
 
 [sub_resource type="Resource" id="Resource_m1scw"]
 script = ExtResource("2_std0o")
 id = "5288971"
 speakers = PackedStringArray("Kadaj")
-frequencies = PackedStringArray("Change in the Community")
+frequency = "Local Scene"
 audio = ExtResource("14_4aqd8")
 
 [sub_resource type="Resource" id="Resource_thk15"]
 script = ExtResource("2_std0o")
 id = "5307959"
 speakers = PackedStringArray("Michelle", "Lily")
-frequencies = PackedStringArray("The Art Economy")
+frequency = "Art Economy"
 audio = ExtResource("15_ofxge")
 
 [sub_resource type="Resource" id="Resource_4aqd8"]
 script = ExtResource("2_std0o")
 id = "5308047"
 speakers = PackedStringArray("Emmanuel")
-frequencies = PackedStringArray("Hubs and Resources")
+frequency = "Art to Thrive"
 audio = ExtResource("16_0vufw")
 
 [sub_resource type="Resource" id="Resource_ofxge"]
 script = ExtResource("2_std0o")
 id = "5308049"
 speakers = PackedStringArray("Kyle")
-frequencies = PackedStringArray("Hubs and Resources", "Getting My Start")
+frequency = "Local Scene"
 audio = ExtResource("17_3s8i5")
 
 [sub_resource type="Resource" id="Resource_0vufw"]
 script = ExtResource("2_std0o")
 id = "5308104"
 speakers = PackedStringArray("Sheri")
-frequencies = PackedStringArray("Getting My Start", "Arts Education")
+frequency = "Beginnings"
 audio = ExtResource("18_fnbgf")
 
 [sub_resource type="Resource" id="Resource_3s8i5"]
 script = ExtResource("2_std0o")
 id = "5307903"
 speakers = PackedStringArray("Athena", "Ava")
-frequencies = PackedStringArray("Getting My Start")
+frequency = "Beginnings"
 audio = ExtResource("19_08gy4")
 
 [sub_resource type="Resource" id="Resource_fnbgf"]
 script = ExtResource("2_std0o")
 id = "5308044"
 speakers = PackedStringArray("Kyle", "Nate", "Ava", "Jordan")
-frequencies = PackedStringArray("The Art Economy", "Hubs and Resources")
+frequency = "Gentrification"
 audio = ExtResource("20_qgx86")
 
 [sub_resource type="Resource" id="Resource_08gy4"]
 script = ExtResource("2_std0o")
 id = "5307666"
 speakers = PackedStringArray("George")
-frequencies = PackedStringArray("Change in the Community", "Art to Thrive", "Arts Education")
+frequency = "Art to Thrive"
 audio = ExtResource("21_jai5g")
 
 [sub_resource type="Resource" id="Resource_qgx86"]
 script = ExtResource("2_std0o")
 id = "5307949"
 speakers = PackedStringArray("Ray Sam", "Lilly")
-frequencies = PackedStringArray("Change in the Community", "The Art Economy", "Hubs and Resources")
+frequency = "Local Scene"
 audio = ExtResource("22_8vd3x")
 
 [sub_resource type="Resource" id="Resource_jai5g"]
 script = ExtResource("2_std0o")
 id = "5307965"
 speakers = PackedStringArray("Grace", "Ava", "Lilly")
-frequencies = PackedStringArray("The Art Economy", "Hubs and Resources")
+frequency = "Local Scene"
 audio = ExtResource("23_wjfyf")
 
 [sub_resource type="Resource" id="Resource_8vd3x"]
 script = ExtResource("2_std0o")
 id = "5289306"
 speakers = PackedStringArray("Olivia")
-frequencies = PackedStringArray("Art to Thrive", "Black Art is Everything")
+frequency = "Black Art"
 audio = ExtResource("24_4a2s6")
 
 [sub_resource type="Resource" id="Resource_wjfyf"]
 script = ExtResource("2_std0o")
 id = "5289307"
 speakers = PackedStringArray("Ivy")
-frequencies = PackedStringArray("Getting My Start")
+frequency = "Beginnings"
 audio = ExtResource("25_sdj51")
 
 [sub_resource type="Resource" id="Resource_4a2s6"]
 script = ExtResource("2_std0o")
 id = "5290057"
 speakers = PackedStringArray("Sophia")
-frequencies = PackedStringArray("The Art Economy", "Art to Thrive")
+frequency = "Art Economy"
 audio = ExtResource("26_brbvo")
 
 [sub_resource type="Resource" id="Resource_sdj51"]
 script = ExtResource("2_std0o")
 id = "5289854"
 speakers = PackedStringArray("Tyler")
-frequencies = PackedStringArray("The Art Economy", "Getting My Start", "Arts Education")
+frequency = "Beginnings"
 audio = ExtResource("27_7texf")
 
 [sub_resource type="Resource" id="Resource_brbvo"]
 script = ExtResource("2_std0o")
 id = "5291325"
 speakers = PackedStringArray("Dominic")
-frequencies = PackedStringArray("Art to Thrive", "The Art Economy")
+frequency = "Art Economy"
 audio = ExtResource("28_x4bct")
 
 [sub_resource type="Resource" id="Resource_7texf"]
 script = ExtResource("2_std0o")
 id = "5289040"
 speakers = PackedStringArray("Nate")
-frequencies = PackedStringArray("The Art Economy")
+frequency = "Art Economy"
 audio = ExtResource("29_roitt")
 
 [sub_resource type="Resource" id="Resource_x4bct"]
 script = ExtResource("2_std0o")
 id = "5289044"
 speakers = PackedStringArray("Aaron")
-frequencies = PackedStringArray("Loss in the Community", "Hubs and Resources")
+frequency = "Gentrification"
 audio = ExtResource("30_o70ig")
 
 [sub_resource type="Resource" id="Resource_roitt"]
 script = ExtResource("2_std0o")
 id = "5289047"
 speakers = PackedStringArray("Aparna")
-frequencies = PackedStringArray("Art to Thrive")
+frequency = "Art to Thrive"
 audio = ExtResource("31_a0u13")
 
 [sub_resource type="Resource" id="Resource_o70ig"]
 script = ExtResource("2_std0o")
 id = "5289029"
 speakers = PackedStringArray("Michelle")
-frequencies = PackedStringArray("Getting My Start")
+frequency = "Beginnings"
 audio = ExtResource("32_2cpom")
 
 [sub_resource type="Resource" id="Resource_a0u13"]
 script = ExtResource("2_std0o")
 id = "5289030"
 speakers = PackedStringArray("Michelle")
-frequencies = PackedStringArray("Art to Thrive", "Loss in the Community")
+frequency = "Art to Thrive"
 audio = ExtResource("33_763kf")
 
 [sub_resource type="Resource" id="Resource_2cpom"]
 script = ExtResource("2_std0o")
 id = "5289032"
 speakers = PackedStringArray("Michelle")
-frequencies = PackedStringArray("Arts Education", "Loss in the Community")
+frequency = "Across Generations"
 audio = ExtResource("34_5xn34")
 
 [sub_resource type="Resource" id="Resource_763kf"]
 script = ExtResource("2_std0o")
 id = "5289033"
 speakers = PackedStringArray("Grace")
-frequencies = PackedStringArray("Black Art is Everything")
+frequency = "Black Art"
 audio = ExtResource("35_pph68")
 
 [sub_resource type="Resource" id="Resource_5xn34"]
 script = ExtResource("2_std0o")
 id = "5288882"
 speakers = PackedStringArray("Kadaj")
-frequencies = PackedStringArray("Art to Thrive", "Change in the Community", "Loss in the Community")
+frequency = "Gentrification"
 audio = ExtResource("36_mhb3l")
 
 [sub_resource type="Resource" id="Resource_pph68"]
 script = ExtResource("2_std0o")
 id = "5289235"
 speakers = PackedStringArray("Madeline")
-frequencies = PackedStringArray("Art to Thrive")
+frequency = "Art to Thrive"
 audio = ExtResource("37_namhw")
 
 [sub_resource type="Resource" id="Resource_mhb3l"]
 script = ExtResource("2_std0o")
 id = "5290671"
 speakers = PackedStringArray("Raffi")
-frequencies = PackedStringArray("Getting My Start", "Local Scene")
+frequency = "Local Scene"
 audio = ExtResource("38_1t3hk")
 
 [sub_resource type="Resource" id="Resource_namhw"]
 script = ExtResource("2_std0o")
 id = "5297450"
 speakers = PackedStringArray("Whitney")
-frequencies = PackedStringArray("The Art Economy", "Art to Thrive")
+frequency = "Art to Thrive"
 audio = ExtResource("39_upwdp")
 
 [sub_resource type="Resource" id="Resource_1t3hk"]
 script = ExtResource("2_std0o")
 id = "5304206"
 speakers = PackedStringArray("Joanna")
-frequencies = PackedStringArray("Art to Thrive", "Local Scene", "Hubs and Resources")
+frequency = "Local Scene"
 audio = ExtResource("40_fwg78")
 
 [sub_resource type="Resource" id="Resource_upwdp"]
 script = ExtResource("2_std0o")
 id = "5304247"
 speakers = PackedStringArray("Sarah")
-frequencies = PackedStringArray("Art to Thrive")
+frequency = "Art to Thrive"
 audio = ExtResource("41_u57aq")
 
 [sub_resource type="Resource" id="Resource_fwg78"]
 script = ExtResource("2_std0o")
 id = "5308023"
 speakers = PackedStringArray("Farah")
-frequencies = PackedStringArray("Hubs and Resources")
+frequency = "Local Scene"
 audio = ExtResource("42_w6gen")
 
 [sub_resource type="Resource" id="Resource_u57aq"]
 script = ExtResource("2_std0o")
 id = "5308033"
 speakers = PackedStringArray("Farah")
-frequencies = PackedStringArray("Getting My Start")
+frequency = "Beginnings"
 audio = ExtResource("43_x0gug")
 
 [sub_resource type="Resource" id="Resource_w6gen"]
 script = ExtResource("2_std0o")
 id = "5307689"
 speakers = PackedStringArray("Nick")
-frequencies = PackedStringArray("Hubs and Resources", "Across Generations", "Art to Thrive")
+frequency = "Local Scene"
 audio = ExtResource("44_eh0em")
 
 [sub_resource type="Resource" id="Resource_x0gug"]
 script = ExtResource("2_std0o")
 id = "5307116"
 speakers = PackedStringArray("Bianca")
-frequencies = PackedStringArray("Art to Thrive", "Arts Education")
+frequency = "Art to Thrive"
 audio = ExtResource("45_f8a00")
 
 [sub_resource type="Resource" id="Resource_eh0em"]
 script = ExtResource("2_std0o")
 id = "5307117"
 speakers = PackedStringArray("Adana")
-frequencies = PackedStringArray("Hubs and Resources", "Art to Thrive")
+frequency = "Art to Thrive"
 audio = ExtResource("46_cf3w8")
 
 [resource]

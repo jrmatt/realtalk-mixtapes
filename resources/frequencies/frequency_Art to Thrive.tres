@@ -1,0 +1,81 @@
+[gd_resource type="Resource" script_class="Frequency" load_steps=21 format=3 uid="uid://dcoboreyhyug5"]
+
+[ext_resource type="Script" uid="uid://cnw7m05sc7dsw" path="res://resource_types/frequency.gd" id="1_an304"]
+[ext_resource type="Script" uid="uid://c3ejljwk35a7s" path="res://resource_types/track.gd" id="2_hy6jk"]
+[ext_resource type="AudioStream" uid="uid://cnhu60kiq3fwj" path="res://track_audio/5308047.mp3" id="3_4y4ah"]
+[ext_resource type="AudioStream" uid="uid://d3xkebtt1b648" path="res://track_audio/5307666.mp3" id="4_67vn2"]
+[ext_resource type="AudioStream" uid="uid://s4d60kdyjvom" path="res://track_audio/5289047.mp3" id="5_pndtn"]
+[ext_resource type="AudioStream" uid="uid://bridvacniseyj" path="res://track_audio/5289030.mp3" id="6_lc6c5"]
+[ext_resource type="AudioStream" uid="uid://dp48ly8i4kpr6" path="res://track_audio/5289235.mp3" id="7_5go0l"]
+[ext_resource type="AudioStream" uid="uid://bhlvjqdr0v0d" path="res://track_audio/5297450.mp3" id="8_5m2wh"]
+[ext_resource type="AudioStream" uid="uid://xyl7x6qjb3ng" path="res://track_audio/5304247.mp3" id="9_igohh"]
+[ext_resource type="AudioStream" uid="uid://dhg0sfelfcelo" path="res://track_audio/5307116.mp3" id="10_3558h"]
+[ext_resource type="AudioStream" uid="uid://c25yya122aql6" path="res://track_audio/5307117.mp3" id="11_uwqhg"]
+
+[sub_resource type="Resource" id="Resource_4aqd8"]
+script = ExtResource("2_hy6jk")
+id = "5308047"
+speakers = PackedStringArray("Emmanuel")
+frequency = "Art to Thrive"
+audio = ExtResource("3_4y4ah")
+
+[sub_resource type="Resource" id="Resource_08gy4"]
+script = ExtResource("2_hy6jk")
+id = "5307666"
+speakers = PackedStringArray("George")
+frequency = "Art to Thrive"
+audio = ExtResource("4_67vn2")
+
+[sub_resource type="Resource" id="Resource_roitt"]
+script = ExtResource("2_hy6jk")
+id = "5289047"
+speakers = PackedStringArray("Aparna")
+frequency = "Art to Thrive"
+audio = ExtResource("5_pndtn")
+
+[sub_resource type="Resource" id="Resource_a0u13"]
+script = ExtResource("2_hy6jk")
+id = "5289030"
+speakers = PackedStringArray("Michelle")
+frequency = "Art to Thrive"
+audio = ExtResource("6_lc6c5")
+
+[sub_resource type="Resource" id="Resource_pph68"]
+script = ExtResource("2_hy6jk")
+id = "5289235"
+speakers = PackedStringArray("Madeline")
+frequency = "Art to Thrive"
+audio = ExtResource("7_5go0l")
+
+[sub_resource type="Resource" id="Resource_namhw"]
+script = ExtResource("2_hy6jk")
+id = "5297450"
+speakers = PackedStringArray("Whitney")
+frequency = "Art to Thrive"
+audio = ExtResource("8_5m2wh")
+
+[sub_resource type="Resource" id="Resource_upwdp"]
+script = ExtResource("2_hy6jk")
+id = "5304247"
+speakers = PackedStringArray("Sarah")
+frequency = "Art to Thrive"
+audio = ExtResource("9_igohh")
+
+[sub_resource type="Resource" id="Resource_x0gug"]
+script = ExtResource("2_hy6jk")
+id = "5307116"
+speakers = PackedStringArray("Bianca")
+frequency = "Art to Thrive"
+audio = ExtResource("10_3558h")
+
+[sub_resource type="Resource" id="Resource_eh0em"]
+script = ExtResource("2_hy6jk")
+id = "5307117"
+speakers = PackedStringArray("Adana")
+frequency = "Art to Thrive"
+audio = ExtResource("11_uwqhg")
+
+[resource]
+script = ExtResource("1_an304")
+frequency = "Art to Thrive"
+tracks = Array[ExtResource("2_hy6jk")]([SubResource("Resource_4aqd8"), SubResource("Resource_08gy4"), SubResource("Resource_roitt"), SubResource("Resource_a0u13"), SubResource("Resource_pph68"), SubResource("Resource_namhw"), SubResource("Resource_upwdp"), SubResource("Resource_x0gug"), SubResource("Resource_eh0em")])

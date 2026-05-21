@@ -1,0 +1,58 @@
+[gd_resource type="Resource" script_class="Frequency" load_steps=17 format=3 uid="uid://dvd8insnkg2x7"]
+
+[ext_resource type="Script" uid="uid://cnw7m05sc7dsw" path="res://resource_types/frequency.gd" id="1_84jot"]
+[ext_resource type="Script" uid="uid://c3ejljwk35a7s" path="res://resource_types/track.gd" id="2_a680e"]
+[ext_resource type="AudioStream" uid="uid://f6qy1b1ndi1x" path="res://track_audio/5308057.mp3" id="3_lfatn"]
+[ext_resource type="AudioStream" uid="uid://b12gnkagg3661" path="res://track_audio/5308056.mp3" id="4_oi6ld"]
+[ext_resource type="AudioStream" uid="uid://e16t6xaa10w5" path="res://track_audio/5307961.mp3" id="5_8heev"]
+[ext_resource type="AudioStream" uid="uid://cj43d2b6vrn4g" path="res://track_audio/5307959.mp3" id="6_hhoeb"]
+[ext_resource type="AudioStream" uid="uid://ce1657o801n4k" path="res://track_audio/5290057.mp3" id="7_cmddq"]
+[ext_resource type="AudioStream" uid="uid://b2em1yucq4kt1" path="res://track_audio/5291325.mp3" id="8_j25f2"]
+[ext_resource type="AudioStream" uid="uid://dwia6e01rvrh5" path="res://track_audio/5289040.mp3" id="9_ll65a"]
+
+[sub_resource type="Resource" id="Resource_7wysp"]
+script = ExtResource("2_a680e")
+id = "5308057"
+frequency = "Art Economy"
+audio = ExtResource("3_lfatn")
+
+[sub_resource type="Resource" id="Resource_qlamp"]
+script = ExtResource("2_a680e")
+id = "5308056"
+frequency = "Art Economy"
+audio = ExtResource("4_oi6ld")
+
+[sub_resource type="Resource" id="Resource_0ipvf"]
+script = ExtResource("2_a680e")
+id = "5307961"
+frequency = "Art Economy"
+audio = ExtResource("5_8heev")
+
+[sub_resource type="Resource" id="Resource_thk15"]
+script = ExtResource("2_a680e")
+id = "5307959"
+frequency = "Art Economy"
+audio = ExtResource("6_hhoeb")
+
+[sub_resource type="Resource" id="Resource_4a2s6"]
+script = ExtResource("2_a680e")
+id = "5290057"
+frequency = "Art Economy"
+audio = ExtResource("7_cmddq")
+
+[sub_resource type="Resource" id="Resource_brbvo"]
+script = ExtResource("2_a680e")
+id = "5291325"
+frequency = "Art Economy"
+audio = ExtResource("8_j25f2")
+
+[sub_resource type="Resource" id="Resource_7texf"]
+script = ExtResource("2_a680e")
+id = "5289040"
+frequency = "Art Economy"
+audio = ExtResource("9_ll65a")
+
+[resource]
+script = ExtResource("1_84jot")
+frequency = "Art Economy"
+tracks = Array[ExtResource("2_a680e")]([SubResource("Resource_7wysp"), SubResource("Resource_qlamp"), SubResource("Resource_0ipvf"), SubResource("Resource_thk15"), SubResource("Resource_4a2s6"), SubResource("Resource_brbvo"), SubResource("Resource_7texf")])

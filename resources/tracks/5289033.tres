@@ -7,5 +7,5 @@
 script = ExtResource("2_mkk8i")
 id = "5289033"
 speakers = PackedStringArray("Grace")
-frequencies = PackedStringArray("Black Art is Everything")
+frequency = "Black Art"
 audio = ExtResource("1_wppp6")

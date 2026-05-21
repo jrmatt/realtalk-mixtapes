@@ -4,4 +4,4 @@
 
 [resource]
 script = ExtResource("1_u35y0")
-frequencies = PackedStringArray("Black Art is Everything", "Local Scene", "Across Generations", "Loss in the Community", "The Art Economy", "Hubs and Resources", "Change in the Community", "Getting My Start", "Arts Education", "Art to Thrive")
+frequencies = PackedStringArray("Black Art", "Across Generations", "Art Economy", "Local Scene", "Gentrification", "Art to Thrive", "Beginnings")
