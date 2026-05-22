@@ -131,6 +131,7 @@ layout_mode = 2
 text = "Something you think others should hear?"
 
 [connection signal="playing_freq" from="Radio/Dial" to="Radio/HFlowContainer/FrequencyLabel" method="_on_dial_playing_freq"]
+[connection signal="playing_track" from="Radio/Dial" to="Radio/Recorder" method="_on_dial_playing_track"]
 [connection signal="playing_track" from="Radio/Dial" to="Radio/HFlowContainer/SpeakerLabel" method="_on_dial_playing_track"]
 [connection signal="pressed" from="Radio/RecordBtn" to="Radio/Recorder" method="_on_record_btn_pressed"]
 [connection signal="new_mix" from="Radio/Recorder" to="Radio/Dial" method="_on_recorder_new_mix"]
