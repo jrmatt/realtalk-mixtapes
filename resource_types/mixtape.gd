@@ -1,5 +1,5 @@
 class_name Mixtape
-extends Node
+extends Node2D
 
 var recordings = []
 
@@ -16,8 +16,5 @@ func _save_recording(recording, current_track):
 	print(recordings)
 
 
-func _on_play_btn_pressed() -> void:
-	var player = $PlayMix
-	for recording in recordings:
-		player.stream = recording.recording
-		player.play()
+func _on_load_tape_pressed() -> void:
+	print("Will load tape")

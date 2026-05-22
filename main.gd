@@ -3,18 +3,29 @@ extends Node2D
 var SaveScene = preload("res://save.tscn")
 
 # What should the actual flow be:
-# Load a new cassette into drawer
+# Load a cassette into drawer
+#	Needs: is cassette loaded?
+#	Needs: casssette blank or recorded?
+
 # Press play and record simultaneously
-# Able to press pause
-# Pressing stop stops recording & ejects (and pops the recording & play buttons back up)
+#	If cassette blank, start recording, else nothing
+# Pause recording
+# Start recording again
+# Stop recording & eject cassette (press twice to eject?)
+#	(and pops the recording & play buttons back up)
+#	is cassette loaded = false
 # [DONE] Prompted to save it or discard it 
 # [DONE] Saving adds it to the stack
 
-# Load an existing cassette into drawer
 # Press play
+#	If cassette loaded:
+#		If cassette blank, play with no sound
+#		If cassette recorded, play recorded audio & display track info
 # Press pause
+#	Pause cassette
 # Fast forward / back
 # Press stop & ejects
+# 	Place back on mixtape stack
 
 
 # Called when the node enters the scene tree for the first time.

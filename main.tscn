@@ -98,6 +98,12 @@ offset_bottom = 8.0
 offset_right = 8.0
 offset_bottom = 8.0
 
+[node name="LoadCassette" type="Button" parent="Radio" unique_id=2000682245]
+offset_left = 746.0
+offset_top = 393.0
+offset_right = 882.0
+offset_bottom = 478.0
+
 [node name="MixtapeStack" type="VFlowContainer" parent="." unique_id=1497847491]
 offset_left = 79.0
 offset_top = 257.0
