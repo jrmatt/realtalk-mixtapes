@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://brsbf0hkg1vcy"]
+[gd_scene format=3 uid="uid://brsbf0hkg1vcy"]
 
 [ext_resource type="Script" uid="uid://ceif0x5qnf4pt" path="res://main.gd" id="1_w48qg"]
 [ext_resource type="Texture2D" uid="uid://bbma21pro7p8l" path="res://sprites/radio_sprite (1).png" id="1_ycdy4"]
@@ -7,12 +7,12 @@
 [ext_resource type="Texture2D" uid="uid://bn2nngv8hto8v" path="res://sprites/btn_sprite.png" id="4_2cqfq"]
 [ext_resource type="Texture2D" uid="uid://cqgyt7dyjfohj" path="res://sprites/levels_frame_1_sprite.png" id="5_yaehf"]
 [ext_resource type="Texture2D" uid="uid://dyeodkfuottla" path="res://sprites/levels_frame_2_sprite.png" id="6_074og"]
-[ext_resource type="AudioStream" uid="uid://bpgtxeb1k3bi6" path="res://sounds/static.mp3" id="7_cegan"]
 [ext_resource type="Script" uid="uid://dljp5jxnewx7g" path="res://record.gd" id="8_82xsv"]
 [ext_resource type="Script" uid="uid://da4uga58owk0m" path="res://recorder.gd" id="9_getpj"]
 [ext_resource type="Script" uid="uid://617ue6pyp6cn" path="res://frequency_label.gd" id="12_1u8w0"]
 [ext_resource type="Script" uid="uid://cccc3tfe44jhf" path="res://save_btn.gd" id="12_dg77c"]
 [ext_resource type="Script" uid="uid://c250y0dehwnrn" path="res://speaker_label.gd" id="13_0odxb"]
+[ext_resource type="PackedScene" uid="uid://pr88iiebh72d" path="res://dial_new.tscn" id="14_w48qg"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vlguu"]
 
@@ -38,17 +38,17 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node2D" unique_id=582703919]
 script = ExtResource("1_w48qg")
 
-[node name="Radio" type="Node2D" parent="."]
+[node name="Radio" type="Node2D" parent="." unique_id=782036082]
 
-[node name="RadioBody" type="Sprite2D" parent="Radio"]
+[node name="RadioBody" type="Sprite2D" parent="Radio" unique_id=657849294]
 position = Vector2(814.49426, 371.12503)
 scale = Vector2(0.68371195, 0.6762234)
 texture = ExtResource("1_ycdy4")
 
-[node name="Dial" type="Button" parent="Radio"]
+[node name="Dial" type="Button" parent="Radio" unique_id=881117356]
 offset_left = 1008.0
 offset_top = 251.0
 offset_right = 1062.0
@@ -62,17 +62,17 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_gp06y")
 expand_icon = true
 script = ExtResource("3_vivmo")
 
-[node name="Btn1" type="Sprite2D" parent="Radio"]
+[node name="Btn1" type="Sprite2D" parent="Radio" unique_id=2025521478]
 position = Vector2(832.5, 276.25)
 scale = Vector2(0.9393942, 0.9083332)
 texture = ExtResource("4_2cqfq")
 
-[node name="Btn2" type="Sprite2D" parent="Radio"]
+[node name="Btn2" type="Sprite2D" parent="Radio" unique_id=1243577639]
 position = Vector2(866.5, 276.125)
 scale = Vector2(0.90908796, 0.9416658)
 texture = ExtResource("4_2cqfq")
 
-[node name="Levels" type="AnimatedSprite2D" parent="Radio"]
+[node name="Levels" type="AnimatedSprite2D" parent="Radio" unique_id=285120536]
 position = Vector2(646, 235)
 scale = Vector2(0.80588233, 0.7222222)
 sprite_frames = SubResource("SpriteFrames_5sdnf")
@@ -80,13 +80,7 @@ autoplay = "default"
 frame_progress = 0.09082031
 speed_scale = 0.5
 
-[node name="Static" type="AudioStreamPlayer2D" parent="Radio"]
-position = Vector2(964, 441)
-stream = ExtResource("7_cegan")
-autoplay = true
-parameters/looping = true
-
-[node name="RecordBtn" type="Button" parent="Radio"]
+[node name="RecordBtn" type="Button" parent="Radio" unique_id=310661157]
 offset_left = 775.0
 offset_top = 484.0
 offset_right = 854.0
@@ -94,24 +88,24 @@ offset_bottom = 537.0
 text = "Record"
 script = ExtResource("8_82xsv")
 
-[node name="Recorder" type="Node" parent="Radio"]
+[node name="Recorder" type="Node" parent="Radio" unique_id=52088900]
 script = ExtResource("9_getpj")
 
-[node name="HFlowContainer" type="HFlowContainer" parent="Radio"]
+[node name="HFlowContainer" type="HFlowContainer" parent="Radio" unique_id=406963598]
 offset_left = 709.0
 offset_top = 147.0
 offset_right = 1017.0
 offset_bottom = 177.0
 
-[node name="FrequencyLabel" type="Label" parent="Radio/HFlowContainer"]
+[node name="FrequencyLabel" type="Label" parent="Radio/HFlowContainer" unique_id=1587873138]
 layout_mode = 2
 script = ExtResource("12_1u8w0")
 
-[node name="SpeakerLabel" type="Label" parent="Radio/HFlowContainer"]
+[node name="SpeakerLabel" type="Label" parent="Radio/HFlowContainer" unique_id=1102705934]
 layout_mode = 2
 script = ExtResource("13_0odxb")
 
-[node name="SaveBtn" type="Button" parent="Radio"]
+[node name="SaveBtn" type="Button" parent="Radio" unique_id=922399820]
 offset_left = 794.0
 offset_top = 359.0
 offset_right = 838.0
@@ -119,29 +113,35 @@ offset_bottom = 390.0
 text = "Save"
 script = ExtResource("12_dg77c")
 
-[node name="HelpText" type="FlowContainer" parent="."]
+[node name="Bounds" parent="Radio" unique_id=1296031382 instance=ExtResource("14_w48qg")]
+offset_left = 598.0
+offset_top = 305.0
+offset_right = 1052.0
+offset_bottom = 345.0
+
+[node name="HelpText" type="FlowContainer" parent="." unique_id=1481632643]
 offset_left = 20.0
 offset_top = 15.0
 offset_right = 338.0
 offset_bottom = 119.0
 
-[node name="CanYouRecord" type="Label" parent="HelpText"]
+[node name="CanYouRecord" type="Label" parent="HelpText" unique_id=1564104705]
 layout_mode = 2
 text = "Can you record..."
 
-[node name="Guide1" type="Label" parent="HelpText"]
+[node name="Guide1" type="Label" parent="HelpText" unique_id=678794322]
 layout_mode = 2
 text = "A speaker you relate to?"
 
-[node name="Guide2" type="Label" parent="HelpText"]
+[node name="Guide2" type="Label" parent="HelpText" unique_id=1323397832]
 layout_mode = 2
 text = "An idea that surprised you?"
 
-[node name="Guide3" type="Label" parent="HelpText"]
+[node name="Guide3" type="Label" parent="HelpText" unique_id=369037997]
 layout_mode = 2
 text = "Something you think others should hear?"
 
-[node name="MixtapeStack" type="VFlowContainer" parent="."]
+[node name="MixtapeStack" type="VFlowContainer" parent="." unique_id=1497847491]
 offset_left = 79.0
 offset_top = 257.0
 offset_right = 384.0

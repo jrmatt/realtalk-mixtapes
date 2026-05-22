@@ -1,7 +1,8 @@
 class_name FreqStation
 extends AudioStreamPlayer
 
-#var tracks: Array = []
+var position_in_dial: float
+
 var freq: Frequency
 var current_index = -1
 var current_track_time = 0.0
