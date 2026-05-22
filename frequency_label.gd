@@ -11,5 +11,5 @@ func _process(delta: float) -> void:
 	pass
 
 
-func _on_dial_freq_changed(new_freq: Variant) -> void:
+func _on_dial_playing_freq(new_freq: Variant) -> void:
 	self.text = new_freq + ": "

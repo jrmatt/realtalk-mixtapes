@@ -11,7 +11,7 @@ func _process(delta: float) -> void:
 	pass
 
 
-func _on_dial_track_changed(new_track: Variant) -> void:
+func _on_dial_playing_track(new_track: Variant) -> void:
 	var speaker_array = new_track.speakers
 	var speakers = ", ".join(speaker_array)
 	self.text = speakers

@@ -3,14 +3,13 @@ extends Button
 var frequencies = load("res://resources/frequencies.tres")
 var freq_names = frequencies.frequency_names
 var current_index := -1
-var current_freq: String
-signal freq_changed(new_freq)
-signal track_changed(new_track)
+var current_freq: String = ""
+signal playing_freq(new_freq)
+signal playing_track(new_track)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	self.pressed.connect(_button_pressed)
-	
 	for freq in freq_names:
 		var frequency: Frequency = load("res://resources/frequencies/frequency_%s.tres" % freq)
 		var station = FreqStation.new()
@@ -29,9 +28,22 @@ func _button_pressed():
 
 func _change_station(freq):
 	var stations = self.get_children()
-	freq_changed.emit(freq)
+	#playing_freq.emit(freq)
 	for station in stations:
 		station.volume_db = -80
 		if station.freq.frequency_name == freq:
-			track_changed.emit(station.current_track)
 			station.volume_db = 0.0
+
+
+func _on_recorder_new_mix(current_mix: Variant) -> void:
+	var stations = self.get_children()
+	for station in stations:
+		station.volume_db = -80
+
+
+func _process(delta: float) -> void:
+	var stations = self.get_children()
+	for station in stations:
+		if station.freq.frequency_name == current_freq:
+			playing_track.emit(station.current_track)
+			playing_freq.emit(current_freq)
