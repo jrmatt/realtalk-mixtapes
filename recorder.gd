@@ -46,5 +46,5 @@ func _on_record_btn_pressed() -> void:
 		_start_recording()
 
 
-func _on_dial_playing_track(new_track: Variant) -> void:
+func _on_bounds_playing_track(new_track: Variant) -> void:
 	current_track = new_track

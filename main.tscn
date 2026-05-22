@@ -2,27 +2,14 @@
 
 [ext_resource type="Script" uid="uid://ceif0x5qnf4pt" path="res://main.gd" id="1_w48qg"]
 [ext_resource type="Texture2D" uid="uid://bbma21pro7p8l" path="res://sprites/radio_sprite (1).png" id="1_ycdy4"]
-[ext_resource type="Texture2D" uid="uid://bie3fowjw6l75" path="res://sprites/dial_sprite.png" id="2_w48qg"]
-[ext_resource type="Script" uid="uid://bhpel7ykwirtw" path="res://dial.gd" id="3_vivmo"]
-[ext_resource type="Texture2D" uid="uid://bn2nngv8hto8v" path="res://sprites/btn_sprite.png" id="4_2cqfq"]
 [ext_resource type="Texture2D" uid="uid://cqgyt7dyjfohj" path="res://sprites/levels_frame_1_sprite.png" id="5_yaehf"]
 [ext_resource type="Texture2D" uid="uid://dyeodkfuottla" path="res://sprites/levels_frame_2_sprite.png" id="6_074og"]
 [ext_resource type="Script" uid="uid://dljp5jxnewx7g" path="res://record.gd" id="8_82xsv"]
 [ext_resource type="Script" uid="uid://da4uga58owk0m" path="res://recorder.gd" id="9_getpj"]
 [ext_resource type="Script" uid="uid://617ue6pyp6cn" path="res://frequency_label.gd" id="12_1u8w0"]
-[ext_resource type="Script" uid="uid://cccc3tfe44jhf" path="res://save_btn.gd" id="12_dg77c"]
+[ext_resource type="Script" uid="uid://cccc3tfe44jhf" path="res://stop_btn.gd" id="12_dg77c"]
 [ext_resource type="Script" uid="uid://c250y0dehwnrn" path="res://speaker_label.gd" id="13_0odxb"]
 [ext_resource type="PackedScene" uid="uid://pr88iiebh72d" path="res://dial_new.tscn" id="14_w48qg"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vlguu"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fpcy6"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wkoss"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5sdnf"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gp06y"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5sdnf"]
 animations = [{
@@ -48,54 +35,11 @@ position = Vector2(814.49426, 371.12503)
 scale = Vector2(0.68371195, 0.6762234)
 texture = ExtResource("1_ycdy4")
 
-[node name="Dial" type="Button" parent="Radio" unique_id=881117356]
-offset_left = 1008.0
-offset_top = 251.0
-offset_right = 1062.0
-offset_bottom = 288.0
-theme_override_icons/icon = ExtResource("2_w48qg")
-theme_override_styles/normal = SubResource("StyleBoxEmpty_vlguu")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_fpcy6")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_wkoss")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_5sdnf")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_gp06y")
-expand_icon = true
-script = ExtResource("3_vivmo")
-
-[node name="Btn1" type="Sprite2D" parent="Radio" unique_id=2025521478]
-position = Vector2(832.5, 276.25)
-scale = Vector2(0.9393942, 0.9083332)
-texture = ExtResource("4_2cqfq")
-
-[node name="Btn2" type="Sprite2D" parent="Radio" unique_id=1243577639]
-position = Vector2(866.5, 276.125)
-scale = Vector2(0.90908796, 0.9416658)
-texture = ExtResource("4_2cqfq")
-
-[node name="Levels" type="AnimatedSprite2D" parent="Radio" unique_id=285120536]
-position = Vector2(646, 235)
-scale = Vector2(0.80588233, 0.7222222)
-sprite_frames = SubResource("SpriteFrames_5sdnf")
-autoplay = "default"
-frame_progress = 0.09082031
-speed_scale = 0.5
-
-[node name="RecordBtn" type="Button" parent="Radio" unique_id=310661157]
-offset_left = 775.0
-offset_top = 484.0
-offset_right = 854.0
-offset_bottom = 537.0
-text = "Record"
-script = ExtResource("8_82xsv")
-
-[node name="Recorder" type="Node" parent="Radio" unique_id=52088900]
-script = ExtResource("9_getpj")
-
 [node name="HFlowContainer" type="HFlowContainer" parent="Radio" unique_id=406963598]
-offset_left = 709.0
-offset_top = 147.0
-offset_right = 1017.0
-offset_bottom = 177.0
+offset_left = 768.0
+offset_top = 221.0
+offset_right = 1076.0
+offset_bottom = 251.0
 
 [node name="FrequencyLabel" type="Label" parent="Radio/HFlowContainer" unique_id=1587873138]
 layout_mode = 2
@@ -105,7 +49,32 @@ script = ExtResource("12_1u8w0")
 layout_mode = 2
 script = ExtResource("13_0odxb")
 
-[node name="SaveBtn" type="Button" parent="Radio" unique_id=922399820]
+[node name="Levels" type="AnimatedSprite2D" parent="Radio" unique_id=285120536]
+position = Vector2(646, 235)
+scale = Vector2(0.80588233, 0.7222222)
+sprite_frames = SubResource("SpriteFrames_5sdnf")
+autoplay = "default"
+frame_progress = 0.09082031
+speed_scale = 0.5
+
+[node name="Recorder" type="Node" parent="Radio" unique_id=52088900]
+script = ExtResource("9_getpj")
+
+[node name="Bounds" parent="Radio" unique_id=1296031382 instance=ExtResource("14_w48qg")]
+offset_left = 598.0
+offset_top = 305.0
+offset_right = 1052.0
+offset_bottom = 345.0
+
+[node name="RecordBtn" type="Button" parent="Radio" unique_id=310661157]
+offset_left = 775.0
+offset_top = 484.0
+offset_right = 854.0
+offset_bottom = 537.0
+text = "Record"
+script = ExtResource("8_82xsv")
+
+[node name="StopBtn" type="Button" parent="Radio" unique_id=922399820]
 offset_left = 794.0
 offset_top = 359.0
 offset_right = 838.0
@@ -113,11 +82,21 @@ offset_bottom = 390.0
 text = "Save"
 script = ExtResource("12_dg77c")
 
-[node name="Bounds" parent="Radio" unique_id=1296031382 instance=ExtResource("14_w48qg")]
-offset_left = 598.0
-offset_top = 305.0
-offset_right = 1052.0
-offset_bottom = 345.0
+[node name="PlayBtn" type="Button" parent="Radio" unique_id=684982014]
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="PauseBtn" type="Button" parent="Radio" unique_id=872450069]
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="FFBtn" type="Button" parent="Radio" unique_id=549453749]
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="RwBtn" type="Button" parent="Radio" unique_id=1938241678]
+offset_right = 8.0
+offset_bottom = 8.0
 
 [node name="HelpText" type="FlowContainer" parent="." unique_id=1481632643]
 offset_left = 20.0
@@ -150,11 +129,10 @@ theme_override_constants/h_separation = 0
 theme_override_constants/v_separation = 40
 alignment = 2
 
-[connection signal="playing_freq" from="Radio/Dial" to="Radio/HFlowContainer/FrequencyLabel" method="_on_dial_playing_freq"]
-[connection signal="playing_track" from="Radio/Dial" to="Radio/Recorder" method="_on_dial_playing_track"]
-[connection signal="playing_track" from="Radio/Dial" to="Radio/HFlowContainer/SpeakerLabel" method="_on_dial_playing_track"]
-[connection signal="pressed" from="Radio/RecordBtn" to="Radio/Recorder" method="_on_record_btn_pressed"]
-[connection signal="new_mix" from="Radio/Recorder" to="Radio/Dial" method="_on_recorder_new_mix"]
 [connection signal="paused_recording" from="Radio/Recorder" to="Radio/RecordBtn" method="_on_recorder_paused_recording"]
 [connection signal="started_recording" from="Radio/Recorder" to="Radio/RecordBtn" method="_on_recorder_started_recording"]
-[connection signal="pressed" from="Radio/SaveBtn" to="." method="_on_save_btn_pressed"]
+[connection signal="playing_freq" from="Radio/Bounds" to="Radio/HFlowContainer/FrequencyLabel" method="_on_bounds_playing_freq"]
+[connection signal="playing_track" from="Radio/Bounds" to="Radio/HFlowContainer/SpeakerLabel" method="_on_bounds_playing_track"]
+[connection signal="playing_track" from="Radio/Bounds" to="Radio/Recorder" method="_on_bounds_playing_track"]
+[connection signal="pressed" from="Radio/RecordBtn" to="Radio/Recorder" method="_on_record_btn_pressed"]
+[connection signal="pressed" from="Radio/StopBtn" to="." method="_on_stop_btn_pressed"]

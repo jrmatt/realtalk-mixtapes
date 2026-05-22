@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://pr88iiebh72d"]
+[gd_scene load_steps=0 format=3 uid="uid://pr88iiebh72d"]
 
 [ext_resource type="Script" uid="uid://ckhwqojnpojpb" path="res://dial_new.gd" id="1_w8tbn"]
 [ext_resource type="AudioStream" uid="uid://vnbhy7axckf0" path="res://sounds/260522_radio_static.mp3" id="2_w8tbn"]
