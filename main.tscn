@@ -1,5 +1,6 @@
-[gd_scene load_steps=18 format=3 uid="uid://brsbf0hkg1vcy"]
+[gd_scene load_steps=20 format=3 uid="uid://brsbf0hkg1vcy"]
 
+[ext_resource type="Script" uid="uid://ceif0x5qnf4pt" path="res://main.gd" id="1_w48qg"]
 [ext_resource type="Texture2D" uid="uid://bbma21pro7p8l" path="res://sprites/radio_sprite (1).png" id="1_ycdy4"]
 [ext_resource type="Texture2D" uid="uid://bie3fowjw6l75" path="res://sprites/dial_sprite.png" id="2_w48qg"]
 [ext_resource type="Script" uid="uid://bhpel7ykwirtw" path="res://dial.gd" id="3_vivmo"]
@@ -10,6 +11,7 @@
 [ext_resource type="Script" uid="uid://dljp5jxnewx7g" path="res://record.gd" id="8_82xsv"]
 [ext_resource type="Script" uid="uid://da4uga58owk0m" path="res://recorder.gd" id="9_getpj"]
 [ext_resource type="Script" uid="uid://617ue6pyp6cn" path="res://frequency_label.gd" id="12_1u8w0"]
+[ext_resource type="Script" uid="uid://cccc3tfe44jhf" path="res://save_btn.gd" id="12_dg77c"]
 [ext_resource type="Script" uid="uid://c250y0dehwnrn" path="res://speaker_label.gd" id="13_0odxb"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vlguu"]
@@ -37,6 +39,7 @@ animations = [{
 }]
 
 [node name="Main" type="Node2D"]
+script = ExtResource("1_w48qg")
 
 [node name="Radio" type="Node2D" parent="."]
 
@@ -108,27 +111,44 @@ script = ExtResource("12_1u8w0")
 layout_mode = 2
 script = ExtResource("13_0odxb")
 
-[node name="FlowContainer" type="FlowContainer" parent="."]
+[node name="SaveBtn" type="Button" parent="Radio"]
+offset_left = 794.0
+offset_top = 359.0
+offset_right = 838.0
+offset_bottom = 390.0
+text = "Save"
+script = ExtResource("12_dg77c")
+
+[node name="HelpText" type="FlowContainer" parent="."]
 offset_left = 20.0
 offset_top = 15.0
 offset_right = 338.0
 offset_bottom = 119.0
 
-[node name="CanYouRecord" type="Label" parent="FlowContainer"]
+[node name="CanYouRecord" type="Label" parent="HelpText"]
 layout_mode = 2
 text = "Can you record..."
 
-[node name="Guide1" type="Label" parent="FlowContainer"]
+[node name="Guide1" type="Label" parent="HelpText"]
 layout_mode = 2
 text = "A speaker you relate to?"
 
-[node name="Guide2" type="Label" parent="FlowContainer"]
+[node name="Guide2" type="Label" parent="HelpText"]
 layout_mode = 2
 text = "An idea that surprised you?"
 
-[node name="Guide3" type="Label" parent="FlowContainer"]
+[node name="Guide3" type="Label" parent="HelpText"]
 layout_mode = 2
 text = "Something you think others should hear?"
+
+[node name="MixtapeStack" type="VFlowContainer" parent="."]
+offset_left = 79.0
+offset_top = 257.0
+offset_right = 384.0
+offset_bottom = 598.0
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 40
+alignment = 2
 
 [connection signal="playing_freq" from="Radio/Dial" to="Radio/HFlowContainer/FrequencyLabel" method="_on_dial_playing_freq"]
 [connection signal="playing_track" from="Radio/Dial" to="Radio/Recorder" method="_on_dial_playing_track"]
@@ -137,3 +157,4 @@ text = "Something you think others should hear?"
 [connection signal="new_mix" from="Radio/Recorder" to="Radio/Dial" method="_on_recorder_new_mix"]
 [connection signal="paused_recording" from="Radio/Recorder" to="Radio/RecordBtn" method="_on_recorder_paused_recording"]
 [connection signal="started_recording" from="Radio/Recorder" to="Radio/RecordBtn" method="_on_recorder_started_recording"]
+[connection signal="pressed" from="Radio/SaveBtn" to="." method="_on_save_btn_pressed"]
