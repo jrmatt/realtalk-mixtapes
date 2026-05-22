@@ -79,7 +79,7 @@ offset_left = 794.0
 offset_top = 359.0
 offset_right = 838.0
 offset_bottom = 390.0
-text = "Save"
+text = "Stop"
 script = ExtResource("12_dg77c")
 
 [node name="PlayBtn" type="Button" parent="Radio" unique_id=684982014]
@@ -97,28 +97,6 @@ offset_bottom = 8.0
 [node name="RwBtn" type="Button" parent="Radio" unique_id=1938241678]
 offset_right = 8.0
 offset_bottom = 8.0
-
-[node name="HelpText" type="FlowContainer" parent="." unique_id=1481632643]
-offset_left = 20.0
-offset_top = 15.0
-offset_right = 338.0
-offset_bottom = 119.0
-
-[node name="CanYouRecord" type="Label" parent="HelpText" unique_id=1564104705]
-layout_mode = 2
-text = "Can you record..."
-
-[node name="Guide1" type="Label" parent="HelpText" unique_id=678794322]
-layout_mode = 2
-text = "A speaker you relate to?"
-
-[node name="Guide2" type="Label" parent="HelpText" unique_id=1323397832]
-layout_mode = 2
-text = "An idea that surprised you?"
-
-[node name="Guide3" type="Label" parent="HelpText" unique_id=369037997]
-layout_mode = 2
-text = "Something you think others should hear?"
 
 [node name="MixtapeStack" type="VFlowContainer" parent="." unique_id=1497847491]
 offset_left = 79.0

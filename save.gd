@@ -13,6 +13,10 @@ func _save_mix() -> void:
 	print("Added current mix: ", mix_to_save)
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func _on_save_btn_pressed() -> void:
+	_save_mix()
+	queue_free()
+
+
+func _on_discard_btn_pressed() -> void:
+	queue_free()

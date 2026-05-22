@@ -7,8 +7,8 @@ var SaveScene = preload("res://save.tscn")
 # Press play and record simultaneously
 # Able to press pause
 # Pressing stop stops recording & ejects (and pops the recording & play buttons back up)
-# Prompted to save it or discard it
-# Saving adds it to the stack
+# [DONE] Prompted to save it or discard it 
+# [DONE] Saving adds it to the stack
 
 # Load an existing cassette into drawer
 # Press play
@@ -34,5 +34,6 @@ func _on_stop_btn_pressed() -> void:
 		var new_save = SaveScene.instantiate()
 		new_save.mix_to_save = current_mix
 		new_save.stack = $MixtapeStack
-		new_save._save_mix()
+		add_child(new_save)
+		print("Kicked off a new save: ", new_save)
 		$Radio/Recorder.current_mix = null
