@@ -1,3 +1,4 @@
+class_name Dial
 extends Panel
 
 @onready var bar: Panel = $Bar
@@ -35,6 +36,8 @@ var bar_position := 0.:
         bar.position.x = bar_position * size.x - bar.size.x / 2
 
 func _ready() -> void:
+    bar_position = 0.3
+
     var freq_interval: float = 1. / (freq_names.size() + 1)
 
     for freq_i in freq_names.size():
@@ -49,8 +52,13 @@ func _ready() -> void:
 
         var station_bar = BarScene.instantiate()
         station_bar.position.x = size.x * station.position_in_dial - station_bar.size.x / 2
-        station_bar.get_theme_stylebox('panel').bg_color = Color(randf(), randf(), randf(), 0.05)
+        var color = Color(randf(), randf(), randf(), 0.01)
+        station_bar.get_theme_stylebox('panel').bg_color = color
         station.bar = station_bar
+        var label = station_bar.get_node('Label') as Label
+        label.text = station.freq.frequency_name
+        label.add_theme_color_override('font_color', color)
+        
         add_child(station_bar)
 
         stations.append(station)
@@ -77,6 +85,7 @@ func set_volumes():
         if not current_station.has_been_discovered:
             var tween = create_tween()
             tween.tween_property(current_station.bar.get_theme_stylebox('panel'), 'bg_color:a', 1, 1)
+            tween.tween_property(current_station.bar.get_node('Label'), 'theme_override_colors/font_color:a', 1, 1)
 
         playing_freq.emit(current_station.freq.frequency_name)
         playing_track.emit(current_station.current_track)

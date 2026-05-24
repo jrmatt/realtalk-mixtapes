@@ -12,7 +12,7 @@ border_width_top = 1
 border_width_right = 1
 border_width_bottom = 1
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fcqnh"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8er6q"]
 resource_local_to_scene = true
 bg_color = Color(0, 0, 0, 1)
 
@@ -27,8 +27,10 @@ script = ExtResource("1_w8tbn")
 [node name="Bar" parent="." unique_id=214478169 instance=ExtResource("2_8er6q")]
 z_index = 1
 layout_mode = 0
+offset_top = -7.0
 offset_right = 3.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_fcqnh")
+offset_bottom = 47.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_8er6q")
 
 [node name="Static" type="AudioStreamPlayer" parent="." unique_id=525667313]
 stream = ExtResource("2_w8tbn")
