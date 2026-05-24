@@ -30,21 +30,21 @@ var SaveScene = preload("res://save.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+    pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+    pass
 
 
 func _on_stop_btn_pressed() -> void:
-	var current_mix = $Radio/Recorder.current_mix
-	if current_mix:
-		$Radio/Recorder._stop_recording()
-		var new_save = SaveScene.instantiate()
-		new_save.mix_to_save = current_mix
-		new_save.stack = $MixtapeStack
-		add_child(new_save)
-		print("Kicked off a new save: ", new_save)
-		$Radio/Recorder.current_mix = null
+    var current_mix = $Radio/Recorder.current_mix
+    if current_mix:
+        $Radio/Recorder._stop_recording()
+        var new_save = SaveScene.instantiate()
+        new_save.mix_to_save = current_mix
+        new_save.stack = $MixtapeStack
+        add_child(new_save)
+        print("Kicked off a new save: ", new_save)
+        $Radio/Recorder.current_mix = null
