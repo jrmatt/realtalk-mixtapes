@@ -38,3 +38,4 @@ autoplay = true
 
 [node name="Rewind" type="AudioStreamPlayer2D" parent="." unique_id=1044741829]
 stream = ExtResource("4_8er6q")
+volume_db = -14.0

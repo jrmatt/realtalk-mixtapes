@@ -21,6 +21,9 @@ var last_position_was_valid := false
 
 var last_angle := 0.
 
+var rewind_started_at := 0.0
+const REWIND_MULTIPLE := 2.0
+
 const SPINS_FOR_FULL_LENGTH := 10.
 const STATION_WIDTH := 0.02
 
@@ -117,23 +120,28 @@ func get_current_station_for_label():
 
 func _unhandled_input(event: InputEvent) -> void:
     if event.is_action_pressed('rewind_time'):
-        for station in stations:
-            station.seek(max(station.get_playback_position() - 1, 0))
+        rewind_started_at = Time.get_ticks_msec()
 
+        for station in stations:
             station.stream_paused = true
 
-        static_player.seek(max(static_player.get_playback_position() - 1, 0))
         static_player.stream_paused = true
 
         rewind.play()
 
     elif event.is_action_released('rewind_time'):
+        rewind.stop()
+
+        var rewind_duration = (Time.get_ticks_msec() - rewind_started_at) / 1000 * REWIND_MULTIPLE
+        print(rewind_duration)
+
         for station in stations:
             station.stream_paused = false
 
-        static_player.stream_paused = false
+            station.seek(max(station.get_playback_position() - rewind_duration, 0))
 
-        rewind.stop()
+        static_player.stream_paused = false
+        static_player.seek(max(static_player.get_playback_position() - rewind_duration, 0))
 
         
 func _process(_delta: float) -> void:
