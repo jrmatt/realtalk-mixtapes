@@ -1,9 +1,7 @@
 extends Panel
 
-@onready var bounds: Panel = $'.'
 @onready var bar: Panel = $Bar
 @onready var static_player: AudioStreamPlayer = $Static
-@onready var music: AudioStreamPlayer = $Music
 
 signal playing_track(new_track)
 signal playing_freq(new_freq)
@@ -33,7 +31,7 @@ var bar_position := 0.:
             
         set_volumes()
 
-        bar.position.x = bar_position * bounds.size.x
+        bar.position.x = bar_position * size.x - bar.size.x / 2
 
 func _ready() -> void:
     var freq_interval: float = 1. / (freq_names.size() + 1)
@@ -49,7 +47,7 @@ func _ready() -> void:
         add_child(station)
 
         var station_bar = BarScene.instantiate()
-        station_bar.position.x = size.x * station.position_in_dial
+        station_bar.position.x = size.x * station.position_in_dial - station_bar.size.x / 2
         station_bar.get_theme_stylebox('panel').bg_color = Color(randf(), randf(), randf(), 0.05)
         station.bar = station_bar
         add_child(station_bar)
@@ -70,7 +68,7 @@ func set_volumes():
         station.volume_linear = station_volume
         total_static_reduction += station_volume
 
-    static_player.volume_linear = clampf(1 - total_static_reduction, 0, 1)
+    static_player.volume_linear = clampf(1 - total_static_reduction, 0, 1)**2
 
     var current_station = get_current_station_for_label()
 
@@ -102,7 +100,7 @@ func get_current_station_for_label():
     var current_station = null
 
     for station in stations:
-        if bar_distance_from_station(station) < 1:
+        if bar_distance_from_station(station) < 0.5:
             current_station = station
 
     return current_station
@@ -111,7 +109,6 @@ func _unhandled_input(event: InputEvent) -> void:
     if event.is_action_pressed('rewind_time'):
         for station in stations:
             station.seek(max(station.get_playback_position() - 1, 0))
-        
 
 func _process(_delta: float) -> void:
 
