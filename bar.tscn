@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://dibpwlycg8oyi"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p42vg"]
+resource_local_to_scene = true
+bg_color = Color(1, 0, 0, 1)
+
+[node name="Bar" type="Panel" unique_id=214478169]
+offset_top = -8.0
+offset_right = 7.0
+offset_bottom = 46.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_p42vg")

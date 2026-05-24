@@ -1,6 +1,7 @@
-[gd_scene load_steps=0 format=3 uid="uid://pr88iiebh72d"]
+[gd_scene format=3 uid="uid://pr88iiebh72d"]
 
 [ext_resource type="Script" uid="uid://ckhwqojnpojpb" path="res://dial_new.gd" id="1_w8tbn"]
+[ext_resource type="PackedScene" uid="uid://dibpwlycg8oyi" path="res://bar.tscn" id="2_8er6q"]
 [ext_resource type="AudioStream" uid="uid://vnbhy7axckf0" path="res://sounds/260522_radio_static.mp3" id="2_w8tbn"]
 [ext_resource type="AudioStream" uid="uid://binxnw53gqhtg" path="res://track_audio/5288882.mp3" id="3_w8tbn"]
 
@@ -11,10 +12,11 @@ border_width_top = 1
 border_width_right = 1
 border_width_bottom = 1
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p42vg"]
-bg_color = Color(1, 0, 0, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fcqnh"]
+resource_local_to_scene = true
+bg_color = Color(0, 0, 0, 1)
 
-[node name="Bounds" type="Panel" unique_id=1296031382]
+[node name="Dial" type="Panel" unique_id=1296031382]
 offset_left = 342.0
 offset_top = 287.0
 offset_right = 796.0
@@ -22,12 +24,11 @@ offset_bottom = 327.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ssumn")
 script = ExtResource("1_w8tbn")
 
-[node name="Bar" type="Panel" parent="." unique_id=1089066484]
+[node name="Bar" parent="." unique_id=214478169 instance=ExtResource("2_8er6q")]
+z_index = 1
 layout_mode = 0
-offset_top = -8.0
-offset_right = 7.0
-offset_bottom = 46.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_p42vg")
+offset_right = 3.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_fcqnh")
 
 [node name="Static" type="AudioStreamPlayer" parent="." unique_id=525667313]
 stream = ExtResource("2_w8tbn")

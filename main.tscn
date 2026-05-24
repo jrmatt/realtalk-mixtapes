@@ -25,6 +25,10 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4c57u"]
+resource_local_to_scene = true
+bg_color = Color(0, 0, 0, 1)
+
 [node name="Main" type="Node2D" unique_id=582703919]
 script = ExtResource("1_w48qg")
 
@@ -60,11 +64,16 @@ speed_scale = 0.5
 [node name="Recorder" type="Node" parent="Radio" unique_id=52088900]
 script = ExtResource("9_getpj")
 
-[node name="Bounds" parent="Radio" unique_id=1296031382 instance=ExtResource("14_w48qg")]
+[node name="Dial" parent="Radio" unique_id=1296031382 instance=ExtResource("14_w48qg")]
 offset_left = 598.0
 offset_top = 305.0
 offset_right = 1052.0
 offset_bottom = 345.0
+
+[node name="Bar" parent="Radio/Dial" index="0" unique_id=214478169]
+offset_top = -5.0
+offset_bottom = 49.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_4c57u")
 
 [node name="RecordBtn" type="Button" parent="Radio" unique_id=310661157]
 offset_left = 775.0
@@ -115,8 +124,10 @@ alignment = 2
 
 [connection signal="paused_recording" from="Radio/Recorder" to="Radio/RecordBtn" method="_on_recorder_paused_recording"]
 [connection signal="started_recording" from="Radio/Recorder" to="Radio/RecordBtn" method="_on_recorder_started_recording"]
-[connection signal="playing_freq" from="Radio/Bounds" to="Radio/HFlowContainer/FrequencyLabel" method="_on_bounds_playing_freq"]
-[connection signal="playing_track" from="Radio/Bounds" to="Radio/HFlowContainer/SpeakerLabel" method="_on_bounds_playing_track"]
-[connection signal="playing_track" from="Radio/Bounds" to="Radio/Recorder" method="_on_bounds_playing_track"]
+[connection signal="playing_freq" from="Radio/Dial" to="Radio/HFlowContainer/FrequencyLabel" method="_on_bounds_playing_freq"]
+[connection signal="playing_track" from="Radio/Dial" to="Radio/HFlowContainer/SpeakerLabel" method="_on_bounds_playing_track"]
+[connection signal="playing_track" from="Radio/Dial" to="Radio/Recorder" method="_on_bounds_playing_track"]
 [connection signal="pressed" from="Radio/RecordBtn" to="Radio/Recorder" method="_on_record_btn_pressed"]
 [connection signal="pressed" from="Radio/StopBtn" to="." method="_on_stop_btn_pressed"]
+
+[editable path="Radio/Dial"]
