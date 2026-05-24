@@ -2,6 +2,7 @@ extends Panel
 
 @onready var bar: Panel = $Bar
 @onready var static_player: AudioStreamPlayer = $Static
+@onready var rewind: AudioStreamPlayer2D = $Rewind
 
 signal playing_track(new_track)
 signal playing_freq(new_freq)
@@ -110,6 +111,22 @@ func _unhandled_input(event: InputEvent) -> void:
         for station in stations:
             station.seek(max(station.get_playback_position() - 1, 0))
 
+            station.stream_paused = true
+
+        static_player.seek(max(static_player.get_playback_position() - 1, 0))
+        static_player.stream_paused = true
+
+        rewind.play()
+
+    elif event.is_action_released('rewind_time'):
+        for station in stations:
+            station.stream_paused = false
+
+        static_player.stream_paused = false
+
+        rewind.stop()
+
+        
 func _process(_delta: float) -> void:
 
     if stick_is_active():

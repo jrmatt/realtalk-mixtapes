@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://ckhwqojnpojpb" path="res://dial_new.gd" id="1_w8tbn"]
 [ext_resource type="PackedScene" uid="uid://dibpwlycg8oyi" path="res://bar.tscn" id="2_8er6q"]
 [ext_resource type="AudioStream" uid="uid://vnbhy7axckf0" path="res://sounds/260522_radio_static.mp3" id="2_w8tbn"]
-[ext_resource type="AudioStream" uid="uid://binxnw53gqhtg" path="res://track_audio/5288882.mp3" id="3_w8tbn"]
+[ext_resource type="AudioStream" uid="uid://dt1nlg3k3fp36" path="res://sounds/rewind.mp3" id="4_8er6q"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ssumn"]
 bg_color = Color(0.29219013, 0.29219, 0.29219002, 1)
@@ -34,7 +34,5 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_fcqnh")
 stream = ExtResource("2_w8tbn")
 autoplay = true
 
-[node name="Music" type="AudioStreamPlayer" parent="." unique_id=472004205]
-stream = ExtResource("3_w8tbn")
-volume_db = -80.0
-autoplay = true
+[node name="Rewind" type="AudioStreamPlayer2D" parent="." unique_id=1044741829]
+stream = ExtResource("4_8er6q")
