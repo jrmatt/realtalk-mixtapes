@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://cmi20ocs5tw1h"]
+[gd_scene format=3 uid="uid://cmi20ocs5tw1h"]
 
 [ext_resource type="Script" uid="uid://bsvdckdh2a863" path="res://freq_station.gd" id="1_rvmr8"]
 
-[node name="FreqStation" type="AudioStreamPlayer"]
+[node name="FreqStation" type="AudioStreamPlayer" unique_id=1885120644]
 script = ExtResource("1_rvmr8")
