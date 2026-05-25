@@ -10,6 +10,8 @@ signal playing_freq(new_freq)
 
 const BarScene = preload("res://bar.tscn")
 
+var cassette_mode: bool
+
 var frequencies = load("res://resources/frequencies.tres")
 var freq_names = frequencies.frequency_names
 
@@ -98,15 +100,18 @@ func set_volumes():
 
 
 func get_stick_vector():
-    return Input.get_vector('wheel_left', 'wheel_right', 'wheel_up', 'wheel_down')
+    if not cassette_mode:
+        return Input.get_vector('wheel_left', 'wheel_right', 'wheel_up', 'wheel_down')
 
 
 func stick_is_active():
-    return get_stick_vector().length() >= 0.99
+    if not cassette_mode:
+        return get_stick_vector().length() >= 0.99
 
 
 func stick_angle():
-    return get_stick_vector().angle()
+    if not cassette_mode:
+        return get_stick_vector().angle()
 
 
 func get_current_station_for_label():
@@ -119,29 +124,36 @@ func get_current_station_for_label():
     return current_station
 
 func _unhandled_input(event: InputEvent) -> void:
-    if event.is_action_pressed('rewind_time'):
-        rewind_started_at = Time.get_ticks_msec()
+    if not cassette_mode:
+        if event.is_action_pressed('rewind_time'):
+            rewind_started_at = Time.get_ticks_msec()
 
-        for station in stations:
-            station.stream_paused = true
+            for station in stations:
+                station.stream_paused = true
 
-        static_player.stream_paused = true
+            static_player.stream_paused = true
 
-        rewind.play()
+            rewind.play()
 
-    elif event.is_action_released('rewind_time'):
-        rewind.stop()
+        elif event.is_action_released('rewind_time'):
+            rewind.stop()
 
-        var rewind_duration = (Time.get_ticks_msec() - rewind_started_at) / 1000 * REWIND_MULTIPLE
-        print(rewind_duration)
+            var rewind_duration = (Time.get_ticks_msec() - rewind_started_at) / 1000 * REWIND_MULTIPLE
+            print(rewind_duration)
 
-        for station in stations:
-            station.stream_paused = false
+            for station in stations:
+                station.stream_paused = false
 
-            station.seek(max(station.get_playback_position() - rewind_duration, 0))
+                station.seek(max(station.get_playback_position() - rewind_duration, 0))
 
-        static_player.stream_paused = false
-        static_player.seek(max(static_player.get_playback_position() - rewind_duration, 0))
+            static_player.stream_paused = false
+            static_player.seek(max(static_player.get_playback_position() - rewind_duration, 0))
+        
+
+func mute() -> void:
+    for station in stations:
+        station.volume_linear = 0
+    static_player.volume_linear = 0
 
         
 func _process(_delta: float) -> void:

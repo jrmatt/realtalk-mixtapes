@@ -1,11 +1,6 @@
 [gd_scene format=3 uid="uid://ciohh52mfwdsj"]
 
-[ext_resource type="Script" uid="uid://ca2ye55tb45a" path="res://save.gd" id="1_tknle"]
-
-[node name="Save" type="Node2D" unique_id=494060752]
-script = ExtResource("1_tknle")
-
-[node name="Control" type="Control" parent="." unique_id=1424632092]
+[node name="Save" type="Control" unique_id=1424632092]
 layout_mode = 3
 anchors_preset = 0
 offset_left = 49.0
@@ -13,7 +8,7 @@ offset_top = 45.0
 offset_right = 350.0
 offset_bottom = 241.0
 
-[node name="SaveDialogue" type="Label" parent="Control" unique_id=475943774]
+[node name="SaveDialogue" type="Label" parent="." unique_id=475943774]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -25,7 +20,7 @@ grow_horizontal = 2
 text = "Keep this mixtape, or discard it?"
 horizontal_alignment = 1
 
-[node name="SaveBtn" type="Button" parent="Control" unique_id=846052667]
+[node name="SaveBtn" type="Button" parent="." unique_id=846052667]
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
@@ -36,7 +31,7 @@ offset_bottom = 15.5
 grow_vertical = 2
 text = "Keep"
 
-[node name="DiscardBtn" type="Button" parent="Control" unique_id=691826361]
+[node name="DiscardBtn" type="Button" parent="." unique_id=691826361]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -49,6 +44,3 @@ offset_bottom = 15.5
 grow_horizontal = 0
 grow_vertical = 2
 text = "Discard"
-
-[connection signal="pressed" from="Control/SaveBtn" to="." method="_on_save_btn_pressed"]
-[connection signal="pressed" from="Control/DiscardBtn" to="." method="_on_discard_btn_pressed"]

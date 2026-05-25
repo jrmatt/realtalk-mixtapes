@@ -3,14 +3,23 @@
 [ext_resource type="Script" uid="uid://b015jre3mi13x" path="res://resource_types/mixtape.gd" id="1_x0xp4"]
 [ext_resource type="Script" uid="uid://cgx8iywm6eaoc" path="res://load_tape.gd" id="2_xebgi"]
 
-[node name="Mixtape" type="Node2D" unique_id=2060384530]
+[node name="Mixtape" type="Control" unique_id=523821633]
+custom_minimum_size = Vector2(80, 20)
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_x0xp4")
 
-[node name="Load_Tape" type="Button" parent="." unique_id=1456869113]
+[node name="LoadBtn" type="Button" parent="." unique_id=1456869113]
+layout_mode = 0
 offset_right = 103.0
 offset_bottom = 20.0
 script = ExtResource("2_xebgi")
 
 [node name="PlayMix" type="AudioStreamPlayer" parent="." unique_id=714457694]
 
-[connection signal="pressed" from="Load_Tape" to="." method="_on_load_tape_pressed"]
+[node name="Label" type="Label" parent="." unique_id=1362902850]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[connection signal="pressed" from="LoadBtn" to="." method="_on_load_btn_pressed"]

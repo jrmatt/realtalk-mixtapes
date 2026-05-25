@@ -5,7 +5,6 @@
 [ext_resource type="Texture2D" uid="uid://cqgyt7dyjfohj" path="res://sprites/levels_frame_1_sprite.png" id="5_yaehf"]
 [ext_resource type="Texture2D" uid="uid://dyeodkfuottla" path="res://sprites/levels_frame_2_sprite.png" id="6_074og"]
 [ext_resource type="Script" uid="uid://dljp5jxnewx7g" path="res://record.gd" id="8_82xsv"]
-[ext_resource type="Script" uid="uid://da4uga58owk0m" path="res://recorder.gd" id="9_getpj"]
 [ext_resource type="Script" uid="uid://617ue6pyp6cn" path="res://frequency_label.gd" id="12_1u8w0"]
 [ext_resource type="Script" uid="uid://cccc3tfe44jhf" path="res://stop_btn.gd" id="12_dg77c"]
 [ext_resource type="Script" uid="uid://c250y0dehwnrn" path="res://speaker_label.gd" id="13_0odxb"]
@@ -35,19 +34,22 @@ position = Vector2(814.49426, 371.12503)
 scale = Vector2(0.68371195, 0.6762234)
 texture = ExtResource("1_ycdy4")
 
-[node name="HFlowContainer" type="HFlowContainer" parent="Radio" unique_id=406963598]
+[node name="RadioLabel" type="HFlowContainer" parent="Radio" unique_id=406963598]
 offset_left = 768.0
 offset_top = 221.0
 offset_right = 1076.0
 offset_bottom = 251.0
 
-[node name="FrequencyLabel" type="Label" parent="Radio/HFlowContainer" unique_id=1587873138]
+[node name="FrequencyLabel" type="Label" parent="Radio/RadioLabel" unique_id=1587873138]
 layout_mode = 2
 script = ExtResource("12_1u8w0")
 
-[node name="SpeakerLabel" type="Label" parent="Radio/HFlowContainer" unique_id=1102705934]
+[node name="SpeakerLabel" type="Label" parent="Radio/RadioLabel" unique_id=1102705934]
 layout_mode = 2
 script = ExtResource("13_0odxb")
+
+[node name="TapeLabel" type="Label" parent="Radio/RadioLabel" unique_id=1367407076]
+layout_mode = 2
 
 [node name="Levels" type="AnimatedSprite2D" parent="Radio" unique_id=285120536]
 position = Vector2(646, 235)
@@ -57,9 +59,6 @@ autoplay = "default"
 frame_progress = 0.09082031
 speed_scale = 0.5
 
-[node name="Recorder" type="Node" parent="Radio" unique_id=52088900]
-script = ExtResource("9_getpj")
-
 [node name="Dial" parent="Radio" unique_id=1296031382 instance=ExtResource("14_w48qg")]
 offset_left = 598.0
 offset_top = 305.0
@@ -67,36 +66,42 @@ offset_right = 1052.0
 offset_bottom = 345.0
 
 [node name="RecordBtn" type="Button" parent="Radio" unique_id=310661157]
-offset_left = 775.0
-offset_top = 484.0
-offset_right = 854.0
-offset_bottom = 537.0
-text = "Record"
+offset_left = 832.0
+offset_top = 262.0
+offset_right = 863.0
+offset_bottom = 293.0
+theme_override_colors/font_color = Color(1, 0.2615567, 0.18573189, 1)
+text = "R"
 script = ExtResource("8_82xsv")
 
 [node name="StopBtn" type="Button" parent="Radio" unique_id=922399820]
-offset_left = 794.0
-offset_top = 359.0
-offset_right = 838.0
-offset_bottom = 390.0
-text = "Stop"
+offset_left = 981.0
+offset_top = 263.0
+offset_right = 1025.0
+offset_bottom = 294.0
+text = "S/E"
 script = ExtResource("12_dg77c")
 
 [node name="PlayBtn" type="Button" parent="Radio" unique_id=684982014]
-offset_right = 8.0
-offset_bottom = 8.0
-
-[node name="PauseBtn" type="Button" parent="Radio" unique_id=872450069]
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 911.0
+offset_top = 262.0
+offset_right = 938.0
+offset_bottom = 293.0
+text = ">"
 
 [node name="FFBtn" type="Button" parent="Radio" unique_id=549453749]
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 944.0
+offset_top = 262.0
+offset_right = 974.0
+offset_bottom = 293.0
+text = ">>"
 
 [node name="RwBtn" type="Button" parent="Radio" unique_id=1938241678]
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 870.0
+offset_top = 263.0
+offset_right = 904.0
+offset_bottom = 294.0
+text = "<<"
 
 [node name="LoadCassette" type="Button" parent="Radio" unique_id=2000682245]
 offset_left = 746.0
@@ -104,19 +109,50 @@ offset_top = 393.0
 offset_right = 882.0
 offset_bottom = 478.0
 
-[node name="MixtapeStack" type="VFlowContainer" parent="." unique_id=1497847491]
-offset_left = 79.0
-offset_top = 257.0
-offset_right = 384.0
-offset_bottom = 598.0
+[node name="Stacks" type="Control" parent="." unique_id=327644751]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 38.0
+offset_top = 185.0
+offset_right = 498.0
+offset_bottom = 607.0
+
+[node name="RecordedTapes" type="VFlowContainer" parent="Stacks" unique_id=1497847491]
+layout_mode = 1
+offset_right = 222.0
+offset_bottom = 341.0
 theme_override_constants/h_separation = 0
 theme_override_constants/v_separation = 40
 alignment = 2
 
-[connection signal="paused_recording" from="Radio/Recorder" to="Radio/RecordBtn" method="_on_recorder_paused_recording"]
-[connection signal="started_recording" from="Radio/Recorder" to="Radio/RecordBtn" method="_on_recorder_started_recording"]
-[connection signal="playing_freq" from="Radio/Dial" to="Radio/HFlowContainer/FrequencyLabel" method="_on_bounds_playing_freq"]
-[connection signal="playing_track" from="Radio/Dial" to="Radio/HFlowContainer/SpeakerLabel" method="_on_bounds_playing_track"]
-[connection signal="playing_track" from="Radio/Dial" to="Radio/Recorder" method="_on_bounds_playing_track"]
-[connection signal="pressed" from="Radio/RecordBtn" to="Radio/Recorder" method="_on_record_btn_pressed"]
+[node name="Label" type="Label" parent="Stacks/RecordedTapes" unique_id=1835516828]
+layout_mode = 2
+text = "Recorded Tapes"
+
+[node name="EmptyTapes" type="VFlowContainer" parent="Stacks" unique_id=2101019717]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -209.0
+offset_bottom = 341.0
+grow_horizontal = 0
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 40
+alignment = 2
+
+[node name="Label" type="Label" parent="Stacks/EmptyTapes" unique_id=609364826]
+layout_mode = 2
+text = "Empty Tapes"
+
+[node name="Messages" type="Label" parent="." unique_id=1695101003]
+offset_left = 562.0
+offset_top = 82.0
+offset_right = 602.0
+offset_bottom = 105.0
+
+[connection signal="playing_freq" from="Radio/Dial" to="Radio/RadioLabel/FrequencyLabel" method="_on_bounds_playing_freq"]
+[connection signal="playing_track" from="Radio/Dial" to="Radio/RadioLabel/SpeakerLabel" method="_on_bounds_playing_track"]
+[connection signal="pressed" from="Radio/RecordBtn" to="." method="_on_record_btn_pressed"]
 [connection signal="pressed" from="Radio/StopBtn" to="." method="_on_stop_btn_pressed"]
+[connection signal="pressed" from="Radio/PlayBtn" to="." method="_on_play_btn_pressed"]

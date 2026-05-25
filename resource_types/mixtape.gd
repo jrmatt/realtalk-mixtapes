@@ -1,20 +1,33 @@
 class_name Mixtape
-extends Node2D
+extends Control
 
-var recordings = []
+var recording = []
+var is_recordable: bool
+var tape_id : int
+var current_index := -1
+signal load_tape(tape)
+@onready var player := $PlayMix
 
 
-func _save_recording(recording, current_track):
-    var recording_dict = {}
-    if current_track:
-        recording_dict.recording = recording
-        recording_dict.freq = current_track.frequency
-        recording_dict.speakers = current_track.speakers
+func _ready() -> void:
+    if not is_recordable:
+        tape_id = randi_range(100, 999)
+        while tape_id in [666, 420]:
+            tape_id = randi_range(100, 999)
+        $Label.text = "Tape " + str(tape_id)
+        
+    player.finished.connect(play_next_audio)
+    
+
+func play_next_audio() -> void:
+    if current_index < recording.size() - 1:
+        current_index += 1
+        player.stream = recording[current_index].audio
+        
+        player.play()
     else:
-        recording_dict.recording = recording
-    recordings.append(recording_dict)
-    print(recordings)
+        current_index = -1
 
 
-func _on_load_tape_pressed() -> void:
-    print("Will load tape")
+func _on_load_btn_pressed() -> void:
+    load_tape.emit(self)
