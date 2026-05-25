@@ -75,10 +75,10 @@ text = "R"
 script = ExtResource("8_82xsv")
 
 [node name="StopBtn" type="Button" parent="Radio" unique_id=922399820]
-offset_left = 981.0
-offset_top = 263.0
-offset_right = 1025.0
-offset_bottom = 294.0
+offset_left = 946.0
+offset_top = 262.0
+offset_right = 990.0
+offset_bottom = 293.0
 text = "S/E"
 script = ExtResource("12_dg77c")
 
@@ -88,13 +88,6 @@ offset_top = 262.0
 offset_right = 938.0
 offset_bottom = 293.0
 text = ">"
-
-[node name="FFBtn" type="Button" parent="Radio" unique_id=549453749]
-offset_left = 944.0
-offset_top = 262.0
-offset_right = 974.0
-offset_bottom = 293.0
-text = ">>"
 
 [node name="RwBtn" type="Button" parent="Radio" unique_id=1938241678]
 offset_left = 870.0
