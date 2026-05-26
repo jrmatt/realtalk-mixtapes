@@ -7,11 +7,11 @@
 [ext_resource type="Script" uid="uid://dljp5jxnewx7g" path="res://record.gd" id="8_82xsv"]
 [ext_resource type="Texture2D" uid="uid://dx87ylqb2qqho" path="res://sprites/tape_sprite.png" id="10_4c57u"]
 [ext_resource type="Texture2D" uid="uid://bb7p64lxhdkv5" path="res://sprites/gear_sprite.png" id="11_efxa6"]
-[ext_resource type="Shader" uid="uid://dh1cluiagll7b" path="res://blur.gdshader" id="10_4c57u"]
-[ext_resource type="Script" uid="uid://boswg3amidssu" path="res://rewind_shader.gd" id="11_efxa6"]
 [ext_resource type="Script" uid="uid://617ue6pyp6cn" path="res://frequency_label.gd" id="12_1u8w0"]
 [ext_resource type="Script" uid="uid://cccc3tfe44jhf" path="res://stop_btn.gd" id="12_dg77c"]
+[ext_resource type="Shader" uid="uid://dh1cluiagll7b" path="res://blur.gdshader" id="12_ycdy4"]
 [ext_resource type="Script" uid="uid://c250y0dehwnrn" path="res://speaker_label.gd" id="13_0odxb"]
+[ext_resource type="Script" uid="uid://boswg3amidssu" path="res://rewind_shader.gd" id="13_w48qg"]
 [ext_resource type="PackedScene" uid="uid://pr88iiebh72d" path="res://dial_new.tscn" id="14_w48qg"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5sdnf"]
@@ -38,7 +38,7 @@ noise = SubResource("FastNoiseLite_4c57u")
 seamless = true
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_efxa6"]
-shader = ExtResource("10_4c57u")
+shader = ExtResource("12_ycdy4")
 shader_parameter/noise = SubResource("NoiseTexture2D_efxa6")
 shader_parameter/offset_per_time = Vector2(0.5, 0.5)
 
@@ -189,7 +189,7 @@ material = SubResource("ShaderMaterial_efxa6")
 position = Vector2(564.25, 356.50003)
 scale = Vector2(1090.5, 507.00003)
 texture = SubResource("PlaceholderTexture2D_dg77c")
-script = ExtResource("11_efxa6")
+script = ExtResource("13_w48qg")
 
 [connection signal="playing_freq" from="Radio/Dial" to="Radio/RadioLabel/FrequencyLabel" method="_on_bounds_playing_freq"]
 [connection signal="playing_track" from="Radio/Dial" to="Radio/RadioLabel/SpeakerLabel" method="_on_bounds_playing_track"]
