@@ -164,6 +164,33 @@ offset_top = 82.0
 offset_right = 602.0
 offset_bottom = 105.0
 
+[node name="Tape" type="Node2D" parent="." unique_id=614611568]
+visible = false
+
+[node name="TapeBody" type="Sprite2D" parent="Tape" unique_id=750665013]
+position = Vector2(814.2572, 434.5)
+scale = Vector2(0.16485512, 0.1648551)
+texture = ExtResource("10_4c57u")
+
+[node name="Gear1" type="Sprite2D" parent="Tape" unique_id=1776951753]
+position = Vector2(791.5, 428.50003)
+scale = Vector2(0.18269321, 0.18269321)
+texture = ExtResource("11_efxa6")
+
+[node name="Gear2" type="Sprite2D" parent="Tape" unique_id=44219863]
+position = Vector2(837, 428)
+scale = Vector2(0.18749973, 0.18749973)
+texture = ExtResource("11_efxa6")
+
+[node name="RewindShader" type="Sprite2D" parent="." unique_id=519319861]
+visible = false
+z_index = 2
+material = SubResource("ShaderMaterial_efxa6")
+position = Vector2(564.25, 356.50003)
+scale = Vector2(1090.5, 507.00003)
+texture = SubResource("PlaceholderTexture2D_dg77c")
+script = ExtResource("11_efxa6")
+
 [connection signal="playing_freq" from="Radio/Dial" to="Radio/RadioLabel/FrequencyLabel" method="_on_bounds_playing_freq"]
 [connection signal="playing_track" from="Radio/Dial" to="Radio/RadioLabel/SpeakerLabel" method="_on_bounds_playing_track"]
 [connection signal="start_rewind" from="Radio/Dial" to="RewindShader" method="_on_dial_start_rewind"]
