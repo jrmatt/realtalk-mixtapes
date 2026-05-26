@@ -7,6 +7,8 @@ var current_tape: Mixtape #the tape that was loaded (empty or recorded)
 var recordings = []
 var num_empty_tapes := 5
 var playback_position
+var gear_rotation_direction = 1
+var gear_rotation_speed = 2
 
 # Bit hacky, the labels get their text from signals from Dial
 var current_track_speakers:
@@ -60,6 +62,7 @@ func _on_stop_btn_pressed() -> void:
         $Stacks/RecordedTapes.add_child(current_tape)
         current_tape.visible = true
         current_tape = null
+        $Tape.visible = false
         $Radio/RadioLabel/TapeLabel.text = ""
         $Radio/Dial.cassette_mode = false
         $Radio/Dial.set_volumes()
@@ -78,7 +81,8 @@ func _on_stop_btn_pressed() -> void:
         else:
             _create_empty_tape()
             current_tape = null
-            
+            $Tape.visible = false
+
 
 func _on_play_btn_pressed() -> void:
     if not current_tape:
@@ -101,11 +105,11 @@ func _on_play_btn_pressed() -> void:
 
 
 func _create_empty_tape() -> void:
-        var empty_tape = MixtapeScene.instantiate()
-        empty_tape.is_recordable = true
-        empty_tape.load_tape.connect(_on_tape_loaded)  
-        $Stacks/EmptyTapes.add_child(empty_tape)
-        print("Created tape: ", empty_tape)
+    var empty_tape = MixtapeScene.instantiate()
+    empty_tape.is_recordable = true
+    empty_tape.load_tape.connect(_on_tape_loaded)  
+    $Stacks/EmptyTapes.add_child(empty_tape)
+    print("Created tape: ", empty_tape)
      
     
 func _save_tape() -> void:
@@ -119,6 +123,7 @@ func _save_tape() -> void:
     saved_tape.recording = recordings
     print("Saved current tape: ", saved_tape.recording)
     current_tape = null
+    $Tape.visible = false
     recordings = []
     $Save.queue_free()
 
@@ -126,10 +131,12 @@ func _save_tape() -> void:
 func _discard_tape() -> void:
     current_tape.queue_free()
     current_tape = null
+    $Tape.visible = false
 
                
 func _on_tape_loaded(tape):
     current_tape = tape
+    $Tape.visible = true
     if current_tape.is_recordable:
         print("Loading empty tape: ", current_tape, current_tape.is_recordable)
         $Stacks/EmptyTapes.remove_child(current_tape)
@@ -170,3 +177,10 @@ func _pause_recording() -> void:
         recording_dict.audio = recording
         recordings.append(recording_dict)
         print("Added recording to tape: ", recordings)
+        
+        
+func _process(delta: float) -> void:
+    if current_tape and (current_tape.player.playing or effect.is_recording_active()):
+        $Tape/Gear1.rotation += gear_rotation_direction * gear_rotation_speed * delta
+        $Tape/Gear2.rotation += gear_rotation_direction * gear_rotation_speed * delta
+     

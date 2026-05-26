@@ -5,6 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://cqgyt7dyjfohj" path="res://sprites/levels_frame_1_sprite.png" id="5_yaehf"]
 [ext_resource type="Texture2D" uid="uid://dyeodkfuottla" path="res://sprites/levels_frame_2_sprite.png" id="6_074og"]
 [ext_resource type="Script" uid="uid://dljp5jxnewx7g" path="res://record.gd" id="8_82xsv"]
+[ext_resource type="Texture2D" uid="uid://dx87ylqb2qqho" path="res://sprites/tape_sprite.png" id="10_4c57u"]
+[ext_resource type="Texture2D" uid="uid://bb7p64lxhdkv5" path="res://sprites/gear_sprite.png" id="11_efxa6"]
 [ext_resource type="Shader" uid="uid://dh1cluiagll7b" path="res://blur.gdshader" id="10_4c57u"]
 [ext_resource type="Script" uid="uid://boswg3amidssu" path="res://rewind_shader.gd" id="11_efxa6"]
 [ext_resource type="Script" uid="uid://617ue6pyp6cn" path="res://frequency_label.gd" id="12_1u8w0"]
@@ -133,7 +135,7 @@ layout_mode = 1
 offset_right = 222.0
 offset_bottom = 341.0
 theme_override_constants/h_separation = 0
-theme_override_constants/v_separation = 40
+theme_override_constants/v_separation = 20
 alignment = 2
 
 [node name="Label" type="Label" parent="Stacks/RecordedTapes" unique_id=1835516828]
@@ -149,7 +151,7 @@ offset_left = -209.0
 offset_bottom = 341.0
 grow_horizontal = 0
 theme_override_constants/h_separation = 0
-theme_override_constants/v_separation = 40
+theme_override_constants/v_separation = 20
 alignment = 2
 
 [node name="Label" type="Label" parent="Stacks/EmptyTapes" unique_id=609364826]
@@ -161,15 +163,6 @@ offset_left = 562.0
 offset_top = 82.0
 offset_right = 602.0
 offset_bottom = 105.0
-
-[node name="RewindShader" type="Sprite2D" parent="." unique_id=519319861]
-visible = false
-z_index = 2
-material = SubResource("ShaderMaterial_efxa6")
-position = Vector2(564.25, 356.50003)
-scale = Vector2(1090.5, 507.00003)
-texture = SubResource("PlaceholderTexture2D_dg77c")
-script = ExtResource("11_efxa6")
 
 [connection signal="playing_freq" from="Radio/Dial" to="Radio/RadioLabel/FrequencyLabel" method="_on_bounds_playing_freq"]
 [connection signal="playing_track" from="Radio/Dial" to="Radio/RadioLabel/SpeakerLabel" method="_on_bounds_playing_track"]
