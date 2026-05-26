@@ -8,6 +8,9 @@ extends Panel
 signal playing_track(new_track)
 signal playing_freq(new_freq)
 
+signal start_rewind
+signal stop_rewind
+
 const BarScene = preload("res://bar.tscn")
 
 var cassette_mode: bool
@@ -135,6 +138,8 @@ func _unhandled_input(event: InputEvent) -> void:
 
             rewind.play()
 
+            start_rewind.emit()
+
         elif event.is_action_released('rewind_time'):
             rewind.stop()
 
@@ -148,6 +153,8 @@ func _unhandled_input(event: InputEvent) -> void:
 
             static_player.stream_paused = false
             static_player.seek(max(static_player.get_playback_position() - rewind_duration, 0))
+
+            stop_rewind.emit()
         
 
 func mute() -> void:

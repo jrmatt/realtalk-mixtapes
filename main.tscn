@@ -5,6 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://cqgyt7dyjfohj" path="res://sprites/levels_frame_1_sprite.png" id="5_yaehf"]
 [ext_resource type="Texture2D" uid="uid://dyeodkfuottla" path="res://sprites/levels_frame_2_sprite.png" id="6_074og"]
 [ext_resource type="Script" uid="uid://dljp5jxnewx7g" path="res://record.gd" id="8_82xsv"]
+[ext_resource type="Shader" uid="uid://dh1cluiagll7b" path="res://blur.gdshader" id="10_4c57u"]
+[ext_resource type="Script" uid="uid://boswg3amidssu" path="res://rewind_shader.gd" id="11_efxa6"]
 [ext_resource type="Script" uid="uid://617ue6pyp6cn" path="res://frequency_label.gd" id="12_1u8w0"]
 [ext_resource type="Script" uid="uid://cccc3tfe44jhf" path="res://stop_btn.gd" id="12_dg77c"]
 [ext_resource type="Script" uid="uid://c250y0dehwnrn" path="res://speaker_label.gd" id="13_0odxb"]
@@ -23,6 +25,22 @@ animations = [{
 "name": &"default",
 "speed": 5.0
 }]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_4c57u"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_efxa6"]
+width = 256
+height = 256
+generate_mipmaps = false
+noise = SubResource("FastNoiseLite_4c57u")
+seamless = true
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_efxa6"]
+shader = ExtResource("10_4c57u")
+shader_parameter/noise = SubResource("NoiseTexture2D_efxa6")
+shader_parameter/offset_per_time = Vector2(0.5, 0.5)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_dg77c"]
 
 [node name="Main" type="Node2D" unique_id=582703919]
 script = ExtResource("1_w48qg")
@@ -144,8 +162,19 @@ offset_top = 82.0
 offset_right = 602.0
 offset_bottom = 105.0
 
+[node name="RewindShader" type="Sprite2D" parent="." unique_id=519319861]
+visible = false
+z_index = 2
+material = SubResource("ShaderMaterial_efxa6")
+position = Vector2(564.25, 356.50003)
+scale = Vector2(1090.5, 507.00003)
+texture = SubResource("PlaceholderTexture2D_dg77c")
+script = ExtResource("11_efxa6")
+
 [connection signal="playing_freq" from="Radio/Dial" to="Radio/RadioLabel/FrequencyLabel" method="_on_bounds_playing_freq"]
 [connection signal="playing_track" from="Radio/Dial" to="Radio/RadioLabel/SpeakerLabel" method="_on_bounds_playing_track"]
+[connection signal="start_rewind" from="Radio/Dial" to="RewindShader" method="_on_dial_start_rewind"]
+[connection signal="stop_rewind" from="Radio/Dial" to="RewindShader" method="_on_dial_stop_rewind"]
 [connection signal="pressed" from="Radio/RecordBtn" to="." method="_on_record_btn_pressed"]
 [connection signal="pressed" from="Radio/StopBtn" to="." method="_on_stop_btn_pressed"]
 [connection signal="pressed" from="Radio/PlayBtn" to="." method="_on_play_btn_pressed"]
