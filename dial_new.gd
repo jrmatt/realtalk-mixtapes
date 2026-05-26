@@ -144,7 +144,6 @@ func _unhandled_input(event: InputEvent) -> void:
             rewind.stop()
 
             var rewind_duration = (Time.get_ticks_msec() - rewind_started_at) / 1000 * REWIND_MULTIPLE
-            print(rewind_duration)
 
             for station in stations:
                 station.stream_paused = false
