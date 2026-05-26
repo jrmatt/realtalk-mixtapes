@@ -135,21 +135,22 @@ func _discard_tape() -> void:
 
                
 func _on_tape_loaded(tape):
-    current_tape = tape
-    $Tape.visible = true
-    if current_tape.is_recordable:
-        print("Loading empty tape: ", current_tape, current_tape.is_recordable)
-        $Stacks/EmptyTapes.remove_child(current_tape)
-    else:
-        print("Loading recorded tape: ", current_tape, current_tape.is_recordable)
-        $Radio/Dial.mute()
-        $Radio/Dial.cassette_mode = true
-        $Stacks/RecordedTapes.remove_child(current_tape)
-        $Radio.add_child(current_tape)
-        current_tape.visible = false
-        $Radio/RadioLabel/FrequencyLabel.text = ""
-        $Radio/RadioLabel/SpeakerLabel.text = ""
-        $Radio/RadioLabel/TapeLabel.text = "Tape " + str(current_tape.tape_id)
+    if not current_tape:
+        current_tape = tape
+        $Tape.visible = true
+        if current_tape.is_recordable:
+            print("Loading empty tape: ", current_tape, current_tape.is_recordable)
+            $Stacks/EmptyTapes.remove_child(current_tape)
+        else:
+            print("Loading recorded tape: ", current_tape, current_tape.is_recordable)
+            $Radio/Dial.mute()
+            $Radio/Dial.cassette_mode = true
+            $Stacks/RecordedTapes.remove_child(current_tape)
+            $Radio.add_child(current_tape)
+            current_tape.visible = false
+            $Radio/RadioLabel/FrequencyLabel.text = ""
+            $Radio/RadioLabel/SpeakerLabel.text = ""
+            $Radio/RadioLabel/TapeLabel.text = "Tape " + str(current_tape.tape_id)
 
 
 # --------
