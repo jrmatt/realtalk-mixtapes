@@ -109,9 +109,9 @@ text = ">"
 
 [node name="RwBtn" type="Button" parent="Radio" unique_id=1938241678]
 offset_left = 870.0
-offset_top = 263.0
+offset_top = 262.0
 offset_right = 904.0
-offset_bottom = 294.0
+offset_bottom = 293.0
 text = "<<"
 
 [node name="LoadCassette" type="Button" parent="Radio" unique_id=2000682245]
