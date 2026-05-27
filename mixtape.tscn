@@ -1,29 +1,24 @@
 [gd_scene format=3 uid="uid://dt78ncg2jpsx1"]
 
-[ext_resource type="Script" uid="uid://b015jre3mi13x" path="res://resource_types/mixtape.gd" id="1_x0xp4"]
-[ext_resource type="Texture2D" uid="uid://du2p1s5t0nf7p" path="res://sprites/tape_side_sprite.png" id="2_73a7t"]
-[ext_resource type="Script" uid="uid://cgx8iywm6eaoc" path="res://load_tape.gd" id="2_xebgi"]
+[ext_resource type="Texture2D" uid="uid://b6gg21q3d4sow" path="res://sprites/tape_side_sprite_sm.png" id="1_xebgi"]
+[ext_resource type="Script" uid="uid://cgx8iywm6eaoc" path="res://mixtape.gd" id="2_xebgi"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3aha3"]
 
-[node name="Mixtape" type="Control" unique_id=523821633]
-custom_minimum_size = Vector2(80, 20)
-layout_mode = 3
-anchors_preset = 0
-script = ExtResource("1_x0xp4")
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_73a7t"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2117474719]
-position = Vector2(92, 13)
-scale = Vector2(0.21666664, 0.21666667)
-texture = ExtResource("2_73a7t")
-
-[node name="LoadBtn" type="Button" parent="." unique_id=1456869113]
-layout_mode = 0
-offset_left = 13.0
-offset_top = 2.0
-offset_right = 170.0
-offset_bottom = 24.0
+[node name="LoadBtn" type="Button" unique_id=1456869113]
+custom_minimum_size = Vector2(210, 30)
+offset_right = 210.0
+offset_bottom = 30.0
 theme_override_styles/normal = SubResource("StyleBoxEmpty_3aha3")
+theme_override_styles/focus = SubResource("StyleBoxFlat_73a7t")
+icon = ExtResource("1_xebgi")
 script = ExtResource("2_xebgi")
 
 [node name="PlayMix" type="AudioStreamPlayer" parent="." unique_id=714457694]
@@ -35,5 +30,3 @@ offset_top = 1.0
 offset_right = 60.0
 offset_bottom = 24.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-
-[connection signal="pressed" from="LoadBtn" to="." method="_on_load_btn_pressed"]

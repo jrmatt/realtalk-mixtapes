@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dyeodkfuottla" path="res://sprites/levels_frame_2_sprite.png" id="6_074og"]
 [ext_resource type="Script" uid="uid://dljp5jxnewx7g" path="res://record.gd" id="8_82xsv"]
 [ext_resource type="Texture2D" uid="uid://dx87ylqb2qqho" path="res://sprites/tape_sprite.png" id="10_4c57u"]
+[ext_resource type="Script" uid="uid://djs5r6lay0pix" path="res://play_btn.gd" id="10_w48qg"]
 [ext_resource type="Texture2D" uid="uid://bb7p64lxhdkv5" path="res://sprites/gear_sprite.png" id="11_efxa6"]
 [ext_resource type="Script" uid="uid://617ue6pyp6cn" path="res://frequency_label.gd" id="12_1u8w0"]
 [ext_resource type="Script" uid="uid://cccc3tfe44jhf" path="res://stop_btn.gd" id="12_dg77c"]
@@ -108,6 +109,7 @@ offset_top = 262.0
 offset_right = 938.0
 offset_bottom = 293.0
 text = ">"
+script = ExtResource("10_w48qg")
 
 [node name="RwBtn" type="Button" parent="Radio" unique_id=1938241678]
 offset_left = 870.0
@@ -132,8 +134,12 @@ offset_bottom = 607.0
 
 [node name="RecordedTapes" type="VFlowContainer" parent="Stacks" unique_id=1497847491]
 layout_mode = 1
-offset_right = 222.0
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -222.0
 offset_bottom = 341.0
+grow_horizontal = 0
 theme_override_constants/h_separation = 0
 theme_override_constants/v_separation = 20
 alignment = 2
@@ -144,12 +150,8 @@ text = "Recorded Tapes"
 
 [node name="EmptyTapes" type="VFlowContainer" parent="Stacks" unique_id=2101019717]
 layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -209.0
+offset_right = 209.0
 offset_bottom = 341.0
-grow_horizontal = 0
 theme_override_constants/h_separation = 0
 theme_override_constants/v_separation = 20
 alignment = 2

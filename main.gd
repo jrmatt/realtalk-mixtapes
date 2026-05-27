@@ -32,7 +32,14 @@ func _ready() -> void:
     # Create the stack of empty tapes
     for i in range(num_empty_tapes):
         _create_empty_tape()
-      
+    
+    $Stacks/EmptyTapes.get_child(1).grab_focus()        
+ 
+
+func _unhandled_input(event: InputEvent) -> void:
+    if event is InputEventJoypadMotion and not get_viewport().gui_get_focus_owner():
+        $Stacks/EmptyTapes.get_child(1).grab_focus()
+     
            
 # --------
 # BUTTON LISTENERS
@@ -77,6 +84,7 @@ func _on_stop_btn_pressed() -> void:
             add_child(new_save)
             var save_button = $Save/SaveBtn
             save_button.pressed.connect(_save_tape)
+            save_button.grab_focus()
             print("Kicking off a new save scene: ", new_save)
         else:
             _create_empty_tape()
@@ -150,7 +158,7 @@ func _on_tape_loaded(tape):
             current_tape.visible = false
             $Radio/RadioLabel/FrequencyLabel.text = ""
             $Radio/RadioLabel/SpeakerLabel.text = ""
-            $Radio/RadioLabel/TapeLabel.text = "Tape " + str(current_tape.tape_id)
+            $Radio/RadioLabel/TapeLabel.text = "Tape " + str(current_tape.tape_id)     
 
 
 # --------
@@ -184,4 +192,5 @@ func _process(delta: float) -> void:
     if current_tape and (current_tape.player.playing or effect.is_recording_active()):
         $Tape/Gear1.rotation += gear_rotation_direction * gear_rotation_speed * delta
         $Tape/Gear2.rotation += gear_rotation_direction * gear_rotation_speed * delta
+    print(get_viewport().gui_get_focus_owner())
      
