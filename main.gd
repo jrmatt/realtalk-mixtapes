@@ -9,6 +9,8 @@ var num_empty_tapes := 5
 var playback_position
 var gear_rotation_direction = 1
 var gear_rotation_speed = 2
+var btn_move_speed := 0.1
+var btn_move_amt = 16
 
 # Bit hacky, the labels get their text from signals from Dial
 var current_track_speakers:
@@ -39,6 +41,26 @@ func _ready() -> void:
 func _unhandled_input(event: InputEvent) -> void:
     if event is InputEventJoypadMotion and not get_viewport().gui_get_focus_owner():
         $Stacks/EmptyTapes.get_child(1).grab_focus()
+        
+        
+func btn_down(btn) -> void:
+    var tween = create_tween()
+    tween.tween_property(btn, "position", Vector2(0, btn_move_amt), btn_move_speed).as_relative()
+    
+
+func btn_half_down(btn) -> void:
+    var tween = create_tween()
+    tween.tween_property(btn, "position", Vector2(0, (btn_move_amt*.5)), btn_move_speed).as_relative()
+    
+
+func btn_up(btn) -> void:
+    var tween = create_tween()
+    tween.tween_property(btn, "position", Vector2(0, -btn_move_amt), btn_move_speed).as_relative()
+    
+    
+func btn_half_up(btn) -> void:
+    var tween = create_tween()
+    tween.tween_property(btn, "position", Vector2(0, -(btn_move_amt*.5)), btn_move_speed).as_relative()
      
            
 # --------
@@ -49,6 +71,7 @@ func _unhandled_input(event: InputEvent) -> void:
 func _on_record_btn_pressed() -> void:
     print("Record button pressed")
     if current_tape and current_tape.is_recordable:
+        btn_down($Radio/RecordBtn)
         _start_recording()
     else:
         $Messages.text = "Load an Empty Tape to Record!"
@@ -63,8 +86,11 @@ func _on_stop_btn_pressed() -> void:
     if current_tape.player.playing:
         print("Player is playing, pausing")
         current_tape.player.stream_paused = true
+        btn_half_down($Radio/StopBtn)
+        btn_up($Radio/PlayBtn)
     elif not current_tape.is_recordable:
         print("Player is not playing, ejecting")
+        btn_half_down($Radio/StopBtn)
         $Radio.remove_child(current_tape)
         $Stacks/RecordedTapes.add_child(current_tape)
         $Radio/TapeDoor.load_tape()
@@ -74,7 +100,11 @@ func _on_stop_btn_pressed() -> void:
         $Radio/RadioLabel/TapeLabel.text = ""
         $Radio/Dial.cassette_mode = false
         $Radio/Dial.set_volumes()
+        await get_tree().create_timer(1.5).timeout
+        btn_up($Radio/StopBtn)
     elif effect.is_recording_active():
+        btn_half_down($Radio/StopBtn)
+        btn_up($Radio/RecordBtn)
         print("Stopping recording")
         effect.set_recording_active(false)
         _pause_recording()
@@ -82,6 +112,7 @@ func _on_stop_btn_pressed() -> void:
         if current_tape.is_recordable and recordings.size() > 0:
             # launch the save scene
             var new_save = SaveScene.instantiate()
+            btn_half_down($Radio/StopBtn)
             add_child(new_save)
             $Save/SaveBtn.pressed.connect(_save_tape)
             $Save/DiscardBtn.pressed.connect(_discard_tape)
@@ -102,10 +133,13 @@ func _on_play_btn_pressed() -> void:
             print("Player is not playing")
             if not current_tape.player.stream_paused:
                 print("Playing audio")
+                btn_down($Radio/PlayBtn)
                 current_tape.play_next_audio()
                 print("Current tape index: ", current_tape.current_index)
             else:
                 print("Unpausing")
+                btn_down($Radio/PlayBtn)
+                btn_half_up($Radio/StopBtn)
                 current_tape.player.stream_paused = false
  
 
@@ -136,6 +170,7 @@ func _save_tape() -> void:
     recordings = []
     $Save.queue_free()
     $Radio/TapeDoor.close_door()
+    btn_up($Radio/StopBtn)
 
 
 func _discard_tape() -> void:
