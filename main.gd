@@ -235,3 +235,11 @@ func _process(delta: float) -> void:
         $Tape/Gear2.rotation += gear_rotation_direction * gear_rotation_speed * delta
     print(get_viewport().gui_get_focus_owner())
      
+
+
+func _on_dial_start_rewind() -> void:
+    btn_down($Radio/RwBtn)
+
+
+func _on_dial_stop_rewind() -> void:
+    btn_up($Radio/RwBtn)

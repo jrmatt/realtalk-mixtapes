@@ -458,16 +458,18 @@ texture = ExtResource("11_efxa6")
 
 [node name="RewindShader" type="Sprite2D" parent="." unique_id=519319861]
 visible = false
-z_index = 2
+z_index = 200
 material = SubResource("ShaderMaterial_efxa6")
-position = Vector2(564.25, 356.50003)
-scale = Vector2(1090.5, 507.00003)
+position = Vector2(783.5, 354.5)
+scale = Vector2(703, 415)
 texture = SubResource("PlaceholderTexture2D_dg77c")
 script = ExtResource("13_w48qg")
 
 [connection signal="playing_freq" from="Radio/Dial" to="Radio/RadioLabel/FrequencyLabel" method="_on_bounds_playing_freq"]
 [connection signal="playing_track" from="Radio/Dial" to="Radio/RadioLabel/SpeakerLabel" method="_on_bounds_playing_track"]
+[connection signal="start_rewind" from="Radio/Dial" to="." method="_on_dial_start_rewind"]
 [connection signal="start_rewind" from="Radio/Dial" to="RewindShader" method="_on_dial_start_rewind"]
+[connection signal="stop_rewind" from="Radio/Dial" to="." method="_on_dial_stop_rewind"]
 [connection signal="stop_rewind" from="Radio/Dial" to="RewindShader" method="_on_dial_stop_rewind"]
 [connection signal="pressed" from="Radio/RecordBtn" to="." method="_on_record_btn_pressed"]
 [connection signal="pressed" from="Radio/StopBtn" to="." method="_on_stop_btn_pressed"]
