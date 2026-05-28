@@ -16,6 +16,37 @@
 [ext_resource type="Script" uid="uid://boswg3amidssu" path="res://rewind_shader.gd" id="13_w48qg"]
 [ext_resource type="PackedScene" uid="uid://pr88iiebh72d" path="res://dial_new.tscn" id="14_w48qg"]
 
+[sub_resource type="Curve" id="Curve_vivmo"]
+_limits = [-1.0, 1.0, 0.0, 1.0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_2cqfq"]
+curve = SubResource("Curve_vivmo")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_yaehf"]
+particle_flag_disable_z = true
+emission_shape_scale = Vector3(5, 5, 5)
+emission_shape = 6
+emission_ring_axis = Vector3(0, 0, 1)
+emission_ring_height = 265.25
+emission_ring_radius = 16.54
+emission_ring_inner_radius = 7.18
+emission_ring_cone_angle = 90.0
+angle_min = -203.9
+angle_max = 245.10002
+gravity = Vector3(0, 0, 0)
+radial_accel_min = -2.2351742e-06
+radial_accel_max = 57.389996
+scale_min = 0.0
+scale_max = 5.81
+hue_variation_min = -0.46
+hue_variation_max = 0.30999997
+hue_variation_curve = SubResource("CurveTexture_2cqfq")
+turbulence_enabled = true
+turbulence_noise_strength = 5.02
+turbulence_noise_scale = 5.68
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dg77c"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ycdy4"]
@@ -115,12 +146,171 @@ texture = ExtResource("2_w48qg")
 region_enabled = true
 region_rect = Rect2(701.1189, 447.70068, 1099.2456, 554.2708)
 
+[node name="Label" type="Label" parent="Radio/RadioBody" unique_id=308128226]
+offset_left = -489.291
+offset_top = 6.0
+offset_right = -456.291
+offset_bottom = 36.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 21
+text = "AM"
+
+[node name="Label2" type="Label" parent="Radio/RadioBody" unique_id=594914409]
+offset_left = -490.939
+offset_top = 118.0
+offset_right = -457.939
+offset_bottom = 148.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 21
+text = "FM"
+
+[node name="Label3" type="Label" parent="Radio/RadioBody" unique_id=152885136]
+offset_left = -403.624
+offset_top = 118.0
+offset_right = -370.624
+offset_bottom = 148.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 21
+text = "88"
+
+[node name="Label4" type="Label" parent="Radio/RadioBody" unique_id=1268514902]
+offset_left = -352.553
+offset_top = 118.0
+offset_right = -319.553
+offset_bottom = 148.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 21
+text = "92"
+
+[node name="Label5" type="Label" parent="Radio/RadioBody" unique_id=1020467990]
+offset_left = -306.425
+offset_top = 118.0
+offset_right = -273.425
+offset_bottom = 148.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 21
+text = "96"
+
+[node name="Label6" type="Label" parent="Radio/RadioBody" unique_id=1440878435]
+offset_left = -245.469
+offset_top = 118.0
+offset_right = -209.469
+offset_bottom = 148.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 21
+text = "100"
+
+[node name="Label7" type="Label" parent="Radio/RadioBody" unique_id=1825436016]
+offset_left = -196.046
+offset_top = 118.0
+offset_right = -160.046
+offset_bottom = 148.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 21
+text = "104"
+
+[node name="Label8" type="Label" parent="Radio/RadioBody" unique_id=1784844315]
+offset_left = -121.911
+offset_top = 118.0
+offset_right = -85.911
+offset_bottom = 148.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 21
+text = "108"
+
+[node name="Label10" type="Label" parent="Radio/RadioBody" unique_id=219718110]
+offset_left = -392.092
+offset_top = 6.0
+offset_right = -359.092
+offset_bottom = 36.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 21
+text = "54"
+
+[node name="Label11" type="Label" parent="Radio/RadioBody" unique_id=2048896856]
+offset_left = -345.964
+offset_top = 6.0
+offset_right = -312.964
+offset_bottom = 36.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 21
+text = "60"
+
+[node name="Label12" type="Label" parent="Radio/RadioBody" unique_id=1610070127]
+offset_left = -276.771
+offset_top = 6.0
+offset_right = -243.771
+offset_bottom = 36.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 21
+text = "70"
+
+[node name="Label13" type="Label" parent="Radio/RadioBody" unique_id=218838865]
+offset_left = -230.642
+offset_top = 6.0
+offset_right = -197.642
+offset_bottom = 36.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 21
+text = "80"
+
+[node name="Label14" type="Label" parent="Radio/RadioBody" unique_id=676588846]
+offset_left = -172.982
+offset_top = 6.0
+offset_right = -136.982
+offset_bottom = 36.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 21
+text = "100"
+
+[node name="Label15" type="Label" parent="Radio/RadioBody" unique_id=1042132557]
+offset_left = -115.321
+offset_top = 6.0
+offset_right = -79.321
+offset_bottom = 36.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 21
+text = "140"
+
+[node name="Label16" type="Label" parent="Radio/RadioBody" unique_id=115879362]
+offset_left = -60.955
+offset_top = 6.0
+offset_right = -24.955002
+offset_bottom = 36.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 21
+text = "160"
+
+[node name="Label17" type="Label" parent="Radio/RadioBody" unique_id=1863546365]
+offset_left = 199.34116
+offset_top = -253.33331
+offset_right = 237.34116
+offset_bottom = -223.33331
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 21
+text = "REC"
+
+[node name="Label18" type="Label" parent="Radio/RadioBody" unique_id=770473282]
+offset_left = 350.90625
+offset_top = -253.33333
+offset_right = 466.90625
+offset_bottom = -223.33333
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 21
+text = "STOP/EJECT"
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="Radio/RadioBody" unique_id=1391715145]
+visible = false
+position = Vector2(47.77605, -238.33333)
+amount = 23
+process_material = SubResource("ParticleProcessMaterial_yaehf")
+
 [node name="RadioLabel" type="HFlowContainer" parent="Radio" unique_id=406963598]
 z_index = 110
-offset_left = 491.0
-offset_top = 304.0
-offset_right = 788.0
-offset_bottom = 334.0
+offset_left = 489.0
+offset_top = 303.0
+offset_right = 786.0
+offset_bottom = 333.0
 
 [node name="FrequencyLabel" type="Label" parent="Radio/RadioLabel" unique_id=1587873138]
 layout_mode = 2
@@ -135,9 +325,9 @@ layout_mode = 2
 
 [node name="Dial" parent="Radio" unique_id=1296031382 instance=ExtResource("14_w48qg")]
 z_index = 105
-offset_left = 523.0
+offset_left = 527.0
 offset_top = 396.0
-offset_right = 765.0
+offset_right = 769.0
 offset_bottom = 436.0
 
 [node name="RecordBtn" type="Button" parent="Radio" unique_id=310661157]
@@ -183,10 +373,10 @@ icon = SubResource("AtlasTexture_w48qg")
 script = ExtResource("10_w48qg")
 
 [node name="RwBtn" type="Button" parent="Radio" unique_id=1938241678]
-offset_left = 791.0
-offset_top = 177.0
-offset_right = 903.0
-offset_bottom = 238.0
+offset_left = 792.0
+offset_top = 174.0
+offset_right = 904.0
+offset_bottom = 235.0
 scale = Vector2(0.6, 0.6)
 theme_override_styles/normal = SubResource("StyleBoxEmpty_a6jrf")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_xuqvo")

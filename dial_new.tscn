@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dibpwlycg8oyi" path="res://bar.tscn" id="2_8er6q"]
 [ext_resource type="AudioStream" uid="uid://vnbhy7axckf0" path="res://sounds/260522_radio_static.mp3" id="2_w8tbn"]
 [ext_resource type="AudioStream" uid="uid://dt1nlg3k3fp36" path="res://sounds/rewind.mp3" id="4_8er6q"]
+[ext_resource type="Texture2D" uid="uid://cxjde103syn4t" path="res://sprites/radio (1).png" id="5_fcqnh"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8er6q"]
 
@@ -34,3 +35,11 @@ autoplay = true
 [node name="Rewind" type="AudioStreamPlayer2D" parent="." unique_id=1044741829]
 stream = ExtResource("4_8er6q")
 volume_db = -14.0
+
+[node name="Knob" type="Sprite2D" parent="." unique_id=2130999480]
+z_index = -10
+position = Vector2(10, -176)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("5_fcqnh")
+region_enabled = true
+region_rect = Rect2(87.176346, 68.484695, 133.0293, 135.8065)
