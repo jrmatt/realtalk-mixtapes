@@ -67,6 +67,7 @@ func _on_stop_btn_pressed() -> void:
         print("Player is not playing, ejecting")
         $Radio.remove_child(current_tape)
         $Stacks/RecordedTapes.add_child(current_tape)
+        $Radio/TapeDoor.load_tape()
         current_tape.visible = true
         current_tape = null
         $Tape.visible = false
@@ -82,10 +83,11 @@ func _on_stop_btn_pressed() -> void:
             # launch the save scene
             var new_save = SaveScene.instantiate()
             add_child(new_save)
-            var save_button = $Save/SaveBtn
-            save_button.pressed.connect(_save_tape)
-            save_button.grab_focus()
+            $Save/SaveBtn.pressed.connect(_save_tape)
+            $Save/DiscardBtn.pressed.connect(_discard_tape)
+            $Save/SaveBtn.grab_focus()
             print("Kicking off a new save scene: ", new_save)
+            $Radio/TapeDoor.open_door()
         else:
             _create_empty_tape()
             current_tape = null
@@ -126,7 +128,6 @@ func _save_tape() -> void:
     $Stacks/RecordedTapes.add_child(saved_tape)
     saved_tape.is_recordable = false
     saved_tape.load_tape.connect(_on_tape_loaded)
-    # Recordings is empty here
     print("Recordings to save: ", recordings)
     saved_tape.recording = recordings
     print("Saved current tape: ", saved_tape.recording)
@@ -134,11 +135,15 @@ func _save_tape() -> void:
     $Tape.visible = false
     recordings = []
     $Save.queue_free()
+    $Radio/TapeDoor.close_door()
 
 
 func _discard_tape() -> void:
     current_tape.queue_free()
+    $Save.queue_free()
+    $Radio/TapeDoor.close_door()
     current_tape = null
+    recordings = []
     $Tape.visible = false
 
                
@@ -146,6 +151,7 @@ func _on_tape_loaded(tape):
     if not current_tape:
         current_tape = tape
         $Tape.visible = true
+        $Radio/TapeDoor.load_tape()
         if current_tape.is_recordable:
             print("Loading empty tape: ", current_tape, current_tape.is_recordable)
             $Stacks/EmptyTapes.remove_child(current_tape)
