@@ -16,6 +16,8 @@
 [ext_resource type="Script" uid="uid://boswg3amidssu" path="res://rewind_shader.gd" id="13_w48qg"]
 [ext_resource type="PackedScene" uid="uid://pr88iiebh72d" path="res://dial.tscn" id="14_w48qg"]
 [ext_resource type="Texture2D" uid="uid://yfh7v245xlus" path="res://sprites/mixtapes_logo.png" id="16_2cqfq"]
+[ext_resource type="PackedScene" uid="uid://upte61xgooko" path="res://controls.tscn" id="17_074og"]
+[ext_resource type="Texture2D" uid="uid://ere0swytoiwl" path="res://sprites/controller.png" id="18_cegan"]
 
 [sub_resource type="Curve" id="Curve_vivmo"]
 _limits = [-1.0, 1.0, 0.0, 1.0]
@@ -118,6 +120,14 @@ animations = [{
 "speed": 1.0
 }]
 
+[sub_resource type="GDScript" id="GDScript_2cqfq"]
+script/source = "extends Label
+
+
+func _on_pressed() -> void:
+    pass # Replace with function body.
+"
+
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_4c57u"]
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_efxa6"]
@@ -141,7 +151,7 @@ script = ExtResource("1_w48qg")
 
 [node name="RadioBody" type="Sprite2D" parent="Radio" unique_id=657849294]
 z_index = 100
-position = Vector2(789.99994, 371)
+position = Vector2(793.99994, 460)
 scale = Vector2(0.607, 0.6)
 texture = ExtResource("2_w48qg")
 region_enabled = true
@@ -308,10 +318,10 @@ process_material = SubResource("ParticleProcessMaterial_yaehf")
 
 [node name="RadioLabel" type="HFlowContainer" parent="Radio" unique_id=406963598]
 z_index = 110
-offset_left = 489.0
-offset_top = 303.0
-offset_right = 786.0
-offset_bottom = 333.0
+offset_left = 493.0
+offset_top = 392.0
+offset_right = 790.0
+offset_bottom = 422.0
 
 [node name="FrequencyLabel" type="Label" parent="Radio/RadioLabel" unique_id=1587873138]
 layout_mode = 2
@@ -326,13 +336,13 @@ layout_mode = 2
 
 [node name="Dial" parent="Radio" unique_id=1296031382 instance=ExtResource("14_w48qg")]
 z_index = 105
-offset_left = 527.0
-offset_top = 396.0
-offset_right = 769.0
-offset_bottom = 436.0
+offset_left = 531.0
+offset_top = 485.0
+offset_right = 773.0
+offset_bottom = 525.0
 
 [node name="PlayAnchor" type="Node2D" parent="Radio" unique_id=452582252]
-position = Vector2(952, 177)
+position = Vector2(956, 266)
 
 [node name="PlayBtn" type="Button" parent="Radio/PlayAnchor" unique_id=684982014]
 offset_right = 85.99994
@@ -348,7 +358,7 @@ icon = SubResource("AtlasTexture_w48qg")
 script = ExtResource("10_w48qg")
 
 [node name="RecordAnchor" type="Node2D" parent="Radio" unique_id=894432045]
-position = Vector2(896, 176)
+position = Vector2(900, 265)
 
 [node name="RecordBtn" type="Button" parent="Radio/RecordAnchor" unique_id=310661157]
 offset_right = 87.0
@@ -364,7 +374,7 @@ icon = SubResource("AtlasTexture_dg77c")
 script = ExtResource("8_82xsv")
 
 [node name="StopAnchor" type="Node2D" parent="Radio" unique_id=29596954]
-position = Vector2(1011, 178)
+position = Vector2(1015, 267)
 
 [node name="StopBtn" type="Button" parent="Radio/StopAnchor" unique_id=922399820]
 offset_right = 89.0
@@ -380,7 +390,7 @@ icon = SubResource("AtlasTexture_ycdy4")
 script = ExtResource("12_dg77c")
 
 [node name="RwAnchor" type="Node2D" parent="Radio" unique_id=1677658616]
-position = Vector2(792, 176)
+position = Vector2(796, 265)
 
 [node name="RwBtn" type="Button" parent="Radio/RwAnchor" unique_id=1938241678]
 offset_right = 112.0
@@ -396,19 +406,20 @@ icon = SubResource("AtlasTexture_vivmo")
 
 [node name="TapeDoor" type="AnimatedSprite2D" parent="Radio" unique_id=1264128355]
 z_index = 120
-position = Vector2(962.00006, 390)
+position = Vector2(966.00006, 479)
 scale = Vector2(0.6, 0.6)
 sprite_frames = SubResource("SpriteFrames_ycdy4")
 frame_progress = 0.99283445
 script = ExtResource("9_ycdy4")
 
 [node name="Stacks" type="Control" parent="." unique_id=327644751]
+z_index = 210
 layout_mode = 3
 anchors_preset = 0
-offset_left = 6.0
-offset_top = 192.0
-offset_right = 466.0
-offset_bottom = 614.0
+offset_left = 10.0
+offset_top = 281.0
+offset_right = 470.0
+offset_bottom = 703.0
 
 [node name="RecordedTapes" type="VFlowContainer" parent="Stacks" unique_id=1497847491]
 layout_mode = 1
@@ -438,30 +449,39 @@ alignment = 2
 layout_mode = 2
 text = "Empty Tapes"
 
-[node name="Messages" type="Label" parent="." unique_id=1695101003]
-offset_left = 562.0
-offset_top = 82.0
-offset_right = 602.0
-offset_bottom = 105.0
+[node name="ShowControls" type="Label" parent="." unique_id=776710490]
+offset_left = 1014.0
+offset_top = 21.0
+offset_right = 1174.0
+offset_bottom = 52.0
+text = "Show Controls"
+script = SubResource("GDScript_2cqfq")
+
+[node name="Sprite2D" type="Sprite2D" parent="ShowControls" unique_id=539367201]
+position = Vector2(-24.999989, 11)
+scale = Vector2(0.8469388, 0.8148148)
+texture = ExtResource("18_cegan")
+region_enabled = true
+region_rect = Rect2(568.06036, 190.96555, 49.75287, 54.003143)
 
 [node name="Tape" type="Node2D" parent="." unique_id=614611568]
 visible = false
 
 [node name="TapeBody" type="Sprite2D" parent="Tape" unique_id=750665013]
 z_index = 115
-position = Vector2(963.7047, 389.75)
+position = Vector2(966.00006, 479)
 scale = Vector2(0.34706166, 0.39221016)
 texture = ExtResource("10_4c57u")
 
 [node name="Gear1" type="Sprite2D" parent="Tape" unique_id=1776951753]
 z_index = 116
-position = Vector2(916.125, 374.87506)
+position = Vector2(920, 464)
 scale = Vector2(0.32451862, 0.32451862)
 texture = ExtResource("11_efxa6")
 
 [node name="Gear2" type="Sprite2D" parent="Tape" unique_id=44219863]
 z_index = 116
-position = Vector2(1009, 374.99997)
+position = Vector2(1009, 465.00003)
 scale = Vector2(0.32451963, 0.32451963)
 texture = ExtResource("11_efxa6")
 
@@ -469,15 +489,23 @@ texture = ExtResource("11_efxa6")
 visible = false
 z_index = 200
 material = SubResource("ShaderMaterial_efxa6")
-position = Vector2(783.5, 354.5)
-scale = Vector2(703, 415)
+position = Vector2(784, 448.75)
+scale = Vector2(703, 381.5)
 texture = SubResource("PlaceholderTexture2D_dg77c")
 script = ExtResource("13_w48qg")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=76892536]
+[node name="Logo" type="Sprite2D" parent="." unique_id=76892536]
 position = Vector2(767, 51.999996)
 scale = Vector2(0.5945946, 0.5945946)
 texture = ExtResource("16_2cqfq")
+
+[node name="Controls" parent="." unique_id=1477886189 instance=ExtResource("17_074og")]
+visible = false
+z_index = 210
+
+[node name="Messages" type="Label" parent="." unique_id=571717112]
+offset_right = 40.0
+offset_bottom = 23.0
 
 [connection signal="playing_freq" from="Radio/Dial" to="Radio/RadioLabel/FrequencyLabel" method="_on_bounds_playing_freq"]
 [connection signal="playing_track" from="Radio/Dial" to="Radio/RadioLabel/SpeakerLabel" method="_on_bounds_playing_track"]

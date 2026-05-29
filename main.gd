@@ -7,12 +7,15 @@ var loaded_tape: Mixtape #the tape that was loaded (empty or recorded)
 var recordings = []
 var num_empty_tapes := 5
 var playback_position
+
 var gear_rotation_direction = 1
 var gear_rotation_speed = 2
+
 var btn_move_duration := 0.1
 var btn_move_amt = 16
 
 var currently_accepting_button_presses := true
+var showing_controls := false
 
 # Bit hacky, the labels get their text from signals from Dial
 var current_track_speakers:
@@ -31,7 +34,8 @@ func _ready() -> void:
     var idx = AudioServer.get_bus_index("Master")
     # Retrieve its effect
     effect = AudioServer.get_bus_effect(idx, 0)
-    effect.set_recording_active(false)   
+    effect.set_recording_active(false)  
+     
     
     # Create the stack of empty tapes
     for i in range(num_empty_tapes):
@@ -45,7 +49,12 @@ func _unhandled_input(event: InputEvent) -> void:
         var current_focus = get_viewport().gui_get_focus_owner()
         if not current_focus:
             $Stacks/EmptyTapes.get_child(1).grab_focus()
-
+    if event.is_action_pressed("show_controls"):
+        showing_controls = not showing_controls
+        $Logo.visible = not $Logo.visible
+        $Controls.visible = not $Controls.visible
+        
+        
 
 func move_button_to_ys(btn, ys):
     var tween = create_tween()
@@ -70,7 +79,7 @@ func depress_and_pop_button(btn):
 # --------
 
 
-func _on_record_btn_pressed() -> void:
+func _on_record_btn_pressed() -> void:      
     if not currently_accepting_button_presses:
         return
 
@@ -79,6 +88,8 @@ func _on_record_btn_pressed() -> void:
         depress_button($Radio/PlayAnchor/PlayBtn)
         _start_recording()
     else:
+        depress_button($Radio/RecordAnchor/RecordBtn)
+        depress_button($Radio/PlayAnchor/PlayBtn)
         $Messages.text = "Load an Empty Tape to Record!"
         await get_tree().create_timer(2.0).timeout
         $Messages.text = ""
@@ -139,21 +150,33 @@ func _on_play_btn_pressed() -> void:
 
     if not loaded_tape:
         print("No tape to play")
+        depress_button($Radio/PlayAnchor/PlayBtn)
 
     elif not loaded_tape.is_recordable:
+        depress_button($Radio/PlayAnchor/PlayBtn)
         if not loaded_tape.player.playing:
             print("Player is not playing")
             if not loaded_tape.player.stream_paused:
                 print("Playing audio")
-                depress_button($Radio/PlayAnchor/PlayBtn)
                 loaded_tape.play_next_audio()
                 print("Current tape index: ", loaded_tape.current_index)
             else:
                 print("Unpausing")
-                depress_button($Radio/PlayAnchor/PlayBtn)
-                #btn_half_up($Radio/StopBtn)
                 loaded_tape.player.stream_paused = false
+
+
+# --------
+# SIGNAL LISTENERS
+# --------
  
+
+func _on_dial_start_rewind() -> void:
+    depress_button($Radio/RwAnchor/RwBtn)
+
+
+func _on_dial_stop_rewind() -> void:
+    pop_button($Radio/RwAnchor/RwBtn)
+
 
 # --------
 # TAPE CONTROLS
@@ -165,7 +188,6 @@ func _create_empty_tape() -> void:
     empty_tape.is_recordable = true
     empty_tape.load_tape.connect(_on_tape_loaded)  
     $Stacks/EmptyTapes.add_child(empty_tape)
-    print("Created tape: ", empty_tape)
      
     
 func _save_tape() -> void:
@@ -195,6 +217,7 @@ func _discard_tape() -> void:
 
                
 func _on_tape_loaded(tape):
+    
     if not loaded_tape:
         loaded_tape = tape
         $Tape.visible = true
@@ -244,11 +267,5 @@ func _process(delta: float) -> void:
     if loaded_tape and (loaded_tape.player.playing or effect.is_recording_active()):
         $Tape/Gear1.rotation += gear_rotation_direction * gear_rotation_speed * delta
         $Tape/Gear2.rotation += gear_rotation_direction * gear_rotation_speed * delta
-     
 
-func _on_dial_start_rewind() -> void:
-    depress_button($Radio/RwAnchor/RwBtn)
-
-
-func _on_dial_stop_rewind() -> void:
-    pop_button($Radio/RwAnchor/RwBtn)
+    

@@ -1,0 +1,159 @@
+[gd_scene format=3 uid="uid://upte61xgooko"]
+
+[ext_resource type="Texture2D" uid="uid://ere0swytoiwl" path="res://sprites/controller.png" id="1_7n6eb"]
+[ext_resource type="Script" uid="uid://12vbijpgxd3v" path="res://tutorial.gd" id="1_yb1ct"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yb1ct"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="Controls" type="Node2D" unique_id=1477886189]
+script = ExtResource("1_yb1ct")
+
+[node name="Controller" type="Sprite2D" parent="." unique_id=1604254170]
+position = Vector2(809, 120.00001)
+scale = Vector2(0.18566598, 0.18101093)
+texture = ExtResource("1_7n6eb")
+
+[node name="LeftJoyHighlight" type="Panel" parent="Controller" unique_id=1749693319]
+visible = false
+offset_left = -323.16098
+offset_top = -226.50569
+offset_right = -21.544037
+offset_bottom = 116.01503
+theme_override_styles/panel = SubResource("StyleBoxFlat_yb1ct")
+
+[node name="RightJoyHighlight" type="Panel" parent="Controller" unique_id=1233161804]
+visible = false
+offset_left = 59.246063
+offset_top = -77.34343
+offset_right = 204.66891
+offset_bottom = 82.867874
+theme_override_styles/panel = SubResource("StyleBoxFlat_yb1ct")
+
+[node name="LeftBtnHighlight" type="Panel" parent="Controller" unique_id=30660992]
+visible = false
+offset_left = -339.3191
+offset_top = -336.99625
+offset_right = -140.03638
+offset_bottom = -254.12836
+theme_override_styles/panel = SubResource("StyleBoxFlat_yb1ct")
+
+[node name="AHighlight" type="Panel" parent="Controller" unique_id=1329369736]
+visible = false
+offset_left = 215.44061
+offset_top = -121.53967
+offset_right = 290.8449
+offset_bottom = -38.671783
+theme_override_styles/panel = SubResource("StyleBoxFlat_yb1ct")
+
+[node name="BHighlight" type="Panel" parent="Controller" unique_id=389037327]
+visible = false
+offset_left = 285.45883
+offset_top = -182.30948
+offset_right = 360.86313
+offset_bottom = -99.44159
+theme_override_styles/panel = SubResource("StyleBoxFlat_yb1ct")
+
+[node name="YHighlight" type="Panel" parent="Controller" unique_id=861234156]
+visible = false
+offset_left = 220.82663
+offset_top = -248.60382
+offset_right = 296.23093
+offset_bottom = -165.73593
+theme_override_styles/panel = SubResource("StyleBoxFlat_yb1ct")
+
+[node name="XHighlight" type="Panel" parent="Controller" unique_id=1843228187]
+visible = false
+offset_left = 150.80841
+offset_top = -187.83401
+offset_right = 226.2127
+offset_bottom = -104.966125
+theme_override_styles/panel = SubResource("StyleBoxFlat_yb1ct")
+
+[node name="LeftJoy" type="Label" parent="." unique_id=408122380]
+offset_left = 101.0
+offset_top = 236.0
+offset_right = 234.0
+offset_bottom = 264.0
+text = "Choose Tape"
+autowrap_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="LeftJoy" unique_id=1452464707]
+position = Vector2(-35.999996, 10)
+scale = Vector2(0.18835616, 0.18835618)
+texture = ExtResource("1_7n6eb")
+region_enabled = true
+region_rect = Rect2(192.77188, 133.92601, 292.34943, 344.2179)
+
+[node name="Load" type="Label" parent="." unique_id=1499688315]
+offset_left = 93.0
+offset_top = 291.0
+offset_right = 260.0
+offset_bottom = 314.0
+text = "Load Tape"
+
+[node name="Sprite2D" type="Sprite2D" parent="Load" unique_id=769744058]
+position = Vector2(-18, 12)
+scale = Vector2(0.3, 0.29746836)
+texture = ExtResource("1_7n6eb")
+region_enabled = true
+region_rect = Rect2(734.17004, 247.66931, 75.096924, 79.01993)
+
+[node name="RightJoy" type="Label" parent="." unique_id=1478527983]
+offset_left = 520.0
+offset_top = 229.63608
+offset_right = 609.0
+offset_bottom = 260.63608
+text = "Tune Radio"
+autowrap_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="RightJoy" unique_id=906308316]
+position = Vector2(-16.999998, 13.00001)
+scale = Vector2(0.17903224, 0.17903224)
+texture = ExtResource("1_7n6eb")
+region_enabled = true
+region_rect = Rect2(569.4608, 287.1203, 155.7981, 157.75964)
+
+[node name="Rewind" type="Label" parent="." unique_id=860322258]
+offset_left = 719.0
+offset_top = 228.63608
+offset_right = 870.0
+offset_bottom = 251.63608
+text = "Rewind Time"
+autowrap_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Rewind" unique_id=742051165]
+position = Vector2(-31.999992, 7.0000043)
+scale = Vector2(0.22580644, 0.22580644)
+texture = ExtResource("1_7n6eb")
+region_enabled = true
+region_rect = Rect2(161.94815, 16.372787, 247.31073, 124.74965)
+
+[node name="Record" type="Sprite2D" parent="." unique_id=1659529888]
+position = Vector2(935, 239.63608)
+scale = Vector2(0.38607594, 0.38607594)
+texture = ExtResource("1_7n6eb")
+region_enabled = true
+region_rect = Rect2(663.849, 179.55609, 79.75464, 81.0047)
+
+[node name="Play" type="Sprite2D" parent="." unique_id=1807938540]
+position = Vector2(1030, 239.63608)
+scale = Vector2(0.38607594, 0.38607594)
+texture = ExtResource("1_7n6eb")
+region_enabled = true
+region_rect = Rect2(798.831, 185.48999, 74.50433, 76.754486)
+
+[node name="Stop" type="Sprite2D" parent="." unique_id=459501622]
+position = Vector2(982, 239.63608)
+scale = Vector2(0.38607594, 0.38607594)
+texture = ExtResource("1_7n6eb")
+region_enabled = true
+region_rect = Rect2(731.78986, 117.861404, 78.25458, 79.25462)
