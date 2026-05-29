@@ -11,12 +11,12 @@ signal load_tape(tape)
 
 func _ready() -> void:
     pressed.connect(_on_button_pressed)
+
     if not is_recordable:
         tape_id = randi_range(100, 999)
         while tape_id in [666, 420]:
             tape_id = randi_range(100, 999)
         $Label.text = "Tape " + str(tape_id)
-        print(get_index())
         
     player.finished.connect(play_next_audio)
     
@@ -33,8 +33,3 @@ func play_next_audio() -> void:
 
 func _on_button_pressed():
     load_tape.emit(self)
-
-
-func _process(delta: float) -> void:
-    if Input.is_action_just_pressed("load_tape"):
-       load_tape.emit(self) 
