@@ -1,12 +1,27 @@
 [gd_scene format=3 uid="uid://ciohh52mfwdsj"]
 
+[ext_resource type="Script" uid="uid://dnqcdhopqgcv0" path="res://addons/onscreenkeyboard/onscreen_keyboard.gd" id="1_tknle"]
+
+[sub_resource type="GDScript" id="GDScript_uj6uw"]
+script/source = "extends LineEdit
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+    pass
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+    pass
+"
+
 [node name="Save" type="Control" unique_id=1424632092]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 49.0
-offset_top = 45.0
-offset_right = 350.0
-offset_bottom = 241.0
+offset_left = 55.0
+offset_top = 25.0
+offset_right = 740.0
+offset_bottom = 277.0
 
 [node name="SaveDialogue" type="Label" parent="." unique_id=475943774]
 layout_mode = 1
@@ -17,30 +32,55 @@ offset_left = -123.5
 offset_right = 123.5
 offset_bottom = 23.0
 grow_horizontal = 2
+theme_override_font_sizes/font_size = 30
 text = "Keep this mixtape, or discard it?"
 horizontal_alignment = 1
 
 [node name="SaveBtn" type="Button" parent="." unique_id=846052667]
 layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_top = -15.5
-offset_right = 47.0
-offset_bottom = 15.5
-grow_vertical = 2
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -42.0
+offset_right = 66.0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 24
 text = "Keep"
 
 [node name="DiscardBtn" type="Button" parent="." unique_id=691826361]
 layout_mode = 1
-anchors_preset = 6
+anchors_preset = 3
 anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -95.0
+offset_top = -42.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 24
+text = "Discard"
+
+[node name="LineEdit" type="LineEdit" parent="." unique_id=1733765024]
+layout_mode = 1
+anchors_preset = 14
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -67.0
-offset_top = -15.5
+offset_top = -43.0
 offset_bottom = 15.5
-grow_horizontal = 0
+grow_horizontal = 2
 grow_vertical = 2
-text = "Discard"
+placeholder_text = "Name Your Tape"
+script = SubResource("GDScript_uj6uw")
+
+[node name="OnscreenKeyboard" type="PanelContainer" parent="." unique_id=931781744]
+visible = false
+z_index = 1000
+layout_mode = 0
+offset_top = 134.0
+offset_right = 825.0
+offset_bottom = 489.0
+script = ExtResource("1_tknle")
+animate = false
+metadata/_custom_type_script = "uid://dnqcdhopqgcv0"

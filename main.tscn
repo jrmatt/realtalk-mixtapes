@@ -506,8 +506,8 @@ texture = SubResource("PlaceholderTexture2D_dg77c")
 script = ExtResource("13_w48qg")
 
 [node name="Logo" type="Sprite2D" parent="." unique_id=76892536]
-position = Vector2(767, 51.999996)
-scale = Vector2(0.5945946, 0.5945946)
+position = Vector2(1214, 173)
+scale = Vector2(1.168919, 1.168919)
 texture = ExtResource("16_2cqfq")
 
 [node name="Controls" parent="." unique_id=1477886189 instance=ExtResource("17_074og")]

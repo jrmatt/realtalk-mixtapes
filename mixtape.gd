@@ -3,8 +3,8 @@ extends Button
 
 var recording = []
 var is_recordable: bool
-var tape_id : int
 var current_index := -1
+var tape_name: String
 signal load_tape(tape)
 @onready var player := $PlayMix
 
@@ -13,10 +13,7 @@ func _ready() -> void:
     pressed.connect(_on_button_pressed)
 
     if not is_recordable:
-        tape_id = randi_range(100, 999)
-        while tape_id in [666, 420]:
-            tape_id = randi_range(100, 999)
-        $Label.text = "Tape " + str(tape_id)
+        $Label.text = tape_name
         
     player.finished.connect(play_next_audio)
     

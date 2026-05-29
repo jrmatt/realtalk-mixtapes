@@ -7,6 +7,7 @@ var loaded_tape: Mixtape #the tape that was loaded (empty or recorded)
 var recordings = []
 var num_empty_tapes := 5
 var playback_position
+var tape_id : int
 
 var gear_rotation_direction = 1
 var gear_rotation_speed = 2
@@ -53,7 +54,6 @@ func _unhandled_input(event: InputEvent) -> void:
         showing_controls = not showing_controls
         $Logo.visible = not $Logo.visible
         $Controls.visible = not $Controls.visible
-        
         
 
 func move_button_to_ys(btn, ys):
@@ -155,12 +155,15 @@ func _on_play_btn_pressed() -> void:
     elif not loaded_tape.is_recordable:
         depress_button($Radio/PlayAnchor/PlayBtn)
         if not loaded_tape.player.playing:
+            depress_button($Radio/PlayAnchor/PlayBtn)
             print("Player is not playing")
             if not loaded_tape.player.stream_paused:
+                depress_button($Radio/PlayAnchor/PlayBtn)
                 print("Playing audio")
                 loaded_tape.play_next_audio()
                 print("Current tape index: ", loaded_tape.current_index)
             else:
+                depress_button($Radio/PlayAnchor/PlayBtn)
                 print("Unpausing")
                 loaded_tape.player.stream_paused = false
 
@@ -192,19 +195,30 @@ func _create_empty_tape() -> void:
     
 func _save_tape() -> void:
     print("Trying to save current tape: ", loaded_tape)
+    
     var saved_tape = MixtapeScene.instantiate()
-    $Stacks/RecordedTapes.add_child(saved_tape)
     saved_tape.is_recordable = false
-    saved_tape.load_tape.connect(_on_tape_loaded)
-    print("Recordings to save: ", recordings)
     saved_tape.recording = recordings
+    
+    if not $Save/LineEdit.text:
+        tape_id = randi_range(100, 999)
+        while tape_id in [666, 420]:
+            tape_id = randi_range(100, 999)
+        saved_tape.tape_name = "Tape: " + str(tape_id)
+    else:
+        saved_tape.tape_name = $Save/LineEdit.text
+        
+    $Stacks/RecordedTapes.add_child(saved_tape)
+    saved_tape.load_tape.connect(_on_tape_loaded)
+    
     print("Saved current tape: ", saved_tape.recording)
+    
     loaded_tape = null
     $Tape.visible = false
     recordings = []
-    $Save.queue_free()
     currently_accepting_button_presses = true
     $Radio/TapeDoor.close_door()
+    $Save.queue_free()
 
 
 func _discard_tape() -> void:
