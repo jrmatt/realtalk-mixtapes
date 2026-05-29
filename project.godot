@@ -25,6 +25,8 @@ buses/default_bus_layout="uid://djae266rovjp1"
 
 [display]
 
+window/size/viewport_width=1920
+window/size/viewport_height=1080
 window/stretch/mode="viewport"
 
 [input]
