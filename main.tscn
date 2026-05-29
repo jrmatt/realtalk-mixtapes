@@ -47,6 +47,20 @@ turbulence_enabled = true
 turbulence_noise_strength = 5.02
 turbulence_noise_scale = 5.68
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ryguw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d13ii"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1u8w0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0odxb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lswn8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w48qg"]
+atlas = ExtResource("2_w48qg")
+region = Rect2(353.0478, 247.58151, 78.002716, 50.854248)
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dg77c"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ycdy4"]
@@ -74,20 +88,6 @@ region = Rect2(253.36777, 245.31372, 79.53198, 50.611237)
 [sub_resource type="AtlasTexture" id="AtlasTexture_ycdy4"]
 atlas = ExtResource("2_w48qg")
 region = Rect2(449.6433, 248.18394, 81.03125, 46.60045)
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ryguw"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d13ii"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1u8w0"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0odxb"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lswn8"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_w48qg"]
-atlas = ExtResource("2_w48qg")
-region = Rect2(353.0478, 247.58151, 78.002716, 50.854248)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a6jrf"]
 
@@ -330,41 +330,12 @@ offset_top = 396.0
 offset_right = 769.0
 offset_bottom = 436.0
 
-[node name="RecordBtn" type="Button" parent="Radio" unique_id=310661157]
-offset_left = 898.0
-offset_top = 175.0
-offset_right = 985.0
-offset_bottom = 233.0
-scale = Vector2(0.6, 0.6)
-focus_mode = 0
-theme_override_styles/normal = SubResource("StyleBoxEmpty_dg77c")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_ycdy4")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_w48qg")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_vivmo")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_2cqfq")
-icon = SubResource("AtlasTexture_dg77c")
-script = ExtResource("8_82xsv")
+[node name="PlayAnchor" type="Node2D" parent="Radio" unique_id=452582252]
+position = Vector2(952, 177)
 
-[node name="StopBtn" type="Button" parent="Radio" unique_id=922399820]
-offset_left = 1004.0
-offset_top = 177.0
-offset_right = 1093.0
-offset_bottom = 231.0
-scale = Vector2(0.6, 0.6)
-focus_mode = 0
-theme_override_styles/normal = SubResource("StyleBoxEmpty_yaehf")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_074og")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_cegan")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_82xsv")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_getpj")
-icon = SubResource("AtlasTexture_ycdy4")
-script = ExtResource("12_dg77c")
-
-[node name="PlayBtn" type="Button" parent="Radio" unique_id=684982014]
-offset_left = 952.00006
-offset_top = 176.0
-offset_right = 1038.0
-offset_bottom = 234.0
+[node name="PlayBtn" type="Button" parent="Radio/PlayAnchor" unique_id=684982014]
+offset_right = 85.99994
+offset_bottom = 58.0
 scale = Vector2(0.6, 0.6)
 focus_mode = 0
 theme_override_styles/normal = SubResource("StyleBoxEmpty_ryguw")
@@ -375,11 +346,44 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_lswn8")
 icon = SubResource("AtlasTexture_w48qg")
 script = ExtResource("10_w48qg")
 
-[node name="RwBtn" type="Button" parent="Radio" unique_id=1938241678]
-offset_left = 792.0
-offset_top = 174.0
-offset_right = 904.0
-offset_bottom = 235.0
+[node name="RecordAnchor" type="Node2D" parent="Radio" unique_id=894432045]
+position = Vector2(896, 176)
+
+[node name="RecordBtn" type="Button" parent="Radio/RecordAnchor" unique_id=310661157]
+offset_right = 87.0
+offset_bottom = 58.0
+scale = Vector2(0.6, 0.6)
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_dg77c")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ycdy4")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_w48qg")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_vivmo")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_2cqfq")
+icon = SubResource("AtlasTexture_dg77c")
+script = ExtResource("8_82xsv")
+
+[node name="StopAnchor" type="Node2D" parent="Radio" unique_id=29596954]
+position = Vector2(1011, 178)
+
+[node name="StopBtn" type="Button" parent="Radio/StopAnchor" unique_id=922399820]
+offset_right = 89.0
+offset_bottom = 54.0
+scale = Vector2(0.6, 0.6)
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_yaehf")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_074og")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_cegan")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_82xsv")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_getpj")
+icon = SubResource("AtlasTexture_ycdy4")
+script = ExtResource("12_dg77c")
+
+[node name="RwAnchor" type="Node2D" parent="Radio" unique_id=1677658616]
+position = Vector2(792, 176)
+
+[node name="RwBtn" type="Button" parent="Radio/RwAnchor" unique_id=1938241678]
+offset_right = 112.0
+offset_bottom = 61.0
 scale = Vector2(0.6, 0.6)
 focus_mode = 0
 theme_override_styles/normal = SubResource("StyleBoxEmpty_a6jrf")
@@ -475,6 +479,6 @@ script = ExtResource("13_w48qg")
 [connection signal="start_rewind" from="Radio/Dial" to="RewindShader" method="_on_dial_start_rewind"]
 [connection signal="stop_rewind" from="Radio/Dial" to="." method="_on_dial_stop_rewind"]
 [connection signal="stop_rewind" from="Radio/Dial" to="RewindShader" method="_on_dial_stop_rewind"]
-[connection signal="pressed" from="Radio/RecordBtn" to="." method="_on_record_btn_pressed"]
-[connection signal="pressed" from="Radio/StopBtn" to="." method="_on_stop_btn_pressed"]
-[connection signal="pressed" from="Radio/PlayBtn" to="." method="_on_play_btn_pressed"]
+[connection signal="pressed" from="Radio/PlayAnchor/PlayBtn" to="." method="_on_play_btn_pressed"]
+[connection signal="pressed" from="Radio/RecordAnchor/RecordBtn" to="." method="_on_record_btn_pressed"]
+[connection signal="pressed" from="Radio/StopAnchor/StopBtn" to="." method="_on_stop_btn_pressed"]

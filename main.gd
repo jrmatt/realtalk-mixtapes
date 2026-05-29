@@ -9,8 +9,10 @@ var num_empty_tapes := 5
 var playback_position
 var gear_rotation_direction = 1
 var gear_rotation_speed = 2
-var btn_move_speed := 0.1
+var btn_move_duration := 0.1
 var btn_move_amt = 16
+
+var currently_accepting_button_presses := true
 
 # Bit hacky, the labels get their text from signals from Dial
 var current_track_speakers:
@@ -39,49 +41,57 @@ func _ready() -> void:
  
 
 func _unhandled_input(event: InputEvent) -> void:
-    if event is InputEventJoypadMotion:
     if event.is_action_pressed('ui_left') or event.is_action_pressed('ui_right') or event.is_action_pressed('ui_up') or event.is_action_pressed('ui_down'):
         var current_focus = get_viewport().gui_get_focus_owner()
         if not current_focus:
             $Stacks/EmptyTapes.get_child(1).grab_focus()
-        
-        
-func btn_down(btn) -> void:
-    var tween = create_tween()
-    tween.tween_property(btn, "position", Vector2(0, btn_move_amt), btn_move_speed).as_relative()
-    
 
-func btn_half_down(btn) -> void:
-    var tween = create_tween()
-    tween.tween_property(btn, "position", Vector2(0, (btn_move_amt*.5)), btn_move_speed).as_relative()
-    
 
-func btn_up(btn) -> void:
+func move_button_to_ys(btn, ys):
     var tween = create_tween()
-    tween.tween_property(btn, "position", Vector2(0, -btn_move_amt), btn_move_speed).as_relative()
-    
-    
-func btn_half_up(btn) -> void:
-    var tween = create_tween()
-    tween.tween_property(btn, "position", Vector2(0, -(btn_move_amt*.5)), btn_move_speed).as_relative()
-     
-           
+    for y in ys:
+        tween.tween_property(btn, "position:y", y, btn_move_duration)
+
+
+func depress_button(btn):
+    move_button_to_ys(btn, [btn_move_amt])
+
+
+func pop_button(btn):
+    move_button_to_ys(btn, [0])
+
+
+func depress_and_pop_button(btn):
+    move_button_to_ys(btn, [btn_move_amt, 0])
+
+
 # --------
 # BUTTON LISTENERS
 # --------
 
 
 func _on_record_btn_pressed() -> void:
-    print("Record button pressed")
+    if not currently_accepting_button_presses:
+        return
+
     if loaded_tape and loaded_tape.is_recordable:
-        btn_down($Radio/RecordBtn)
+        depress_button($Radio/RecordAnchor/RecordBtn)
+        depress_button($Radio/PlayAnchor/PlayBtn)
         _start_recording()
     else:
         $Messages.text = "Load an Empty Tape to Record!"
         await get_tree().create_timer(2.0).timeout
         $Messages.text = ""
 
+
 func _on_stop_btn_pressed() -> void:
+    depress_and_pop_button($Radio/StopAnchor/StopBtn)
+    pop_button($Radio/PlayAnchor/PlayBtn)
+    pop_button($Radio/RecordAnchor/RecordBtn)
+
+    if not currently_accepting_button_presses:
+        return
+
     if not loaded_tape:
         print("No current tape")
         return
@@ -89,11 +99,9 @@ func _on_stop_btn_pressed() -> void:
     if loaded_tape.player.playing:
         print("Player is playing, pausing")
         loaded_tape.player.stream_paused = true
-        btn_half_down($Radio/StopBtn)
-        btn_up($Radio/PlayBtn)
+
     elif not loaded_tape.is_recordable:
         print("Player is not playing, ejecting")
-        btn_half_down($Radio/StopBtn)
         $Radio.remove_child(loaded_tape)
         $Stacks/RecordedTapes.add_child(loaded_tape)
         $Radio/TapeDoor.load_tape()
@@ -103,25 +111,22 @@ func _on_stop_btn_pressed() -> void:
         $Radio/RadioLabel/TapeLabel.text = ""
         $Radio/Dial.cassette_mode = false
         $Radio/Dial.set_volumes()
-        await get_tree().create_timer(1.5).timeout
-        btn_up($Radio/StopBtn)
+
     elif effect.is_recording_active():
-        btn_half_down($Radio/StopBtn)
-        btn_up($Radio/RecordBtn)
         print("Stopping recording")
         effect.set_recording_active(false)
         _pause_recording()
+
     else:
         if loaded_tape.is_recordable and recordings.size() > 0:
-            # launch the save scene
             var new_save = SaveScene.instantiate()
-            btn_half_down($Radio/StopBtn)
+            currently_accepting_button_presses = false
             add_child(new_save)
             $Save/SaveBtn.pressed.connect(_save_tape)
             $Save/DiscardBtn.pressed.connect(_discard_tape)
             $Save/SaveBtn.grab_focus()
-            print("Kicking off a new save scene: ", new_save)
             $Radio/TapeDoor.open_door()
+
         else:
             _create_empty_tape()
             loaded_tape = null
@@ -129,20 +134,24 @@ func _on_stop_btn_pressed() -> void:
 
 
 func _on_play_btn_pressed() -> void:
+    if not currently_accepting_button_presses:
+        return
+
     if not loaded_tape:
         print("No tape to play")
+
     elif not loaded_tape.is_recordable:
         if not loaded_tape.player.playing:
             print("Player is not playing")
             if not loaded_tape.player.stream_paused:
                 print("Playing audio")
-                btn_down($Radio/PlayBtn)
+                depress_button($Radio/PlayAnchor/PlayBtn)
                 loaded_tape.play_next_audio()
                 print("Current tape index: ", loaded_tape.current_index)
             else:
                 print("Unpausing")
-                btn_down($Radio/PlayBtn)
-                btn_half_up($Radio/StopBtn)
+                depress_button($Radio/PlayAnchor/PlayBtn)
+                #btn_half_up($Radio/StopBtn)
                 loaded_tape.player.stream_paused = false
  
 
@@ -172,8 +181,8 @@ func _save_tape() -> void:
     $Tape.visible = false
     recordings = []
     $Save.queue_free()
+    currently_accepting_button_presses = true
     $Radio/TapeDoor.close_door()
-    btn_up($Radio/StopBtn)
 
 
 func _discard_tape() -> void:
@@ -212,7 +221,6 @@ func _on_tape_loaded(tape):
 
 func _start_recording() -> void:
     effect.set_recording_active(true)
-    print("Now recording")
        
 
 func _pause_recording() -> void:
@@ -239,8 +247,8 @@ func _process(delta: float) -> void:
      
 
 func _on_dial_start_rewind() -> void:
-    btn_down($Radio/RwBtn)
+    depress_button($Radio/RwAnchor/RwBtn)
 
 
 func _on_dial_stop_rewind() -> void:
-    btn_up($Radio/RwBtn)
+    pop_button($Radio/RwAnchor/RwBtn)
