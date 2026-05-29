@@ -335,6 +335,7 @@ script = ExtResource("13_0odxb")
 
 [node name="TapeLabel" type="Label" parent="Radio/RadioLabel" unique_id=1367407076]
 layout_mode = 2
+theme_override_font_sizes/font_size = 24
 
 [node name="Dial" parent="Radio" unique_id=1296031382 instance=ExtResource("14_w48qg")]
 z_index = 105

@@ -18,8 +18,8 @@ corner_radius_bottom_left = 10
 script = ExtResource("1_yb1ct")
 
 [node name="Controller" type="Sprite2D" parent="." unique_id=1604254170]
-position = Vector2(809, 120.00001)
-scale = Vector2(0.18566598, 0.18101093)
+position = Vector2(755.44824, 160.375)
+scale = Vector2(0.28934795, 0.2913251)
 texture = ExtResource("1_7n6eb")
 
 [node name="LeftJoyHighlight" type="Panel" parent="Controller" unique_id=1749693319]
@@ -79,10 +79,10 @@ offset_bottom = -104.966125
 theme_override_styles/panel = SubResource("StyleBoxFlat_yb1ct")
 
 [node name="LeftJoy" type="Label" parent="." unique_id=408122380]
-offset_left = 101.0
-offset_top = 236.0
-offset_right = 234.0
-offset_bottom = 264.0
+offset_left = 185.0
+offset_top = 479.0
+offset_right = 318.0
+offset_bottom = 507.0
 text = "Choose Tape"
 autowrap_mode = 2
 
@@ -94,10 +94,10 @@ region_enabled = true
 region_rect = Rect2(192.77188, 133.92601, 292.34943, 344.2179)
 
 [node name="Load" type="Label" parent="." unique_id=1499688315]
-offset_left = 93.0
-offset_top = 291.0
-offset_right = 260.0
-offset_bottom = 314.0
+offset_left = 177.0
+offset_top = 534.0
+offset_right = 344.0
+offset_bottom = 557.0
 text = "Load Tape"
 
 [node name="Sprite2D" type="Sprite2D" parent="Load" unique_id=769744058]
@@ -108,10 +108,10 @@ region_enabled = true
 region_rect = Rect2(734.17004, 247.66931, 75.096924, 79.01993)
 
 [node name="RightJoy" type="Label" parent="." unique_id=1478527983]
-offset_left = 520.0
-offset_top = 229.63608
-offset_right = 609.0
-offset_bottom = 260.63608
+offset_left = 1151.0
+offset_top = 419.63608
+offset_right = 1240.0
+offset_bottom = 450.63608
 text = "Tune Radio"
 autowrap_mode = 2
 
@@ -123,10 +123,10 @@ region_enabled = true
 region_rect = Rect2(569.4608, 287.1203, 155.7981, 157.75964)
 
 [node name="Rewind" type="Label" parent="." unique_id=860322258]
-offset_left = 719.0
-offset_top = 228.63608
-offset_right = 870.0
-offset_bottom = 251.63608
+offset_left = 1350.0
+offset_top = 418.63608
+offset_right = 1501.0
+offset_bottom = 441.63608
 text = "Rewind Time"
 autowrap_mode = 2
 
@@ -138,21 +138,21 @@ region_enabled = true
 region_rect = Rect2(161.94815, 16.372787, 247.31073, 124.74965)
 
 [node name="Record" type="Sprite2D" parent="." unique_id=1659529888]
-position = Vector2(935, 239.63608)
+position = Vector2(1566, 429.63608)
 scale = Vector2(0.38607594, 0.38607594)
 texture = ExtResource("1_7n6eb")
 region_enabled = true
 region_rect = Rect2(663.849, 179.55609, 79.75464, 81.0047)
 
 [node name="Play" type="Sprite2D" parent="." unique_id=1807938540]
-position = Vector2(1030, 239.63608)
+position = Vector2(1661, 429.63608)
 scale = Vector2(0.38607594, 0.38607594)
 texture = ExtResource("1_7n6eb")
 region_enabled = true
 region_rect = Rect2(798.831, 185.48999, 74.50433, 76.754486)
 
 [node name="Stop" type="Sprite2D" parent="." unique_id=459501622]
-position = Vector2(982, 239.63608)
+position = Vector2(1613, 429.63608)
 scale = Vector2(0.38607594, 0.38607594)
 texture = ExtResource("1_7n6eb")
 region_enabled = true

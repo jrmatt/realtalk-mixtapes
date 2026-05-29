@@ -51,9 +51,12 @@ func _unhandled_input(event: InputEvent) -> void:
         if not current_focus:
             $Stacks/EmptyTapes.get_child(1).grab_focus()
     if event.is_action_pressed("show_controls"):
-        showing_controls = not showing_controls
-        $Logo.visible = not $Logo.visible
-        $Controls.visible = not $Controls.visible
+        if not currently_accepting_button_presses:
+            return
+        else:
+            showing_controls = not showing_controls
+            $Logo.visible = not $Logo.visible
+            $Controls.visible = not $Controls.visible
         
 
 func move_button_to_ys(btn, ys):
