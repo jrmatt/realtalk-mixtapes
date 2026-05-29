@@ -14,7 +14,7 @@
 [ext_resource type="Shader" uid="uid://dh1cluiagll7b" path="res://blur.gdshader" id="12_ycdy4"]
 [ext_resource type="Script" uid="uid://c250y0dehwnrn" path="res://speaker_label.gd" id="13_0odxb"]
 [ext_resource type="Script" uid="uid://boswg3amidssu" path="res://rewind_shader.gd" id="13_w48qg"]
-[ext_resource type="PackedScene" uid="uid://pr88iiebh72d" path="res://dial_new.tscn" id="14_w48qg"]
+[ext_resource type="PackedScene" uid="uid://pr88iiebh72d" path="res://dial.tscn" id="14_w48qg"]
 
 [sub_resource type="Curve" id="Curve_vivmo"]
 _limits = [-1.0, 1.0, 0.0, 1.0]

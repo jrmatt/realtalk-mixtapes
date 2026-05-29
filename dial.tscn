@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://pr88iiebh72d"]
 
-[ext_resource type="Script" uid="uid://ckhwqojnpojpb" path="res://dial_new.gd" id="1_w8tbn"]
+[ext_resource type="Script" uid="uid://dsr4jw5wnlw3y" path="res://dial.gd" id="1_6q106"]
 [ext_resource type="PackedScene" uid="uid://dibpwlycg8oyi" path="res://bar.tscn" id="2_8er6q"]
 [ext_resource type="AudioStream" uid="uid://vnbhy7axckf0" path="res://sounds/260522_radio_static.mp3" id="2_w8tbn"]
 [ext_resource type="AudioStream" uid="uid://dt1nlg3k3fp36" path="res://sounds/rewind.mp3" id="4_8er6q"]
@@ -18,7 +18,7 @@ offset_top = 287.0
 offset_right = 796.0
 offset_bottom = 327.0
 theme_override_styles/panel = SubResource("StyleBoxEmpty_8er6q")
-script = ExtResource("1_w8tbn")
+script = ExtResource("1_6q106")
 
 [node name="Bar" parent="." unique_id=214478169 instance=ExtResource("2_8er6q")]
 z_index = 1
