@@ -8,7 +8,7 @@
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8er6q"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8er6q"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fcqnh"]
 resource_local_to_scene = true
 bg_color = Color(0, 0, 0, 1)
 
@@ -26,7 +26,7 @@ layout_mode = 0
 offset_top = -7.0
 offset_right = 3.0
 offset_bottom = 47.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_8er6q")
+theme_override_styles/panel = SubResource("StyleBoxFlat_fcqnh")
 
 [node name="Static" type="AudioStreamPlayer" parent="." unique_id=525667313]
 stream = ExtResource("2_w8tbn")

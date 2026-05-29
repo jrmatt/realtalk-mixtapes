@@ -31,7 +31,7 @@ var rewind_started_at := 0.0
 const REWIND_MULTIPLE := 2.0
 
 const SPINS_FOR_FULL_LENGTH := 10.
-const STATION_WIDTH := 0.02
+const STATION_WIDTH := 0.06
 
 var bar_position := 0.:
     set(new_position):
@@ -72,6 +72,7 @@ func _ready() -> void:
 
         stations.append(station)
 
+
 func bar_distance_from_station(station):
     ''' Returns distance from station in multiples of STATION_WIDTH, capped at 1. ''' 
     return clampf(abs(bar_position - station.position_in_dial), 0., STATION_WIDTH) / STATION_WIDTH
@@ -82,7 +83,7 @@ func set_volumes():
 
     for station in stations:
         var distance = bar_distance_from_station(station)
-        var station_volume = 1 - distance
+        var station_volume = (1 - distance)**2
         station.volume_linear = station_volume
         total_static_reduction += station_volume
 
@@ -122,7 +123,7 @@ func get_current_station_for_label():
     var current_station = null
 
     for station in stations:
-        if bar_distance_from_station(station) < 0.5:
+        if bar_distance_from_station(station) < 0.25:
             current_station = station
 
     return current_station
