@@ -4,6 +4,7 @@ extends Panel
 @onready var bar: Panel = $Bar
 @onready var static_player: AudioStreamPlayer = $Static
 @onready var rewind: AudioStreamPlayer2D = $Rewind
+@onready var gremlin_knob: Sprite2D = $Knob
 
 signal playing_track(new_track)
 signal playing_freq(new_freq)
@@ -171,6 +172,7 @@ func _process(_delta: float) -> void:
             var angle_delta = angle_difference(last_angle, current_angle)
 
             bar_position += angle_delta / (2 * PI * SPINS_FOR_FULL_LENGTH)
+            gremlin_knob.rotation += angle_delta
 
         last_angle = current_angle
 
