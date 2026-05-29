@@ -120,6 +120,7 @@ func _on_stop_btn_pressed() -> void:
         loaded_tape = null
         $Tape.visible = false
         $Radio/RadioLabel/TapeLabel.text = ""
+        
         $Radio/Dial.cassette_mode = false
         $Radio/Dial.set_volumes()
 
@@ -133,9 +134,11 @@ func _on_stop_btn_pressed() -> void:
             var new_save = SaveScene.instantiate()
             currently_accepting_button_presses = false
             add_child(new_save)
+            
             $Save/SaveBtn.pressed.connect(_save_tape)
             $Save/DiscardBtn.pressed.connect(_discard_tape)
             $Save/SaveBtn.grab_focus()
+            
             $Radio/TapeDoor.open_door()
 
         else:
@@ -241,14 +244,16 @@ func _on_tape_loaded(tape):
             $Stacks/EmptyTapes.remove_child(loaded_tape)
         else:
             print("Loading recorded tape: ", loaded_tape, loaded_tape.is_recordable)
-            $Radio/Dial.mute()
-            $Radio/Dial.cassette_mode = true
             $Stacks/RecordedTapes.remove_child(loaded_tape)
             $Radio.add_child(loaded_tape)
             loaded_tape.visible = false
+            
             $Radio/RadioLabel/FrequencyLabel.text = ""
             $Radio/RadioLabel/SpeakerLabel.text = ""
-            $Radio/RadioLabel/TapeLabel.text = "Tape " + str(loaded_tape.tape_id)     
+            $Radio/RadioLabel/TapeLabel.text = "Tape " + str(loaded_tape.tape_id)
+            
+            $Radio/Dial.mute()
+            $Radio/Dial.cassette_mode = true     
 
 
 # --------
