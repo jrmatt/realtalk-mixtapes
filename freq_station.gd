@@ -13,7 +13,6 @@ var bar
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-    print("I'm playing: ", freq.frequency_name)
     tracks.shuffle()
     finished.connect(_play_next_track)
     
