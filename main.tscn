@@ -318,17 +318,19 @@ process_material = SubResource("ParticleProcessMaterial_yaehf")
 
 [node name="RadioLabel" type="HFlowContainer" parent="Radio" unique_id=406963598]
 z_index = 110
-offset_left = 493.0
-offset_top = 392.0
-offset_right = 790.0
-offset_bottom = 422.0
+offset_left = 852.0
+offset_top = 655.0
+offset_right = 1339.0
+offset_bottom = 729.0
 
 [node name="FrequencyLabel" type="Label" parent="Radio/RadioLabel" unique_id=1587873138]
 layout_mode = 2
+theme_override_font_sizes/font_size = 24
 script = ExtResource("12_1u8w0")
 
 [node name="SpeakerLabel" type="Label" parent="Radio/RadioLabel" unique_id=1102705934]
 layout_mode = 2
+theme_override_font_sizes/font_size = 24
 script = ExtResource("13_0odxb")
 
 [node name="TapeLabel" type="Label" parent="Radio/RadioLabel" unique_id=1367407076]
