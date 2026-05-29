@@ -299,7 +299,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 21
 text = "STOP/EJECT"
 
-[node name="GPUParticles2D" type="GPUParticles2D" parent="Radio/RadioBody" unique_id=1391715145]
+[node name="MagicSparkles" type="GPUParticles2D" parent="Radio/RadioBody" unique_id=1391715145]
 visible = false
 position = Vector2(47.77605, -238.33333)
 amount = 23
