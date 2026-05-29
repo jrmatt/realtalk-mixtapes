@@ -253,7 +253,7 @@ func _on_tape_loaded(tape):
             
             $Radio/RadioLabel/FrequencyLabel.text = ""
             $Radio/RadioLabel/SpeakerLabel.text = ""
-            $Radio/RadioLabel/TapeLabel.text = "Tape " + str(loaded_tape.tape_id)
+            $Radio/RadioLabel/TapeLabel.text = loaded_tape.tape_name
             
             $Radio/Dial.mute()
             $Radio/Dial.cassette_mode = true     
