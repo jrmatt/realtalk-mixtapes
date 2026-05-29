@@ -15,6 +15,7 @@
 [ext_resource type="Script" uid="uid://c250y0dehwnrn" path="res://speaker_label.gd" id="13_0odxb"]
 [ext_resource type="Script" uid="uid://boswg3amidssu" path="res://rewind_shader.gd" id="13_w48qg"]
 [ext_resource type="PackedScene" uid="uid://pr88iiebh72d" path="res://dial.tscn" id="14_w48qg"]
+[ext_resource type="Texture2D" uid="uid://yfh7v245xlus" path="res://sprites/mixtapes_logo.png" id="16_2cqfq"]
 
 [sub_resource type="Curve" id="Curve_vivmo"]
 _limits = [-1.0, 1.0, 0.0, 1.0]
@@ -472,6 +473,11 @@ position = Vector2(783.5, 354.5)
 scale = Vector2(703, 415)
 texture = SubResource("PlaceholderTexture2D_dg77c")
 script = ExtResource("13_w48qg")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=76892536]
+position = Vector2(767, 51.999996)
+scale = Vector2(0.5945946, 0.5945946)
+texture = ExtResource("16_2cqfq")
 
 [connection signal="playing_freq" from="Radio/Dial" to="Radio/RadioLabel/FrequencyLabel" method="_on_bounds_playing_freq"]
 [connection signal="playing_track" from="Radio/Dial" to="Radio/RadioLabel/SpeakerLabel" method="_on_bounds_playing_track"]
