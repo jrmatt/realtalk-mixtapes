@@ -125,7 +125,6 @@ func _on_stop_btn_pressed() -> void:
         $Radio/RadioLabel/TapeLabel.text = ""
         
         $Radio/Dial.cassette_mode = false
-        $Radio/Dial.set_volumes()
         $Radio/Dial.set_volumes_and_label()
 
     elif effect.is_recording_active():
@@ -223,9 +222,10 @@ func _save_tape() -> void:
     loaded_tape = null
     $Tape.visible = false
     recordings = []
-    currently_accepting_button_presses = true
     $Radio/TapeDoor.close_door()
     $Save.queue_free()
+
+    currently_accepting_button_presses = true
 
 
 func _discard_tape() -> void:
@@ -236,6 +236,8 @@ func _discard_tape() -> void:
     recordings = []
     $Tape.visible = false
 
+    currently_accepting_button_presses = true
+
                
 func _on_tape_loaded(tape):
     
@@ -243,9 +245,11 @@ func _on_tape_loaded(tape):
         loaded_tape = tape
         $Tape.visible = true
         $Radio/TapeDoor.load_tape()
+
         if loaded_tape.is_recordable:
             print("Loading empty tape: ", loaded_tape, loaded_tape.is_recordable)
             $Stacks/EmptyTapes.remove_child(loaded_tape)
+
         else:
             print("Loading recorded tape: ", loaded_tape, loaded_tape.is_recordable)
             $Stacks/RecordedTapes.remove_child(loaded_tape)
