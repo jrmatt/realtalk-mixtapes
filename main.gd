@@ -7,7 +7,6 @@ var loaded_tape: Mixtape #the tape that was loaded (empty or recorded)
 var recordings = []
 var num_empty_tapes := 5
 var playback_position
-var tape_id : int
 
 var gear_rotation_direction = 1
 var gear_rotation_speed = 2
@@ -206,13 +205,17 @@ func _save_tape() -> void:
     saved_tape.is_recordable = false
     saved_tape.recording = recordings
     
-    if not $Save/LineEdit.text:
-        tape_id = randi_range(100, 999)
-        while tape_id in [666, 420]:
+    var input_text = $Save/TextEditWithOnScreenKeyboard.text_edit.text
+
+    if not input_text:
+        var tape_id = -1
+
+        while tape_id in [-1, 420, 666]:
             tape_id = randi_range(100, 999)
-        saved_tape.tape_name = "Tape: " + str(tape_id)
-    else:
-        saved_tape.tape_name = $Save/LineEdit.text
+
+        input_text = "Tape: " + str(tape_id)
+
+    saved_tape.tape_name = input_text
         
     $Stacks/RecordedTapes.add_child(saved_tape)
     saved_tape.load_tape.connect(_on_tape_loaded)

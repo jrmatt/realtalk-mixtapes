@@ -1,19 +1,6 @@
 [gd_scene format=3 uid="uid://ciohh52mfwdsj"]
 
-[ext_resource type="Script" uid="uid://dnqcdhopqgcv0" path="res://addons/onscreenkeyboard/onscreen_keyboard.gd" id="1_tknle"]
-
-[sub_resource type="GDScript" id="GDScript_uj6uw"]
-script/source = "extends LineEdit
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-    pass
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-    pass
-"
+[ext_resource type="PackedScene" uid="uid://bt0iwvnblvssu" path="res://greenpixels-onscreen-keyboard/text_edit_with_on_screen_keyboard.tscn" id="2_8viy1"]
 
 [node name="Save" type="Control" unique_id=1424632092]
 layout_mode = 3
@@ -41,9 +28,12 @@ layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_top = -42.0
-offset_right = 66.0
+offset_left = 129.0
+offset_top = 146.0
+offset_right = 195.0
+offset_bottom = 188.0
 grow_vertical = 0
+focus_neighbor_right = NodePath("../DiscardBtn")
 theme_override_font_sizes/font_size = 24
 text = "Keep"
 
@@ -54,33 +44,20 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -95.0
-offset_top = -42.0
+offset_left = -351.0
+offset_top = 146.0
+offset_right = -256.0
+offset_bottom = 188.0
 grow_horizontal = 0
 grow_vertical = 0
+focus_neighbor_left = NodePath("../SaveBtn")
 theme_override_font_sizes/font_size = 24
 text = "Discard"
 
-[node name="LineEdit" type="LineEdit" parent="." unique_id=1733765024]
-layout_mode = 1
-anchors_preset = 14
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_top = -43.0
-offset_bottom = 15.5
-grow_horizontal = 2
-grow_vertical = 2
-placeholder_text = "Name Your Tape"
-script = SubResource("GDScript_uj6uw")
-
-[node name="OnscreenKeyboard" type="PanelContainer" parent="." unique_id=931781744]
-visible = false
-z_index = 1000
+[node name="TextEditWithOnScreenKeyboard" parent="." unique_id=515065060 instance=ExtResource("2_8viy1")]
 layout_mode = 0
-offset_top = 134.0
-offset_right = 825.0
-offset_bottom = 489.0
-script = ExtResource("1_tknle")
-animate = false
-metadata/_custom_type_script = "uid://dnqcdhopqgcv0"
+offset_left = 112.0
+offset_top = 71.0
+offset_right = 532.0
+offset_bottom = 328.0
+text_placeholder = "Name your tape"

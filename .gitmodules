@@ -1,0 +1,3 @@
+[submodule "greenpixels-onscreen-keyboard"]
+	path = greenpixels-onscreen-keyboard
+	url = https://github.com/greenpixels/greenpixels-onscreen-keyboard.git
