@@ -126,6 +126,7 @@ func _on_stop_btn_pressed() -> void:
         
         $Radio/Dial.cassette_mode = false
         $Radio/Dial.set_volumes()
+        $Radio/Dial.set_volumes_and_label()
 
     elif effect.is_recording_active():
         print("Stopping recording")

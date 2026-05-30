@@ -28,7 +28,6 @@ var last_position_was_valid := false
 var last_angle := 0.
 
 var rewind_started_at := 0.0
-const REWIND_MULTIPLE := 2.0
 const REWIND_MULTIPLE := 4.0
 
 const ANGLE_DELTA_PER_MOUSE_WHEEL_CLICK := 0.75
@@ -37,12 +36,13 @@ const STATION_WIDTH := 0.06
 
 var bar_position := 0.:
     set(new_position):
-        if new_position < 0 or new_position > 100:
-            Input.start_joy_vibration(0, 0.5, 0.5, 0.1)
+        if new_position < 0 or new_position > 1:
+            Input.start_joy_vibration(0, 0.5, 0, 0.1)
 
         bar_position = clampf(new_position, 0, 1)
             
-        set_volumes()
+        if not cassette_mode:
+            set_volumes_and_label()
 
         bar.position.x = bar_position * size.x - bar.size.x / 2
 
@@ -80,7 +80,7 @@ func bar_distance_from_station(station):
     return clampf(abs(bar_position - station.position_in_dial), 0., STATION_WIDTH) / STATION_WIDTH
     
 
-func set_volumes():
+func set_volumes_and_label():
     var total_static_reduction := 0.
 
     for station in stations:
@@ -94,10 +94,12 @@ func set_volumes():
     var current_station = get_current_station_for_label()
 
     if current_station:
-        #if not current_station.has_been_discovered:
-            #var tween = create_tween()
-            #tween.tween_property(current_station.bar.get_theme_stylebox('panel'), 'bg_color:a', 1, 1)
-            #tween.tween_property(current_station.bar.get_node('Label'), 'theme_override_colors/font_color:a', 1, 1)
+        if not current_station.has_been_discovered:
+            var tween = create_tween()
+            tween.tween_property(current_station.bar.get_theme_stylebox('panel'), 'bg_color:a', 1, 1)
+            tween.tween_property(current_station.bar.get_node('Label'), 'theme_override_colors/font_color:a', 1, 1)
+
+            current_station.has_been_discovered = true
 
         playing_freq.emit(current_station.freq.frequency_name)
         playing_track.emit(current_station.current_track)
@@ -107,18 +109,15 @@ func set_volumes():
 
 
 func get_stick_vector():
-    if not cassette_mode:
-        return Input.get_vector('wheel_left', 'wheel_right', 'wheel_up', 'wheel_down')
+    return Input.get_vector('wheel_left', 'wheel_right', 'wheel_up', 'wheel_down')
 
 
 func stick_is_active():
-    if not cassette_mode:
-        return get_stick_vector().length() >= 0.99
+    return get_stick_vector().length() >= 0.99
 
 
 func stick_angle():
-    if not cassette_mode:
-        return get_stick_vector().angle()
+    return get_stick_vector().angle()
 
 
 func get_current_station_for_label():
@@ -190,7 +189,6 @@ func _process(_delta: float) -> void:
             var angle_delta = angle_difference(last_angle, current_angle)
 
             bar_position += angle_delta / (2 * PI * SPINS_FOR_FULL_LENGTH)
-            gremlin_knob.rotation += angle_delta
             if bar_position > 0 and bar_position < 1:
                 gremlin_knob.rotation += angle_delta
 
