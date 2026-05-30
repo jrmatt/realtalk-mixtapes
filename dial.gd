@@ -31,6 +31,7 @@ var rewind_started_at := 0.0
 const REWIND_MULTIPLE := 2.0
 const REWIND_MULTIPLE := 4.0
 
+const ANGLE_DELTA_PER_MOUSE_WHEEL_CLICK := 0.75
 const SPINS_FOR_FULL_LENGTH := 10.
 const STATION_WIDTH := 0.06
 
@@ -130,6 +131,20 @@ func get_current_station_for_label():
     return current_station
 
 func _unhandled_input(event: InputEvent) -> void:
+    var angle_delta
+
+    if event.is_action_pressed('mouse_wheel_up'):
+        angle_delta = -ANGLE_DELTA_PER_MOUSE_WHEEL_CLICK
+    elif event.is_action_pressed('mouse_wheel_down'):
+        angle_delta = ANGLE_DELTA_PER_MOUSE_WHEEL_CLICK
+    else:
+        angle_delta = 0.0
+    
+    bar_position += angle_delta / (2 * PI * SPINS_FOR_FULL_LENGTH)
+
+    if bar_position > 0 and bar_position < 1:
+        gremlin_knob.rotation += angle_delta
+
     if not cassette_mode:
         if event.is_action_pressed('rewind_time'):
             rewind_started_at = Time.get_ticks_msec()
@@ -162,6 +177,7 @@ func _unhandled_input(event: InputEvent) -> void:
 func mute() -> void:
     for station in stations:
         station.volume_linear = 0
+
     static_player.volume_linear = 0
 
         
@@ -175,6 +191,8 @@ func _process(_delta: float) -> void:
 
             bar_position += angle_delta / (2 * PI * SPINS_FOR_FULL_LENGTH)
             gremlin_knob.rotation += angle_delta
+            if bar_position > 0 and bar_position < 1:
+                gremlin_knob.rotation += angle_delta
 
         last_angle = current_angle
 
