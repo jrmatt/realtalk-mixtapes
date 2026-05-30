@@ -29,6 +29,7 @@ var last_angle := 0.
 
 var rewind_started_at := 0.0
 const REWIND_MULTIPLE := 2.0
+const REWIND_MULTIPLE := 4.0
 
 const SPINS_FOR_FULL_LENGTH := 10.
 const STATION_WIDTH := 0.06
