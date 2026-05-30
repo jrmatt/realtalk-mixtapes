@@ -5,9 +5,9 @@ resource_local_to_scene = true
 bg_color = Color(1, 0, 0, 1)
 
 [node name="Bar" type="Panel" unique_id=214478169]
-offset_top = -8.0
+offset_top = 5.0
 offset_right = 7.0
-offset_bottom = 46.0
+offset_bottom = 105.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_p42vg")
 
 [node name="Label" type="Label" parent="." unique_id=1419696492]
