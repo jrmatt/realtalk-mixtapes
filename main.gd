@@ -299,7 +299,7 @@ func _process(delta: float) -> void:
         $Tape/Gear2.rotation += gear_rotation_direction * gear_rotation_speed * delta
     
     # This is goofy
-    # <akes the relevant room sprite visible for the current freq
+    # Makes the relevant room sprite visible for the current freq
     # Should move this out of process and wait for freq change to run
     for room in $BackdropLayer/BoldRooms.get_children():
         room.visible = false
