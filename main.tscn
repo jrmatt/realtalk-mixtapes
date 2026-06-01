@@ -118,10 +118,10 @@ region = Rect2(79.37645, 247.00697, 104.46443, 53.163437)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("9_vivmo")
+"texture": ExtResource("10_2cqfq")
 }, {
 "duration": 1.0,
-"texture": ExtResource("10_2cqfq")
+"texture": ExtResource("9_vivmo")
 }],
 "loop": true,
 "name": &"default",
