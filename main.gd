@@ -138,9 +138,8 @@ func _on_stop_btn_pressed() -> void:
             currently_accepting_button_presses = false
             add_child(new_save)
             
-            $Save/SaveBtn.pressed.connect(_save_tape)
-            $Save/DiscardBtn.pressed.connect(_discard_tape)
-            #$Save/SaveBtn.grab_focus()
+            $Save/TextEditWithOnScreenKeyboard.on_submit_pressed.connect(_save_tape)
+            $Save/TextEditWithOnScreenKeyboard.on_cancel_pressed.connect(_discard_tape)
             
             $"Save/TextEditWithOnScreenKeyboard/MarginContainer/VBoxContainer/Controls/NumberKeys/1".grab_focus()
             
@@ -202,14 +201,15 @@ func _create_empty_tape() -> void:
     $Stacks/EmptyTapes.add_child(empty_tape)
      
     
-func _save_tape() -> void:
+func _save_tape(text) -> void:
     print("Trying to save current tape: ", loaded_tape)
     
     var saved_tape = MixtapeScene.instantiate()
     saved_tape.is_recordable = false
     saved_tape.recording = recordings
     
-    var input_text = $Save/TextEditWithOnScreenKeyboard.text_edit.text
+    #var input_text = $Save/TextEditWithOnScreenKeyboard.text_edit.text
+    var input_text = text
 
     if not input_text:
         var tape_id = -1
