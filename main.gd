@@ -41,7 +41,7 @@ func _ready() -> void:
     for i in range(num_empty_tapes):
         _create_empty_tape()
     
-    $Stacks/EmptyTapes.get_child(1).grab_focus()        
+    $Stacks/EmptyTapes.get_child(1).grab_focus()
  
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -140,8 +140,7 @@ func _on_stop_btn_pressed() -> void:
             
             $Save/TextEditWithOnScreenKeyboard.on_submit_pressed.connect(_save_tape)
             $Save/TextEditWithOnScreenKeyboard.on_cancel_pressed.connect(_discard_tape)
-            
-            $"Save/TextEditWithOnScreenKeyboard/MarginContainer/VBoxContainer/Controls/NumberKeys/1".grab_focus()
+            $Save/TextEditWithOnScreenKeyboard/MarginContainer/VBoxContainer/Controls/Keyboards/Qwerty/LettersSmall/Q.grab_focus()
             
             $Radio/TapeDoor.open_door()
 
