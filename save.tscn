@@ -23,16 +23,17 @@ text = "Name Your Mixtape"
 horizontal_alignment = 1
 
 [node name="TextEditWithOnScreenKeyboard" parent="." unique_id=515065060 instance=ExtResource("2_8viy1")]
-anchors_preset = 12
-anchor_top = 1.0
+anchors_preset = 14
+anchor_top = 0.5
 anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 0.0
-offset_top = -272.0
-offset_right = 0.0
-offset_bottom = 0.0
+anchor_bottom = 0.5
+offset_left = 191.0
+offset_top = 21.0
+offset_right = -197.0
+offset_bottom = 470.0
 grow_horizontal = 2
-grow_vertical = 0
+grow_vertical = 2
+size_flags_horizontal = 8
 text_placeholder = "Name your tape"
 show_input = false
 
@@ -52,8 +53,11 @@ script = ExtResource("3_hjq3a")
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2028355556]
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=872720108]
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("4_w8f4x")
 
 [connection signal="on_text_changed" from="TextEditWithOnScreenKeyboard" to="TapePreview/TapeNamePreview" method="_on_text_edit_with_on_screen_keyboard_on_text_changed"]
