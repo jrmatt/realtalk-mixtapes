@@ -9,6 +9,7 @@ offset_left = 55.0
 offset_top = 25.0
 offset_right = 740.0
 offset_bottom = 277.0
+layer = 10
 
 [node name="SaveDialogue" type="Label" parent="." unique_id=475943774]
 layout_mode = 1
