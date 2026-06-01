@@ -13,6 +13,7 @@ var gear_rotation_speed = 2
 
 var btn_move_duration := 0.1
 var btn_move_amt = 16
+var disabled_btn_move_amt = 2
 
 var currently_accepting_button_presses := true
 var showing_controls := false
@@ -74,6 +75,10 @@ func pop_button(btn):
 
 func depress_and_pop_button(btn):
     move_button_to_ys(btn, [btn_move_amt, 0])
+    
+
+func depress_disabled_button(btn):
+    move_button_to_ys(btn, [disabled_btn_move_amt, 0])
 
 
 # --------
@@ -90,30 +95,32 @@ func _on_record_btn_pressed() -> void:
         depress_button($Radio/PlayAnchor/PlayBtn)
         _start_recording()
     else:
-        depress_button($Radio/RecordAnchor/RecordBtn)
-        depress_button($Radio/PlayAnchor/PlayBtn)
+        depress_disabled_button($Radio/RecordAnchor/RecordBtn)
+        depress_disabled_button($Radio/PlayAnchor/PlayBtn)
         $Messages.text = "Load an Empty Tape to Record!"
         await get_tree().create_timer(2.0).timeout
         $Messages.text = ""
 
 
 func _on_stop_btn_pressed() -> void:
-    depress_and_pop_button($Radio/StopAnchor/StopBtn)
-    pop_button($Radio/PlayAnchor/PlayBtn)
-    pop_button($Radio/RecordAnchor/RecordBtn)
 
     if not currently_accepting_button_presses:
         return
 
     if not loaded_tape:
+        depress_disabled_button($Radio/StopAnchor/StopBtn)
         print("No current tape")
         return
         
     if loaded_tape.player.playing:
+        depress_and_pop_button($Radio/StopAnchor/StopBtn)
         print("Player is playing, pausing")
         loaded_tape.player.stream_paused = true
 
     elif not loaded_tape.is_recordable:
+        depress_and_pop_button($Radio/StopAnchor/StopBtn)
+        pop_button($Radio/PlayAnchor/PlayBtn)
+        pop_button($Radio/RecordAnchor/RecordBtn)
         print("Player is not playing, ejecting")
         $Radio.remove_child(loaded_tape)
         $Stacks/RecordedTapes.add_child(loaded_tape)
@@ -128,12 +135,20 @@ func _on_stop_btn_pressed() -> void:
         $Radio/Dial.set_volumes_and_label()
 
     elif effect.is_recording_active():
+        depress_and_pop_button($Radio/StopAnchor/StopBtn)
+        pop_button($Radio/PlayAnchor/PlayBtn)
+        pop_button($Radio/RecordAnchor/RecordBtn)
         print("Stopping recording")
         effect.set_recording_active(false)
         _pause_recording()
 
     else:
         if loaded_tape.is_recordable and recordings.size() > 0:
+            $Radio/Dial.mute()
+            
+            depress_and_pop_button($Radio/StopAnchor/StopBtn)
+            pop_button($Radio/PlayAnchor/PlayBtn)
+            pop_button($Radio/RecordAnchor/RecordBtn)
             var new_save = SaveScene.instantiate()
             currently_accepting_button_presses = false
             add_child(new_save)
@@ -145,6 +160,7 @@ func _on_stop_btn_pressed() -> void:
             $Radio/TapeDoor.open_door()
 
         else:
+            depress_and_pop_button($Radio/StopAnchor/StopBtn)
             _create_empty_tape()
             $Radio/TapeDoor.open_door()
             loaded_tape = null
@@ -229,6 +245,8 @@ func _save_tape(text) -> void:
     $Tape.visible = false
     recordings = []
     $Save.queue_free()
+    
+    $Radio/Dial.set_volumes_and_label()
 
     currently_accepting_button_presses = true
 
@@ -239,6 +257,8 @@ func _discard_tape() -> void:
     loaded_tape = null
     recordings = []
     $Tape.visible = false
+
+    $Radio/Dial.set_volumes_and_label()
 
     currently_accepting_button_presses = true
 
