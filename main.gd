@@ -122,6 +122,7 @@ func _on_stop_btn_pressed() -> void:
         loaded_tape = null
         $Tape.visible = false
         $Radio/RadioLabel/TapeLabel.text = ""
+        $Radio/TapeDoor.open_door()
         
         $Radio/Dial.cassette_mode = false
         $Radio/Dial.set_volumes_and_label()
@@ -145,6 +146,7 @@ func _on_stop_btn_pressed() -> void:
 
         else:
             _create_empty_tape()
+            $Radio/TapeDoor.open_door()
             loaded_tape = null
             $Tape.visible = false
 
@@ -225,7 +227,6 @@ func _save_tape() -> void:
     loaded_tape = null
     $Tape.visible = false
     recordings = []
-    $Radio/TapeDoor.close_door()
     $Save.queue_free()
 
     currently_accepting_button_presses = true
@@ -234,7 +235,6 @@ func _save_tape() -> void:
 func _discard_tape() -> void:
     loaded_tape.queue_free()
     $Save.queue_free()
-    $Radio/TapeDoor.close_door()
     loaded_tape = null
     recordings = []
     $Tape.visible = false
