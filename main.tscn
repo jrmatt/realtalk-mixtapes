@@ -502,9 +502,10 @@ texture = ExtResource("11_efxa6")
 
 [node name="RewindShader" type="Sprite2D" parent="." unique_id=519319861]
 visible = false
+z_index = 10
 material = SubResource("ShaderMaterial_efxa6")
-position = Vector2(1347.25, 763.625)
-scale = Vector2(1413.5001, 844.75006)
+position = Vector2(1336, 762.00006)
+scale = Vector2(1212.0001, 700)
 texture = SubResource("PlaceholderTexture2D_dg77c")
 script = ExtResource("13_w48qg")
 
@@ -529,232 +530,224 @@ offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("19_82xsv")
 
-[node name="GridContainer" type="GridContainer" parent="BackdropLayer" unique_id=1564863390]
-modulate = Color(1, 1, 1, 0.25490198)
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -685.0
-offset_top = 151.0
-offset_right = 427.0
-offset_bottom = 162.0
-grow_horizontal = 2
-grow_vertical = 2
-columns = 12
-
-[node name="BlueRoom" type="TextureRect" parent="BackdropLayer/GridContainer" unique_id=1599604421]
-layout_mode = 2
-texture = ExtResource("20_getpj")
-
-[node name="PinkRoom" type="TextureRect" parent="BackdropLayer/GridContainer" unique_id=1437912846]
-layout_mode = 2
-texture = ExtResource("21_lswn8")
-
-[node name="GreenRoom" type="TextureRect" parent="BackdropLayer/GridContainer" unique_id=935337713]
-layout_mode = 2
-texture = ExtResource("22_a6jrf")
-
-[node name="OrangeRoom" type="TextureRect" parent="BackdropLayer/GridContainer" unique_id=448628837]
-layout_mode = 2
-texture = ExtResource("23_xuqvo")
-
-[node name="IndigoRoom" type="TextureRect" parent="BackdropLayer/GridContainer" unique_id=1273756756]
-layout_mode = 2
-texture = ExtResource("24_qsp4k")
-
-[node name="PurpleRoom" type="TextureRect" parent="BackdropLayer/GridContainer" unique_id=578242055]
-layout_mode = 2
-texture = ExtResource("25_kq58d")
-
-[node name="TealRoom" type="TextureRect" parent="BackdropLayer/GridContainer" unique_id=1930491139]
-layout_mode = 2
-texture = ExtResource("26_seu75")
-
-[node name="BlueRoom4" type="TextureRect" parent="BackdropLayer/GridContainer" unique_id=1332174809]
-layout_mode = 2
-texture = ExtResource("20_getpj")
-
-[node name="PinkRoom4" type="TextureRect" parent="BackdropLayer/GridContainer" unique_id=316724575]
-layout_mode = 2
-texture = ExtResource("21_lswn8")
-
-[node name="GreenRoom4" type="TextureRect" parent="BackdropLayer/GridContainer" unique_id=940783371]
-layout_mode = 2
-texture = ExtResource("22_a6jrf")
-
-[node name="OrangeRoom4" type="TextureRect" parent="BackdropLayer/GridContainer" unique_id=338989684]
-layout_mode = 2
-texture = ExtResource("23_xuqvo")
-
-[node name="IndigoRoom4" type="TextureRect" parent="BackdropLayer/GridContainer" unique_id=660920705]
-layout_mode = 2
-texture = ExtResource("24_qsp4k")
-
-[node name="PurpleRoom4" type="TextureRect" parent="BackdropLayer/GridContainer" unique_id=1460774361]
-layout_mode = 2
-texture = ExtResource("25_kq58d")
-
-[node name="TealRoom4" type="TextureRect" parent="BackdropLayer/GridContainer" unique_id=1755580840]
-layout_mode = 2
-texture = ExtResource("26_seu75")
-
-[node name="BlueRoom5" type="TextureRect" parent="BackdropLayer/GridContainer" unique_id=648568166]
-layout_mode = 2
-texture = ExtResource("20_getpj")
-
-[node name="PinkRoom5" type="TextureRect" parent="BackdropLayer/GridContainer" unique_id=696429714]
-layout_mode = 2
-texture = ExtResource("21_lswn8")
-
-[node name="GreenRoom5" type="TextureRect" parent="BackdropLayer/GridContainer" unique_id=32551384]
-layout_mode = 2
-texture = ExtResource("22_a6jrf")
-
-[node name="OrangeRoom5" type="TextureRect" parent="BackdropLayer/GridContainer" unique_id=1001189281]
-layout_mode = 2
-texture = ExtResource("23_xuqvo")
-
-[node name="IndigoRoom5" type="TextureRect" parent="BackdropLayer/GridContainer" unique_id=510824618]
-layout_mode = 2
-texture = ExtResource("24_qsp4k")
-
-[node name="PurpleRoom5" type="TextureRect" parent="BackdropLayer/GridContainer" unique_id=1692003252]
-layout_mode = 2
-texture = ExtResource("25_kq58d")
-
-[node name="TealRoom5" type="TextureRect" parent="BackdropLayer/GridContainer" unique_id=1198316739]
-layout_mode = 2
-texture = ExtResource("26_seu75")
-
-[node name="TealRoom6" type="TextureRect" parent="BackdropLayer/GridContainer" unique_id=1578276507]
-visible = false
-layout_mode = 2
-texture = ExtResource("26_seu75")
-
-[node name="BlueRoom2" type="TextureRect" parent="BackdropLayer/GridContainer" unique_id=1026743636]
-layout_mode = 2
-texture = ExtResource("20_getpj")
-
-[node name="PinkRoom2" type="TextureRect" parent="BackdropLayer/GridContainer" unique_id=119547104]
-layout_mode = 2
-texture = ExtResource("21_lswn8")
-
-[node name="GreenRoom2" type="TextureRect" parent="BackdropLayer/GridContainer" unique_id=1012018619]
-layout_mode = 2
-texture = ExtResource("22_a6jrf")
-
-[node name="OrangeRoom2" type="TextureRect" parent="BackdropLayer/GridContainer" unique_id=400457709]
-layout_mode = 2
-texture = ExtResource("23_xuqvo")
-
-[node name="IndigoRoom2" type="TextureRect" parent="BackdropLayer/GridContainer" unique_id=1159913741]
-layout_mode = 2
-texture = ExtResource("24_qsp4k")
-
-[node name="PurpleRoom2" type="TextureRect" parent="BackdropLayer/GridContainer" unique_id=1367435102]
-layout_mode = 2
-texture = ExtResource("25_kq58d")
-
-[node name="TealRoom2" type="TextureRect" parent="BackdropLayer/GridContainer" unique_id=668906668]
-layout_mode = 2
-texture = ExtResource("26_seu75")
-
-[node name="BlueRoom3" type="TextureRect" parent="BackdropLayer/GridContainer" unique_id=1253542097]
-layout_mode = 2
-texture = ExtResource("20_getpj")
-
-[node name="PinkRoom3" type="TextureRect" parent="BackdropLayer/GridContainer" unique_id=1365261596]
-layout_mode = 2
-texture = ExtResource("21_lswn8")
-
-[node name="GreenRoom3" type="TextureRect" parent="BackdropLayer/GridContainer" unique_id=1303256652]
-layout_mode = 2
-texture = ExtResource("22_a6jrf")
-
-[node name="OrangeRoom3" type="TextureRect" parent="BackdropLayer/GridContainer" unique_id=1249451748]
-layout_mode = 2
-texture = ExtResource("23_xuqvo")
-
-[node name="IndigoRoom3" type="TextureRect" parent="BackdropLayer/GridContainer" unique_id=494384939]
-layout_mode = 2
-texture = ExtResource("24_qsp4k")
-
-[node name="PurpleRoom3" type="TextureRect" parent="BackdropLayer/GridContainer" unique_id=274976212]
-layout_mode = 2
-texture = ExtResource("25_kq58d")
-
-[node name="TealRoom3" type="TextureRect" parent="BackdropLayer/GridContainer" unique_id=1984908481]
-layout_mode = 2
-texture = ExtResource("26_seu75")
-
-[node name="BoldRooms" type="Control" parent="BackdropLayer" unique_id=159149741]
+[node name="BoldRooms" type="Control" parent="BackdropLayer" unique_id=567806170]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 74.0
+offset_top = 164.0
+offset_right = 1841.0
+offset_bottom = 379.0
 
 [node name="BlackArt" type="TextureRect" parent="BackdropLayer/BoldRooms" unique_id=2026009479]
 visible = false
 texture_filter = 1
 layout_mode = 0
-offset_left = 74.0
-offset_top = 151.0
-offset_right = 323.0
-offset_bottom = 366.0
+offset_right = 249.0
+offset_bottom = 215.0
 texture = ExtResource("23_xuqvo")
+
+[node name="Label" type="Label" parent="BackdropLayer/BoldRooms/BlackArt" unique_id=1948468708]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -35.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "Black Art"
 
 [node name="AcrossGenerations" type="TextureRect" parent="BackdropLayer/BoldRooms" unique_id=394850020]
 visible = false
 layout_mode = 0
-offset_left = 327.0
-offset_top = 151.0
-offset_right = 576.0
-offset_bottom = 366.0
+offset_left = 253.0
+offset_right = 502.0
+offset_bottom = 215.0
 texture = ExtResource("24_qsp4k")
+
+[node name="Label" type="Label" parent="BackdropLayer/BoldRooms/AcrossGenerations" unique_id=615984012]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -35.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "Across Generations"
 
 [node name="ArtEconomy" type="TextureRect" parent="BackdropLayer/BoldRooms" unique_id=367247359]
 visible = false
 layout_mode = 0
-offset_left = 580.0
-offset_top = 150.0
-offset_right = 829.0
-offset_bottom = 365.0
+offset_left = 506.0
+offset_right = 755.0
+offset_bottom = 215.0
 texture = ExtResource("25_kq58d")
+
+[node name="Label" type="Label" parent="BackdropLayer/BoldRooms/ArtEconomy" unique_id=1149225080]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -35.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "Art Economy"
 
 [node name="LocalScene" type="TextureRect" parent="BackdropLayer/BoldRooms" unique_id=67483685]
 visible = false
 layout_mode = 0
-offset_left = 833.0
-offset_top = 151.0
-offset_right = 1082.0
-offset_bottom = 366.0
+offset_left = 759.0
+offset_right = 1008.0
+offset_bottom = 215.0
 texture = ExtResource("26_seu75")
+
+[node name="Label" type="Label" parent="BackdropLayer/BoldRooms/LocalScene" unique_id=1272111472]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -35.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "Local Scene"
 
 [node name="Gentrification" type="TextureRect" parent="BackdropLayer/BoldRooms" unique_id=1913852596]
 visible = false
 layout_mode = 0
-offset_left = 1086.0
-offset_top = 151.0
-offset_right = 1335.0
-offset_bottom = 366.0
+offset_left = 1012.0
+offset_right = 1261.0
+offset_bottom = 215.0
 texture = ExtResource("20_getpj")
+
+[node name="Label" type="Label" parent="BackdropLayer/BoldRooms/Gentrification" unique_id=943759608]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -35.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "Gentrification"
 
 [node name="ArttoThrive" type="TextureRect" parent="BackdropLayer/BoldRooms" unique_id=1903511816]
 visible = false
 layout_mode = 0
-offset_left = 1339.0
-offset_top = 151.0
-offset_right = 1588.0
-offset_bottom = 366.0
+offset_left = 1265.0
+offset_right = 1514.0
+offset_bottom = 215.0
 texture = ExtResource("21_lswn8")
+
+[node name="Label" type="Label" parent="BackdropLayer/BoldRooms/ArttoThrive" unique_id=339159636]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -35.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "Art to Thrive"
 
 [node name="Beginnings" type="TextureRect" parent="BackdropLayer/BoldRooms" unique_id=819058765]
 visible = false
 layout_mode = 0
-offset_left = 1592.0
-offset_top = 151.0
+offset_left = 1518.0
+offset_right = 1767.0
+offset_bottom = 215.0
+texture = ExtResource("22_a6jrf")
+
+[node name="Label" type="Label" parent="BackdropLayer/BoldRooms/Beginnings" unique_id=598761473]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -35.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "Beginnings"
+
+[node name="LightRooms" type="Control" parent="BackdropLayer" unique_id=973724435]
+modulate = Color(1, 1, 1, 0.30980393)
+layout_mode = 3
+anchors_preset = 0
+offset_left = 74.0
+offset_top = 164.0
 offset_right = 1841.0
-offset_bottom = 366.0
+offset_bottom = 379.0
+
+[node name="BlackArt" type="TextureRect" parent="BackdropLayer/LightRooms" unique_id=1181101699]
+texture_filter = 1
+layout_mode = 0
+offset_right = 249.0
+offset_bottom = 215.0
+texture = ExtResource("23_xuqvo")
+
+[node name="AcrossGenerations" type="TextureRect" parent="BackdropLayer/LightRooms" unique_id=2074420084]
+layout_mode = 0
+offset_left = 253.0
+offset_right = 502.0
+offset_bottom = 215.0
+texture = ExtResource("24_qsp4k")
+
+[node name="ArtEconomy" type="TextureRect" parent="BackdropLayer/LightRooms" unique_id=1652742624]
+layout_mode = 0
+offset_left = 506.0
+offset_right = 755.0
+offset_bottom = 215.0
+texture = ExtResource("25_kq58d")
+
+[node name="LocalScene" type="TextureRect" parent="BackdropLayer/LightRooms" unique_id=1905356632]
+layout_mode = 0
+offset_left = 759.0
+offset_right = 1008.0
+offset_bottom = 215.0
+texture = ExtResource("26_seu75")
+
+[node name="Gentrification" type="TextureRect" parent="BackdropLayer/LightRooms" unique_id=863281249]
+layout_mode = 0
+offset_left = 1012.0
+offset_right = 1261.0
+offset_bottom = 215.0
+texture = ExtResource("20_getpj")
+
+[node name="ArttoThrive" type="TextureRect" parent="BackdropLayer/LightRooms" unique_id=1442407491]
+layout_mode = 0
+offset_left = 1265.0
+offset_right = 1514.0
+offset_bottom = 215.0
+texture = ExtResource("21_lswn8")
+
+[node name="Beginnings" type="TextureRect" parent="BackdropLayer/LightRooms" unique_id=1545463436]
+layout_mode = 0
+offset_left = 1518.0
+offset_right = 1767.0
+offset_bottom = 215.0
 texture = ExtResource("22_a6jrf")
 
 [connection signal="playing_freq" from="Radio/Dial" to="Radio/RadioLabel/FrequencyLabel" method="_on_dial_playing_freq"]
