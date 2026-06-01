@@ -140,7 +140,9 @@ func _on_stop_btn_pressed() -> void:
             
             $Save/SaveBtn.pressed.connect(_save_tape)
             $Save/DiscardBtn.pressed.connect(_discard_tape)
-            $Save/SaveBtn.grab_focus()
+            #$Save/SaveBtn.grab_focus()
+            
+            $"Save/TextEditWithOnScreenKeyboard/MarginContainer/VBoxContainer/Controls/NumberKeys/1".grab_focus()
             
             $Radio/TapeDoor.open_door()
 

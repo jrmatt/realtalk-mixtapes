@@ -54,14 +54,13 @@ anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 0.0
-offset_top = -261.0
+offset_top = -272.0
 offset_right = 0.0
 offset_bottom = 0.0
 grow_horizontal = 2
 grow_vertical = 0
 text_placeholder = "Name your tape"
-show_cancel_button = false
-show_submit_button = false
+show_input = false
 
 [node name="TapePreview" type="Sprite2D" parent="." unique_id=892739047]
 position = Vector2(946, 404)
