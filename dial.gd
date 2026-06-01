@@ -94,12 +94,12 @@ func set_volumes_and_label():
     var current_station = get_current_station_for_label()
 
     if current_station:
-        if not current_station.has_been_discovered:
-            var tween = create_tween()
-            tween.tween_property(current_station.bar.get_theme_stylebox('panel'), 'bg_color:a', 1, 1)
-            tween.tween_property(current_station.bar.get_node('Label'), 'theme_override_colors/font_color:a', 1, 1)
-
-            current_station.has_been_discovered = true
+        #if not current_station.has_been_discovered:
+            #var tween = create_tween()
+            #tween.tween_property(current_station.bar.get_theme_stylebox('panel'), 'bg_color:a', 1, 1)
+            #tween.tween_property(current_station.bar.get_node('Label'), 'theme_override_colors/font_color:a', 1, 1)
+#
+            #current_station.has_been_discovered = true
 
         playing_freq.emit(current_station.freq.frequency_name)
         playing_track.emit(current_station.current_track)
