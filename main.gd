@@ -173,10 +173,14 @@ func _on_play_btn_pressed() -> void:
 
     if not loaded_tape:
         print("No tape to play")
-        depress_button($Radio/PlayAnchor/PlayBtn)
+        depress_disabled_button($Radio/PlayAnchor/PlayBtn)
 
-    elif not loaded_tape.is_recordable:
+    elif loaded_tape.is_recordable:
+        depress_disabled_button($Radio/PlayAnchor/PlayBtn)
+        
+    else:
         depress_button($Radio/PlayAnchor/PlayBtn)
+        
         if not loaded_tape.player.playing:
             depress_button($Radio/PlayAnchor/PlayBtn)
             print("Player is not playing")
