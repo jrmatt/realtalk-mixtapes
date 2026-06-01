@@ -534,9 +534,9 @@ texture = ExtResource("19_82xsv")
 layout_mode = 3
 anchors_preset = 0
 offset_left = 74.0
-offset_top = 164.0
+offset_top = 135.0
 offset_right = 1841.0
-offset_bottom = 379.0
+offset_bottom = 350.0
 
 [node name="BlackArt" type="TextureRect" parent="BackdropLayer/BoldRooms" unique_id=2026009479]
 visible = false
@@ -697,9 +697,9 @@ modulate = Color(1, 1, 1, 0.30980393)
 layout_mode = 3
 anchors_preset = 0
 offset_left = 74.0
-offset_top = 164.0
+offset_top = 135.0
 offset_right = 1841.0
-offset_bottom = 379.0
+offset_bottom = 350.0
 
 [node name="BlackArt" type="TextureRect" parent="BackdropLayer/LightRooms" unique_id=1181101699]
 texture_filter = 1
@@ -708,12 +708,40 @@ offset_right = 249.0
 offset_bottom = 215.0
 texture = ExtResource("23_xuqvo")
 
+[node name="Label" type="Label" parent="BackdropLayer/LightRooms/BlackArt" unique_id=1842630512]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -35.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "Black Art"
+
 [node name="AcrossGenerations" type="TextureRect" parent="BackdropLayer/LightRooms" unique_id=2074420084]
 layout_mode = 0
 offset_left = 253.0
 offset_right = 502.0
 offset_bottom = 215.0
 texture = ExtResource("24_qsp4k")
+
+[node name="Label" type="Label" parent="BackdropLayer/LightRooms/AcrossGenerations" unique_id=1412421379]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -35.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "Across Generations"
 
 [node name="ArtEconomy" type="TextureRect" parent="BackdropLayer/LightRooms" unique_id=1652742624]
 layout_mode = 0
@@ -722,12 +750,40 @@ offset_right = 755.0
 offset_bottom = 215.0
 texture = ExtResource("25_kq58d")
 
+[node name="Label" type="Label" parent="BackdropLayer/LightRooms/ArtEconomy" unique_id=1654265684]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -35.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "Art Economy"
+
 [node name="LocalScene" type="TextureRect" parent="BackdropLayer/LightRooms" unique_id=1905356632]
 layout_mode = 0
 offset_left = 759.0
 offset_right = 1008.0
 offset_bottom = 215.0
 texture = ExtResource("26_seu75")
+
+[node name="Label" type="Label" parent="BackdropLayer/LightRooms/LocalScene" unique_id=506463595]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -35.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "Local Scene"
 
 [node name="Gentrification" type="TextureRect" parent="BackdropLayer/LightRooms" unique_id=863281249]
 layout_mode = 0
@@ -736,6 +792,20 @@ offset_right = 1261.0
 offset_bottom = 215.0
 texture = ExtResource("20_getpj")
 
+[node name="Label" type="Label" parent="BackdropLayer/LightRooms/Gentrification" unique_id=1229359820]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -35.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "Gentrification"
+
 [node name="ArttoThrive" type="TextureRect" parent="BackdropLayer/LightRooms" unique_id=1442407491]
 layout_mode = 0
 offset_left = 1265.0
@@ -743,12 +813,40 @@ offset_right = 1514.0
 offset_bottom = 215.0
 texture = ExtResource("21_lswn8")
 
+[node name="Label" type="Label" parent="BackdropLayer/LightRooms/ArttoThrive" unique_id=117378794]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -35.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "Art to Thrive"
+
 [node name="Beginnings" type="TextureRect" parent="BackdropLayer/LightRooms" unique_id=1545463436]
 layout_mode = 0
 offset_left = 1518.0
 offset_right = 1767.0
 offset_bottom = 215.0
 texture = ExtResource("22_a6jrf")
+
+[node name="Label" type="Label" parent="BackdropLayer/LightRooms/Beginnings" unique_id=1764299765]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -35.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "Beginnings"
 
 [connection signal="playing_freq" from="Radio/Dial" to="Radio/RadioLabel/FrequencyLabel" method="_on_dial_playing_freq"]
 [connection signal="playing_track" from="Radio/Dial" to="Radio/RadioLabel/SpeakerLabel" method="_on_dial_playing_track"]
