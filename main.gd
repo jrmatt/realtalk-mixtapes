@@ -304,5 +304,4 @@ func _process(delta: float) -> void:
     for room in $BackdropLayer/BoldRooms.get_children():
         room.visible = false
         if str(room.get_path()) == "/root/Main/BackdropLayer/BoldRooms/%s" % current_freq.replace(" ", "").replace(":", ""):
-            print(room)
             room.visible = true
