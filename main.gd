@@ -227,10 +227,10 @@ func _save_tape(text) -> void:
     saved_tape.is_recordable = false
     saved_tape.recording = recordings
     
-    #var input_text = $Save/TextEditWithOnScreenKeyboard.text_edit.text
     var input_text = text
+    var text_is_safe = BadWordsFilter.is_word_ok(text)
 
-    if not input_text:
+    if not input_text or not text_is_safe:
         var tape_id = -1
 
         while tape_id in [-1, 420, 666]:

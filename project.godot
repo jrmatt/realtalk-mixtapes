@@ -23,6 +23,10 @@ config/icon="res://icon.svg"
 
 buses/default_bus_layout="uid://djae266rovjp1"
 
+[autoload]
+
+BadWordsFilter="*uid://d1f2hwvod6ngo"
+
 [display]
 
 window/size/viewport_width=1920
@@ -31,7 +35,7 @@ window/stretch/mode="viewport"
 
 [editor_plugins]
 
-enabled=PackedStringArray()
+enabled=PackedStringArray("res://addons/badwordsfilter/plugin.cfg")
 
 [input]
 
