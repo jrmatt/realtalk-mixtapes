@@ -145,6 +145,7 @@ func _on_stop_btn_pressed() -> void:
     else:
         if loaded_tape.is_recordable and recordings.size() > 0:
             $Radio/Dial.mute()
+            $Radio/Dial.cassette_mode = true
             
             depress_and_pop_button($Radio/StopAnchor/StopBtn)
             pop_button($Radio/PlayAnchor/PlayBtn)
@@ -249,6 +250,7 @@ func _save_tape(text) -> void:
     $Tape.visible = false
     recordings = []
     $Save.queue_free()
+    $Radio/Dial.cassette_mode = false
     
     $Radio/Dial.set_volumes_and_label()
 
