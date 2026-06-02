@@ -28,7 +28,7 @@ var last_position_was_valid := false
 var last_angle := 0.
 
 var rewind_started_at := 0.0
-const REWIND_MULTIPLE := 4.0
+const REWIND_MULTIPLE := 6.0
 
 const ANGLE_DELTA_PER_MOUSE_WHEEL_CLICK := 0.75
 const SPINS_FOR_FULL_LENGTH := 10.
