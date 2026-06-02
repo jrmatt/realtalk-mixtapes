@@ -293,29 +293,25 @@ func _on_tape_loaded(tape):
 
 
 func _check_text_safety(text):
-    var flags = 0
     
     var is_safe_as_is = BadWordsFilter.is_word_ok(text)
     if not is_safe_as_is:
-        flags += 1
+        return false
         
     for word in text.split(" "):
         var is_word_safe = BadWordsFilter.is_word_ok(word)
         if not is_word_safe:
-            flags += 1
+            return false
             
     var joined_text = text.replace(" ", "")
         
     for word in BadWordsFilter.profanity_list:
         if word in text:
-            flags += 1
+            return false
         if word in joined_text:
-            flags += 1
+            return false
             
-    if flags > 0:
-        return false
-    else:
-        return true
+    return true
             
 
 # --------
