@@ -303,19 +303,21 @@ func _on_tape_loaded(tape):
 
 func _check_text_safety(text):
     
-    var is_safe_as_is = BadWordsFilter.is_word_ok(text)
+    var lower_text = text.to_lower()
+    
+    var is_safe_as_is = BadWordsFilter.is_word_ok(lower_text)
     if not is_safe_as_is:
         return false
         
-    for word in text.split(" "):
+    for word in lower_text.split(" "):
         var is_word_safe = BadWordsFilter.is_word_ok(word)
         if not is_word_safe:
             return false
             
-    var joined_text = text.replace(" ", "")
+    var joined_text = lower_text.replace(" ", "")
         
     for word in BadWordsFilter.profanity_list:
-        if word in text:
+        if word in lower_text:
             return false
         if word in joined_text:
             return false
