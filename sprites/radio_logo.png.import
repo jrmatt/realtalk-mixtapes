@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://yfh7v245xlus"
-path="res://.godot/imported/mixtapes_logo.png-3994e00b26cf007b67eebc1d4f0b8314.ctex"
+uid="uid://bopd7wv8xw2l5"
+path="res://.godot/imported/radio_logo.png-f7955423ab8eab924b2b72d59bf42871.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/mixtapes_logo.png"
-dest_files=["res://.godot/imported/mixtapes_logo.png-3994e00b26cf007b67eebc1d4f0b8314.ctex"]
+source_file="res://sprites/radio_logo.png"
+dest_files=["res://.godot/imported/radio_logo.png-f7955423ab8eab924b2b72d59bf42871.ctex"]
 
 [params]
 
