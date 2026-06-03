@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bt0iwvnblvssu" path="res://greenpixels-onscreen-keyboard/text_edit_with_on_screen_keyboard.tscn" id="2_8viy1"]
 [ext_resource type="Texture2D" uid="uid://du2p1s5t0nf7p" path="res://sprites/tape_side_sprite.png" id="2_hjq3a"]
+[ext_resource type="FontFile" uid="uid://bqg5ao41gp82j" path="res://fonts/Hot-Mess.ttf" id="3_hcujw"]
 [ext_resource type="Script" uid="uid://c2kpy1sxpmuys" path="res://tape_name_preview.gd" id="3_hjq3a"]
 [ext_resource type="Texture2D" uid="uid://cmq6ms1ra20dw" path="res://BackgroundGradientMobile.png" id="4_w8f4x"]
 
@@ -47,7 +48,8 @@ offset_top = -33.0
 offset_right = 329.0
 offset_bottom = 28.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 24
+theme_override_fonts/font = ExtResource("3_hcujw")
+theme_override_font_sizes/font_size = 60
 script = ExtResource("3_hjq3a")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2028355556]

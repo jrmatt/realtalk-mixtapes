@@ -151,7 +151,7 @@ func _on_stop_btn_pressed() -> void:
             
             $Save/TextEditWithOnScreenKeyboard.on_submit_pressed.connect(_save_tape)
             $Save/TextEditWithOnScreenKeyboard.on_cancel_pressed.connect(_discard_tape)
-            $Save/TextEditWithOnScreenKeyboard/MarginContainer/VBoxContainer/Controls/Keyboards/Qwerty/LettersSmall/Q.grab_focus()
+            $Save/TextEditWithOnScreenKeyboard/MarginContainer/VBoxContainer/Controls/Keyboards/Qwerty/LettersBig/Q.grab_focus()
             
             $Radio/TapeDoor.open_door()
 
