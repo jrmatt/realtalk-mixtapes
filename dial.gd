@@ -101,7 +101,7 @@ func set_volumes_and_label():
         playing_track.emit(current_station.current_track, total_static_reduction)
     else:
         playing_freq.emit(null, 0)
-        playing_track.emit(null)
+        playing_track.emit(null, 0)
 
 
 func get_stick_vector():
