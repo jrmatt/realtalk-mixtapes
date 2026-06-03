@@ -18,13 +18,8 @@ var disabled_btn_move_amt = 2
 var currently_accepting_button_presses := true
 var showing_controls := false
 
-# Bit hacky, the labels get their text from signals from Dial
-var current_track_speakers:
-    get:
-        return $Radio/RadioLabel/SpeakerLabel.text
-var current_freq:
-    get:
-        return $Radio/RadioLabel/FrequencyLabel.text
+var current_track_speakers := []
+var current_freq: String
 
 const SaveScene = preload("res://save.tscn")
 const MixtapeScene = preload("res://mixtape.tscn")
@@ -207,6 +202,16 @@ func _on_dial_start_rewind() -> void:
 
 func _on_dial_stop_rewind() -> void:
     pop_button($Radio/RwAnchor/RwBtn)
+    
+
+func _on_dial_playing_freq(new_freq: Variant, alpha: Variant) -> void:
+    if new_freq:
+        current_freq = new_freq
+
+
+func _on_dial_playing_track(new_track: Variant, alpha: Variant) -> void:
+    if new_track:
+        current_track_speakers = new_track.speakers
 
 
 # --------

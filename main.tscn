@@ -848,7 +848,9 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 24
 text = "Beginnings"
 
+[connection signal="playing_freq" from="Radio/Dial" to="." method="_on_dial_playing_freq"]
 [connection signal="playing_freq" from="Radio/Dial" to="Radio/RadioLabel/FrequencyLabel" method="_on_dial_playing_freq"]
+[connection signal="playing_track" from="Radio/Dial" to="." method="_on_dial_playing_track"]
 [connection signal="playing_track" from="Radio/Dial" to="Radio/RadioLabel/SpeakerLabel" method="_on_dial_playing_track"]
 [connection signal="start_rewind" from="Radio/Dial" to="." method="_on_dial_start_rewind"]
 [connection signal="start_rewind" from="Radio/Dial" to="RewindShader" method="_on_dial_start_rewind"]
