@@ -6,8 +6,8 @@ extends Panel
 @onready var rewind: AudioStreamPlayer2D = $Rewind
 @onready var gremlin_knob: Sprite2D = $Knob
 
-signal playing_track(new_track)
-signal playing_freq(new_freq)
+signal playing_track(new_track, alpha)
+signal playing_freq(new_freq, alpha)
 
 signal start_rewind
 signal stop_rewind
@@ -61,16 +61,10 @@ func _ready() -> void:
         station.volume_linear = 0
         add_child(station)
 
-        var station_bar = BarScene.instantiate()
-        station_bar.position.x = size.x * station.position_in_dial - station_bar.size.x / 2
-        var color = Color(randf(), randf(), randf(), 0.01)
-        station_bar.get_theme_stylebox('panel').bg_color = color
-        station.bar = station_bar
-        var label = station_bar.get_node('Label') as Label
-        label.text = station.freq.frequency_name
-        label.add_theme_color_override('font_color', color)
-        
-        add_child(station_bar)
+        var room_node_path = "/root/Main/BackdropLayer/BoldRooms/%s" % freq.replace(" ", "")
+        var room = get_node(room_node_path)
+
+        station.room = room
 
         stations.append(station)
 
@@ -89,6 +83,8 @@ func set_volumes_and_label():
         station.volume_linear = station_volume
         total_static_reduction += station_volume
 
+        station.room.modulate.a = station_volume
+
     static_player.volume_linear = clampf(1 - total_static_reduction, 0, 1)**2
 
     var current_station = get_current_station_for_label()
@@ -101,10 +97,10 @@ func set_volumes_and_label():
 #
             #current_station.has_been_discovered = true
 
-        playing_freq.emit(current_station.freq.frequency_name)
-        playing_track.emit(current_station.current_track)
+        playing_freq.emit(current_station.freq.frequency_name, total_static_reduction)
+        playing_track.emit(current_station.current_track, total_static_reduction)
     else:
-        playing_freq.emit(null)
+        playing_freq.emit(null, 0)
         playing_track.emit(null)
 
 
@@ -124,7 +120,7 @@ func get_current_station_for_label():
     var current_station = null
 
     for station in stations:
-        if bar_distance_from_station(station) < 0.25:
+        if bar_distance_from_station(station) < 1:
             current_station = station
 
     return current_station

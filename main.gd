@@ -346,11 +346,3 @@ func _process(delta: float) -> void:
     if loaded_tape and (loaded_tape.player.playing or effect.is_recording_active()):
         $Tape/Gear1.rotation += gear_rotation_direction * gear_rotation_speed * delta
         $Tape/Gear2.rotation += gear_rotation_direction * gear_rotation_speed * delta
-    
-    # This is goofy
-    # Makes the relevant room sprite visible for the current freq
-    # Should move this out of process and wait for freq change to run
-    for room in $BackdropLayer/BoldRooms.get_children():
-        room.visible = false
-        if str(room.get_path()) == "/root/Main/BackdropLayer/BoldRooms/%s" % current_freq.replace(" ", "").replace(":", ""):
-            room.visible = true

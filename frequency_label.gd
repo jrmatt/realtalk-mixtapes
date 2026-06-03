@@ -11,10 +11,13 @@ const colors = {
 }
 
 
-func _on_dial_playing_freq(new_freq: Variant) -> void:
+func _on_dial_playing_freq(new_freq: Variant, alpha: float) -> void:
     if new_freq:
         text = new_freq + ": "
         var color = colors[new_freq]
-        set("theme_override_colors/font_color",color)
+        set("theme_override_colors/font_color", color)
+
     else:
         text = ""
+
+    modulate.a = alpha

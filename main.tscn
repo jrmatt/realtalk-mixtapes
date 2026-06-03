@@ -539,7 +539,7 @@ offset_right = 1841.0
 offset_bottom = 350.0
 
 [node name="BlackArt" type="TextureRect" parent="BackdropLayer/BoldRooms" unique_id=2026009479]
-visible = false
+modulate = Color(1, 1, 1, 0)
 texture_filter = 1
 layout_mode = 0
 offset_right = 249.0
@@ -561,7 +561,7 @@ theme_override_font_sizes/font_size = 24
 text = "Black Art"
 
 [node name="AcrossGenerations" type="TextureRect" parent="BackdropLayer/BoldRooms" unique_id=394850020]
-visible = false
+modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_left = 253.0
 offset_right = 502.0
@@ -583,7 +583,7 @@ theme_override_font_sizes/font_size = 24
 text = "Across Generations"
 
 [node name="ArtEconomy" type="TextureRect" parent="BackdropLayer/BoldRooms" unique_id=367247359]
-visible = false
+modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_left = 506.0
 offset_right = 755.0
@@ -605,7 +605,7 @@ theme_override_font_sizes/font_size = 24
 text = "Art Economy"
 
 [node name="LocalScene" type="TextureRect" parent="BackdropLayer/BoldRooms" unique_id=67483685]
-visible = false
+modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_left = 759.0
 offset_right = 1008.0
@@ -627,7 +627,7 @@ theme_override_font_sizes/font_size = 24
 text = "Local Scene"
 
 [node name="Gentrification" type="TextureRect" parent="BackdropLayer/BoldRooms" unique_id=1913852596]
-visible = false
+modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_left = 1012.0
 offset_right = 1261.0
@@ -649,7 +649,7 @@ theme_override_font_sizes/font_size = 24
 text = "Gentrification"
 
 [node name="ArttoThrive" type="TextureRect" parent="BackdropLayer/BoldRooms" unique_id=1903511816]
-visible = false
+modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_left = 1265.0
 offset_right = 1514.0
@@ -671,7 +671,7 @@ theme_override_font_sizes/font_size = 24
 text = "Art to Thrive"
 
 [node name="Beginnings" type="TextureRect" parent="BackdropLayer/BoldRooms" unique_id=819058765]
-visible = false
+modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_left = 1518.0
 offset_right = 1767.0

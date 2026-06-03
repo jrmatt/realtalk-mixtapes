@@ -9,7 +9,7 @@ var current_index = -1
 var current_track_time = 0.0
 var current_track: Track
 @onready var tracks = freq.tracks
-var bar
+var room
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
