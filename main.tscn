@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://ere0swytoiwl" path="res://sprites/controller.png" id="18_cegan"]
 [ext_resource type="Texture2D" uid="uid://cmq6ms1ra20dw" path="res://BackgroundGradientMobile.png" id="19_82xsv"]
 [ext_resource type="Texture2D" uid="uid://blpq1gw8qmvk7" path="res://sprites/BlueRoom.png" id="20_getpj"]
+[ext_resource type="Texture2D" uid="uid://dvfgxf1mxvwpv" path="res://sprites/highlight.png" id="21_a6jrf"]
 [ext_resource type="Texture2D" uid="uid://btxyfaspxos15" path="res://sprites/PinkRoom.png" id="21_lswn8"]
 [ext_resource type="Texture2D" uid="uid://br3ayotk864hs" path="res://sprites/GreenRoom.png" id="22_a6jrf"]
 [ext_resource type="Texture2D" uid="uid://cpw1iw46slgjg" path="res://sprites/OrangeRoom.png" id="23_xuqvo"]
@@ -560,6 +561,22 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 24
 text = "Black Art"
 
+[node name="TextureRect" type="TextureRect" parent="BackdropLayer/BoldRooms/BlackArt" unique_id=1223085032]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -220.0
+offset_top = -220.0
+offset_right = 220.0
+offset_bottom = 220.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("21_a6jrf")
+
 [node name="AcrossGenerations" type="TextureRect" parent="BackdropLayer/BoldRooms" unique_id=394850020]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 0
@@ -581,6 +598,22 @@ grow_vertical = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 24
 text = "Across Generations"
+
+[node name="TextureRect" type="TextureRect" parent="BackdropLayer/BoldRooms/AcrossGenerations" unique_id=1729607235]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -220.0
+offset_top = -220.0
+offset_right = 220.0
+offset_bottom = 220.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("21_a6jrf")
 
 [node name="ArtEconomy" type="TextureRect" parent="BackdropLayer/BoldRooms" unique_id=367247359]
 modulate = Color(1, 1, 1, 0)
@@ -604,6 +637,22 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 24
 text = "Art Economy"
 
+[node name="TextureRect" type="TextureRect" parent="BackdropLayer/BoldRooms/ArtEconomy" unique_id=1620142759]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -220.0
+offset_top = -220.0
+offset_right = 220.0
+offset_bottom = 220.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("21_a6jrf")
+
 [node name="LocalScene" type="TextureRect" parent="BackdropLayer/BoldRooms" unique_id=67483685]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 0
@@ -625,6 +674,22 @@ grow_vertical = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 24
 text = "Local Scene"
+
+[node name="TextureRect" type="TextureRect" parent="BackdropLayer/BoldRooms/LocalScene" unique_id=2127906104]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -220.0
+offset_top = -220.0
+offset_right = 220.0
+offset_bottom = 220.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("21_a6jrf")
 
 [node name="Gentrification" type="TextureRect" parent="BackdropLayer/BoldRooms" unique_id=1913852596]
 modulate = Color(1, 1, 1, 0)
@@ -648,6 +713,22 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 24
 text = "Gentrification"
 
+[node name="TextureRect" type="TextureRect" parent="BackdropLayer/BoldRooms/Gentrification" unique_id=1787780786]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -220.0
+offset_top = -220.0
+offset_right = 220.0
+offset_bottom = 220.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("21_a6jrf")
+
 [node name="ArttoThrive" type="TextureRect" parent="BackdropLayer/BoldRooms" unique_id=1903511816]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 0
@@ -669,6 +750,22 @@ grow_vertical = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 24
 text = "Art to Thrive"
+
+[node name="TextureRect" type="TextureRect" parent="BackdropLayer/BoldRooms/ArttoThrive" unique_id=1419947696]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -220.0
+offset_top = -220.0
+offset_right = 220.0
+offset_bottom = 220.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("21_a6jrf")
 
 [node name="Beginnings" type="TextureRect" parent="BackdropLayer/BoldRooms" unique_id=819058765]
 modulate = Color(1, 1, 1, 0)
@@ -692,8 +789,24 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 24
 text = "Beginnings"
 
+[node name="TextureRect" type="TextureRect" parent="BackdropLayer/BoldRooms/Beginnings" unique_id=435063566]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -220.0
+offset_top = -220.0
+offset_right = 220.0
+offset_bottom = 220.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("21_a6jrf")
+
 [node name="LightRooms" type="Control" parent="BackdropLayer" unique_id=973724435]
-modulate = Color(1, 1, 1, 0.30980393)
+modulate = Color(1, 1, 1, 0.19215687)
 layout_mode = 3
 anchors_preset = 0
 offset_left = 74.0
