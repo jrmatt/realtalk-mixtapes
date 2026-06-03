@@ -123,7 +123,7 @@ func _on_stop_btn_pressed() -> void:
         loaded_tape.visible = true
         loaded_tape = null
         $Tape.visible = false
-        $Radio/RadioLabel/TapeLabel.text = ""
+        $Radio/Control/TapeLabel.text = ""
         $Radio/TapeDoor.open_door()
         
         $Radio/Dial.cassette_mode = false
@@ -291,9 +291,11 @@ func _on_tape_loaded(tape):
             $Radio.add_child(loaded_tape)
             loaded_tape.visible = false
             
-            $Radio/RadioLabel/FrequencyLabel.text = ""
-            $Radio/RadioLabel/SpeakerLabel.text = ""
-            $Radio/RadioLabel/TapeLabel.text = loaded_tape.tape_name
+            $Radio/RadioLabel/HBoxContainer/Label.freq_name = ""
+            $Radio/RadioLabel/HBoxContainer/Label2.freq_name = ""
+            $Radio/RadioLabel/HBoxContainer/Label.speakers = ""
+            $Radio/RadioLabel/HBoxContainer/Label2.speakers = ""
+            $Radio/Control/TapeLabel.text = loaded_tape.tape_name
             
             $Radio/Dial.mute()
             $Radio/Dial.cassette_mode = true     
