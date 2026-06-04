@@ -299,9 +299,11 @@ metadata/_edit_use_anchors_ = true
 
 [node name="TapeDoor" type="AnimatedSprite2D" parent="Radio" unique_id=1264128355]
 z_index = 2
-position = Vector2(1323, 898)
+position = Vector2(1324, 897)
 sprite_frames = SubResource("SpriteFrames_ycdy4")
 animation = &"new_animation"
+frame = 1
+frame_progress = 0.59125566
 script = ExtResource("9_ycdy4")
 
 [node name="Stacks" type="Control" parent="." unique_id=327644751]
