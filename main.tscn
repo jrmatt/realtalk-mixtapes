@@ -28,6 +28,7 @@
 [ext_resource type="Texture2D" uid="uid://br3ayotk864hs" path="res://sprites/GreenRoom.png" id="22_a6jrf"]
 [ext_resource type="Texture2D" uid="uid://cpw1iw46slgjg" path="res://sprites/OrangeRoom.png" id="23_xuqvo"]
 [ext_resource type="Texture2D" uid="uid://dmwd05vuxkn7l" path="res://sprites/IndigoRoom.png" id="24_qsp4k"]
+[ext_resource type="FontFile" uid="uid://bqg5ao41gp82j" path="res://fonts/Hot-Mess.ttf" id="24_seu75"]
 [ext_resource type="Texture2D" uid="uid://demo453fcjg3j" path="res://sprites/PurpleRoom.png" id="25_kq58d"]
 [ext_resource type="Texture2D" uid="uid://dfo1p01ktd21t" path="res://sprites/TealRoom.png" id="26_seu75"]
 
@@ -578,16 +579,19 @@ texture = ExtResource("23_xuqvo")
 
 [node name="Label" type="Label" parent="BackdropLayer/BoldRooms/BlackArt" unique_id=1948468708]
 layout_mode = 1
-anchors_preset = 12
+anchors_preset = 7
+anchor_left = 0.5
 anchor_top = 1.0
-anchor_right = 1.0
+anchor_right = 0.5
 anchor_bottom = 1.0
-offset_top = -35.0
-offset_bottom = -1.0
+offset_left = -98.0
+offset_top = -62.0
+offset_right = 98.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 24
+theme_override_fonts/font = ExtResource("24_seu75")
+theme_override_font_sizes/font_size = 54
 text = "Black Art"
 
 [node name="TextureRect" type="TextureRect" parent="BackdropLayer/BoldRooms/BlackArt" unique_id=1223085032]
@@ -616,17 +620,21 @@ texture = ExtResource("24_qsp4k")
 
 [node name="Label" type="Label" parent="BackdropLayer/BoldRooms/AcrossGenerations" unique_id=615984012]
 layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -35.0
-offset_bottom = -1.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -119.5
+offset_top = -31.0
+offset_right = 119.5
+offset_bottom = 31.0
 grow_horizontal = 2
-grow_vertical = 0
+grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 24
-text = "Across Generations"
+theme_override_fonts/font = ExtResource("24_seu75")
+theme_override_font_sizes/font_size = 54
+text = "Generations"
 
 [node name="TextureRect" type="TextureRect" parent="BackdropLayer/BoldRooms/AcrossGenerations" unique_id=1729607235]
 show_behind_parent = true
@@ -636,10 +644,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -220.0
-offset_top = -220.0
-offset_right = 220.0
-offset_bottom = 220.0
+offset_left = -253.5
+offset_top = -218.5
+offset_right = 186.5
+offset_bottom = 221.5
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("21_a6jrf")
@@ -654,16 +662,19 @@ texture = ExtResource("25_kq58d")
 
 [node name="Label" type="Label" parent="BackdropLayer/BoldRooms/ArtEconomy" unique_id=1149225080]
 layout_mode = 1
-anchors_preset = 12
+anchors_preset = 7
+anchor_left = 0.5
 anchor_top = 1.0
-anchor_right = 1.0
+anchor_right = 0.5
 anchor_bottom = 1.0
-offset_top = -35.0
-offset_bottom = -1.0
+offset_left = -119.5
+offset_top = -62.0
+offset_right = 119.5
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 24
+theme_override_fonts/font = ExtResource("24_seu75")
+theme_override_font_sizes/font_size = 54
 text = "Art Economy"
 
 [node name="TextureRect" type="TextureRect" parent="BackdropLayer/BoldRooms/ArtEconomy" unique_id=1620142759]
@@ -692,16 +703,20 @@ texture = ExtResource("26_seu75")
 
 [node name="Label" type="Label" parent="BackdropLayer/BoldRooms/LocalScene" unique_id=1272111472]
 layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -35.0
-offset_bottom = -1.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -106.5
+offset_top = -31.0
+offset_right = 106.5
+offset_bottom = 31.0
 grow_horizontal = 2
-grow_vertical = 0
+grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 24
+theme_override_fonts/font = ExtResource("24_seu75")
+theme_override_font_sizes/font_size = 54
 text = "Local Scene"
 
 [node name="TextureRect" type="TextureRect" parent="BackdropLayer/BoldRooms/LocalScene" unique_id=2127906104]
@@ -730,16 +745,19 @@ texture = ExtResource("20_getpj")
 
 [node name="Label" type="Label" parent="BackdropLayer/BoldRooms/Gentrification" unique_id=943759608]
 layout_mode = 1
-anchors_preset = 12
+anchors_preset = 7
+anchor_left = 0.5
 anchor_top = 1.0
-anchor_right = 1.0
+anchor_right = 0.5
 anchor_bottom = 1.0
-offset_top = -35.0
-offset_bottom = -1.0
+offset_left = -144.0
+offset_top = -62.0
+offset_right = 144.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 24
+theme_override_fonts/font = ExtResource("24_seu75")
+theme_override_font_sizes/font_size = 54
 text = "Gentrification"
 
 [node name="TextureRect" type="TextureRect" parent="BackdropLayer/BoldRooms/Gentrification" unique_id=1787780786]
@@ -768,16 +786,20 @@ texture = ExtResource("21_lswn8")
 
 [node name="Label" type="Label" parent="BackdropLayer/BoldRooms/ArttoThrive" unique_id=339159636]
 layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -35.0
-offset_bottom = -1.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -129.5
+offset_top = -31.0
+offset_right = 129.5
+offset_bottom = 31.0
 grow_horizontal = 2
-grow_vertical = 0
+grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 24
+theme_override_fonts/font = ExtResource("24_seu75")
+theme_override_font_sizes/font_size = 54
 text = "Art to Thrive"
 
 [node name="TextureRect" type="TextureRect" parent="BackdropLayer/BoldRooms/ArttoThrive" unique_id=1419947696]
@@ -806,16 +828,19 @@ texture = ExtResource("22_a6jrf")
 
 [node name="Label" type="Label" parent="BackdropLayer/BoldRooms/Beginnings" unique_id=598761473]
 layout_mode = 1
-anchors_preset = 12
+anchors_preset = 7
+anchor_left = 0.5
 anchor_top = 1.0
-anchor_right = 1.0
+anchor_right = 0.5
 anchor_bottom = 1.0
-offset_top = -35.0
-offset_bottom = -1.0
+offset_left = -119.5
+offset_top = -62.0
+offset_right = 119.5
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 24
+theme_override_fonts/font = ExtResource("24_seu75")
+theme_override_font_sizes/font_size = 54
 text = "Beginnings"
 
 [node name="TextureRect" type="TextureRect" parent="BackdropLayer/BoldRooms/Beginnings" unique_id=435063566]
@@ -852,16 +877,19 @@ texture = ExtResource("23_xuqvo")
 
 [node name="Label" type="Label" parent="BackdropLayer/LightRooms/BlackArt" unique_id=1842630512]
 layout_mode = 1
-anchors_preset = 12
+anchors_preset = 7
+anchor_left = 0.5
 anchor_top = 1.0
-anchor_right = 1.0
+anchor_right = 0.5
 anchor_bottom = 1.0
-offset_top = -35.0
-offset_bottom = -1.0
+offset_left = -87.0
+offset_top = -55.0
+offset_right = 87.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 24
+theme_override_fonts/font = ExtResource("24_seu75")
+theme_override_font_sizes/font_size = 54
 text = "Black Art"
 
 [node name="AcrossGenerations" type="TextureRect" parent="BackdropLayer/LightRooms" unique_id=2074420084]
@@ -873,17 +901,21 @@ texture = ExtResource("24_qsp4k")
 
 [node name="Label" type="Label" parent="BackdropLayer/LightRooms/AcrossGenerations" unique_id=1412421379]
 layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -35.0
-offset_bottom = -1.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -106.0
+offset_top = -27.5
+offset_right = 106.0
+offset_bottom = 27.5
 grow_horizontal = 2
-grow_vertical = 0
+grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 24
-text = "Across Generations"
+theme_override_fonts/font = ExtResource("24_seu75")
+theme_override_font_sizes/font_size = 54
+text = "Generations"
 
 [node name="ArtEconomy" type="TextureRect" parent="BackdropLayer/LightRooms" unique_id=1652742624]
 layout_mode = 0
@@ -894,16 +926,19 @@ texture = ExtResource("25_kq58d")
 
 [node name="Label" type="Label" parent="BackdropLayer/LightRooms/ArtEconomy" unique_id=1654265684]
 layout_mode = 1
-anchors_preset = 12
+anchors_preset = 7
+anchor_left = 0.5
 anchor_top = 1.0
-anchor_right = 1.0
+anchor_right = 0.5
 anchor_bottom = 1.0
-offset_top = -35.0
-offset_bottom = -1.0
+offset_left = -106.0
+offset_top = -55.0
+offset_right = 106.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 24
+theme_override_fonts/font = ExtResource("24_seu75")
+theme_override_font_sizes/font_size = 54
 text = "Art Economy"
 
 [node name="LocalScene" type="TextureRect" parent="BackdropLayer/LightRooms" unique_id=1905356632]
@@ -915,16 +950,20 @@ texture = ExtResource("26_seu75")
 
 [node name="Label" type="Label" parent="BackdropLayer/LightRooms/LocalScene" unique_id=506463595]
 layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -35.0
-offset_bottom = -1.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -94.5
+offset_top = -27.5
+offset_right = 94.5
+offset_bottom = 27.5
 grow_horizontal = 2
-grow_vertical = 0
+grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 24
+theme_override_fonts/font = ExtResource("24_seu75")
+theme_override_font_sizes/font_size = 54
 text = "Local Scene"
 
 [node name="Gentrification" type="TextureRect" parent="BackdropLayer/LightRooms" unique_id=863281249]
@@ -936,16 +975,19 @@ texture = ExtResource("20_getpj")
 
 [node name="Label" type="Label" parent="BackdropLayer/LightRooms/Gentrification" unique_id=1229359820]
 layout_mode = 1
-anchors_preset = 12
+anchors_preset = 7
+anchor_left = 0.5
 anchor_top = 1.0
-anchor_right = 1.0
+anchor_right = 0.5
 anchor_bottom = 1.0
-offset_top = -35.0
-offset_bottom = -1.0
+offset_left = -128.0
+offset_top = -55.0
+offset_right = 128.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 24
+theme_override_fonts/font = ExtResource("24_seu75")
+theme_override_font_sizes/font_size = 54
 text = "Gentrification"
 
 [node name="ArttoThrive" type="TextureRect" parent="BackdropLayer/LightRooms" unique_id=1442407491]
@@ -957,16 +999,20 @@ texture = ExtResource("21_lswn8")
 
 [node name="Label" type="Label" parent="BackdropLayer/LightRooms/ArttoThrive" unique_id=117378794]
 layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -35.0
-offset_bottom = -1.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -115.5
+offset_top = -27.5
+offset_right = 115.5
+offset_bottom = 27.5
 grow_horizontal = 2
-grow_vertical = 0
+grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 24
+theme_override_fonts/font = ExtResource("24_seu75")
+theme_override_font_sizes/font_size = 54
 text = "Art to Thrive"
 
 [node name="Beginnings" type="TextureRect" parent="BackdropLayer/LightRooms" unique_id=1545463436]
@@ -978,16 +1024,19 @@ texture = ExtResource("22_a6jrf")
 
 [node name="Label" type="Label" parent="BackdropLayer/LightRooms/Beginnings" unique_id=1764299765]
 layout_mode = 1
-anchors_preset = 12
+anchors_preset = 7
+anchor_left = 0.5
 anchor_top = 1.0
-anchor_right = 1.0
+anchor_right = 0.5
 anchor_bottom = 1.0
-offset_top = -35.0
-offset_bottom = -1.0
+offset_left = -106.5
+offset_top = -55.0
+offset_right = 106.5
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 24
+theme_override_fonts/font = ExtResource("24_seu75")
+theme_override_font_sizes/font_size = 54
 text = "Beginnings"
 
 [connection signal="playing_freq" from="Radio/Dial" to="." method="_on_dial_playing_freq"]
