@@ -50,7 +50,8 @@ func _unhandled_input(event: InputEvent) -> void:
             return
         else:
             showing_controls = not showing_controls
-            $Logo.visible = not $Logo.visible
+            $BackdropLayer/BoldRooms.visible = not $BackdropLayer/BoldRooms.visible
+            $BackdropLayer/LightRooms.visible = not $BackdropLayer/LightRooms.visible
             $Controls.visible = not $Controls.visible
         
 
