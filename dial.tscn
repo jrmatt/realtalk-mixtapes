@@ -15,7 +15,7 @@ bg_color = Color(0, 0, 0, 1)
 [node name="Dial" type="Panel" unique_id=1296031382]
 offset_left = 109.0
 offset_top = 835.0
-offset_right = 648.0
+offset_right = 1122.0
 offset_bottom = 946.0
 theme_override_styles/panel = SubResource("StyleBoxEmpty_8er6q")
 script = ExtResource("1_6q106")

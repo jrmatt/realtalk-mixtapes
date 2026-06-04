@@ -383,10 +383,10 @@ script = ExtResource("5_kq58d")
 
 [node name="Dial" parent="Radio" unique_id=1296031382 instance=ExtResource("14_w48qg")]
 z_index = 1
-offset_left = 982.0
-offset_top = 457.0
-offset_right = 1368.0
-offset_bottom = 497.0
+offset_left = 979.0
+offset_top = 467.0
+offset_right = 1657.0
+offset_bottom = 507.0
 
 [node name="Control" type="HBoxContainer" parent="Radio" unique_id=204003008]
 clip_children = 1
