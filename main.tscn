@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ceif0x5qnf4pt" path="res://main.gd" id="1_w48qg"]
 [ext_resource type="Texture2D" uid="uid://csj3n6s056r2s" path="res://sprites/radio_body.png" id="2_qsp4k"]
+[ext_resource type="Texture2D" uid="uid://c5u73hv0he1ma" path="res://sprites/rec_light_on.png" id="3_kq58d"]
 [ext_resource type="Script" uid="uid://cbhsrotcos7u0" path="res://radio_label.gd" id="3_qsp4k"]
 [ext_resource type="FontFile" uid="uid://bmhytq3j5rers" path="res://fonts/digital-7 (mono).ttf" id="3_xuqvo"]
 [ext_resource type="Script" uid="uid://jddsx5iq1ymv" path="res://label.gd" id="5_kq58d"]
@@ -326,6 +327,11 @@ position = Vector2(47.77605, -238.33333)
 amount = 23
 process_material = SubResource("ParticleProcessMaterial_yaehf")
 
+[node name="RecLight" type="Sprite2D" parent="Radio/RadioBody" unique_id=1357858205]
+visible = false
+position = Vector2(-314, -85)
+texture = ExtResource("3_kq58d")
+
 [node name="RadioLabel" type="ScrollContainer" parent="Radio" unique_id=290878849]
 z_index = 1
 custom_minimum_size = Vector2(100, 0)
@@ -525,6 +531,7 @@ scale = Vector2(0.70072055, 0.70072055)
 texture = ExtResource("11_efxa6")
 
 [node name="RewindShader" type="Sprite2D" parent="." unique_id=519319861]
+visible = false
 z_index = 10
 material = SubResource("ShaderMaterial_efxa6")
 position = Vector2(1336, 747)

@@ -135,6 +135,7 @@ func _on_stop_btn_pressed() -> void:
         pop_button($Radio/RecordAnchor/RecordBtn)
         print("Stopping recording")
         effect.set_recording_active(false)
+        $Radio/RadioBody/RecLight.visible = false
         _pause_recording()
 
     else:
@@ -332,11 +333,13 @@ func _check_text_safety(text):
 
 func _start_recording() -> void:
     effect.set_recording_active(true)
+    $Radio/RadioBody/RecLight.visible = true
        
 
 func _pause_recording() -> void:
     recording = effect.get_recording()
     effect.set_recording_active(false)
+    $Radio/RadioBody/RecLight.visible = false
     
     var recording_dict = {}
     if current_track_speakers:
