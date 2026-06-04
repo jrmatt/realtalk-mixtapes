@@ -5,6 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://c5u73hv0he1ma" path="res://sprites/rec_light_on.png" id="3_kq58d"]
 [ext_resource type="Script" uid="uid://cbhsrotcos7u0" path="res://radio_label.gd" id="3_qsp4k"]
 [ext_resource type="FontFile" uid="uid://bmhytq3j5rers" path="res://fonts/digital-7 (mono).ttf" id="3_xuqvo"]
+[ext_resource type="Texture2D" uid="uid://bbyojnw0kcgc5" path="res://sprites/level_needle.png" id="4_htxhm"]
+[ext_resource type="Script" uid="uid://c2rp7fc1kgkoh" path="res://level_needle.gd" id="5_jq2sk"]
 [ext_resource type="Script" uid="uid://jddsx5iq1ymv" path="res://label.gd" id="5_kq58d"]
 [ext_resource type="Texture2D" uid="uid://l8vp67jnr7gp" path="res://sprites/button.png" id="7_qsp4k"]
 [ext_resource type="Script" uid="uid://dljp5jxnewx7g" path="res://record.gd" id="8_82xsv"]
@@ -332,6 +334,22 @@ process_material = SubResource("ParticleProcessMaterial_yaehf")
 visible = false
 position = Vector2(-314, -85)
 texture = ExtResource("3_kq58d")
+
+[node name="LevelNeedle1" type="Sprite2D" parent="Radio/RadioBody" unique_id=1838539589]
+position = Vector2(-426, -211)
+rotation = -0.3228859
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("4_htxhm")
+offset = Vector2(-23, -30)
+script = ExtResource("5_jq2sk")
+
+[node name="LevelNeedle2" type="Sprite2D" parent="Radio/RadioBody" unique_id=1534439143]
+position = Vector2(430.00018, -215)
+rotation = -0.3228859
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("4_htxhm")
+offset = Vector2(-23, -30)
+script = ExtResource("5_jq2sk")
 
 [node name="RadioLabel" type="ScrollContainer" parent="Radio" unique_id=290878849]
 z_index = 1
