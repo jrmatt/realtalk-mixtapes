@@ -4,11 +4,11 @@
 [ext_resource type="PackedScene" uid="uid://dibpwlycg8oyi" path="res://bar.tscn" id="2_8er6q"]
 [ext_resource type="AudioStream" uid="uid://vnbhy7axckf0" path="res://sounds/260522_radio_static.mp3" id="2_w8tbn"]
 [ext_resource type="AudioStream" uid="uid://dt1nlg3k3fp36" path="res://sounds/rewind.mp3" id="4_8er6q"]
-[ext_resource type="Texture2D" uid="uid://cxjde103syn4t" path="res://sprites/radio (1).png" id="5_fcqnh"]
+[ext_resource type="Texture2D" uid="uid://defys0slmp1hm" path="res://sprites/dial.png" id="5_6q106"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8er6q"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6q106"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lbqvx"]
 resource_local_to_scene = true
 bg_color = Color(0, 0, 0, 1)
 
@@ -26,7 +26,7 @@ layout_mode = 0
 offset_top = 0.0
 offset_right = 3.0
 offset_bottom = 114.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_6q106")
+theme_override_styles/panel = SubResource("StyleBoxFlat_lbqvx")
 
 [node name="Static" type="AudioStreamPlayer" parent="." unique_id=525667313]
 stream = ExtResource("2_w8tbn")
@@ -38,7 +38,6 @@ volume_db = -14.0
 
 [node name="Knob" type="Sprite2D" parent="." unique_id=2130999480]
 z_index = -10
-position = Vector2(2, -265)
-texture = ExtResource("5_fcqnh")
-region_enabled = true
+position = Vector2(-85, 15)
+texture = ExtResource("5_6q106")
 region_rect = Rect2(87.176346, 68.484695, 133.0293, 135.8065)
