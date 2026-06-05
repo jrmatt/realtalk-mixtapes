@@ -39,7 +39,7 @@ func _unhandled_input(event: InputEvent) -> void:
     if event.is_action_pressed('ui_left') or event.is_action_pressed('ui_right') or event.is_action_pressed('ui_up') or event.is_action_pressed('ui_down'):
         var current_focus = get_viewport().gui_get_focus_owner()
         if not current_focus:
-            $Stacks/EmptyTapes.grab_focus()
+            $BlankTapesBox.grab_focus()
     if event.is_action_pressed("show_controls"):
         if not currently_accepting_button_presses:
             return
@@ -75,6 +75,14 @@ func depress_disabled_button(btn):
 # --------
 # BUTTON LISTENERS
 # --------
+
+
+func _on_blank_tapes_box_pressed() -> void:
+    var empty_tape = MixtapeScene.instantiate()
+    empty_tape.is_recordable = true   
+    empty_tape.visible = false
+    add_child(empty_tape)
+    _on_tape_loaded(empty_tape)
 
 
 func _on_record_btn_pressed() -> void:      
@@ -268,11 +276,11 @@ func _on_tape_loaded(tape):
     if not loaded_tape:
         loaded_tape = tape
         $Tape.visible = true
+        await get_tree().create_timer(2).timeout
         $Radio/TapeDoor.load_tape()
 
         if loaded_tape.is_recordable:
             print("Loading empty tape: ", loaded_tape, loaded_tape.is_recordable)
-            $Stacks/EmptyTapes.remove_child(loaded_tape)
 
         else:
             print("Loading recorded tape: ", loaded_tape, loaded_tape.is_recordable)
@@ -346,11 +354,3 @@ func _process(delta: float) -> void:
     if loaded_tape and (loaded_tape.player.playing or effect.is_recording_active()):
         $Tape/Gear1.rotation += gear_rotation_direction * gear_rotation_speed * delta
         $Tape/Gear2.rotation += gear_rotation_direction * gear_rotation_speed * delta
-        
-
-func _on_blank_tapes_box_pressed() -> void:
-    var empty_tape = MixtapeScene.instantiate()
-    empty_tape.is_recordable = true   
-    empty_tape.visible = false
-    add_child(empty_tape)
-    _on_tape_loaded(empty_tape)

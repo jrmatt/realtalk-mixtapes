@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ciohh52mfwdsj"]
 
 [ext_resource type="PackedScene" uid="uid://bt0iwvnblvssu" path="res://greenpixels-onscreen-keyboard/text_edit_with_on_screen_keyboard.tscn" id="2_8viy1"]
-[ext_resource type="Texture2D" uid="uid://du2p1s5t0nf7p" path="res://sprites/tape_side_sprite.png" id="2_hjq3a"]
+[ext_resource type="Texture2D" uid="uid://4481vdoccp0j" path="res://sprites/tape_final.png" id="2_hcujw"]
 [ext_resource type="FontFile" uid="uid://bqg5ao41gp82j" path="res://fonts/Hot-Mess.ttf" id="3_hcujw"]
 [ext_resource type="Script" uid="uid://c2kpy1sxpmuys" path="res://tape_name_preview.gd" id="3_hjq3a"]
 [ext_resource type="Texture2D" uid="uid://cmq6ms1ra20dw" path="res://BackgroundGradientMobile.png" id="4_w8f4x"]
@@ -40,13 +40,16 @@ show_input = false
 
 [node name="TapePreview" type="Sprite2D" parent="." unique_id=892739047]
 position = Vector2(946, 404)
-texture = ExtResource("2_hjq3a")
+scale = Vector2(2, 2)
+texture = ExtResource("2_hcujw")
+region_enabled = true
+region_rect = Rect2(1055.8108, 622.35565, 392.2556, 57.881836)
 
 [node name="TapeNamePreview" type="Label" parent="TapePreview" unique_id=460710430]
-offset_left = -334.0
+offset_left = -168.0
 offset_top = -33.0
-offset_right = 329.0
-offset_bottom = 28.0
+offset_right = 169.0
+offset_bottom = 36.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_hcujw")
 theme_override_font_sizes/font_size = 60
