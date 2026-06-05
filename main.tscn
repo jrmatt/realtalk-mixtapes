@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://ditb3ufq2bkb5" path="res://sprites/empty_box.png" id="16_4k2k6"]
 [ext_resource type="PackedScene" uid="uid://upte61xgooko" path="res://controls.tscn" id="17_074og"]
 [ext_resource type="Texture2D" uid="uid://bopd7wv8xw2l5" path="res://sprites/radio_logo.png" id="17_a6jrf"]
+[ext_resource type="Script" uid="uid://dd148diwddonr" path="res://blank_tapes_box.gd" id="17_jq2sk"]
 [ext_resource type="Texture2D" uid="uid://4481vdoccp0j" path="res://sprites/tape_final.png" id="18_0rl1p"]
 [ext_resource type="Texture2D" uid="uid://ere0swytoiwl" path="res://sprites/controller.png" id="18_cegan"]
 [ext_resource type="Texture2D" uid="uid://cmq6ms1ra20dw" path="res://BackgroundGradientMobile.png" id="19_82xsv"]
@@ -356,6 +357,7 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_4k2k6")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_0rl1p")
 theme_override_styles/focus = SubResource("StyleBoxFlat_htxhm")
 icon = ExtResource("16_4k2k6")
+script = ExtResource("17_jq2sk")
 
 [node name="Label" type="Label" parent="BlankTapesBox" unique_id=518244271]
 layout_mode = 0
@@ -369,22 +371,30 @@ theme_override_fonts/font = ExtResource("24_seu75")
 theme_override_font_sizes/font_size = 54
 text = "BLANK TAPES"
 
-[node name="GearStatic1" type="Sprite2D" parent="BlankTapesBox" unique_id=35699377]
+[node name="Control" type="Control" parent="BlankTapesBox" unique_id=674132160]
+show_behind_parent = true
+anchors_preset = 0
+offset_left = -2.222
+offset_top = 286.0
+offset_right = 37.778
+offset_bottom = 326.0
+
+[node name="GearStatic1" type="Sprite2D" parent="BlankTapesBox/Control" unique_id=35699377]
 position = Vector2(155.76666, -146.67224)
 scale = Vector2(0.9, 0.9)
 texture = ExtResource("18_0rl1p")
 region_enabled = true
 region_rect = Rect2(813.33356, 720.9148, 61.11841, 61.422974)
 
-[node name="GearStatic2" type="Sprite2D" parent="BlankTapesBox" unique_id=212624398]
-position = Vector2(283.54443, -147.78336)
+[node name="GearStatic2" type="Sprite2D" parent="BlankTapesBox/Control" unique_id=212624398]
+position = Vector2(283.54446, -147.78333)
 scale = Vector2(0.9, 0.9)
 texture = ExtResource("18_0rl1p")
 region_enabled = true
 region_rect = Rect2(813.33356, 720.9148, 61.11841, 61.422974)
 
-[node name="Sprite2D" type="Sprite2D" parent="BlankTapesBox" unique_id=53952062]
-position = Vector2(220.2111, -137.78336)
+[node name="Sprite2D" type="Sprite2D" parent="BlankTapesBox/Control" unique_id=53952062]
+position = Vector2(220.2111, -137.78333)
 scale = Vector2(0.9, 0.9)
 texture = ExtResource("18_0rl1p")
 region_enabled = true

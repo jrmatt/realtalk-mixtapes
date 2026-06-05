@@ -275,8 +275,8 @@ func _on_tape_loaded(tape):
     
     if not loaded_tape:
         loaded_tape = tape
+        await get_tree().create_timer(1).timeout
         $Tape.visible = true
-        await get_tree().create_timer(2).timeout
         $Radio/TapeDoor.load_tape()
 
         if loaded_tape.is_recordable:
