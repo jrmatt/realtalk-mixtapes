@@ -165,6 +165,7 @@ func _on_stop_btn_pressed() -> void:
             $Radio/TapeDoor.open_door()
             loaded_tape = null
             $Tape.visible = false
+            $BlankTapesBox.animate_replace_tape()
 
 
 func _on_play_btn_pressed() -> void:
