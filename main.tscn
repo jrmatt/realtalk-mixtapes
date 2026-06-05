@@ -134,6 +134,26 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_htxhm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jq2sk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4k2k6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0rl1p"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_htxhm"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.8509804, 0.8117647, 0.52156866, 0.6862745)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
 [sub_resource type="GDScript" id="GDScript_2cqfq"]
 script/source = "extends Label
 
@@ -324,17 +344,25 @@ animation = &"new_animation"
 frame_progress = 0.74587834
 script = ExtResource("9_ycdy4")
 
-[node name="BlankTapesBox" type="Sprite2D" parent="." unique_id=1203504640]
-visible = false
-position = Vector2(202, 921)
+[node name="BlankTapesBox" type="Button" parent="." unique_id=416131326]
+offset_left = 1.0
+offset_top = 798.0
+offset_right = 443.0
+offset_bottom = 1091.0
 scale = Vector2(0.9, 0.9)
-texture = ExtResource("16_4k2k6")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_htxhm")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_jq2sk")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_4k2k6")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_0rl1p")
+theme_override_styles/focus = SubResource("StyleBoxFlat_htxhm")
+icon = ExtResource("16_4k2k6")
 
 [node name="Label" type="Label" parent="BlankTapesBox" unique_id=518244271]
-offset_left = -132.22223
-offset_top = 36.666668
-offset_right = 124.77777
-offset_bottom = 98.66667
+layout_mode = 0
+offset_left = 85.55554
+offset_top = 183.33334
+offset_right = 342.55554
+offset_bottom = 245.33334
 rotation = -0.06806784
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("24_seu75")
@@ -342,21 +370,21 @@ theme_override_font_sizes/font_size = 54
 text = "BLANK TAPES"
 
 [node name="GearStatic1" type="Sprite2D" parent="BlankTapesBox" unique_id=35699377]
-position = Vector2(-66.66667, -294.44446)
+position = Vector2(155.76666, -146.67224)
 scale = Vector2(0.9, 0.9)
 texture = ExtResource("18_0rl1p")
 region_enabled = true
 region_rect = Rect2(813.33356, 720.9148, 61.11841, 61.422974)
 
 [node name="GearStatic2" type="Sprite2D" parent="BlankTapesBox" unique_id=212624398]
-position = Vector2(61.111115, -295.55557)
+position = Vector2(283.54443, -147.78336)
 scale = Vector2(0.9, 0.9)
 texture = ExtResource("18_0rl1p")
 region_enabled = true
 region_rect = Rect2(813.33356, 720.9148, 61.11841, 61.422974)
 
 [node name="Sprite2D" type="Sprite2D" parent="BlankTapesBox" unique_id=53952062]
-position = Vector2(-2.2222223, -285.55557)
+position = Vector2(220.2111, -137.78336)
 scale = Vector2(0.9, 0.9)
 texture = ExtResource("18_0rl1p")
 region_enabled = true
@@ -388,24 +416,6 @@ alignment = 2
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
 text = "Recorded Tapes"
-
-[node name="EmptyTapes" type="VFlowContainer" parent="Stacks" unique_id=2101019717]
-visible = false
-layout_mode = 1
-offset_left = -1.0
-offset_top = 4.0
-offset_right = 358.0
-offset_bottom = 641.0
-theme_override_constants/h_separation = 0
-theme_override_constants/v_separation = 0
-alignment = 2
-reverse_fill = true
-
-[node name="Label" type="Label" parent="Stacks/EmptyTapes" unique_id=609364826]
-show_behind_parent = true
-layout_mode = 2
-theme_override_font_sizes/font_size = 24
-text = "Empty Tapes"
 
 [node name="ShowControls" type="Label" parent="." unique_id=776710490]
 offset_left = 1729.0
@@ -969,3 +979,4 @@ text = "Beginnings"
 [connection signal="pressed" from="Radio/PlayAnchor/PlayBtn" to="." method="_on_play_btn_pressed"]
 [connection signal="pressed" from="Radio/RecordAnchor/RecordBtn" to="." method="_on_record_btn_pressed"]
 [connection signal="pressed" from="Radio/StopAnchor/StopBtn" to="." method="_on_stop_btn_pressed"]
+[connection signal="pressed" from="BlankTapesBox" to="." method="_on_blank_tapes_box_pressed"]

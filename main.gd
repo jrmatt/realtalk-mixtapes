@@ -31,13 +31,8 @@ func _ready() -> void:
     # Retrieve its effect
     effect = AudioServer.get_bus_effect(idx, 0)
     effect.set_recording_active(false)  
-     
     
-    # Create the stack of empty tapes
-    for i in range(num_empty_tapes):
-        _create_empty_tape()
-    
-    $Stacks/EmptyTapes.grab_focus()
+    $BlankTapesBox.grab_focus()
  
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -159,7 +154,6 @@ func _on_stop_btn_pressed() -> void:
 
         else:
             depress_and_pop_button($Radio/StopAnchor/StopBtn)
-            _create_empty_tape()
             $Radio/TapeDoor.open_door()
             loaded_tape = null
             $Tape.visible = false
@@ -219,13 +213,6 @@ func _on_dial_playing_track(new_track: Variant, alpha: Variant) -> void:
 # --------
 # TAPE CONTROLS
 # --------    
-
-
-func _create_empty_tape() -> void:
-    var empty_tape = MixtapeScene.instantiate()
-    empty_tape.is_recordable = true
-    empty_tape.load_tape.connect(_on_tape_loaded)  
-    $Stacks/EmptyTapes.add_child(empty_tape)
      
     
 func _save_tape(text) -> void:
@@ -359,3 +346,11 @@ func _process(delta: float) -> void:
     if loaded_tape and (loaded_tape.player.playing or effect.is_recording_active()):
         $Tape/Gear1.rotation += gear_rotation_direction * gear_rotation_speed * delta
         $Tape/Gear2.rotation += gear_rotation_direction * gear_rotation_speed * delta
+        
+
+func _on_blank_tapes_box_pressed() -> void:
+    var empty_tape = MixtapeScene.instantiate()
+    empty_tape.is_recordable = true   
+    empty_tape.visible = false
+    add_child(empty_tape)
+    _on_tape_loaded(empty_tape)
