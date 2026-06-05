@@ -1,27 +1,26 @@
 [gd_scene format=3 uid="uid://brsbf0hkg1vcy"]
 
 [ext_resource type="Script" uid="uid://ceif0x5qnf4pt" path="res://main.gd" id="1_w48qg"]
-[ext_resource type="Texture2D" uid="uid://csj3n6s056r2s" path="res://sprites/radio_body.png" id="2_qsp4k"]
+[ext_resource type="Texture2D" uid="uid://b0f364dg46fkr" path="res://sprites/radio_final.png" id="2_4k2k6"]
 [ext_resource type="Texture2D" uid="uid://c5u73hv0he1ma" path="res://sprites/rec_light_on.png" id="3_kq58d"]
 [ext_resource type="Script" uid="uid://cbhsrotcos7u0" path="res://radio_label.gd" id="3_qsp4k"]
 [ext_resource type="FontFile" uid="uid://bmhytq3j5rers" path="res://fonts/digital-7 (mono).ttf" id="3_xuqvo"]
 [ext_resource type="Texture2D" uid="uid://bbyojnw0kcgc5" path="res://sprites/level_needle.png" id="4_htxhm"]
 [ext_resource type="Script" uid="uid://c2rp7fc1kgkoh" path="res://level_needle.gd" id="5_jq2sk"]
 [ext_resource type="Script" uid="uid://jddsx5iq1ymv" path="res://label.gd" id="5_kq58d"]
-[ext_resource type="Texture2D" uid="uid://l8vp67jnr7gp" path="res://sprites/button.png" id="7_qsp4k"]
 [ext_resource type="Script" uid="uid://dljp5jxnewx7g" path="res://record.gd" id="8_82xsv"]
 [ext_resource type="Script" uid="uid://tgv1bop6og2b" path="res://tape_door.gd" id="9_ycdy4"]
-[ext_resource type="Texture2D" uid="uid://dx87ylqb2qqho" path="res://sprites/tape_sprite.png" id="10_4c57u"]
 [ext_resource type="Script" uid="uid://djs5r6lay0pix" path="res://play_btn.gd" id="10_w48qg"]
-[ext_resource type="Texture2D" uid="uid://bb7p64lxhdkv5" path="res://sprites/gear_sprite.png" id="11_efxa6"]
-[ext_resource type="Texture2D" uid="uid://b1jgrop6f6jya" path="res://sprites/door_open.png" id="11_qsp4k"]
+[ext_resource type="Texture2D" uid="uid://dy6hnik4opjdx" path="res://sprites/door_open.png" id="11_qsp4k"]
 [ext_resource type="Script" uid="uid://cccc3tfe44jhf" path="res://stop_btn.gd" id="12_dg77c"]
-[ext_resource type="Texture2D" uid="uid://d2mon0bs4vtyb" path="res://sprites/door_closed.png" id="12_kq58d"]
+[ext_resource type="Texture2D" uid="uid://dxye56dvxlybc" path="res://sprites/door_closed.png" id="12_kq58d"]
 [ext_resource type="Shader" uid="uid://dh1cluiagll7b" path="res://blur.gdshader" id="12_ycdy4"]
 [ext_resource type="Script" uid="uid://boswg3amidssu" path="res://rewind_shader.gd" id="13_w48qg"]
 [ext_resource type="PackedScene" uid="uid://pr88iiebh72d" path="res://dial.tscn" id="14_w48qg"]
+[ext_resource type="Texture2D" uid="uid://ditb3ufq2bkb5" path="res://sprites/empty_box.png" id="16_4k2k6"]
 [ext_resource type="PackedScene" uid="uid://upte61xgooko" path="res://controls.tscn" id="17_074og"]
 [ext_resource type="Texture2D" uid="uid://bopd7wv8xw2l5" path="res://sprites/radio_logo.png" id="17_a6jrf"]
+[ext_resource type="Texture2D" uid="uid://4481vdoccp0j" path="res://sprites/tape_final.png" id="18_0rl1p"]
 [ext_resource type="Texture2D" uid="uid://ere0swytoiwl" path="res://sprites/controller.png" id="18_cegan"]
 [ext_resource type="Texture2D" uid="uid://cmq6ms1ra20dw" path="res://BackgroundGradientMobile.png" id="19_82xsv"]
 [ext_resource type="Texture2D" uid="uid://blpq1gw8qmvk7" path="res://sprites/BlueRoom.png" id="20_getpj"]
@@ -75,6 +74,10 @@ turbulence_noise_scale = 5.68
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lswn8"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_jq2sk"]
+atlas = ExtResource("2_4k2k6")
+region = Rect2(1430.0787, 270.11234, 109.02515, 81.01395)
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dg77c"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ycdy4"]
@@ -84,6 +87,10 @@ turbulence_noise_scale = 5.68
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vivmo"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2cqfq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4k2k6"]
+atlas = ExtResource("2_4k2k6")
+region = Rect2(1318.2892, 270.03952, 107.909546, 84.04724)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yaehf"]
 
@@ -95,6 +102,10 @@ turbulence_noise_scale = 5.68
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_getpj"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_0rl1p"]
+atlas = ExtResource("2_4k2k6")
+region = Rect2(1543.1206, 268.67465, 106.73413, 81.114044)
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a6jrf"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xuqvo"]
@@ -104,6 +115,10 @@ turbulence_noise_scale = 5.68
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kq58d"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_seu75"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ok6jj"]
+atlas = ExtResource("2_4k2k6")
+region = Rect2(1126.7906, 272.22882, 105.89111, 81.62656)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ycdy4"]
 animations = [{
@@ -148,11 +163,14 @@ texture_filter = 1
 script = ExtResource("1_w48qg")
 
 [node name="Radio" type="Node2D" parent="." unique_id=782036082]
+position = Vector2(29, -3)
 
 [node name="RadioBody" type="Sprite2D" parent="Radio" unique_id=657849294]
-position = Vector2(1320, 762)
-texture = ExtResource("2_qsp4k")
-region_rect = Rect2(701.1189, 447.70068, 1099.2456, 554.2708)
+position = Vector2(1334, 770)
+scale = Vector2(0.95, 0.95)
+texture = ExtResource("2_4k2k6")
+region_enabled = true
+region_rect = Rect2(698.7012, 398.19308, 1107.2256, 607.48486)
 
 [node name="MagicSparkles" type="GPUParticles2D" parent="Radio/RadioBody" unique_id=1391715145]
 visible = false
@@ -184,10 +202,10 @@ script = ExtResource("5_jq2sk")
 [node name="RadioLabel" type="ScrollContainer" parent="Radio" unique_id=290878849]
 z_index = 1
 custom_minimum_size = Vector2(100, 0)
-offset_left = 1062.0
-offset_top = 653.0
-offset_right = 1581.0
-offset_bottom = 737.0
+offset_left = 1084.0
+offset_top = 666.0
+offset_right = 1584.0
+offset_bottom = 750.0
 horizontal_scroll_mode = 3
 script = ExtResource("3_qsp4k")
 
@@ -199,7 +217,7 @@ theme_override_constants/separation = 12
 custom_minimum_size = Vector2(1000, 0)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_xuqvo")
-theme_override_font_sizes/font_size = 74
+theme_override_font_sizes/font_size = 70
 clip_text = true
 script = ExtResource("5_kq58d")
 
@@ -207,7 +225,7 @@ script = ExtResource("5_kq58d")
 custom_minimum_size = Vector2(1000, 0)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_xuqvo")
-theme_override_font_sizes/font_size = 74
+theme_override_font_sizes/font_size = 70
 clip_text = true
 script = ExtResource("5_kq58d")
 
@@ -220,19 +238,19 @@ offset_bottom = 507.0
 
 [node name="Control" type="HBoxContainer" parent="Radio" unique_id=204003008]
 clip_children = 1
-offset_left = 1053.0
-offset_top = 664.0
-offset_right = 1064.0
-offset_bottom = 708.0
+offset_left = 1079.0
+offset_top = 666.0
+offset_right = 1090.0
+offset_bottom = 720.0
 
 [node name="TapeLabel" type="Label" parent="Radio/Control" unique_id=1367407076]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_xuqvo")
-theme_override_font_sizes/font_size = 74
+theme_override_font_sizes/font_size = 70
 
 [node name="PlayAnchor" type="Node2D" parent="Radio" unique_id=452582252]
 z_index = -1
-position = Vector2(1572, 404)
+position = Vector2(1571, 410)
 
 [node name="PlayBtn" type="Button" parent="Radio/PlayAnchor" unique_id=684982014]
 offset_right = 112.0
@@ -243,13 +261,13 @@ theme_override_styles/pressed = SubResource("StyleBoxEmpty_d13ii")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_1u8w0")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_0odxb")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_lswn8")
-icon = ExtResource("7_qsp4k")
+icon = SubResource("AtlasTexture_jq2sk")
 script = ExtResource("10_w48qg")
 metadata/_edit_use_anchors_ = true
 
 [node name="RecordAnchor" type="Node2D" parent="Radio" unique_id=894432045]
 z_index = -1
-position = Vector2(1455, 404)
+position = Vector2(1455, 410)
 
 [node name="RecordBtn" type="Button" parent="Radio/RecordAnchor" unique_id=310661157]
 offset_right = 87.0
@@ -260,13 +278,13 @@ theme_override_styles/pressed = SubResource("StyleBoxEmpty_ycdy4")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_w48qg")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_vivmo")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_2cqfq")
-icon = ExtResource("7_qsp4k")
+icon = SubResource("AtlasTexture_4k2k6")
 script = ExtResource("8_82xsv")
 metadata/_edit_use_anchors_ = true
 
 [node name="StopAnchor" type="Node2D" parent="Radio" unique_id=29596954]
 z_index = -1
-position = Vector2(1685, 404)
+position = Vector2(1685, 408)
 
 [node name="StopBtn" type="Button" parent="Radio/StopAnchor" unique_id=922399820]
 offset_right = 112.0
@@ -277,13 +295,13 @@ theme_override_styles/pressed = SubResource("StyleBoxEmpty_074og")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_cegan")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_82xsv")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_getpj")
-icon = ExtResource("7_qsp4k")
+icon = SubResource("AtlasTexture_0rl1p")
 script = ExtResource("12_dg77c")
 metadata/_edit_use_anchors_ = true
 
 [node name="RwAnchor" type="Node2D" parent="Radio" unique_id=1677658616]
 z_index = -1
-position = Vector2(1218, 404)
+position = Vector2(1218, 413)
 
 [node name="RwBtn" type="Button" parent="Radio/RwAnchor" unique_id=1938241678]
 offset_right = 112.0
@@ -294,17 +312,55 @@ theme_override_styles/pressed = SubResource("StyleBoxEmpty_xuqvo")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_qsp4k")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_kq58d")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_seu75")
-icon = ExtResource("7_qsp4k")
+icon = SubResource("AtlasTexture_ok6jj")
 metadata/_edit_use_anchors_ = true
 
 [node name="TapeDoor" type="AnimatedSprite2D" parent="Radio" unique_id=1264128355]
 z_index = 2
-position = Vector2(1324, 897)
+position = Vector2(1336, 898)
+scale = Vector2(0.95, 0.95)
 sprite_frames = SubResource("SpriteFrames_ycdy4")
 animation = &"new_animation"
-frame = 1
-frame_progress = 0.59125566
+frame_progress = 0.74587834
 script = ExtResource("9_ycdy4")
+
+[node name="BlankTapesBox" type="Sprite2D" parent="." unique_id=1203504640]
+visible = false
+position = Vector2(202, 921)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("16_4k2k6")
+
+[node name="Label" type="Label" parent="BlankTapesBox" unique_id=518244271]
+offset_left = -132.22223
+offset_top = 36.666668
+offset_right = 124.77777
+offset_bottom = 98.66667
+rotation = -0.06806784
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("24_seu75")
+theme_override_font_sizes/font_size = 54
+text = "BLANK TAPES"
+
+[node name="GearStatic1" type="Sprite2D" parent="BlankTapesBox" unique_id=35699377]
+position = Vector2(-66.66667, -294.44446)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("18_0rl1p")
+region_enabled = true
+region_rect = Rect2(813.33356, 720.9148, 61.11841, 61.422974)
+
+[node name="GearStatic2" type="Sprite2D" parent="BlankTapesBox" unique_id=212624398]
+position = Vector2(61.111115, -295.55557)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("18_0rl1p")
+region_enabled = true
+region_rect = Rect2(813.33356, 720.9148, 61.11841, 61.422974)
+
+[node name="Sprite2D" type="Sprite2D" parent="BlankTapesBox" unique_id=53952062]
+position = Vector2(-2.2222223, -285.55557)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("18_0rl1p")
+region_enabled = true
+region_rect = Rect2(1052.2573, 697.4416, 398.6516, 279.4803)
 
 [node name="Stacks" type="Control" parent="." unique_id=327644751]
 layout_mode = 3
@@ -319,8 +375,10 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -378.0
-offset_bottom = 644.0
+offset_left = -355.0
+offset_top = -2.0
+offset_right = 23.0
+offset_bottom = 642.0
 grow_horizontal = 0
 theme_override_constants/h_separation = 0
 theme_override_constants/v_separation = 20
@@ -332,16 +390,19 @@ theme_override_font_sizes/font_size = 24
 text = "Recorded Tapes"
 
 [node name="EmptyTapes" type="VFlowContainer" parent="Stacks" unique_id=2101019717]
+visible = false
 layout_mode = 1
 offset_left = -1.0
 offset_top = 4.0
 offset_right = 358.0
 offset_bottom = 641.0
 theme_override_constants/h_separation = 0
-theme_override_constants/v_separation = 20
+theme_override_constants/v_separation = 0
 alignment = 2
+reverse_fill = true
 
 [node name="Label" type="Label" parent="Stacks/EmptyTapes" unique_id=609364826]
+show_behind_parent = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
 text = "Empty Tapes"
@@ -364,22 +425,28 @@ region_rect = Rect2(568.06036, 190.96555, 49.75287, 54.003143)
 [node name="Tape" type="Node2D" parent="." unique_id=614611568]
 visible = false
 
-[node name="TapeBody" type="Sprite2D" parent="Tape" unique_id=750665013]
-position = Vector2(1617.5, 801.5)
-scale = Vector2(0.58658534, 0.63586956)
-texture = ExtResource("10_4c57u")
-
 [node name="Gear1" type="Sprite2D" parent="Tape" unique_id=1776951753]
 z_index = 1
-position = Vector2(1547.0625, 778.06256)
-scale = Vector2(0.63341254, 0.63341254)
-texture = ExtResource("11_efxa6")
+position = Vector2(1294.0001, 883.00006)
+scale = Vector2(0.95, 0.95)
+texture = ExtResource("18_0rl1p")
+region_enabled = true
+region_rect = Rect2(812.46454, 720.49756, 62.133606, 61.626038)
 
 [node name="Gear2" type="Sprite2D" parent="Tape" unique_id=44219863]
 z_index = 1
-position = Vector2(1690, 778.00006)
-scale = Vector2(0.70072055, 0.70072055)
-texture = ExtResource("11_efxa6")
+position = Vector2(1430, 883)
+scale = Vector2(0.95, 0.95)
+texture = ExtResource("18_0rl1p")
+region_enabled = true
+region_rect = Rect2(813.235, 721.428, 61.284546, 60.546143)
+
+[node name="TapeBody" type="Sprite2D" parent="Tape" unique_id=750665013]
+position = Vector2(1363, 893)
+scale = Vector2(0.95, 0.95)
+texture = ExtResource("18_0rl1p")
+region_enabled = true
+region_rect = Rect2(1051.8828, 697.91833, 399.44702, 277.4984)
 
 [node name="RewindShader" type="Sprite2D" parent="." unique_id=519319861]
 visible = false

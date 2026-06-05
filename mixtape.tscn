@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dt78ncg2jpsx1"]
 
-[ext_resource type="Texture2D" uid="uid://b6gg21q3d4sow" path="res://sprites/tape_side_sprite_sm.png" id="1_xebgi"]
+[ext_resource type="Texture2D" uid="uid://4481vdoccp0j" path="res://sprites/tape_final.png" id="1_xebgi"]
 [ext_resource type="Script" uid="uid://cgx8iywm6eaoc" path="res://mixtape.gd" id="2_xebgi"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3aha3"]
@@ -26,16 +26,21 @@ expand_margin_top = 3.0
 expand_margin_right = 3.0
 expand_margin_bottom = 3.0
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_73a7t"]
+atlas = ExtResource("1_xebgi")
+region = Rect2(1055.9651, 623.39197, 392.90967, 56.246704)
+
 [node name="LoadBtn" type="Button" unique_id=1456869113]
 custom_minimum_size = Vector2(210, 30)
 offset_right = 210.0
 offset_bottom = 30.0
+scale = Vector2(0.8, 0.8)
 theme_override_styles/normal = SubResource("StyleBoxEmpty_3aha3")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_xebgi")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_73a7t")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_cx2q0")
 theme_override_styles/focus = SubResource("StyleBoxFlat_xebgi")
-icon = ExtResource("1_xebgi")
+icon = SubResource("AtlasTexture_73a7t")
 script = ExtResource("2_xebgi")
 
 [node name="PlayMix" type="AudioStreamPlayer" parent="." unique_id=714457694]

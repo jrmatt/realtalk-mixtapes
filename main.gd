@@ -37,14 +37,14 @@ func _ready() -> void:
     for i in range(num_empty_tapes):
         _create_empty_tape()
     
-    $Stacks/EmptyTapes.get_child(1).grab_focus()
+    $Stacks/EmptyTapes.grab_focus()
  
 
 func _unhandled_input(event: InputEvent) -> void:
     if event.is_action_pressed('ui_left') or event.is_action_pressed('ui_right') or event.is_action_pressed('ui_up') or event.is_action_pressed('ui_down'):
         var current_focus = get_viewport().gui_get_focus_owner()
         if not current_focus:
-            $Stacks/EmptyTapes.get_child(1).grab_focus()
+            $Stacks/EmptyTapes.grab_focus()
     if event.is_action_pressed("show_controls"):
         if not currently_accepting_button_presses:
             return
