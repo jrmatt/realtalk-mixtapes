@@ -32,7 +32,7 @@ func _ready() -> void:
     effect = AudioServer.get_bus_effect(idx, 0)
     effect.set_recording_active(false)  
     
-    $BlankTapesBox.grab_focus()
+    $ShowControls.grab_focus()
  
 
 func _unhandled_input(event: InputEvent) -> void:

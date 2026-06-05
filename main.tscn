@@ -156,7 +156,7 @@ corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 
 [sub_resource type="GDScript" id="GDScript_2cqfq"]
-script/source = "extends Label
+script/source = "extends Button
 
 
 func _on_pressed() -> void:
@@ -351,6 +351,7 @@ offset_top = 798.0
 offset_right = 443.0
 offset_bottom = 1091.0
 scale = Vector2(0.9, 0.9)
+focus_neighbor_top = NodePath("../ShowControls")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_htxhm")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_jq2sk")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_4k2k6")
@@ -427,11 +428,12 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 24
 text = "Recorded Tapes"
 
-[node name="ShowControls" type="Label" parent="." unique_id=776710490]
+[node name="ShowControls" type="Button" parent="." unique_id=340853370]
 offset_left = 1729.0
 offset_top = 26.0
 offset_right = 1889.0
 offset_bottom = 57.0
+focus_neighbor_bottom = NodePath("../BlankTapesBox")
 text = "Show Controls"
 script = SubResource("GDScript_2cqfq")
 
@@ -989,4 +991,6 @@ text = "Beginnings"
 [connection signal="pressed" from="Radio/PlayAnchor/PlayBtn" to="." method="_on_play_btn_pressed"]
 [connection signal="pressed" from="Radio/RecordAnchor/RecordBtn" to="." method="_on_record_btn_pressed"]
 [connection signal="pressed" from="Radio/StopAnchor/StopBtn" to="." method="_on_stop_btn_pressed"]
+[connection signal="focus_entered" from="BlankTapesBox" to="BlankTapesBox" method="_on_focus_entered"]
+[connection signal="focus_exited" from="BlankTapesBox" to="BlankTapesBox" method="_on_focus_exited"]
 [connection signal="pressed" from="BlankTapesBox" to="." method="_on_blank_tapes_box_pressed"]
