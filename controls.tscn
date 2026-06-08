@@ -1,159 +1,288 @@
 [gd_scene format=3 uid="uid://upte61xgooko"]
 
-[ext_resource type="Texture2D" uid="uid://ere0swytoiwl" path="res://sprites/controller.png" id="1_7n6eb"]
 [ext_resource type="Script" uid="uid://12vbijpgxd3v" path="res://tutorial.gd" id="1_yb1ct"]
+[ext_resource type="FontFile" uid="uid://878k53bmonof" path="res://fonts/NeueHaasGrotDispRound-75Bold copy.otf" id="2_ff64o"]
+[ext_resource type="Texture2D" uid="uid://ccp41yqnxy1kv" path="res://sprites/controls.png" id="2_xwvqn"]
+[ext_resource type="Texture2D" uid="uid://dvfgxf1mxvwpv" path="res://sprites/highlight.png" id="3_ff64o"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yb1ct"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-border_width_left = 4
-border_width_top = 4
-border_width_right = 4
-border_width_bottom = 4
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
+[sub_resource type="AtlasTexture" id="AtlasTexture_dist8"]
+atlas = ExtResource("2_xwvqn")
+region = Rect2(840, 356, 208, 176)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_347em"]
+atlas = ExtResource("2_xwvqn")
+region = Rect2(1050, 356, 208, 176)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sqjlr"]
+atlas = ExtResource("2_xwvqn")
+region = Rect2(840, 356, 208, 176)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j6suo"]
+atlas = ExtResource("2_xwvqn")
+region = Rect2(1050, 534, 208, 176)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0bx74"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dist8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_347em")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sqjlr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j6suo")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kxvun"]
+atlas = ExtResource("2_xwvqn")
+region = Rect2(840, 360, 210, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xwvqn"]
+atlas = ExtResource("2_xwvqn")
+region = Rect2(1050, 360, 210, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ff64o"]
+atlas = ExtResource("2_xwvqn")
+region = Rect2(1260, 360, 210, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kq3yo"]
+atlas = ExtResource("2_xwvqn")
+region = Rect2(1470, 360, 210, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kxtwu"]
+atlas = ExtResource("2_xwvqn")
+region = Rect2(1260, 540, 210, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dob1i"]
+atlas = ExtResource("2_xwvqn")
+region = Rect2(1050, 540, 210, 180)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dob1i"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kxvun")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xwvqn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ff64o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kq3yo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kxtwu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dob1i")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hkas0"]
+atlas = ExtResource("2_xwvqn")
+region = Rect2(506, 440, 253, 110)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cf7nr"]
+atlas = ExtResource("2_xwvqn")
+region = Rect2(506, 550, 253, 110)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dist8"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hkas0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cf7nr")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
 
 [node name="Controls" type="Node2D" unique_id=1477886189]
+modulate = Color(0.85882354, 0.7490196, 1, 0.5686275)
 script = ExtResource("1_yb1ct")
 
-[node name="Controller" type="Sprite2D" parent="." unique_id=1604254170]
-position = Vector2(755.44824, 160.375)
-scale = Vector2(0.28934795, 0.2913251)
-texture = ExtResource("1_7n6eb")
+[node name="LeftJoyHighlight" type="Sprite2D" parent="." unique_id=681113983]
+position = Vector2(124.00001, 376)
+scale = Vector2(1.2846591, 0.77691597)
+texture = ExtResource("3_ff64o")
 
-[node name="LeftJoyHighlight" type="Panel" parent="Controller" unique_id=1749693319]
-visible = false
-offset_left = -323.16098
-offset_top = -226.50569
-offset_right = -21.544037
-offset_bottom = 116.01503
-theme_override_styles/panel = SubResource("StyleBoxFlat_yb1ct")
-
-[node name="RightJoyHighlight" type="Panel" parent="Controller" unique_id=1233161804]
-visible = false
-offset_left = 59.246063
-offset_top = -77.34343
-offset_right = 204.66891
-offset_bottom = 82.867874
-theme_override_styles/panel = SubResource("StyleBoxFlat_yb1ct")
-
-[node name="LeftBtnHighlight" type="Panel" parent="Controller" unique_id=30660992]
-visible = false
-offset_left = -339.3191
-offset_top = -336.99625
-offset_right = -140.03638
-offset_bottom = -254.12836
-theme_override_styles/panel = SubResource("StyleBoxFlat_yb1ct")
-
-[node name="AHighlight" type="Panel" parent="Controller" unique_id=1329369736]
-visible = false
-offset_left = 215.44061
-offset_top = -121.53967
-offset_right = 290.8449
-offset_bottom = -38.671783
-theme_override_styles/panel = SubResource("StyleBoxFlat_yb1ct")
-
-[node name="BHighlight" type="Panel" parent="Controller" unique_id=389037327]
-visible = false
-offset_left = 285.45883
-offset_top = -182.30948
-offset_right = 360.86313
-offset_bottom = -99.44159
-theme_override_styles/panel = SubResource("StyleBoxFlat_yb1ct")
-
-[node name="YHighlight" type="Panel" parent="Controller" unique_id=861234156]
-visible = false
-offset_left = 220.82663
-offset_top = -248.60382
-offset_right = 296.23093
-offset_bottom = -165.73593
-theme_override_styles/panel = SubResource("StyleBoxFlat_yb1ct")
-
-[node name="XHighlight" type="Panel" parent="Controller" unique_id=1843228187]
-visible = false
-offset_left = 150.80841
-offset_top = -187.83401
-offset_right = 226.2127
-offset_bottom = -104.966125
-theme_override_styles/panel = SubResource("StyleBoxFlat_yb1ct")
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="." unique_id=1355693770]
+position = Vector2(24.963646, 336.2)
+scale = Vector2(0.42272738, 0.42272732)
+sprite_frames = SubResource("SpriteFrames_0bx74")
+autoplay = "default"
+frame_progress = 0.12736437
+speed_scale = 0.7
 
 [node name="LeftJoy" type="Label" parent="." unique_id=408122380]
-offset_left = 185.0
-offset_top = 479.0
-offset_right = 318.0
-offset_bottom = 507.0
-text = "Choose Tape"
+offset_left = 64.963646
+offset_top = 314.19998
+offset_right = 302.96365
+offset_bottom = 413.19998
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_ff64o")
+theme_override_font_sizes/font_size = 26
+text = "Use Left Joystick to Navigate"
 autowrap_mode = 2
 
-[node name="Sprite2D" type="Sprite2D" parent="LeftJoy" unique_id=1452464707]
-position = Vector2(-35.999996, 10)
-scale = Vector2(0.18835616, 0.18835618)
-texture = ExtResource("1_7n6eb")
+[node name="Sprite2D4" type="Sprite2D" parent="." unique_id=1340465711]
+position = Vector2(24.963646, 422.19998)
+scale = Vector2(0.85573137, 0.85573137)
+texture = ExtResource("2_xwvqn")
 region_enabled = true
-region_rect = Rect2(192.77188, 133.92601, 292.34943, 344.2179)
+region_rect = Rect2(1779.0605, 219.27463, 69.4989, 70.421844)
 
-[node name="Load" type="Label" parent="." unique_id=1499688315]
-offset_left = 177.0
-offset_top = 534.0
-offset_right = 344.0
-offset_bottom = 557.0
-text = "Load Tape"
-
-[node name="Sprite2D" type="Sprite2D" parent="Load" unique_id=769744058]
-position = Vector2(-18, 12)
-scale = Vector2(0.3, 0.29746836)
-texture = ExtResource("1_7n6eb")
-region_enabled = true
-region_rect = Rect2(734.17004, 247.66931, 75.096924, 79.01993)
-
-[node name="RightJoy" type="Label" parent="." unique_id=1478527983]
-offset_left = 1151.0
-offset_top = 419.63608
-offset_right = 1240.0
-offset_bottom = 450.63608
-text = "Tune Radio"
+[node name="A" type="Label" parent="." unique_id=531858746]
+offset_left = 66.963646
+offset_top = 406.19998
+offset_right = 323.91818
+offset_bottom = 471.19998
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_ff64o")
+theme_override_font_sizes/font_size = 26
+text = "Press A to Load Tape"
 autowrap_mode = 2
 
-[node name="Sprite2D" type="Sprite2D" parent="RightJoy" unique_id=906308316]
-position = Vector2(-16.999998, 13.00001)
-scale = Vector2(0.17903224, 0.17903224)
-texture = ExtResource("1_7n6eb")
-region_enabled = true
-region_rect = Rect2(569.4608, 287.1203, 155.7981, 157.75964)
+[node name="RightJoyHighlight" type="Sprite2D" parent="." unique_id=1688609233]
+modulate = Color(1, 1, 1, 0.74509805)
+position = Vector2(826.5, 331)
+scale = Vector2(1.0159092, 0.65909094)
+texture = ExtResource("3_ff64o")
 
-[node name="Rewind" type="Label" parent="." unique_id=860322258]
-offset_left = 1350.0
-offset_top = 418.63608
-offset_right = 1501.0
-offset_bottom = 441.63608
-text = "Rewind Time"
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="." unique_id=564414066]
+position = Vector2(772.3334, 373)
+scale = Vector2(0.52222246, 0.5222224)
+sprite_frames = SubResource("SpriteFrames_dob1i")
+animation = &"new_animation"
+autoplay = "new_animation"
+frame_progress = 0.29223278
+
+[node name="RightJoy" type="Label" parent="." unique_id=649521102]
+offset_left = 734.3334
+offset_top = 276.0
+offset_right = 955.3334
+offset_bottom = 375.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_ff64o")
+theme_override_font_sizes/font_size = 26
+text = "Roll Right Joystick to Tune Radio"
 autowrap_mode = 2
 
-[node name="Sprite2D" type="Sprite2D" parent="Rewind" unique_id=742051165]
-position = Vector2(-31.999992, 7.0000043)
-scale = Vector2(0.22580644, 0.22580644)
-texture = ExtResource("1_7n6eb")
-region_enabled = true
-region_rect = Rect2(161.94815, 16.372787, 247.31073, 124.74965)
+[node name="RewindHighlight" type="Sprite2D" parent="." unique_id=1638453163]
+modulate = Color(1, 1, 1, 0.5921569)
+position = Vector2(1171.0001, 338)
+scale = Vector2(0.84999985, 0.77500004)
+texture = ExtResource("3_ff64o")
 
-[node name="Record" type="Sprite2D" parent="." unique_id=1659529888]
-position = Vector2(1566, 429.63608)
-scale = Vector2(0.38607594, 0.38607594)
-texture = ExtResource("1_7n6eb")
-region_enabled = true
-region_rect = Rect2(663.849, 179.55609, 79.75464, 81.0047)
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=888118792]
+position = Vector2(1168.3779, 381.375)
+scale = Vector2(0.5144896, 0.51590925)
+sprite_frames = SubResource("SpriteFrames_dist8")
+animation = &"new_animation"
+autoplay = "new_animation"
+frame_progress = 0.473211
+speed_scale = 0.5
 
-[node name="Play" type="Sprite2D" parent="." unique_id=1807938540]
-position = Vector2(1661, 429.63608)
-scale = Vector2(0.38607594, 0.38607594)
-texture = ExtResource("1_7n6eb")
-region_enabled = true
-region_rect = Rect2(798.831, 185.48999, 74.50433, 76.754486)
+[node name="Rewind" type="Label" parent="." unique_id=1706237340]
+offset_left = 1079.0
+offset_top = 277.0
+offset_right = 1286.0
+offset_bottom = 376.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_ff64o")
+theme_override_font_sizes/font_size = 26
+text = "Hold Left Button to Rewind Time"
+autowrap_mode = 2
 
-[node name="Stop" type="Sprite2D" parent="." unique_id=459501622]
-position = Vector2(1613, 429.63608)
-scale = Vector2(0.38607594, 0.38607594)
-texture = ExtResource("1_7n6eb")
+[node name="XHighlight" type="Sprite2D" parent="." unique_id=884876946]
+modulate = Color(1, 1, 1, 0.7647059)
+position = Vector2(1501, 324.25)
+scale = Vector2(0.45454547, 0.44659093)
+texture = ExtResource("3_ff64o")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=1407083996]
+position = Vector2(1507.25, 327.32608)
+scale = Vector2(0.84782606, 0.84782606)
+texture = ExtResource("2_xwvqn")
 region_enabled = true
-region_rect = Rect2(731.78986, 117.861404, 78.25458, 79.25462)
+region_rect = Rect2(1547.3164, 218.16058, 69.32202, 70.13278)
+
+[node name="X" type="Label" parent="." unique_id=66242072]
+visible = false
+offset_left = 1517.0
+offset_top = 171.0
+offset_right = 1767.0
+offset_bottom = 236.0
+theme_override_fonts/font = ExtResource("2_ff64o")
+theme_override_font_sizes/font_size = 30
+text = "Press X to Record"
+autowrap_mode = 2
+
+[node name="YHighlight" type="Sprite2D" parent="." unique_id=869392754]
+modulate = Color(1, 1, 1, 0.7647059)
+position = Vector2(1597.9999, 326.24997)
+scale = Vector2(0.45454547, 0.44659093)
+texture = ExtResource("3_ff64o")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=421763584]
+position = Vector2(1596.9999, 325.99997)
+scale = Vector2(0.86764705, 0.86764705)
+texture = ExtResource("2_xwvqn")
+region_enabled = true
+region_rect = Rect2(1627.2046, 220.3085, 68.916626, 68.67093)
+
+[node name="B" type="Label" parent="." unique_id=1535273575]
+visible = false
+offset_left = 1519.0
+offset_top = 310.0
+offset_right = 1822.0
+offset_bottom = 375.0
+theme_override_fonts/font = ExtResource("2_ff64o")
+theme_override_font_sizes/font_size = 30
+text = "Press B to Stop/Eject"
+autowrap_mode = 2
+
+[node name="BHighlight" type="Sprite2D" parent="." unique_id=999994128]
+modulate = Color(1, 1, 1, 0.85882354)
+position = Vector2(1692, 327.25)
+scale = Vector2(0.45454547, 0.44659093)
+texture = ExtResource("3_ff64o")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1972135744]
+position = Vector2(1684, 324)
+scale = Vector2(0.88235295, 0.88235295)
+texture = ExtResource("2_xwvqn")
+region_enabled = true
+region_rect = Rect2(1705.7502, 220.32565, 68.42822, 69.84964)
+
+[node name="Y" type="Label" parent="." unique_id=1462688947]
+visible = false
+offset_left = 1438.0
+offset_top = 239.0
+offset_right = 1688.0
+offset_bottom = 304.0
+theme_override_fonts/font = ExtResource("2_ff64o")
+theme_override_font_sizes/font_size = 30
+text = "Press Y to Play"
+autowrap_mode = 2
