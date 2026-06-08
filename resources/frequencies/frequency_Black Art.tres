@@ -1,11 +1,11 @@
-[gd_resource type="Resource" script_class="Frequency" load_steps=11 format=3 uid="uid://014qnx6cuvl"]
+[gd_resource type="Resource" script_class="Frequency" format=3 uid="uid://014qnx6cuvl"]
 
 [ext_resource type="Script" uid="uid://cnw7m05sc7dsw" path="res://resource_types/frequency.gd" id="1_6d1lx"]
 [ext_resource type="Script" uid="uid://c3ejljwk35a7s" path="res://resource_types/track.gd" id="2_0rh33"]
-[ext_resource type="AudioStream" uid="uid://cvtr4j821uf3w" path="res://track_audio/5307939.mp3" id="3_5d81t"]
-[ext_resource type="AudioStream" uid="uid://b4cpjv1a7lxsu" path="res://track_audio/5307969.mp3" id="4_pjtba"]
-[ext_resource type="AudioStream" uid="uid://d3h8e0gk5s5sd" path="res://track_audio/5289306.mp3" id="5_fle5o"]
-[ext_resource type="AudioStream" uid="uid://cgj0hbx80fqbv" path="res://track_audio/5289033.mp3" id="6_gx0od"]
+[ext_resource type="AudioStream" uid="uid://dcrftjilhox5w" path="res://track_audio/5307939.mp3" id="3_5d81t"]
+[ext_resource type="AudioStream" uid="uid://5gwx0hko5lwu" path="res://track_audio/5307969.mp3" id="4_pjtba"]
+[ext_resource type="AudioStream" uid="uid://b1he74pd0lnsv" path="res://track_audio/5289306.mp3" id="5_fle5o"]
+[ext_resource type="AudioStream" uid="uid://b4hu4aax6bmc1" path="res://track_audio/5289033.mp3" id="6_gx0od"]
 
 [sub_resource type="Resource" id="Resource_rw2oa"]
 script = ExtResource("2_0rh33")

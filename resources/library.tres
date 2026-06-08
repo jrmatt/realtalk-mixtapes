@@ -1,51 +1,51 @@
-[gd_resource type="Resource" script_class="TrackLibrary" load_steps=91 format=3 uid="uid://mpx31vhifxxq"]
+[gd_resource type="Resource" script_class="TrackLibrary" format=3 uid="uid://mpx31vhifxxq"]
 
 [ext_resource type="Script" uid="uid://b2fuw17njss81" path="res://resource_types/track_library.gd" id="1_rw2oa"]
 [ext_resource type="Script" uid="uid://c3ejljwk35a7s" path="res://resource_types/track.gd" id="2_std0o"]
-[ext_resource type="AudioStream" uid="uid://cvtr4j821uf3w" path="res://track_audio/5307939.mp3" id="3_sa18n"]
-[ext_resource type="AudioStream" uid="uid://b4cpjv1a7lxsu" path="res://track_audio/5307969.mp3" id="4_7wysp"]
-[ext_resource type="AudioStream" uid="uid://cpwyrrljn3he7" path="res://track_audio/5307929.mp3" id="5_qlamp"]
-[ext_resource type="AudioStream" uid="uid://f6qy1b1ndi1x" path="res://track_audio/5308057.mp3" id="6_ycje8"]
-[ext_resource type="AudioStream" uid="uid://b12gnkagg3661" path="res://track_audio/5308056.mp3" id="7_d5f0m"]
-[ext_resource type="AudioStream" uid="uid://4nuilacfsq3y" path="res://track_audio/5307942.mp3" id="8_rlth3"]
-[ext_resource type="AudioStream" uid="uid://cc1huuhe68dvy" path="res://track_audio/5307918.mp3" id="9_0ipvf"]
-[ext_resource type="AudioStream" uid="uid://5pi7wsctlgwx" path="res://track_audio/5288875.mp3" id="10_3rmac"]
-[ext_resource type="AudioStream" uid="uid://e16t6xaa10w5" path="res://track_audio/5307961.mp3" id="11_8ebk7"]
-[ext_resource type="AudioStream" uid="uid://dwedel5thhi5e" path="res://track_audio/5307919.mp3" id="12_m1scw"]
-[ext_resource type="AudioStream" uid="uid://kp51yjujbnvt" path="res://track_audio/5307924.mp3" id="13_thk15"]
-[ext_resource type="AudioStream" uid="uid://bqltn2xb3jqpc" path="res://track_audio/5288971.mp3" id="14_4aqd8"]
-[ext_resource type="AudioStream" uid="uid://cj43d2b6vrn4g" path="res://track_audio/5307959.mp3" id="15_ofxge"]
-[ext_resource type="AudioStream" uid="uid://cnhu60kiq3fwj" path="res://track_audio/5308047.mp3" id="16_0vufw"]
-[ext_resource type="AudioStream" uid="uid://cl5uk8j3c7dd2" path="res://track_audio/5308049.mp3" id="17_3s8i5"]
-[ext_resource type="AudioStream" uid="uid://bgepu3rq5elex" path="res://track_audio/5308104.mp3" id="18_fnbgf"]
-[ext_resource type="AudioStream" uid="uid://dn88m2oor5yxy" path="res://track_audio/5307903.mp3" id="19_08gy4"]
-[ext_resource type="AudioStream" uid="uid://bfgtnr7qc3iqr" path="res://track_audio/5308044.mp3" id="20_qgx86"]
-[ext_resource type="AudioStream" uid="uid://d3xkebtt1b648" path="res://track_audio/5307666.mp3" id="21_jai5g"]
-[ext_resource type="AudioStream" uid="uid://c4dxl6vuyytx" path="res://track_audio/5307949.mp3" id="22_8vd3x"]
-[ext_resource type="AudioStream" uid="uid://bfs5qefygfx6a" path="res://track_audio/5307965.mp3" id="23_wjfyf"]
-[ext_resource type="AudioStream" uid="uid://d3h8e0gk5s5sd" path="res://track_audio/5289306.mp3" id="24_4a2s6"]
-[ext_resource type="AudioStream" uid="uid://dlv525vtgpkf6" path="res://track_audio/5289307.mp3" id="25_sdj51"]
-[ext_resource type="AudioStream" uid="uid://ce1657o801n4k" path="res://track_audio/5290057.mp3" id="26_brbvo"]
-[ext_resource type="AudioStream" uid="uid://dck2rby0nxa56" path="res://track_audio/5289854.mp3" id="27_7texf"]
-[ext_resource type="AudioStream" uid="uid://b2em1yucq4kt1" path="res://track_audio/5291325.mp3" id="28_x4bct"]
-[ext_resource type="AudioStream" uid="uid://dwia6e01rvrh5" path="res://track_audio/5289040.mp3" id="29_roitt"]
-[ext_resource type="AudioStream" uid="uid://dcal6gfpjveuk" path="res://track_audio/5289044.mp3" id="30_o70ig"]
-[ext_resource type="AudioStream" uid="uid://s4d60kdyjvom" path="res://track_audio/5289047.mp3" id="31_a0u13"]
-[ext_resource type="AudioStream" uid="uid://d0scgpj2tgawt" path="res://track_audio/5289029.mp3" id="32_2cpom"]
-[ext_resource type="AudioStream" uid="uid://bridvacniseyj" path="res://track_audio/5289030.mp3" id="33_763kf"]
-[ext_resource type="AudioStream" uid="uid://dx4gkj7qoc0np" path="res://track_audio/5289032.mp3" id="34_5xn34"]
-[ext_resource type="AudioStream" uid="uid://cgj0hbx80fqbv" path="res://track_audio/5289033.mp3" id="35_pph68"]
-[ext_resource type="AudioStream" uid="uid://binxnw53gqhtg" path="res://track_audio/5288882.mp3" id="36_mhb3l"]
-[ext_resource type="AudioStream" uid="uid://dp48ly8i4kpr6" path="res://track_audio/5289235.mp3" id="37_namhw"]
-[ext_resource type="AudioStream" uid="uid://cghqrgjikpleh" path="res://track_audio/5290671.mp3" id="38_1t3hk"]
-[ext_resource type="AudioStream" uid="uid://bhlvjqdr0v0d" path="res://track_audio/5297450.mp3" id="39_upwdp"]
-[ext_resource type="AudioStream" uid="uid://xfppi7d2cw40" path="res://track_audio/5304206.mp3" id="40_fwg78"]
-[ext_resource type="AudioStream" uid="uid://xyl7x6qjb3ng" path="res://track_audio/5304247.mp3" id="41_u57aq"]
-[ext_resource type="AudioStream" uid="uid://codovhxsdueo6" path="res://track_audio/5308023.mp3" id="42_w6gen"]
-[ext_resource type="AudioStream" uid="uid://djkqe2jre4fpa" path="res://track_audio/5308033.mp3" id="43_x0gug"]
-[ext_resource type="AudioStream" uid="uid://c4j31ovhjfj4q" path="res://track_audio/5307689.mp3" id="44_eh0em"]
-[ext_resource type="AudioStream" uid="uid://dhg0sfelfcelo" path="res://track_audio/5307116.mp3" id="45_f8a00"]
-[ext_resource type="AudioStream" uid="uid://c25yya122aql6" path="res://track_audio/5307117.mp3" id="46_cf3w8"]
+[ext_resource type="AudioStream" uid="uid://dcrftjilhox5w" path="res://track_audio/5307939.mp3" id="3_sa18n"]
+[ext_resource type="AudioStream" uid="uid://5gwx0hko5lwu" path="res://track_audio/5307969.mp3" id="4_7wysp"]
+[ext_resource type="AudioStream" uid="uid://1h7w7xfqn2xi" path="res://track_audio/5307929.mp3" id="5_qlamp"]
+[ext_resource type="AudioStream" uid="uid://blaqk10knam8e" path="res://track_audio/5308057.mp3" id="6_ycje8"]
+[ext_resource type="AudioStream" uid="uid://dvsy8gvrvifkt" path="res://track_audio/5308056.mp3" id="7_d5f0m"]
+[ext_resource type="AudioStream" uid="uid://c46m3yf4w78va" path="res://track_audio/5307942.mp3" id="8_rlth3"]
+[ext_resource type="AudioStream" uid="uid://brvgeuk1il68x" path="res://track_audio/5307918.mp3" id="9_0ipvf"]
+[ext_resource type="AudioStream" uid="uid://bmcmg0oqvuhvc" path="res://track_audio/5288875.mp3" id="10_3rmac"]
+[ext_resource type="AudioStream" uid="uid://cuvvc544qnbnd" path="res://track_audio/5307961.mp3" id="11_8ebk7"]
+[ext_resource type="AudioStream" uid="uid://cdlwm6df2bkkj" path="res://track_audio/5307919.mp3" id="12_m1scw"]
+[ext_resource type="AudioStream" uid="uid://dhyw3oj4k145r" path="res://track_audio/5307924.mp3" id="13_thk15"]
+[ext_resource type="AudioStream" uid="uid://drmyet3oyeohm" path="res://track_audio/5288971.mp3" id="14_4aqd8"]
+[ext_resource type="AudioStream" uid="uid://uhq2xql360uf" path="res://track_audio/5307959.mp3" id="15_ofxge"]
+[ext_resource type="AudioStream" uid="uid://c3vltvadcv3hu" path="res://track_audio/5308047.mp3" id="16_0vufw"]
+[ext_resource type="AudioStream" uid="uid://bre1s0il06dft" path="res://track_audio/5308049.mp3" id="17_3s8i5"]
+[ext_resource type="AudioStream" uid="uid://bl3v40i35uajm" path="res://track_audio/5308104.mp3" id="18_fnbgf"]
+[ext_resource type="AudioStream" uid="uid://baw2rgkcynduk" path="res://track_audio/5307903.mp3" id="19_08gy4"]
+[ext_resource type="AudioStream" uid="uid://bt2xqj2jxqo0i" path="res://track_audio/5308044.mp3" id="20_qgx86"]
+[ext_resource type="AudioStream" uid="uid://bev4r23ptriod" path="res://track_audio/5307666.mp3" id="21_jai5g"]
+[ext_resource type="AudioStream" uid="uid://cwjtslajby5ml" path="res://track_audio/5307949.mp3" id="22_8vd3x"]
+[ext_resource type="AudioStream" uid="uid://cfbbk4lrx2mfy" path="res://track_audio/5307965.mp3" id="23_wjfyf"]
+[ext_resource type="AudioStream" uid="uid://b1he74pd0lnsv" path="res://track_audio/5289306.mp3" id="24_4a2s6"]
+[ext_resource type="AudioStream" uid="uid://0hhm3yqj4pks" path="res://track_audio/5289307.mp3" id="25_sdj51"]
+[ext_resource type="AudioStream" uid="uid://dbf7r4txc7i5d" path="res://track_audio/5290057.mp3" id="26_brbvo"]
+[ext_resource type="AudioStream" uid="uid://tucahcbenp2b" path="res://track_audio/5289854.mp3" id="27_7texf"]
+[ext_resource type="AudioStream" uid="uid://bb4euasjfdm71" path="res://track_audio/5291325.mp3" id="28_x4bct"]
+[ext_resource type="AudioStream" uid="uid://c3yj6ceag14lh" path="res://track_audio/5289040.mp3" id="29_roitt"]
+[ext_resource type="AudioStream" uid="uid://ca5lvloxwb3g" path="res://track_audio/5289044.mp3" id="30_o70ig"]
+[ext_resource type="AudioStream" uid="uid://deovmtk6v15w0" path="res://track_audio/5289047.mp3" id="31_a0u13"]
+[ext_resource type="AudioStream" uid="uid://cwc5jt3o5tpxw" path="res://track_audio/5289029.mp3" id="32_2cpom"]
+[ext_resource type="AudioStream" uid="uid://cmgm8hjtfovpt" path="res://track_audio/5289030.mp3" id="33_763kf"]
+[ext_resource type="AudioStream" uid="uid://mqdgtaju0t6o" path="res://track_audio/5289032.mp3" id="34_5xn34"]
+[ext_resource type="AudioStream" uid="uid://b4hu4aax6bmc1" path="res://track_audio/5289033.mp3" id="35_pph68"]
+[ext_resource type="AudioStream" uid="uid://b5gc12yo7thm4" path="res://track_audio/5288882.mp3" id="36_mhb3l"]
+[ext_resource type="AudioStream" uid="uid://fk456q7nhxum" path="res://track_audio/5289235.mp3" id="37_namhw"]
+[ext_resource type="AudioStream" uid="uid://lpiofr2ujp6v" path="res://track_audio/5290671.mp3" id="38_1t3hk"]
+[ext_resource type="AudioStream" uid="uid://d24c73hk0xl50" path="res://track_audio/5297450.mp3" id="39_upwdp"]
+[ext_resource type="AudioStream" uid="uid://3wik54dpcmh" path="res://track_audio/5304206.mp3" id="40_fwg78"]
+[ext_resource type="AudioStream" uid="uid://o84rvxc5ntdv" path="res://track_audio/5304247.mp3" id="41_u57aq"]
+[ext_resource type="AudioStream" uid="uid://b6kk3egencvlx" path="res://track_audio/5308023.mp3" id="42_w6gen"]
+[ext_resource type="AudioStream" uid="uid://cxqmq2kus5r3l" path="res://track_audio/5308033.mp3" id="43_x0gug"]
+[ext_resource type="AudioStream" uid="uid://gr0hnm11yq6u" path="res://track_audio/5307689.mp3" id="44_eh0em"]
+[ext_resource type="AudioStream" uid="uid://ythxw36ccdjb" path="res://track_audio/5307116.mp3" id="45_f8a00"]
+[ext_resource type="AudioStream" uid="uid://b5rpgx2v4enmg" path="res://track_audio/5307117.mp3" id="46_cf3w8"]
 
 [sub_resource type="Resource" id="Resource_rw2oa"]
 script = ExtResource("2_std0o")
@@ -65,7 +65,7 @@ audio = ExtResource("4_7wysp")
 script = ExtResource("2_std0o")
 id = "5307929"
 speakers = PackedStringArray("Jacob", "Kadaj")
-frequency = "Across Generations"
+frequency = "Generations"
 audio = ExtResource("5_qlamp")
 
 [sub_resource type="Resource" id="Resource_7wysp"]
@@ -121,7 +121,7 @@ audio = ExtResource("12_m1scw")
 script = ExtResource("2_std0o")
 id = "5307924"
 speakers = PackedStringArray("Athena")
-frequency = "Across Generations"
+frequency = "Generations"
 audio = ExtResource("13_thk15")
 
 [sub_resource type="Resource" id="Resource_m1scw"]
@@ -268,7 +268,7 @@ audio = ExtResource("33_763kf")
 script = ExtResource("2_std0o")
 id = "5289032"
 speakers = PackedStringArray("Michelle")
-frequency = "Across Generations"
+frequency = "Generations"
 audio = ExtResource("34_5xn34")
 
 [sub_resource type="Resource" id="Resource_763kf"]

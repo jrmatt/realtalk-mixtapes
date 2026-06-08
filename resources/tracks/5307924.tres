@@ -1,11 +1,11 @@
-[gd_resource type="Resource" script_class="Track" load_steps=3 format=3 uid="uid://cnrvv8fu5lia4"]
+[gd_resource type="Resource" script_class="Track" format=3 uid="uid://cnrvv8fu5lia4"]
 
-[ext_resource type="AudioStream" uid="uid://kp51yjujbnvt" path="res://track_audio/5307924.mp3" id="1_n660p"]
+[ext_resource type="AudioStream" uid="uid://dhyw3oj4k145r" path="res://track_audio/5307924.mp3" id="1_n660p"]
 [ext_resource type="Script" uid="uid://c3ejljwk35a7s" path="res://resource_types/track.gd" id="2_j3jmr"]
 
 [resource]
 script = ExtResource("2_j3jmr")
 id = "5307924"
 speakers = PackedStringArray("Athena")
-frequency = "Across Generations"
+frequency = "Generations"
 audio = ExtResource("1_n660p")

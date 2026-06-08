@@ -1,6 +1,6 @@
-[gd_resource type="Resource" script_class="Track" load_steps=3 format=3 uid="uid://d6d2k8yxikq2"]
+[gd_resource type="Resource" script_class="Track" format=3 uid="uid://d6d2k8yxikq2"]
 
-[ext_resource type="AudioStream" uid="uid://cc1huuhe68dvy" path="res://track_audio/5307918.mp3" id="1_7wgaw"]
+[ext_resource type="AudioStream" uid="uid://brvgeuk1il68x" path="res://track_audio/5307918.mp3" id="1_7wgaw"]
 [ext_resource type="Script" uid="uid://c3ejljwk35a7s" path="res://resource_types/track.gd" id="2_1vqs1"]
 
 [resource]

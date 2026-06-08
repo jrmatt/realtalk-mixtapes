@@ -3,7 +3,7 @@ extends Label
 
 const colors = {
     "Black Art": "#E5A377",
-    "Across Generations": "#5A7BFF",
+    "Generations": "#5A7BFF",
     "Art Economy": "#786DCB",
     "Local Scene": "#88C5A7",
     "Gentrification": "#96BACD",

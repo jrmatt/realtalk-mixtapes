@@ -1,13 +1,13 @@
-[gd_resource type="Resource" script_class="Frequency" load_steps=15 format=3 uid="uid://bx6eps5x6fn6v"]
+[gd_resource type="Resource" script_class="Frequency" format=3 uid="uid://bx6eps5x6fn6v"]
 
 [ext_resource type="Script" uid="uid://cnw7m05sc7dsw" path="res://resource_types/frequency.gd" id="1_pxxmg"]
 [ext_resource type="Script" uid="uid://c3ejljwk35a7s" path="res://resource_types/track.gd" id="2_f248m"]
-[ext_resource type="AudioStream" uid="uid://bgepu3rq5elex" path="res://track_audio/5308104.mp3" id="3_oq5sp"]
-[ext_resource type="AudioStream" uid="uid://dn88m2oor5yxy" path="res://track_audio/5307903.mp3" id="4_8h1h0"]
-[ext_resource type="AudioStream" uid="uid://dlv525vtgpkf6" path="res://track_audio/5289307.mp3" id="5_ag580"]
-[ext_resource type="AudioStream" uid="uid://dck2rby0nxa56" path="res://track_audio/5289854.mp3" id="6_8ge7i"]
-[ext_resource type="AudioStream" uid="uid://d0scgpj2tgawt" path="res://track_audio/5289029.mp3" id="7_mjkgi"]
-[ext_resource type="AudioStream" uid="uid://djkqe2jre4fpa" path="res://track_audio/5308033.mp3" id="8_2xf23"]
+[ext_resource type="AudioStream" uid="uid://bl3v40i35uajm" path="res://track_audio/5308104.mp3" id="3_oq5sp"]
+[ext_resource type="AudioStream" uid="uid://baw2rgkcynduk" path="res://track_audio/5307903.mp3" id="4_8h1h0"]
+[ext_resource type="AudioStream" uid="uid://0hhm3yqj4pks" path="res://track_audio/5289307.mp3" id="5_ag580"]
+[ext_resource type="AudioStream" uid="uid://tucahcbenp2b" path="res://track_audio/5289854.mp3" id="6_8ge7i"]
+[ext_resource type="AudioStream" uid="uid://cwc5jt3o5tpxw" path="res://track_audio/5289029.mp3" id="7_mjkgi"]
+[ext_resource type="AudioStream" uid="uid://cxqmq2kus5r3l" path="res://track_audio/5308033.mp3" id="8_2xf23"]
 
 [sub_resource type="Resource" id="Resource_0vufw"]
 script = ExtResource("2_f248m")

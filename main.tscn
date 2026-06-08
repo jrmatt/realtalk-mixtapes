@@ -487,7 +487,7 @@ layout_mode = 2
 theme_override_constants/separation = 12
 
 [node name="Label" type="Label" parent="Radio/RadioLabel/HBoxContainer" unique_id=369912644]
-custom_minimum_size = Vector2(1300, 0)
+custom_minimum_size = Vector2(1000, 0)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_xuqvo")
 theme_override_font_sizes/font_size = 70
@@ -495,7 +495,7 @@ clip_text = true
 script = ExtResource("5_kq58d")
 
 [node name="Label2" type="Label" parent="Radio/RadioLabel/HBoxContainer" unique_id=1723475476]
-custom_minimum_size = Vector2(1300, 0)
+custom_minimum_size = Vector2(1000, 0)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_xuqvo")
 theme_override_font_sizes/font_size = 70
@@ -809,7 +809,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("21_a6jrf")
 
-[node name="AcrossGenerations" type="TextureRect" parent="BackdropLayer/BoldRooms" unique_id=394850020]
+[node name="Generations" type="TextureRect" parent="BackdropLayer/BoldRooms" unique_id=394850020]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_left = 253.0
@@ -817,7 +817,7 @@ offset_right = 502.0
 offset_bottom = 215.0
 texture = ExtResource("24_qsp4k")
 
-[node name="Label" type="Label" parent="BackdropLayer/BoldRooms/AcrossGenerations" unique_id=615984012]
+[node name="Label" type="Label" parent="BackdropLayer/BoldRooms/Generations" unique_id=615984012]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -835,7 +835,7 @@ theme_override_fonts/font = ExtResource("24_seu75")
 theme_override_font_sizes/font_size = 54
 text = "Generations"
 
-[node name="TextureRect" type="TextureRect" parent="BackdropLayer/BoldRooms/AcrossGenerations" unique_id=1729607235]
+[node name="TextureRect" type="TextureRect" parent="BackdropLayer/BoldRooms/Generations" unique_id=1729607235]
 show_behind_parent = true
 layout_mode = 1
 anchors_preset = 8
@@ -1091,14 +1091,14 @@ theme_override_fonts/font = ExtResource("24_seu75")
 theme_override_font_sizes/font_size = 54
 text = "Black Art"
 
-[node name="AcrossGenerations" type="TextureRect" parent="BackdropLayer/LightRooms" unique_id=2074420084]
+[node name="Generations" type="TextureRect" parent="BackdropLayer/LightRooms" unique_id=2074420084]
 layout_mode = 0
 offset_left = 253.0
 offset_right = 502.0
 offset_bottom = 215.0
 texture = ExtResource("24_qsp4k")
 
-[node name="Label" type="Label" parent="BackdropLayer/LightRooms/AcrossGenerations" unique_id=1412421379]
+[node name="Label" type="Label" parent="BackdropLayer/LightRooms/Generations" unique_id=1412421379]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5

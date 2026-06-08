@@ -1,14 +1,14 @@
-[gd_resource type="Resource" script_class="Frequency" load_steps=17 format=3 uid="uid://dvd8insnkg2x7"]
+[gd_resource type="Resource" script_class="Frequency" format=3 uid="uid://dvd8insnkg2x7"]
 
 [ext_resource type="Script" uid="uid://cnw7m05sc7dsw" path="res://resource_types/frequency.gd" id="1_84jot"]
 [ext_resource type="Script" uid="uid://c3ejljwk35a7s" path="res://resource_types/track.gd" id="2_a680e"]
-[ext_resource type="AudioStream" uid="uid://f6qy1b1ndi1x" path="res://track_audio/5308057.mp3" id="3_lfatn"]
-[ext_resource type="AudioStream" uid="uid://b12gnkagg3661" path="res://track_audio/5308056.mp3" id="4_oi6ld"]
-[ext_resource type="AudioStream" uid="uid://e16t6xaa10w5" path="res://track_audio/5307961.mp3" id="5_8heev"]
-[ext_resource type="AudioStream" uid="uid://cj43d2b6vrn4g" path="res://track_audio/5307959.mp3" id="6_hhoeb"]
-[ext_resource type="AudioStream" uid="uid://ce1657o801n4k" path="res://track_audio/5290057.mp3" id="7_cmddq"]
-[ext_resource type="AudioStream" uid="uid://b2em1yucq4kt1" path="res://track_audio/5291325.mp3" id="8_j25f2"]
-[ext_resource type="AudioStream" uid="uid://dwia6e01rvrh5" path="res://track_audio/5289040.mp3" id="9_ll65a"]
+[ext_resource type="AudioStream" uid="uid://blaqk10knam8e" path="res://track_audio/5308057.mp3" id="3_lfatn"]
+[ext_resource type="AudioStream" uid="uid://dvsy8gvrvifkt" path="res://track_audio/5308056.mp3" id="4_oi6ld"]
+[ext_resource type="AudioStream" uid="uid://cuvvc544qnbnd" path="res://track_audio/5307961.mp3" id="5_8heev"]
+[ext_resource type="AudioStream" uid="uid://uhq2xql360uf" path="res://track_audio/5307959.mp3" id="6_hhoeb"]
+[ext_resource type="AudioStream" uid="uid://dbf7r4txc7i5d" path="res://track_audio/5290057.mp3" id="7_cmddq"]
+[ext_resource type="AudioStream" uid="uid://bb4euasjfdm71" path="res://track_audio/5291325.mp3" id="8_j25f2"]
+[ext_resource type="AudioStream" uid="uid://c3yj6ceag14lh" path="res://track_audio/5289040.mp3" id="9_ll65a"]
 
 [sub_resource type="Resource" id="Resource_7wysp"]
 script = ExtResource("2_a680e")

@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="Frequency" format=3 uid="uid://puu42k3gt7id"]
+
+[ext_resource type="Script" uid="uid://cnw7m05sc7dsw" path="res://resource_types/frequency.gd" id="1_c3psb"]
+[ext_resource type="Script" uid="uid://c3ejljwk35a7s" path="res://resource_types/track.gd" id="2_faep6"]
+[ext_resource type="AudioStream" uid="uid://1h7w7xfqn2xi" path="res://track_audio/5307929.mp3" id="3_at4sp"]
+[ext_resource type="AudioStream" uid="uid://dhyw3oj4k145r" path="res://track_audio/5307924.mp3" id="4_17q3e"]
+[ext_resource type="AudioStream" uid="uid://mqdgtaju0t6o" path="res://track_audio/5289032.mp3" id="5_alhtl"]
+
+[sub_resource type="Resource" id="Resource_sa18n"]
+script = ExtResource("2_faep6")
+id = "5307929"
+speakers = PackedStringArray("Jacob", "Kadaj")
+frequency = "Generations"
+audio = ExtResource("3_at4sp")
+
+[sub_resource type="Resource" id="Resource_8ebk7"]
+script = ExtResource("2_faep6")
+id = "5307924"
+speakers = PackedStringArray("Athena")
+frequency = "Generations"
+audio = ExtResource("4_17q3e")
+
+[sub_resource type="Resource" id="Resource_2cpom"]
+script = ExtResource("2_faep6")
+id = "5289032"
+speakers = PackedStringArray("Michelle")
+frequency = "Generations"
+audio = ExtResource("5_alhtl")
+
+[resource]
+script = ExtResource("1_c3psb")
+frequency_name = "Generations"
+tracks = Array[ExtResource("2_faep6")]([SubResource("Resource_sa18n"), SubResource("Resource_8ebk7"), SubResource("Resource_2cpom")])
