@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://4481vdoccp0j" path="res://sprites/tape_final.png" id="1_xebgi"]
 [ext_resource type="Script" uid="uid://cgx8iywm6eaoc" path="res://mixtape.gd" id="2_xebgi"]
+[ext_resource type="FontFile" uid="uid://bqg5ao41gp82j" path="res://fonts/Hot-Mess.ttf" id="3_73a7t"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3aha3"]
 
@@ -31,9 +32,8 @@ atlas = ExtResource("1_xebgi")
 region = Rect2(1055.9651, 623.39197, 392.90967, 56.246704)
 
 [node name="LoadBtn" type="Button" unique_id=1456869113]
-custom_minimum_size = Vector2(210, 30)
-offset_right = 210.0
-offset_bottom = 30.0
+offset_right = 392.0
+offset_bottom = 56.0
 scale = Vector2(0.8, 0.8)
 theme_override_styles/normal = SubResource("StyleBoxEmpty_3aha3")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_xebgi")
@@ -47,8 +47,10 @@ script = ExtResource("2_xebgi")
 
 [node name="Label" type="Label" parent="." unique_id=1362902850]
 layout_mode = 0
-offset_left = 20.0
-offset_top = 1.0
-offset_right = 60.0
-offset_bottom = 24.0
+offset_left = 30.0
+offset_top = -3.7499998
+offset_right = 70.0
+offset_bottom = 61.25
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_73a7t")
+theme_override_font_sizes/font_size = 56

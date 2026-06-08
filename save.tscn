@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://ciohh52mfwdsj"]
 
+[ext_resource type="FontFile" uid="uid://878k53bmonof" path="res://fonts/NeueHaasGrotDispRound-75Bold copy.otf" id="1_m1enn"]
 [ext_resource type="PackedScene" uid="uid://bt0iwvnblvssu" path="res://greenpixels-onscreen-keyboard/text_edit_with_on_screen_keyboard.tscn" id="2_8viy1"]
 [ext_resource type="Texture2D" uid="uid://4481vdoccp0j" path="res://sprites/tape_final.png" id="2_hcujw"]
 [ext_resource type="FontFile" uid="uid://bqg5ao41gp82j" path="res://fonts/Hot-Mess.ttf" id="3_hcujw"]
@@ -13,27 +14,30 @@ layer = 10
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -263.0
-offset_top = 86.0
-offset_right = 200.0
-offset_bottom = 128.0
+offset_left = -279.5
+offset_top = 100.0
+offset_right = 279.5
+offset_bottom = 165.0
 grow_horizontal = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 30
+theme_override_fonts/font = ExtResource("1_m1enn")
+theme_override_font_sizes/font_size = 64
 text = "Name Your Mixtape"
 horizontal_alignment = 1
 
 [node name="TextEditWithOnScreenKeyboard" parent="." unique_id=515065060 instance=ExtResource("2_8viy1")]
-anchors_preset = 14
-anchor_top = 0.5
+anchors_preset = 12
+anchor_top = 1.0
 anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = 191.0
-offset_top = 21.0
-offset_right = -197.0
-offset_bottom = 470.0
+anchor_bottom = 1.0
+offset_left = 0.0
+offset_top = -555.0
+offset_right = 0.0
+offset_bottom = 0.0
 grow_horizontal = 2
-grow_vertical = 2
+grow_vertical = 0
 size_flags_horizontal = 8
 text_placeholder = "Name your tape"
 show_input = false
@@ -46,13 +50,13 @@ region_enabled = true
 region_rect = Rect2(1055.8108, 622.35565, 392.2556, 57.881836)
 
 [node name="TapeNamePreview" type="Label" parent="TapePreview" unique_id=460710430]
-offset_left = -168.0
-offset_top = -33.0
-offset_right = 169.0
-offset_bottom = 36.0
+offset_left = -162.5
+offset_top = -20.5
+offset_right = 174.5
+offset_bottom = 48.5
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_hcujw")
-theme_override_font_sizes/font_size = 60
+theme_override_font_sizes/font_size = 40
 script = ExtResource("3_hjq3a")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2028355556]

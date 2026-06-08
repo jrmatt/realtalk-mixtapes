@@ -22,9 +22,10 @@
 [ext_resource type="Texture2D" uid="uid://bopd7wv8xw2l5" path="res://sprites/radio_logo.png" id="17_a6jrf"]
 [ext_resource type="Script" uid="uid://dd148diwddonr" path="res://blank_tapes_box.gd" id="17_jq2sk"]
 [ext_resource type="Texture2D" uid="uid://4481vdoccp0j" path="res://sprites/tape_final.png" id="18_0rl1p"]
-[ext_resource type="Texture2D" uid="uid://ere0swytoiwl" path="res://sprites/controller.png" id="18_cegan"]
 [ext_resource type="Texture2D" uid="uid://cmq6ms1ra20dw" path="res://BackgroundGradientMobile.png" id="19_82xsv"]
+[ext_resource type="FontFile" uid="uid://878k53bmonof" path="res://fonts/NeueHaasGrotDispRound-75Bold copy.otf" id="20_4k2k6"]
 [ext_resource type="Texture2D" uid="uid://blpq1gw8qmvk7" path="res://sprites/BlueRoom.png" id="20_getpj"]
+[ext_resource type="Texture2D" uid="uid://ccp41yqnxy1kv" path="res://sprites/controls.png" id="21_0rl1p"]
 [ext_resource type="Texture2D" uid="uid://dvfgxf1mxvwpv" path="res://sprites/highlight.png" id="21_a6jrf"]
 [ext_resource type="Texture2D" uid="uid://btxyfaspxos15" path="res://sprites/PinkRoom.png" id="21_lswn8"]
 [ext_resource type="Texture2D" uid="uid://br3ayotk864hs" path="res://sprites/GreenRoom.png" id="22_a6jrf"]
@@ -145,15 +146,39 @@ animations = [{
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_htxhm"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
-border_width_left = 8
-border_width_top = 8
-border_width_right = 8
-border_width_bottom = 8
-border_color = Color(0.8509804, 0.8117647, 0.52156866, 0.6862745)
+border_width_left = 40
+border_width_top = 40
+border_width_right = 40
+border_width_bottom = 40
+border_color = Color(1, 1, 1, 1)
+border_blend = true
 corner_radius_top_left = 20
 corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ok6jj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_facbu"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color(1, 1, 1, 0.81960785)
+border_blend = true
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
 
 [sub_resource type="GDScript" id="GDScript_2cqfq"]
 script/source = "extends Button
@@ -212,14 +237,6 @@ texture = ExtResource("4_htxhm")
 offset = Vector2(-23, -30)
 script = ExtResource("5_jq2sk")
 
-[node name="LevelNeedle2" type="Sprite2D" parent="Radio/RadioBody" unique_id=1534439143]
-position = Vector2(430.00018, -215)
-rotation = -0.3228859
-scale = Vector2(0.8, 0.8)
-texture = ExtResource("4_htxhm")
-offset = Vector2(-23, -30)
-script = ExtResource("5_jq2sk")
-
 [node name="RadioLabel" type="ScrollContainer" parent="Radio" unique_id=290878849]
 z_index = 1
 custom_minimum_size = Vector2(100, 0)
@@ -235,7 +252,7 @@ layout_mode = 2
 theme_override_constants/separation = 12
 
 [node name="Label" type="Label" parent="Radio/RadioLabel/HBoxContainer" unique_id=369912644]
-custom_minimum_size = Vector2(1000, 0)
+custom_minimum_size = Vector2(1300, 0)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_xuqvo")
 theme_override_font_sizes/font_size = 70
@@ -243,7 +260,7 @@ clip_text = true
 script = ExtResource("5_kq58d")
 
 [node name="Label2" type="Label" parent="Radio/RadioLabel/HBoxContainer" unique_id=1723475476]
-custom_minimum_size = Vector2(1000, 0)
+custom_minimum_size = Vector2(1300, 0)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_xuqvo")
 theme_override_font_sizes/font_size = 70
@@ -252,10 +269,10 @@ script = ExtResource("5_kq58d")
 
 [node name="Dial" parent="Radio" unique_id=1296031382 instance=ExtResource("14_w48qg")]
 z_index = 1
-offset_left = 979.0
-offset_top = 467.0
-offset_right = 1657.0
-offset_bottom = 507.0
+offset_left = 978.0
+offset_top = 487.0
+offset_right = 1432.0
+offset_bottom = 527.0
 
 [node name="Control" type="HBoxContainer" parent="Radio" unique_id=204003008]
 clip_children = 1
@@ -271,11 +288,12 @@ theme_override_font_sizes/font_size = 70
 
 [node name="PlayAnchor" type="Node2D" parent="Radio" unique_id=452582252]
 z_index = -1
-position = Vector2(1571, 410)
+position = Vector2(1616, 425)
 
 [node name="PlayBtn" type="Button" parent="Radio/PlayAnchor" unique_id=684982014]
 offset_right = 112.0
 offset_bottom = 86.0
+scale = Vector2(0.8, 0.8)
 focus_mode = 0
 theme_override_styles/normal = SubResource("StyleBoxEmpty_ryguw")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_d13ii")
@@ -288,11 +306,12 @@ metadata/_edit_use_anchors_ = true
 
 [node name="RecordAnchor" type="Node2D" parent="Radio" unique_id=894432045]
 z_index = -1
-position = Vector2(1455, 410)
+position = Vector2(1524, 426)
 
 [node name="RecordBtn" type="Button" parent="Radio/RecordAnchor" unique_id=310661157]
 offset_right = 87.0
 offset_bottom = 58.0
+scale = Vector2(0.8, 0.8)
 focus_mode = 0
 theme_override_styles/normal = SubResource("StyleBoxEmpty_dg77c")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_ycdy4")
@@ -305,11 +324,12 @@ metadata/_edit_use_anchors_ = true
 
 [node name="StopAnchor" type="Node2D" parent="Radio" unique_id=29596954]
 z_index = -1
-position = Vector2(1685, 408)
+position = Vector2(1708, 423)
 
 [node name="StopBtn" type="Button" parent="Radio/StopAnchor" unique_id=922399820]
 offset_right = 112.0
 offset_bottom = 86.0
+scale = Vector2(0.8, 0.8)
 focus_mode = 0
 theme_override_styles/normal = SubResource("StyleBoxEmpty_yaehf")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_074og")
@@ -322,11 +342,12 @@ metadata/_edit_use_anchors_ = true
 
 [node name="RwAnchor" type="Node2D" parent="Radio" unique_id=1677658616]
 z_index = -1
-position = Vector2(1218, 413)
+position = Vector2(1336, 428)
 
 [node name="RwBtn" type="Button" parent="Radio/RwAnchor" unique_id=1938241678]
 offset_right = 112.0
 offset_bottom = 61.0
+scale = Vector2(0.8, 0.8)
 focus_mode = 0
 theme_override_styles/normal = SubResource("StyleBoxEmpty_a6jrf")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_xuqvo")
@@ -346,9 +367,9 @@ frame_progress = 0.74587834
 script = ExtResource("9_ycdy4")
 
 [node name="BlankTapesBox" type="Button" parent="." unique_id=416131326]
-offset_left = 1.0
+offset_left = 8.0
 offset_top = 798.0
-offset_right = 443.0
+offset_right = 450.0
 offset_bottom = 1091.0
 scale = Vector2(0.9, 0.9)
 focus_neighbor_top = NodePath("../ShowControls")
@@ -420,29 +441,31 @@ offset_right = 23.0
 offset_bottom = 642.0
 grow_horizontal = 0
 theme_override_constants/h_separation = 0
-theme_override_constants/v_separation = 20
+theme_override_constants/v_separation = 0
 alignment = 2
 
-[node name="Label" type="Label" parent="Stacks/RecordedTapes" unique_id=1835516828]
-layout_mode = 2
-theme_override_font_sizes/font_size = 24
-text = "Recorded Tapes"
-
 [node name="ShowControls" type="Button" parent="." unique_id=340853370]
-offset_left = 1729.0
-offset_top = 26.0
-offset_right = 1889.0
-offset_bottom = 57.0
+offset_left = 1671.0
+offset_top = 30.0
+offset_right = 1887.0
+offset_bottom = 80.0
 focus_neighbor_bottom = NodePath("../BlankTapesBox")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("20_4k2k6")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ok6jj")
+theme_override_styles/focus = SubResource("StyleBoxFlat_facbu")
 text = "Show Controls"
 script = SubResource("GDScript_2cqfq")
 
 [node name="Sprite2D" type="Sprite2D" parent="ShowControls" unique_id=539367201]
-position = Vector2(-24.999989, 11)
-scale = Vector2(0.8469388, 0.8148148)
-texture = ExtResource("18_cegan")
+modulate = Color(0.8745098, 0.8235294, 1, 0.96862745)
+position = Vector2(-90.235054, 28.055552)
+scale = Vector2(0.7786061, 0.74907404)
+texture = ExtResource("21_0rl1p")
 region_enabled = true
-region_rect = Rect2(568.06036, 190.96555, 49.75287, 54.003143)
+region_rect = Rect2(1538.1506, 39.130447, 198.66235, 120.17845)
 
 [node name="Tape" type="Node2D" parent="." unique_id=614611568]
 visible = false
@@ -481,12 +504,14 @@ script = ExtResource("13_w48qg")
 
 [node name="Logo" type="Sprite2D" parent="." unique_id=76892536]
 texture_filter = 1
-position = Vector2(271, 85)
-scale = Vector2(0.8, 0.8)
+position = Vector2(235.85478, 75.6)
+scale = Vector2(0.6802548, 0.6802548)
 texture = ExtResource("17_a6jrf")
 
 [node name="Controls" parent="." unique_id=1477886189 instance=ExtResource("17_074og")]
 visible = false
+z_index = 11
+position = Vector2(91, 64)
 
 [node name="Messages" type="Label" parent="." unique_id=571717112]
 offset_right = 40.0
@@ -496,17 +521,17 @@ offset_bottom = 23.0
 layer = -100
 
 [node name="Gradient" type="TextureRect" parent="BackdropLayer" unique_id=1924085830]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 1920.0
+offset_bottom = 1080.0
 texture = ExtResource("19_82xsv")
 
 [node name="BoldRooms" type="Control" parent="BackdropLayer" unique_id=567806170]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 74.0
-offset_top = 135.0
-offset_right = 1841.0
-offset_bottom = 350.0
+offset_left = 57.0
+offset_top = 102.0
+offset_right = 1824.0
+offset_bottom = 317.0
 
 [node name="BlackArt" type="TextureRect" parent="BackdropLayer/BoldRooms" unique_id=2026009479]
 modulate = Color(1, 1, 1, 0)
@@ -802,10 +827,10 @@ texture = ExtResource("21_a6jrf")
 modulate = Color(1, 1, 1, 0.19215687)
 layout_mode = 3
 anchors_preset = 0
-offset_left = 74.0
-offset_top = 135.0
-offset_right = 1841.0
-offset_bottom = 350.0
+offset_left = 57.0
+offset_top = 102.0
+offset_right = 1824.0
+offset_bottom = 317.0
 
 [node name="BlackArt" type="TextureRect" parent="BackdropLayer/LightRooms" unique_id=1181101699]
 texture_filter = 1
@@ -994,3 +1019,4 @@ text = "Beginnings"
 [connection signal="focus_entered" from="BlankTapesBox" to="BlankTapesBox" method="_on_focus_entered"]
 [connection signal="focus_exited" from="BlankTapesBox" to="BlankTapesBox" method="_on_focus_exited"]
 [connection signal="pressed" from="BlankTapesBox" to="." method="_on_blank_tapes_box_pressed"]
+[connection signal="pressed" from="ShowControls" to="." method="_on_show_controls_pressed"]

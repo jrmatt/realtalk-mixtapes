@@ -8,15 +8,15 @@
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8er6q"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lbqvx"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6q106"]
 resource_local_to_scene = true
 bg_color = Color(0, 0, 0, 1)
 
 [node name="Dial" type="Panel" unique_id=1296031382]
-offset_left = 109.0
-offset_top = 835.0
-offset_right = 1122.0
-offset_bottom = 946.0
+offset_left = 128.0
+offset_top = 837.0
+offset_right = 818.0
+offset_bottom = 948.0
 theme_override_styles/panel = SubResource("StyleBoxEmpty_8er6q")
 script = ExtResource("1_6q106")
 
@@ -26,7 +26,7 @@ layout_mode = 0
 offset_top = 0.0
 offset_right = 3.0
 offset_bottom = 114.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_lbqvx")
+theme_override_styles/panel = SubResource("StyleBoxFlat_6q106")
 
 [node name="Static" type="AudioStreamPlayer" parent="." unique_id=525667313]
 stream = ExtResource("2_w8tbn")
@@ -38,7 +38,7 @@ volume_db = -14.0
 
 [node name="Knob" type="Sprite2D" parent="." unique_id=2130999480]
 z_index = -10
-position = Vector2(-79, 30)
+position = Vector2(58, 16)
 texture = ExtResource("5_6q106")
 region_enabled = true
 region_rect = Rect2(92.02288, 193.08542, 122.93876, 122.169586)

@@ -40,14 +40,6 @@ func _unhandled_input(event: InputEvent) -> void:
         var current_focus = get_viewport().gui_get_focus_owner()
         if not current_focus:
             $BlankTapesBox.grab_focus()
-    if event.is_action_pressed("show_controls"):
-        if not currently_accepting_button_presses:
-            return
-        else:
-            showing_controls = not showing_controls
-            $BackdropLayer/BoldRooms.visible = not $BackdropLayer/BoldRooms.visible
-            $BackdropLayer/LightRooms.visible = not $BackdropLayer/LightRooms.visible
-            $Controls.visible = not $Controls.visible
         
 
 func move_button_to_ys(btn, ys):
@@ -194,6 +186,17 @@ func _on_play_btn_pressed() -> void:
                 depress_button($Radio/PlayAnchor/PlayBtn)
                 print("Unpausing")
                 loaded_tape.player.stream_paused = false
+
+
+func _on_show_controls_pressed() -> void:
+    showing_controls = not showing_controls
+    #$BackdropLayer/BoldRooms.visible = not $BackdropLayer/BoldRooms.visible
+    #$BackdropLayer/LightRooms.visible = not $BackdropLayer/LightRooms.visible
+    $Controls.visible = not $Controls.visible
+    if showing_controls:
+        $ShowControls.text = "Hide Controls"
+    else:
+        $ShowControls.text = "Show Controls"
 
 
 # --------
