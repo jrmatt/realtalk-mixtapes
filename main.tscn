@@ -206,7 +206,6 @@ shader_parameter/offset_per_time = Vector2(0.5, 0.5)
 
 [node name="Main" type="Node2D" unique_id=582703919]
 texture_filter = 1
-position = Vector2(5, 1)
 script = ExtResource("1_w48qg")
 
 [node name="Radio" type="Node2D" parent="." unique_id=782036082]
