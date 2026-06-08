@@ -40,7 +40,7 @@ func _animate_tape_reveal() -> void:
 func _animate_tape_hint() -> void:
     $Control.modulate.a = 100.0
     var hint_tape_up = create_tween()
-    hint_tape_up.tween_property($Control, "position:y", 200, .3)
+    hint_tape_up.tween_property($Control, "position:y", 110, .3)
     
 
 func _animate_tape_hint_away() -> void:
@@ -53,4 +53,4 @@ func animate_replace_tape() -> void:
     $Control.modulate.a = 100.0
     $Control.position.y = 0
     var replace_tape = create_tween()
-    replace_tape.tween_property($Control, "position:y", 200, .3)
+    replace_tape.tween_property($Control, "position:y", 110, .3)

@@ -206,6 +206,7 @@ shader_parameter/offset_per_time = Vector2(0.5, 0.5)
 
 [node name="Main" type="Node2D" unique_id=582703919]
 texture_filter = 1
+position = Vector2(5, 1)
 script = ExtResource("1_w48qg")
 
 [node name="Radio" type="Node2D" parent="." unique_id=782036082]
@@ -220,7 +221,7 @@ region_rect = Rect2(698.7012, 398.19308, 1107.2256, 607.48486)
 
 [node name="MagicSparkles" type="GPUParticles2D" parent="Radio/RadioBody" unique_id=1391715145]
 visible = false
-position = Vector2(47.77605, -238.33333)
+position = Vector2(47.368465, -334.73688)
 amount = 23
 process_material = SubResource("ParticleProcessMaterial_yaehf")
 
@@ -236,6 +237,239 @@ scale = Vector2(0.8, 0.8)
 texture = ExtResource("4_htxhm")
 offset = Vector2(-23, -30)
 script = ExtResource("5_jq2sk")
+
+[node name="Control" type="Control" parent="Radio/RadioBody" unique_id=1985058792]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -375.7895
+offset_top = -284.21054
+offset_right = 149.4737
+offset_bottom = -186.31577
+
+[node name="AM" type="Label" parent="Radio/RadioBody/Control" unique_id=1537766204]
+layout_mode = 1
+offset_left = 475.7895
+offset_top = 1.0526316
+offset_right = 515.7895
+offset_bottom = 24.052631
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/outline_size = 1
+text = "AM"
+
+[node name="AM Labels" type="Control" parent="Radio/RadioBody/Control" unique_id=1226869303]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="54" type="Label" parent="Radio/RadioBody/Control/AM Labels" unique_id=1599913552]
+layout_mode = 1
+offset_left = 23.157959
+offset_top = 1.0
+offset_right = 63.15796
+offset_bottom = 50.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "54
+"
+
+[node name="60" type="Label" parent="Radio/RadioBody/Control/AM Labels" unique_id=543973683]
+layout_mode = 1
+offset_left = 60.0
+offset_top = 1.0
+offset_right = 100.0
+offset_bottom = 50.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "60"
+
+[node name="70" type="Label" parent="Radio/RadioBody/Control/AM Labels" unique_id=1139777555]
+layout_mode = 1
+offset_left = 134.73682
+offset_top = 1.0
+offset_right = 174.73682
+offset_bottom = 50.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "70"
+
+[node name="80" type="Label" parent="Radio/RadioBody/Control/AM Labels" unique_id=586189024]
+layout_mode = 1
+offset_left = 173.6842
+offset_top = 1.0
+offset_right = 213.6842
+offset_bottom = 50.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "80"
+
+[node name="100" type="Label" parent="Radio/RadioBody/Control/AM Labels" unique_id=687631462]
+layout_mode = 1
+offset_left = 252.63159
+offset_top = 1.0
+offset_right = 292.6316
+offset_bottom = 50.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "100"
+
+[node name="140" type="Label" parent="Radio/RadioBody/Control/AM Labels" unique_id=1328222804]
+layout_mode = 1
+offset_left = 346.3158
+offset_top = 1.0
+offset_right = 386.3158
+offset_bottom = 50.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "140"
+
+[node name="160" type="Label" parent="Radio/RadioBody/Control/AM Labels" unique_id=1453022901]
+layout_mode = 1
+offset_left = 396.84216
+offset_top = 1.0
+offset_right = 436.84216
+offset_bottom = 50.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "160"
+
+[node name="FM Labels" type="Control" parent="Radio/RadioBody/Control" unique_id=1978908885]
+anchors_preset = 0
+offset_top = 60.000004
+offset_right = 40.0
+offset_bottom = 100.0
+
+[node name="88" type="Label" parent="Radio/RadioBody/Control/FM Labels" unique_id=191024205]
+layout_mode = 1
+offset_left = 43.15796
+offset_top = 1.0526187
+offset_right = 83.15796
+offset_bottom = 50.05262
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "88
+"
+
+[node name="92" type="Label" parent="Radio/RadioBody/Control/FM Labels" unique_id=826627651]
+layout_mode = 1
+offset_left = 91.57895
+offset_top = 1.0526187
+offset_right = 131.57895
+offset_bottom = 50.05262
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "92"
+
+[node name="96" type="Label" parent="Radio/RadioBody/Control/FM Labels" unique_id=1007017034]
+layout_mode = 1
+offset_left = 186.31577
+offset_top = 2.1052504
+offset_right = 226.31577
+offset_bottom = 51.10525
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "96
+"
+
+[node name="100" type="Label" parent="Radio/RadioBody/Control/FM Labels" unique_id=877369989]
+layout_mode = 1
+offset_left = 273.68423
+offset_top = 1.0526187
+offset_right = 313.68423
+offset_bottom = 50.05262
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "100"
+
+[node name="104" type="Label" parent="Radio/RadioBody/Control/FM Labels" unique_id=1506842610]
+layout_mode = 1
+offset_left = 315.7895
+offset_top = 1.0526187
+offset_right = 355.7895
+offset_bottom = 50.05262
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "104
+"
+
+[node name="108" type="Label" parent="Radio/RadioBody/Control/FM Labels" unique_id=311209242]
+layout_mode = 1
+offset_left = 395.78952
+offset_top = 1.0526187
+offset_right = 435.78952
+offset_bottom = 50.05262
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "108"
+
+[node name="FM" type="Label" parent="Radio/RadioBody/Control" unique_id=1004842026]
+layout_mode = 1
+offset_left = 475.7895
+offset_top = 61.05264
+offset_right = 515.7894
+offset_bottom = 84.05264
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 1
+text = "FM"
+
+[node name="RecBtnLabel" type="Label" parent="Radio/RadioBody" unique_id=338692457]
+offset_left = 216.84204
+offset_top = -269.4737
+offset_right = 269.84204
+offset_bottom = -229.4737
+theme_override_colors/font_color = Color(0.9713355, 0.9713355, 0.9713355, 1)
+theme_override_colors/font_shadow_color = Color(0.26666668, 0.28235295, 0.34117648, 0.46666667)
+theme_override_colors/font_outline_color = Color(0.27058825, 0.30588236, 0.34901962, 0.42352942)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/shadow_outline_size = 4
+theme_override_font_sizes/font_size = 28
+text = "REC"
+
+[node name="RecLightLabel" type="Label" parent="Radio/RadioBody" unique_id=1563384131]
+offset_left = -396.84216
+offset_top = -103.1579
+offset_right = -343.84216
+offset_bottom = -63.157898
+theme_override_colors/font_color = Color(0.9713355, 0.9713355, 0.9713355, 1)
+theme_override_colors/font_shadow_color = Color(0.26666668, 0.28235295, 0.34117648, 0.46666667)
+theme_override_colors/font_outline_color = Color(0.27058825, 0.30588236, 0.34901962, 0.42352942)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/shadow_outline_size = 4
+theme_override_font_sizes/font_size = 28
+text = "REC"
+
+[node name="PlayBtnLabel" type="Label" parent="Radio/RadioBody" unique_id=2040113337]
+offset_left = 306.3158
+offset_top = -269.4737
+offset_right = 374.3158
+offset_bottom = -229.4737
+theme_override_colors/font_color = Color(0.9713355, 0.9713355, 0.9713355, 1)
+theme_override_colors/font_shadow_color = Color(0.26666668, 0.28235295, 0.34117648, 0.46666667)
+theme_override_colors/font_outline_color = Color(0.27058825, 0.30588236, 0.34901962, 0.42352942)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/shadow_outline_size = 4
+theme_override_font_sizes/font_size = 28
+text = "PLAY"
+
+[node name="StopBtnLabel" type="Label" parent="Radio/RadioBody" unique_id=761919192]
+offset_left = 403.15784
+offset_top = -286.3158
+offset_right = 473.15784
+offset_bottom = -246.3158
+theme_override_colors/font_color = Color(0.9713355, 0.9713355, 0.9713355, 1)
+theme_override_colors/font_shadow_color = Color(0.26666668, 0.28235295, 0.34117648, 0.46666667)
+theme_override_colors/font_outline_color = Color(0.27058825, 0.30588236, 0.34901962, 0.42352942)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/shadow_outline_size = 4
+theme_override_font_sizes/font_size = 28
+text = "STOP"
+
+[node name="EjectBtnLabel" type="Label" parent="Radio/RadioBody" unique_id=2110801148]
+offset_left = 393.6842
+offset_top = -255.78949
+offset_right = 477.6842
+offset_bottom = -215.78949
+theme_override_colors/font_color = Color(0.9713355, 0.9713355, 0.9713355, 1)
+theme_override_colors/font_shadow_color = Color(0.26666668, 0.28235295, 0.34117648, 0.46666667)
+theme_override_colors/font_outline_color = Color(0.27058825, 0.30588236, 0.34901962, 0.42352942)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/shadow_outline_size = 4
+theme_override_font_sizes/font_size = 28
+text = "/EJECT"
 
 [node name="RadioLabel" type="ScrollContainer" parent="Radio" unique_id=290878849]
 z_index = 1
@@ -271,7 +505,7 @@ script = ExtResource("5_kq58d")
 z_index = 1
 offset_left = 978.0
 offset_top = 487.0
-offset_right = 1432.0
+offset_right = 1424.0
 offset_bottom = 527.0
 
 [node name="Control" type="HBoxContainer" parent="Radio" unique_id=204003008]
@@ -456,10 +690,11 @@ theme_override_fonts/font = ExtResource("20_4k2k6")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxEmpty_ok6jj")
 theme_override_styles/focus = SubResource("StyleBoxFlat_facbu")
-text = "Show Controls"
+text = "Hide Controls"
 script = SubResource("GDScript_2cqfq")
 
 [node name="Sprite2D" type="Sprite2D" parent="ShowControls" unique_id=539367201]
+visible = false
 modulate = Color(0.8745098, 0.8235294, 1, 0.96862745)
 position = Vector2(-90.235054, 28.055552)
 scale = Vector2(0.7786061, 0.74907404)
@@ -509,7 +744,6 @@ scale = Vector2(0.6802548, 0.6802548)
 texture = ExtResource("17_a6jrf")
 
 [node name="Controls" parent="." unique_id=1477886189 instance=ExtResource("17_074og")]
-visible = false
 z_index = 11
 position = Vector2(91, 64)
 
@@ -528,10 +762,10 @@ texture = ExtResource("19_82xsv")
 [node name="BoldRooms" type="Control" parent="BackdropLayer" unique_id=567806170]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 57.0
-offset_top = 102.0
-offset_right = 1824.0
-offset_bottom = 317.0
+offset_left = 58.0
+offset_top = 96.0
+offset_right = 1825.0
+offset_bottom = 311.0
 
 [node name="BlackArt" type="TextureRect" parent="BackdropLayer/BoldRooms" unique_id=2026009479]
 modulate = Color(1, 1, 1, 0)
@@ -827,10 +1061,10 @@ texture = ExtResource("21_a6jrf")
 modulate = Color(1, 1, 1, 0.19215687)
 layout_mode = 3
 anchors_preset = 0
-offset_left = 57.0
-offset_top = 102.0
-offset_right = 1824.0
-offset_bottom = 317.0
+offset_left = 58.0
+offset_top = 96.0
+offset_right = 1825.0
+offset_bottom = 311.0
 
 [node name="BlackArt" type="TextureRect" parent="BackdropLayer/LightRooms" unique_id=1181101699]
 texture_filter = 1

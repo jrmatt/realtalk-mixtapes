@@ -16,7 +16,7 @@ var btn_move_amt = 16
 var disabled_btn_move_amt = 2
 
 var currently_accepting_button_presses := true
-var showing_controls := false
+var showing_controls := true
 
 var current_track_speakers := []
 var current_freq: String
@@ -190,9 +190,8 @@ func _on_play_btn_pressed() -> void:
 
 func _on_show_controls_pressed() -> void:
     showing_controls = not showing_controls
-    #$BackdropLayer/BoldRooms.visible = not $BackdropLayer/BoldRooms.visible
-    #$BackdropLayer/LightRooms.visible = not $BackdropLayer/LightRooms.visible
     $Controls.visible = not $Controls.visible
+    $ShowControls/Sprite2D.visible = not $ShowControls/Sprite2D.visible
     if showing_controls:
         $ShowControls.text = "Hide Controls"
     else:
