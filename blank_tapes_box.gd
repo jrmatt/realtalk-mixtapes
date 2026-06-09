@@ -2,7 +2,7 @@ extends Button
 
 
 func _pressed() -> void:
-    if not get_parent().loaded_tape:
+    if not get_parent().get_parent().loaded_tape:
         _animate_tape_reveal()
         _reset_tape()
 

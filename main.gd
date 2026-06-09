@@ -32,14 +32,14 @@ func _ready() -> void:
     effect = AudioServer.get_bus_effect(idx, 0)
     effect.set_recording_active(false)  
     
-    $ShowControls.grab_focus()
+    $UIElements/ShowControls.grab_focus()
  
 
 func _unhandled_input(event: InputEvent) -> void:
     if event.is_action_pressed('ui_left') or event.is_action_pressed('ui_right') or event.is_action_pressed('ui_up') or event.is_action_pressed('ui_down'):
         var current_focus = get_viewport().gui_get_focus_owner()
         if not current_focus:
-            $BlankTapesBox.grab_focus()
+            $UIElements/BlankTapesBox.grab_focus()
         
 
 func move_button_to_ys(btn, ys):
@@ -114,7 +114,7 @@ func _on_stop_btn_pressed() -> void:
         pop_button($Radio/RecordAnchor/RecordBtn)
         print("Player is not playing, ejecting")
         $Radio.remove_child(loaded_tape)
-        $Stacks/RecordedTapes.add_child(loaded_tape)
+        $UIElements/RecordedTapes.add_child(loaded_tape)
         $Radio/TapeDoor.load_tape()
         loaded_tape.visible = true
         loaded_tape = null
@@ -157,7 +157,7 @@ func _on_stop_btn_pressed() -> void:
             $Radio/TapeDoor.open_door()
             loaded_tape = null
             $Tape.visible = false
-            $BlankTapesBox.animate_replace_tape()
+            $UIElements/BlankTapesBox.animate_replace_tape()
 
 
 func _on_play_btn_pressed() -> void:
@@ -191,11 +191,11 @@ func _on_play_btn_pressed() -> void:
 func _on_show_controls_pressed() -> void:
     showing_controls = not showing_controls
     $Controls.visible = not $Controls.visible
-    $ShowControls/Sprite2D.visible = not $ShowControls/Sprite2D.visible
+    $UIElements/ShowControls/Sprite2D.visible = not $UIElements/ShowControls/Sprite2D.visible
     if showing_controls:
-        $ShowControls.text = "Hide Controls"
+        $UIElements/ShowControls.text = "Hide Controls"
     else:
-        $ShowControls.text = "Show Controls"
+        $UIElements/ShowControls.text = "Show Controls"
 
 
 # --------
@@ -246,7 +246,7 @@ func _save_tape(text) -> void:
 
     saved_tape.tape_name = input_text
         
-    $Stacks/RecordedTapes.add_child(saved_tape)
+    $UIElements/RecordedTapes.add_child(saved_tape)
     saved_tape.load_tape.connect(_on_tape_loaded)
     
     print("Saved current tape: ", saved_tape.recording)
@@ -287,7 +287,7 @@ func _on_tape_loaded(tape):
 
         else:
             print("Loading recorded tape: ", loaded_tape, loaded_tape.is_recordable)
-            $Stacks/RecordedTapes.remove_child(loaded_tape)
+            $UIElements/RecordedTapes.remove_child(loaded_tape)
             $Radio.add_child(loaded_tape)
             loaded_tape.visible = false
             
