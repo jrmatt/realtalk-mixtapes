@@ -682,13 +682,19 @@ frame = 1
 frame_progress = 0.2393652
 script = ExtResource("9_ycdy4")
 
-[node name="BlankTapesBox" type="Button" parent="." unique_id=416131326]
-offset_left = 8.0
-offset_top = 798.0
-offset_right = 450.0
-offset_bottom = 1091.0
+[node name="UIElements" type="Control" parent="." unique_id=935732765]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BlankTapesBox" type="Button" parent="UIElements" unique_id=416131326]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 795.0
+offset_right = 466.0
+offset_bottom = 1088.0
 scale = Vector2(0.9, 0.9)
-focus_neighbor_top = NodePath("../ShowControls")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_htxhm")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_jq2sk")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_4k2k6")
@@ -697,7 +703,7 @@ theme_override_styles/focus = SubResource("StyleBoxFlat_htxhm")
 icon = ExtResource("16_4k2k6")
 script = ExtResource("17_jq2sk")
 
-[node name="Label" type="Label" parent="BlankTapesBox" unique_id=518244271]
+[node name="Label" type="Label" parent="UIElements/BlankTapesBox" unique_id=518244271]
 layout_mode = 0
 offset_left = 85.55554
 offset_top = 183.33334
@@ -709,7 +715,7 @@ theme_override_fonts/font = ExtResource("24_seu75")
 theme_override_font_sizes/font_size = 54
 text = "BLANK TAPES"
 
-[node name="Control" type="Control" parent="BlankTapesBox" unique_id=674132160]
+[node name="Control" type="Control" parent="UIElements/BlankTapesBox" unique_id=674132160]
 show_behind_parent = true
 anchors_preset = 0
 offset_left = -2.222
@@ -717,50 +723,43 @@ offset_top = 286.0
 offset_right = 37.778
 offset_bottom = 326.0
 
-[node name="GearStatic1" type="Sprite2D" parent="BlankTapesBox/Control" unique_id=35699377]
+[node name="GearStatic1" type="Sprite2D" parent="UIElements/BlankTapesBox/Control" unique_id=35699377]
 position = Vector2(166.71648, -144.08612)
 scale = Vector2(0.85, 0.85)
 texture = ExtResource("18_0rl1p")
 region_enabled = true
 region_rect = Rect2(813.33356, 720.9148, 61.11841, 61.422974)
 
-[node name="GearStatic2" type="Sprite2D" parent="BlankTapesBox/Control" unique_id=212624398]
+[node name="GearStatic2" type="Sprite2D" parent="UIElements/BlankTapesBox/Control" unique_id=212624398]
 position = Vector2(287.8275, -145.1972)
 scale = Vector2(0.85, 0.85)
 texture = ExtResource("18_0rl1p")
 region_enabled = true
 region_rect = Rect2(813.33356, 720.9148, 61.11841, 61.422974)
 
-[node name="Sprite2D" type="Sprite2D" parent="BlankTapesBox/Control" unique_id=53952062]
+[node name="Sprite2D" type="Sprite2D" parent="UIElements/BlankTapesBox/Control" unique_id=53952062]
 position = Vector2(228.03868, -135.20276)
 scale = Vector2(0.85, 0.85)
 texture = ExtResource("18_0rl1p")
 region_enabled = true
 region_rect = Rect2(1052.2573, 697.4416, 398.6516, 279.4803)
 
-[node name="Stacks" type="Control" parent="." unique_id=327644751]
-layout_mode = 3
-anchors_preset = 0
-offset_left = 27.0
-offset_top = 411.0
-offset_right = 772.0
-offset_bottom = 1071.0
-
-[node name="RecordedTapes" type="VFlowContainer" parent="Stacks" unique_id=1497847491]
+[node name="RecordedTapes" type="VFlowContainer" parent="UIElements" unique_id=1497847491]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -355.0
-offset_top = -2.0
-offset_right = 23.0
-offset_bottom = 642.0
+offset_left = 418.0
+offset_top = 412.0
+offset_right = 805.0
+offset_bottom = 1056.0
 grow_horizontal = 0
 theme_override_constants/h_separation = 0
 theme_override_constants/v_separation = 0
 alignment = 2
 
-[node name="ShowControls" type="Button" parent="." unique_id=340853370]
+[node name="ShowControls" type="Button" parent="UIElements" unique_id=340853370]
+layout_mode = 0
 offset_left = 1671.0
 offset_top = 30.0
 offset_right = 1887.0
@@ -774,7 +773,7 @@ theme_override_styles/focus = SubResource("StyleBoxFlat_facbu")
 text = "Hide Controls"
 script = SubResource("GDScript_2cqfq")
 
-[node name="Sprite2D" type="Sprite2D" parent="ShowControls" unique_id=539367201]
+[node name="Sprite2D" type="Sprite2D" parent="UIElements/ShowControls" unique_id=539367201]
 visible = false
 modulate = Color(0.8994738, 0.8245544, 0.93386, 0.96862745)
 position = Vector2(-90.235054, 28.055552)
@@ -872,12 +871,12 @@ text = "dIO"
 layout_mode = 0
 offset_left = 427.0
 offset_top = 10.0
-offset_right = 1334.0
+offset_right = 1388.0
 offset_bottom = 95.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("20_4k2k6")
 theme_override_font_sizes/font_size = 40
-text = "Tune in to real conversations with local artists. Make a mixtape to share what resonates with you!"
+text = "Tune in to real conversations with local Boston artists. Make a mixtape to share what resonates with you!"
 autowrap_mode = 2
 
 [node name="Controls" parent="." unique_id=1477886189 instance=ExtResource("17_074og")]
@@ -1387,7 +1386,7 @@ text = "Beginnings"
 [connection signal="pressed" from="Radio/PlayAnchor/PlayBtn" to="." method="_on_play_btn_pressed"]
 [connection signal="pressed" from="Radio/RecordAnchor/RecordBtn" to="." method="_on_record_btn_pressed"]
 [connection signal="pressed" from="Radio/StopAnchor/StopBtn" to="." method="_on_stop_btn_pressed"]
-[connection signal="focus_entered" from="BlankTapesBox" to="BlankTapesBox" method="_on_focus_entered"]
-[connection signal="focus_exited" from="BlankTapesBox" to="BlankTapesBox" method="_on_focus_exited"]
-[connection signal="pressed" from="BlankTapesBox" to="." method="_on_blank_tapes_box_pressed"]
-[connection signal="pressed" from="ShowControls" to="." method="_on_show_controls_pressed"]
+[connection signal="focus_entered" from="UIElements/BlankTapesBox" to="UIElements/BlankTapesBox" method="_on_focus_entered"]
+[connection signal="focus_exited" from="UIElements/BlankTapesBox" to="UIElements/BlankTapesBox" method="_on_focus_exited"]
+[connection signal="pressed" from="UIElements/BlankTapesBox" to="." method="_on_blank_tapes_box_pressed"]
+[connection signal="pressed" from="UIElements/ShowControls" to="." method="_on_show_controls_pressed"]
