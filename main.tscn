@@ -23,6 +23,7 @@
 [ext_resource type="Script" uid="uid://dd148diwddonr" path="res://blank_tapes_box.gd" id="17_jq2sk"]
 [ext_resource type="Texture2D" uid="uid://4481vdoccp0j" path="res://sprites/tape_final.png" id="18_0rl1p"]
 [ext_resource type="Texture2D" uid="uid://cmq6ms1ra20dw" path="res://BackgroundGradientMobile.png" id="19_82xsv"]
+[ext_resource type="Script" uid="uid://dx7ankc5gi5u6" path="res://recorded_tapes.gd" id="20_0rl1p"]
 [ext_resource type="FontFile" uid="uid://878k53bmonof" path="res://fonts/NeueHaasGrotDispRound-75Bold copy.otf" id="20_4k2k6"]
 [ext_resource type="Texture2D" uid="uid://blpq1gw8qmvk7" path="res://sprites/BlueRoom.png" id="20_getpj"]
 [ext_resource type="Texture2D" uid="uid://ccp41yqnxy1kv" path="res://sprites/controls.png" id="21_0rl1p"]
@@ -757,6 +758,7 @@ grow_horizontal = 0
 theme_override_constants/h_separation = 0
 theme_override_constants/v_separation = 0
 alignment = 2
+script = ExtResource("20_0rl1p")
 
 [node name="ShowControls" type="Button" parent="UIElements" unique_id=340853370]
 layout_mode = 0
@@ -1389,4 +1391,5 @@ text = "Beginnings"
 [connection signal="focus_entered" from="UIElements/BlankTapesBox" to="UIElements/BlankTapesBox" method="_on_focus_entered"]
 [connection signal="focus_exited" from="UIElements/BlankTapesBox" to="UIElements/BlankTapesBox" method="_on_focus_exited"]
 [connection signal="pressed" from="UIElements/BlankTapesBox" to="." method="_on_blank_tapes_box_pressed"]
+[connection signal="child_entered_tree" from="UIElements/RecordedTapes" to="UIElements/RecordedTapes" method="_on_child_entered_tree"]
 [connection signal="pressed" from="UIElements/ShowControls" to="." method="_on_show_controls_pressed"]
