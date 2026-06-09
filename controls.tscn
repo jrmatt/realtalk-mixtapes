@@ -162,7 +162,7 @@ offset_bottom = 459.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_ff64o")
 theme_override_font_sizes/font_size = 20
-text = "Press A to Load Tape"
+text = "Press A to Load Tape or Press Button"
 autowrap_mode = 2
 
 [node name="RightJoyHighlight" type="Sprite2D" parent="." unique_id=1688609233]
@@ -279,6 +279,17 @@ scale = Vector2(0.794117, 0.79411703)
 texture = ExtResource("2_xwvqn")
 region_enabled = true
 region_rect = Rect2(1705.7502, 220.32565, 68.42822, 69.84964)
+
+[node name="A2" type="Label" parent="." unique_id=605259952]
+offset_left = 1480.0
+offset_top = 264.0
+offset_right = 1736.9546
+offset_bottom = 329.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_ff64o")
+theme_override_font_sizes/font_size = 20
+text = "Button Shortcuts"
+autowrap_mode = 2
 
 [node name="Y" type="Label" parent="." unique_id=1462688947]
 visible = false

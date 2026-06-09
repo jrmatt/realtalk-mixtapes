@@ -82,12 +82,12 @@ func _on_record_btn_pressed() -> void:
         return
 
     if loaded_tape and loaded_tape.is_recordable:
-        depress_button($Radio/RecordAnchor/RecordBtn)
-        depress_button($Radio/PlayAnchor/PlayBtn)
+        depress_button($UIElements/RecordAnchor/RecordBtn)
+        depress_button($UIElements/PlayAnchor/PlayBtn)
         _start_recording()
     else:
-        depress_disabled_button($Radio/RecordAnchor/RecordBtn)
-        depress_disabled_button($Radio/PlayAnchor/PlayBtn)
+        depress_disabled_button($UIElements/RecordAnchor/RecordBtn)
+        depress_disabled_button($UIElements/PlayAnchor/PlayBtn)
         $Messages.text = "Load an Empty Tape to Record!"
         await get_tree().create_timer(2.0).timeout
         $Messages.text = ""
@@ -99,19 +99,19 @@ func _on_stop_btn_pressed() -> void:
         return
 
     if not loaded_tape:
-        depress_disabled_button($Radio/StopAnchor/StopBtn)
+        depress_disabled_button($UIElements/StopAnchor/StopBtn)
         print("No current tape")
         return
         
     if loaded_tape.player.playing:
-        depress_and_pop_button($Radio/StopAnchor/StopBtn)
+        depress_and_pop_button($UIElements/StopAnchor/StopBtn)
         print("Player is playing, pausing")
         loaded_tape.player.stream_paused = true
 
     elif not loaded_tape.is_recordable:
-        depress_and_pop_button($Radio/StopAnchor/StopBtn)
-        pop_button($Radio/PlayAnchor/PlayBtn)
-        pop_button($Radio/RecordAnchor/RecordBtn)
+        depress_and_pop_button($UIElements/StopAnchor/StopBtn)
+        pop_button($UIElements/PlayAnchor/PlayBtn)
+        pop_button($UIElements/RecordAnchor/RecordBtn)
         print("Player is not playing, ejecting")
         $Radio.remove_child(loaded_tape)
         $UIElements/RecordedTapes.add_child(loaded_tape)
@@ -126,9 +126,9 @@ func _on_stop_btn_pressed() -> void:
         $Radio/Dial.set_volumes_and_label()
 
     elif effect.is_recording_active():
-        depress_and_pop_button($Radio/StopAnchor/StopBtn)
-        pop_button($Radio/PlayAnchor/PlayBtn)
-        pop_button($Radio/RecordAnchor/RecordBtn)
+        depress_and_pop_button($UIElements/StopAnchor/StopBtn)
+        pop_button($UIElements/PlayAnchor/PlayBtn)
+        pop_button($UIElements/RecordAnchor/RecordBtn)
         print("Stopping recording")
         effect.set_recording_active(false)
         $Radio/RadioBody/RecLight.visible = false
@@ -139,9 +139,9 @@ func _on_stop_btn_pressed() -> void:
             $Radio/Dial.mute()
             $Radio/Dial.cassette_mode = true
             
-            depress_and_pop_button($Radio/StopAnchor/StopBtn)
-            pop_button($Radio/PlayAnchor/PlayBtn)
-            pop_button($Radio/RecordAnchor/RecordBtn)
+            depress_and_pop_button($UIElements/StopAnchor/StopBtn)
+            pop_button($UIElements/PlayAnchor/PlayBtn)
+            pop_button($UIElements/RecordAnchor/RecordBtn)
             var new_save = SaveScene.instantiate()
             currently_accepting_button_presses = false
             add_child(new_save)
@@ -153,7 +153,7 @@ func _on_stop_btn_pressed() -> void:
             $Radio/TapeDoor.open_door()
 
         else:
-            depress_and_pop_button($Radio/StopAnchor/StopBtn)
+            depress_and_pop_button($UIElements/StopAnchor/StopBtn)
             $Radio/TapeDoor.open_door()
             loaded_tape = null
             $Tape.visible = false
@@ -166,24 +166,24 @@ func _on_play_btn_pressed() -> void:
 
     if not loaded_tape:
         print("No tape to play")
-        depress_disabled_button($Radio/PlayAnchor/PlayBtn)
+        depress_disabled_button($UIElements/PlayAnchor/PlayBtn)
 
     elif loaded_tape.is_recordable:
-        depress_disabled_button($Radio/PlayAnchor/PlayBtn)
+        depress_disabled_button($UIElements/PlayAnchor/PlayBtn)
         
     else:
-        depress_button($Radio/PlayAnchor/PlayBtn)
+        depress_button($UIElements/PlayAnchor/PlayBtn)
         
         if not loaded_tape.player.playing:
-            depress_button($Radio/PlayAnchor/PlayBtn)
+            depress_button($UIElements/PlayAnchor/PlayBtn)
             print("Player is not playing")
             if not loaded_tape.player.stream_paused:
-                depress_button($Radio/PlayAnchor/PlayBtn)
+                depress_button($UIElements/PlayAnchor/PlayBtn)
                 print("Playing audio")
                 loaded_tape.play_next_audio()
                 print("Current tape index: ", loaded_tape.current_index)
             else:
-                depress_button($Radio/PlayAnchor/PlayBtn)
+                depress_button($UIElements/PlayAnchor/PlayBtn)
                 print("Unpausing")
                 loaded_tape.player.stream_paused = false
 
@@ -204,11 +204,11 @@ func _on_show_controls_pressed() -> void:
  
 
 func _on_dial_start_rewind() -> void:
-    depress_button($Radio/RwAnchor/RwBtn)
+    depress_button($UIElements/RwAnchor/RwBtn)
 
 
 func _on_dial_stop_rewind() -> void:
-    pop_button($Radio/RwAnchor/RwBtn)
+    pop_button($UIElements/RwAnchor/RwBtn)
     
 
 func _on_dial_playing_freq(new_freq: Variant, alpha: Variant) -> void:
@@ -278,7 +278,8 @@ func _on_tape_loaded(tape):
     
     if not loaded_tape:
         loaded_tape = tape
-        await get_tree().create_timer(1).timeout
+        if tape.is_recordable:
+            await get_tree().create_timer(1).timeout
         $Tape.visible = true
         $Radio/TapeDoor.load_tape()
 
@@ -354,6 +355,7 @@ func _pause_recording() -> void:
         
         
 func _process(delta: float) -> void:
+    print(get_viewport().gui_get_focus_owner())
     if loaded_tape and (loaded_tape.player.playing or effect.is_recording_active()):
         $Tape/Gear1.rotation += gear_rotation_direction * gear_rotation_speed * delta
         $Tape/Gear2.rotation += gear_rotation_direction * gear_rotation_speed * delta

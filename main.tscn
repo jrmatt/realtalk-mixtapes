@@ -15,7 +15,10 @@
 [ext_resource type="Script" uid="uid://cccc3tfe44jhf" path="res://stop_btn.gd" id="12_dg77c"]
 [ext_resource type="Texture2D" uid="uid://dxye56dvxlybc" path="res://sprites/door_closed.png" id="12_kq58d"]
 [ext_resource type="Shader" uid="uid://dh1cluiagll7b" path="res://blur.gdshader" id="12_ycdy4"]
+[ext_resource type="AudioStream" uid="uid://fnrrctg858oj" path="res://sounds/tape_door_open.mp3" id="13_facbu"]
 [ext_resource type="Script" uid="uid://boswg3amidssu" path="res://rewind_shader.gd" id="13_w48qg"]
+[ext_resource type="AudioStream" uid="uid://bcnqyqxgugd5w" path="res://sounds/tape_door_closed.mp3" id="14_b1qrp"]
+[ext_resource type="AudioStream" uid="uid://dlox30syuyuu1" path="res://sounds/button_press.mp3" id="14_ok6jj"]
 [ext_resource type="PackedScene" uid="uid://pr88iiebh72d" path="res://dial.tscn" id="14_w48qg"]
 [ext_resource type="Texture2D" uid="uid://ditb3ufq2bkb5" path="res://sprites/empty_box.png" id="16_4k2k6"]
 [ext_resource type="PackedScene" uid="uid://upte61xgooko" path="res://controls.tscn" id="17_074og"]
@@ -88,6 +91,20 @@ bg_color = Color(0.91764706, 0.6, 0.81960785, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4lmeg"]
 bg_color = Color(0.6156863, 0.7137255, 0.43529412, 1)
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_ycdy4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_qsp4k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_kq58d")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ryguw"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d13ii"]
@@ -96,7 +113,22 @@ bg_color = Color(0.6156863, 0.7137255, 0.43529412, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0odxb"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lswn8"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0cp0l"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color(1, 1, 1, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 6.0
+expand_margin_top = 6.0
+expand_margin_right = 6.0
+expand_margin_bottom = 6.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jq2sk"]
 atlas = ExtResource("2_4k2k6")
@@ -110,8 +142,6 @@ region = Rect2(1430.0787, 270.11234, 109.02515, 81.01395)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vivmo"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2cqfq"]
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_4k2k6"]
 atlas = ExtResource("2_4k2k6")
 region = Rect2(1318.2892, 270.03952, 107.909546, 84.04724)
@@ -123,8 +153,6 @@ region = Rect2(1318.2892, 270.03952, 107.909546, 84.04724)
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cegan"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_82xsv"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_getpj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0rl1p"]
 atlas = ExtResource("2_4k2k6")
@@ -143,20 +171,6 @@ region = Rect2(1543.1206, 268.67465, 106.73413, 81.114044)
 [sub_resource type="AtlasTexture" id="AtlasTexture_ok6jj"]
 atlas = ExtResource("2_4k2k6")
 region = Rect2(1126.7906, 272.22882, 105.89111, 81.62656)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_ycdy4"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("11_qsp4k")
-}, {
-"duration": 1.0,
-"texture": ExtResource("12_kq58d")
-}],
-"loop": true,
-"name": &"new_animation",
-"speed": 5.0
-}]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_htxhm"]
 
@@ -602,77 +616,6 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("3_xuqvo")
 theme_override_font_sizes/font_size = 70
 
-[node name="PlayAnchor" type="Node2D" parent="Radio" unique_id=452582252]
-z_index = -1
-position = Vector2(1622, 490)
-
-[node name="PlayBtn" type="Button" parent="Radio/PlayAnchor" unique_id=684982014]
-offset_right = 112.0
-offset_bottom = 86.0
-scale = Vector2(0.8, 0.8)
-focus_mode = 0
-theme_override_styles/normal = SubResource("StyleBoxEmpty_ryguw")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_d13ii")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_1u8w0")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_0odxb")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_lswn8")
-icon = SubResource("AtlasTexture_jq2sk")
-script = ExtResource("10_w48qg")
-metadata/_edit_use_anchors_ = true
-
-[node name="RecordAnchor" type="Node2D" parent="Radio" unique_id=894432045]
-z_index = -1
-position = Vector2(1535, 490)
-
-[node name="RecordBtn" type="Button" parent="Radio/RecordAnchor" unique_id=310661157]
-offset_right = 87.0
-offset_bottom = 58.0
-scale = Vector2(0.8, 0.8)
-focus_mode = 0
-theme_override_styles/normal = SubResource("StyleBoxEmpty_dg77c")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_ycdy4")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_w48qg")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_vivmo")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_2cqfq")
-icon = SubResource("AtlasTexture_4k2k6")
-script = ExtResource("8_82xsv")
-metadata/_edit_use_anchors_ = true
-
-[node name="StopAnchor" type="Node2D" parent="Radio" unique_id=29596954]
-z_index = -1
-position = Vector2(1710, 488)
-
-[node name="StopBtn" type="Button" parent="Radio/StopAnchor" unique_id=922399820]
-offset_right = 112.0
-offset_bottom = 86.0
-scale = Vector2(0.8, 0.8)
-focus_mode = 0
-theme_override_styles/normal = SubResource("StyleBoxEmpty_yaehf")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_074og")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_cegan")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_82xsv")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_getpj")
-icon = SubResource("AtlasTexture_0rl1p")
-script = ExtResource("12_dg77c")
-metadata/_edit_use_anchors_ = true
-
-[node name="RwAnchor" type="Node2D" parent="Radio" unique_id=1677658616]
-z_index = -1
-position = Vector2(1405, 493)
-
-[node name="RwBtn" type="Button" parent="Radio/RwAnchor" unique_id=1938241678]
-offset_right = 112.0
-offset_bottom = 61.0
-scale = Vector2(0.8, 0.8)
-focus_mode = 0
-theme_override_styles/normal = SubResource("StyleBoxEmpty_a6jrf")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_xuqvo")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_qsp4k")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_kq58d")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_seu75")
-icon = SubResource("AtlasTexture_ok6jj")
-metadata/_edit_use_anchors_ = true
-
 [node name="TapeDoor" type="AnimatedSprite2D" parent="Radio" unique_id=1264128355]
 z_index = 2
 position = Vector2(1375, 921.9999)
@@ -683,11 +626,93 @@ frame = 1
 frame_progress = 0.2393652
 script = ExtResource("9_ycdy4")
 
+[node name="DoorOpenSound" type="AudioStreamPlayer" parent="Radio/TapeDoor" unique_id=1313292279]
+stream = ExtResource("13_facbu")
+
+[node name="DoorClosedSound" type="AudioStreamPlayer" parent="Radio/TapeDoor" unique_id=1397722201]
+stream = ExtResource("14_b1qrp")
+
 [node name="UIElements" type="Control" parent="." unique_id=935732765]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="PlayAnchor" type="Node2D" parent="UIElements" unique_id=452582252]
+z_index = -1
+position = Vector2(1651, 487)
+
+[node name="PlayBtn" type="Button" parent="UIElements/PlayAnchor" unique_id=684982014]
+offset_right = 112.0
+offset_bottom = 86.0
+scale = Vector2(0.8, 0.8)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ryguw")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_d13ii")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_1u8w0")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_0odxb")
+theme_override_styles/focus = SubResource("StyleBoxFlat_0cp0l")
+icon = SubResource("AtlasTexture_jq2sk")
+script = ExtResource("10_w48qg")
+metadata/_edit_use_anchors_ = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="UIElements/PlayAnchor/PlayBtn" unique_id=1954824907]
+stream = ExtResource("14_ok6jj")
+
+[node name="RecordAnchor" type="Node2D" parent="UIElements" unique_id=894432045]
+z_index = -1
+position = Vector2(1564, 487)
+
+[node name="RecordBtn" type="Button" parent="UIElements/RecordAnchor" unique_id=310661157]
+offset_right = 87.0
+offset_bottom = 58.0
+scale = Vector2(0.8, 0.8)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_dg77c")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ycdy4")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_w48qg")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_vivmo")
+theme_override_styles/focus = SubResource("StyleBoxFlat_0cp0l")
+icon = SubResource("AtlasTexture_4k2k6")
+script = ExtResource("8_82xsv")
+metadata/_edit_use_anchors_ = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="UIElements/RecordAnchor/RecordBtn" unique_id=1899181800]
+stream = ExtResource("14_ok6jj")
+
+[node name="StopAnchor" type="Node2D" parent="UIElements" unique_id=29596954]
+z_index = -1
+position = Vector2(1739, 485)
+
+[node name="StopBtn" type="Button" parent="UIElements/StopAnchor" unique_id=922399820]
+offset_right = 112.0
+offset_bottom = 86.0
+scale = Vector2(0.8, 0.8)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_yaehf")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_074og")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_cegan")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_82xsv")
+theme_override_styles/focus = SubResource("StyleBoxFlat_0cp0l")
+icon = SubResource("AtlasTexture_0rl1p")
+script = ExtResource("12_dg77c")
+metadata/_edit_use_anchors_ = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="UIElements/StopAnchor/StopBtn" unique_id=513430411]
+stream = ExtResource("14_ok6jj")
+
+[node name="RwAnchor" type="Node2D" parent="UIElements" unique_id=1677658616]
+z_index = -1
+position = Vector2(1434, 490)
+
+[node name="RwBtn" type="Button" parent="UIElements/RwAnchor" unique_id=1938241678]
+offset_right = 112.0
+offset_bottom = 61.0
+scale = Vector2(0.8, 0.8)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_a6jrf")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_xuqvo")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_qsp4k")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_kq58d")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_seu75")
+icon = SubResource("AtlasTexture_ok6jj")
+metadata/_edit_use_anchors_ = true
 
 [node name="BlankTapesBox" type="Button" parent="UIElements" unique_id=416131326]
 layout_mode = 0
@@ -1385,9 +1410,9 @@ text = "Beginnings"
 [connection signal="start_rewind" from="Radio/Dial" to="RewindShader" method="_on_dial_start_rewind"]
 [connection signal="stop_rewind" from="Radio/Dial" to="." method="_on_dial_stop_rewind"]
 [connection signal="stop_rewind" from="Radio/Dial" to="RewindShader" method="_on_dial_stop_rewind"]
-[connection signal="pressed" from="Radio/PlayAnchor/PlayBtn" to="." method="_on_play_btn_pressed"]
-[connection signal="pressed" from="Radio/RecordAnchor/RecordBtn" to="." method="_on_record_btn_pressed"]
-[connection signal="pressed" from="Radio/StopAnchor/StopBtn" to="." method="_on_stop_btn_pressed"]
+[connection signal="pressed" from="UIElements/PlayAnchor/PlayBtn" to="." method="_on_play_btn_pressed"]
+[connection signal="pressed" from="UIElements/RecordAnchor/RecordBtn" to="." method="_on_record_btn_pressed"]
+[connection signal="pressed" from="UIElements/StopAnchor/StopBtn" to="." method="_on_stop_btn_pressed"]
 [connection signal="focus_entered" from="UIElements/BlankTapesBox" to="UIElements/BlankTapesBox" method="_on_focus_entered"]
 [connection signal="focus_exited" from="UIElements/BlankTapesBox" to="UIElements/BlankTapesBox" method="_on_focus_exited"]
 [connection signal="pressed" from="UIElements/BlankTapesBox" to="." method="_on_blank_tapes_box_pressed"]
