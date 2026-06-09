@@ -760,21 +760,20 @@ alignment = 2
 
 [node name="ShowControls" type="Button" parent="UIElements" unique_id=340853370]
 layout_mode = 0
-offset_left = 1671.0
-offset_top = 30.0
-offset_right = 1887.0
-offset_bottom = 80.0
+offset_left = 1674.0
+offset_top = 59.0
+offset_right = 1890.0
+offset_bottom = 109.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("20_4k2k6")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxEmpty_ok6jj")
 theme_override_styles/focus = SubResource("StyleBoxFlat_facbu")
-text = "Hide Controls"
+text = "Show Controls"
 script = SubResource("GDScript_2cqfq")
 
 [node name="Sprite2D" type="Sprite2D" parent="UIElements/ShowControls" unique_id=539367201]
-visible = false
 modulate = Color(0.8994738, 0.8245544, 0.93386, 0.96862745)
 position = Vector2(-90.235054, 28.055552)
 scale = Vector2(0.7786061, 0.74907404)
@@ -880,6 +879,7 @@ text = "Tune in to real conversations with local Boston artists. Make a mixtape 
 autowrap_mode = 2
 
 [node name="Controls" parent="." unique_id=1477886189 instance=ExtResource("17_074og")]
+visible = false
 z_index = 11
 position = Vector2(102, 121)
 

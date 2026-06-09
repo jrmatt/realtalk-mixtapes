@@ -16,7 +16,7 @@ var btn_move_amt = 16
 var disabled_btn_move_amt = 2
 
 var currently_accepting_button_presses := true
-var showing_controls := true
+var showing_controls := false
 
 var current_track_speakers := []
 var current_freq: String
