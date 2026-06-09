@@ -66,6 +66,27 @@ turbulence_enabled = true
 turbulence_noise_strength = 5.02
 turbulence_noise_scale = 5.68
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4k2k6"]
+bg_color = Color(0.8980392, 0.6392157, 0.46666667, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0rl1p"]
+bg_color = Color(0.3529412, 0.48235294, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ok6jj"]
+bg_color = Color(0.47058824, 0.42745098, 0.79607844, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b1qrp"]
+bg_color = Color(0.53333336, 0.77254903, 0.654902, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_come4"]
+bg_color = Color(0.5882353, 0.7294118, 0.8039216, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h8e4i"]
+bg_color = Color(0.91764706, 0.6, 0.81960785, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4lmeg"]
+bg_color = Color(0.6156863, 0.7137255, 0.43529412, 1)
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ryguw"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d13ii"]
@@ -212,8 +233,8 @@ script = ExtResource("1_w48qg")
 position = Vector2(29, -3)
 
 [node name="RadioBody" type="Sprite2D" parent="Radio" unique_id=657849294]
-position = Vector2(1334, 770)
-scale = Vector2(0.95, 0.95)
+position = Vector2(1374, 804.99994)
+scale = Vector2(0.85, 0.85)
 texture = ExtResource("2_4k2k6")
 region_enabled = true
 region_rect = Rect2(698.7012, 398.19308, 1107.2256, 607.48486)
@@ -403,10 +424,10 @@ theme_override_font_sizes/font_size = 20
 text = "FM"
 
 [node name="RecBtnLabel" type="Label" parent="Radio/RadioBody" unique_id=338692457]
-offset_left = 216.84204
-offset_top = -269.4737
-offset_right = 269.84204
-offset_bottom = -229.4737
+offset_left = 215.29419
+offset_top = -276.4705
+offset_right = 268.2942
+offset_bottom = -236.47049
 theme_override_colors/font_color = Color(0.9713355, 0.9713355, 0.9713355, 1)
 theme_override_colors/font_shadow_color = Color(0.26666668, 0.28235295, 0.34117648, 0.46666667)
 theme_override_colors/font_outline_color = Color(0.27058825, 0.30588236, 0.34901962, 0.42352942)
@@ -431,10 +452,10 @@ theme_override_font_sizes/font_size = 28
 text = "REC"
 
 [node name="PlayBtnLabel" type="Label" parent="Radio/RadioBody" unique_id=2040113337]
-offset_left = 306.3158
-offset_top = -269.4737
-offset_right = 374.3158
-offset_bottom = -229.4737
+offset_left = 309.41177
+offset_top = -276.4705
+offset_right = 377.41177
+offset_bottom = -236.47049
 theme_override_colors/font_color = Color(0.9713355, 0.9713355, 0.9713355, 1)
 theme_override_colors/font_shadow_color = Color(0.26666668, 0.28235295, 0.34117648, 0.46666667)
 theme_override_colors/font_outline_color = Color(0.27058825, 0.30588236, 0.34901962, 0.42352942)
@@ -445,10 +466,10 @@ theme_override_font_sizes/font_size = 28
 text = "PLAY"
 
 [node name="StopBtnLabel" type="Label" parent="Radio/RadioBody" unique_id=761919192]
-offset_left = 403.15784
-offset_top = -286.3158
-offset_right = 473.15784
-offset_bottom = -246.3158
+offset_left = 411.82654
+offset_top = -285.88223
+offset_right = 481.82654
+offset_bottom = -245.88223
 theme_override_colors/font_color = Color(0.9713355, 0.9713355, 0.9713355, 1)
 theme_override_colors/font_shadow_color = Color(0.26666668, 0.28235295, 0.34117648, 0.46666667)
 theme_override_colors/font_outline_color = Color(0.27058825, 0.30588236, 0.34901962, 0.42352942)
@@ -459,10 +480,10 @@ theme_override_font_sizes/font_size = 28
 text = "STOP"
 
 [node name="EjectBtnLabel" type="Label" parent="Radio/RadioBody" unique_id=2110801148]
-offset_left = 393.6842
-offset_top = -255.78949
-offset_right = 477.6842
-offset_bottom = -215.78949
+offset_left = 402.3529
+offset_top = -255.35593
+offset_right = 486.3529
+offset_bottom = -215.35593
 theme_override_colors/font_color = Color(0.9713355, 0.9713355, 0.9713355, 1)
 theme_override_colors/font_shadow_color = Color(0.26666668, 0.28235295, 0.34117648, 0.46666667)
 theme_override_colors/font_outline_color = Color(0.27058825, 0.30588236, 0.34901962, 0.42352942)
@@ -472,13 +493,56 @@ theme_override_constants/shadow_outline_size = 4
 theme_override_font_sizes/font_size = 28
 text = "/EJECT"
 
+[node name="StationIndicators" type="HBoxContainer" parent="Radio/RadioBody" unique_id=370093359]
+offset_left = -343.52942
+offset_top = -252.9411
+offset_right = 91.76459
+offset_bottom = -225.88226
+theme_override_constants/separation = 52
+alignment = 1
+
+[node name="OrangeBar" type="Panel" parent="Radio/RadioBody/StationIndicators" unique_id=1946937126]
+custom_minimum_size = Vector2(6, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_4k2k6")
+
+[node name="IndigoBar" type="Panel" parent="Radio/RadioBody/StationIndicators" unique_id=2147055095]
+custom_minimum_size = Vector2(6, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_0rl1p")
+
+[node name="PurpleBar" type="Panel" parent="Radio/RadioBody/StationIndicators" unique_id=1176136465]
+custom_minimum_size = Vector2(6, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ok6jj")
+
+[node name="TealBar" type="Panel" parent="Radio/RadioBody/StationIndicators" unique_id=1476941429]
+custom_minimum_size = Vector2(6, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_b1qrp")
+
+[node name="BlueBar" type="Panel" parent="Radio/RadioBody/StationIndicators" unique_id=1954515524]
+custom_minimum_size = Vector2(6, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_come4")
+
+[node name="PinkBar" type="Panel" parent="Radio/RadioBody/StationIndicators" unique_id=1018611291]
+custom_minimum_size = Vector2(6, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_h8e4i")
+
+[node name="GreenBar" type="Panel" parent="Radio/RadioBody/StationIndicators" unique_id=2125691469]
+custom_minimum_size = Vector2(6, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_4lmeg")
+
 [node name="RadioLabel" type="ScrollContainer" parent="Radio" unique_id=290878849]
 z_index = 1
 custom_minimum_size = Vector2(100, 0)
-offset_left = 1084.0
-offset_top = 666.0
-offset_right = 1584.0
-offset_bottom = 750.0
+offset_left = 1151.0
+offset_top = 707.0
+offset_right = 1600.0
+offset_bottom = 780.0
 horizontal_scroll_mode = 3
 script = ExtResource("3_qsp4k")
 
@@ -504,10 +568,10 @@ script = ExtResource("5_kq58d")
 
 [node name="Dial" parent="Radio" unique_id=1296031382 instance=ExtResource("14_w48qg")]
 z_index = 1
-offset_left = 978.0
-offset_top = 487.0
-offset_right = 1424.0
-offset_bottom = 527.0
+offset_left = 1060.0
+offset_top = 547.0
+offset_right = 1444.0
+offset_bottom = 587.0
 
 [node name="Control" type="HBoxContainer" parent="Radio" unique_id=204003008]
 clip_children = 1
@@ -523,7 +587,7 @@ theme_override_font_sizes/font_size = 70
 
 [node name="PlayAnchor" type="Node2D" parent="Radio" unique_id=452582252]
 z_index = -1
-position = Vector2(1616, 425)
+position = Vector2(1622, 490)
 
 [node name="PlayBtn" type="Button" parent="Radio/PlayAnchor" unique_id=684982014]
 offset_right = 112.0
@@ -541,7 +605,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="RecordAnchor" type="Node2D" parent="Radio" unique_id=894432045]
 z_index = -1
-position = Vector2(1524, 426)
+position = Vector2(1535, 490)
 
 [node name="RecordBtn" type="Button" parent="Radio/RecordAnchor" unique_id=310661157]
 offset_right = 87.0
@@ -559,7 +623,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="StopAnchor" type="Node2D" parent="Radio" unique_id=29596954]
 z_index = -1
-position = Vector2(1708, 423)
+position = Vector2(1710, 488)
 
 [node name="StopBtn" type="Button" parent="Radio/StopAnchor" unique_id=922399820]
 offset_right = 112.0
@@ -577,7 +641,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="RwAnchor" type="Node2D" parent="Radio" unique_id=1677658616]
 z_index = -1
-position = Vector2(1336, 428)
+position = Vector2(1405, 493)
 
 [node name="RwBtn" type="Button" parent="Radio/RwAnchor" unique_id=1938241678]
 offset_right = 112.0
@@ -594,11 +658,12 @@ metadata/_edit_use_anchors_ = true
 
 [node name="TapeDoor" type="AnimatedSprite2D" parent="Radio" unique_id=1264128355]
 z_index = 2
-position = Vector2(1336, 898)
-scale = Vector2(0.95, 0.95)
+position = Vector2(1375, 921.9999)
+scale = Vector2(0.85, 0.85)
 sprite_frames = SubResource("SpriteFrames_ycdy4")
 animation = &"new_animation"
-frame_progress = 0.74587834
+frame = 1
+frame_progress = 0.2393652
 script = ExtResource("9_ycdy4")
 
 [node name="BlankTapesBox" type="Button" parent="." unique_id=416131326]
@@ -637,22 +702,22 @@ offset_right = 37.778
 offset_bottom = 326.0
 
 [node name="GearStatic1" type="Sprite2D" parent="BlankTapesBox/Control" unique_id=35699377]
-position = Vector2(155.76666, -146.67224)
-scale = Vector2(0.9, 0.9)
+position = Vector2(166.71648, -144.08612)
+scale = Vector2(0.85, 0.85)
 texture = ExtResource("18_0rl1p")
 region_enabled = true
 region_rect = Rect2(813.33356, 720.9148, 61.11841, 61.422974)
 
 [node name="GearStatic2" type="Sprite2D" parent="BlankTapesBox/Control" unique_id=212624398]
-position = Vector2(283.54446, -147.78333)
-scale = Vector2(0.9, 0.9)
+position = Vector2(287.8275, -145.1972)
+scale = Vector2(0.85, 0.85)
 texture = ExtResource("18_0rl1p")
 region_enabled = true
 region_rect = Rect2(813.33356, 720.9148, 61.11841, 61.422974)
 
 [node name="Sprite2D" type="Sprite2D" parent="BlankTapesBox/Control" unique_id=53952062]
-position = Vector2(220.2111, -137.78333)
-scale = Vector2(0.9, 0.9)
+position = Vector2(228.03868, -135.20276)
+scale = Vector2(0.85, 0.85)
 texture = ExtResource("18_0rl1p")
 region_enabled = true
 region_rect = Rect2(1052.2573, 697.4416, 398.6516, 279.4803)
@@ -696,7 +761,7 @@ script = SubResource("GDScript_2cqfq")
 
 [node name="Sprite2D" type="Sprite2D" parent="ShowControls" unique_id=539367201]
 visible = false
-modulate = Color(0.8745098, 0.8235294, 1, 0.96862745)
+modulate = Color(0.8994738, 0.8245544, 0.93386, 0.96862745)
 position = Vector2(-90.235054, 28.055552)
 scale = Vector2(0.7786061, 0.74907404)
 texture = ExtResource("21_0rl1p")
@@ -705,26 +770,27 @@ region_rect = Rect2(1538.1506, 39.130447, 198.66235, 120.17845)
 
 [node name="Tape" type="Node2D" parent="." unique_id=614611568]
 visible = false
+position = Vector2(-626, -111)
 
 [node name="Gear1" type="Sprite2D" parent="Tape" unique_id=1776951753]
 z_index = 1
-position = Vector2(1294.0001, 883.00006)
-scale = Vector2(0.95, 0.95)
+position = Vector2(1967.5753, 1020.725)
+scale = Vector2(0.85, 0.85)
 texture = ExtResource("18_0rl1p")
 region_enabled = true
 region_rect = Rect2(812.46454, 720.49756, 62.133606, 61.626038)
 
 [node name="Gear2" type="Sprite2D" parent="Tape" unique_id=44219863]
 z_index = 1
-position = Vector2(1430, 883)
-scale = Vector2(0.95, 0.95)
+position = Vector2(2089.5752, 1018.7249)
+scale = Vector2(0.85, 0.85)
 texture = ExtResource("18_0rl1p")
 region_enabled = true
 region_rect = Rect2(813.235, 721.428, 61.284546, 60.546143)
 
 [node name="TapeBody" type="Sprite2D" parent="Tape" unique_id=750665013]
-position = Vector2(1363, 893)
-scale = Vector2(0.95, 0.95)
+position = Vector2(2029.5751, 1028.725)
+scale = Vector2(0.85, 0.85)
 texture = ExtResource("18_0rl1p")
 region_enabled = true
 region_rect = Rect2(1051.8828, 697.91833, 399.44702, 277.4984)
@@ -738,15 +804,70 @@ scale = Vector2(1212.0001, 730)
 texture = SubResource("PlaceholderTexture2D_dg77c")
 script = ExtResource("13_w48qg")
 
-[node name="Logo" type="Sprite2D" parent="." unique_id=76892536]
+[node name="Logo" type="Control" parent="." unique_id=800521728]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 30.0
+offset_top = 40.0
+offset_right = 419.0
+offset_bottom = 146.0
+
+[node name="Ear" type="Sprite2D" parent="Logo" unique_id=76892536]
 texture_filter = 1
-position = Vector2(235.85478, 75.6)
+position = Vector2(261, 50.999996)
 scale = Vector2(0.6802548, 0.6802548)
 texture = ExtResource("17_a6jrf")
+region_enabled = true
+region_rect = Rect2(348, 0, 98.5, 157)
+
+[node name="Realtalk" type="Label" parent="Logo" unique_id=274442470]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 22.0
+offset_right = 170.0
+offset_bottom = 73.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("20_4k2k6")
+theme_override_font_sizes/font_size = 50
+text = "realtalk"
+
+[node name="R" type="Label" parent="Logo" unique_id=401801585]
+layout_mode = 0
+offset_left = 186.0
+offset_top = 1.0
+offset_right = 226.0
+offset_bottom = 93.0
+theme_override_colors/font_color = Color(0.9843137, 0.30588236, 0.25882354, 1)
+theme_override_fonts/font = ExtResource("24_seu75")
+theme_override_font_sizes/font_size = 80
+text = "R"
+
+[node name="DIO" type="Label" parent="Logo" unique_id=1195903109]
+layout_mode = 0
+offset_left = 295.0
+offset_top = -8.0
+offset_right = 389.0
+offset_bottom = 100.0
+theme_override_colors/font_color = Color(0.9843137, 0.30588236, 0.25882354, 1)
+theme_override_fonts/font = ExtResource("24_seu75")
+theme_override_font_sizes/font_size = 94
+text = "dIO"
+
+[node name="Tagline" type="Label" parent="Logo" unique_id=1873276850]
+layout_mode = 0
+offset_left = 427.0
+offset_top = 10.0
+offset_right = 1334.0
+offset_bottom = 95.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("20_4k2k6")
+theme_override_font_sizes/font_size = 40
+text = "Tune in to real conversations with local artists. Make a mixtape to share what resonates with you!"
+autowrap_mode = 2
 
 [node name="Controls" parent="." unique_id=1477886189 instance=ExtResource("17_074og")]
 z_index = 11
-position = Vector2(91, 64)
+position = Vector2(102, 121)
 
 [node name="Messages" type="Label" parent="." unique_id=571717112]
 offset_right = 40.0
@@ -763,10 +884,10 @@ texture = ExtResource("19_82xsv")
 [node name="BoldRooms" type="Control" parent="BackdropLayer" unique_id=567806170]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 58.0
-offset_top = 96.0
-offset_right = 1825.0
-offset_bottom = 311.0
+offset_left = 56.0
+offset_top = 145.0
+offset_right = 1823.0
+offset_bottom = 360.0
 
 [node name="BlackArt" type="TextureRect" parent="BackdropLayer/BoldRooms" unique_id=2026009479]
 modulate = Color(1, 1, 1, 0)
@@ -1062,10 +1183,10 @@ texture = ExtResource("21_a6jrf")
 modulate = Color(1, 1, 1, 0.19215687)
 layout_mode = 3
 anchors_preset = 0
-offset_left = 58.0
-offset_top = 96.0
-offset_right = 1825.0
-offset_bottom = 311.0
+offset_left = 56.0
+offset_top = 145.0
+offset_right = 1823.0
+offset_bottom = 360.0
 
 [node name="BlackArt" type="TextureRect" parent="BackdropLayer/LightRooms" unique_id=1181101699]
 texture_filter = 1

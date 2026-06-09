@@ -119,28 +119,28 @@ animations = [{
 }]
 
 [node name="Controls" type="Node2D" unique_id=1477886189]
-modulate = Color(0.85882354, 0.7490196, 1, 0.7607843)
+modulate = Color(0.9119274, 0.7393284, 0.9052441, 0.7607843)
 script = ExtResource("1_yb1ct")
 
 [node name="LeftJoyHighlight" type="Sprite2D" parent="." unique_id=681113983]
+visible = false
 modulate = Color(1, 1, 1, 0.96862745)
 position = Vector2(112, 369.00003)
 scale = Vector2(1.1627841, 0.72709435)
 texture = ExtResource("3_ff64o")
 
 [node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="." unique_id=1355693770]
-position = Vector2(23, 334)
-scale = Vector2(0.34659088, 0.34659082)
+position = Vector2(29.477276, 328.75)
+scale = Vector2(0.4088724, 0.40624994)
 sprite_frames = SubResource("SpriteFrames_0bx74")
-autoplay = "default"
 frame_progress = 0.7507711
 speed_scale = 0.7
 
 [node name="LeftJoy" type="Label" parent="." unique_id=408122380]
-offset_left = 64.963646
-offset_top = 314.19998
-offset_right = 302.96365
-offset_bottom = 413.19998
+offset_left = 76.0
+offset_top = 314.0
+offset_right = 314.0
+offset_bottom = 413.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_ff64o")
 theme_override_font_sizes/font_size = 20
@@ -148,16 +148,16 @@ text = "Use Left Joystick to Navigate"
 autowrap_mode = 2
 
 [node name="Sprite2D4" type="Sprite2D" parent="." unique_id=1340465711]
-position = Vector2(22, 400)
+position = Vector2(32, 399.99997)
 scale = Vector2(0.76172584, 0.76172584)
 texture = ExtResource("2_xwvqn")
 region_enabled = true
 region_rect = Rect2(1779.0605, 219.27463, 69.4989, 70.421844)
 
 [node name="A" type="Label" parent="." unique_id=531858746]
-offset_left = 61.0
+offset_left = 74.0
 offset_top = 394.0
-offset_right = 317.95453
+offset_right = 330.95453
 offset_bottom = 459.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_ff64o")
@@ -166,24 +166,24 @@ text = "Press A to Load Tape"
 autowrap_mode = 2
 
 [node name="RightJoyHighlight" type="Sprite2D" parent="." unique_id=1688609233]
+visible = false
 modulate = Color(1, 1, 1, 0.96862745)
 position = Vector2(808, 341)
 scale = Vector2(1.0159092, 0.65909094)
 texture = ExtResource("3_ff64o")
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="." unique_id=564414066]
-position = Vector2(788.5, 375)
+position = Vector2(911.74994, 370)
 scale = Vector2(0.4452378, 0.45000017)
 sprite_frames = SubResource("SpriteFrames_dob1i")
 animation = &"new_animation"
-autoplay = "new_animation"
 frame_progress = 0.75401956
 
 [node name="RightJoy" type="Label" parent="." unique_id=649521102]
-offset_left = 742.0
-offset_top = 291.0
-offset_right = 963.0
-offset_bottom = 390.0
+offset_left = 865.2499
+offset_top = 286.0
+offset_right = 1086.2499
+offset_bottom = 385.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_ff64o")
 theme_override_font_sizes/font_size = 20
@@ -191,25 +191,25 @@ text = "Roll Right Joystick to Turn Radio Dial"
 autowrap_mode = 2
 
 [node name="RewindHighlight" type="Sprite2D" parent="." unique_id=1638453163]
+visible = false
 modulate = Color(1, 1, 1, 0.96862745)
-position = Vector2(1166, 332.00003)
+position = Vector2(1205, 329.75003)
 scale = Vector2(0.8954544, 0.7079546)
 texture = ExtResource("3_ff64o")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=888118792]
-position = Vector2(1170, 372.75)
+position = Vector2(1270, 372)
 scale = Vector2(0.5144896, 0.51590925)
 sprite_frames = SubResource("SpriteFrames_dist8")
 animation = &"new_animation"
-autoplay = "new_animation"
 frame_progress = 0.20401154
 speed_scale = 0.5
 
 [node name="Rewind" type="Label" parent="." unique_id=1706237340]
-offset_left = 1096.0
-offset_top = 290.75
-offset_right = 1303.0
-offset_bottom = 389.75
+offset_left = 1196.0
+offset_top = 290.0
+offset_right = 1403.0
+offset_bottom = 389.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_ff64o")
 theme_override_font_sizes/font_size = 20
@@ -217,6 +217,7 @@ text = "Hold Left Button to Rewind Time"
 autowrap_mode = 2
 
 [node name="XHighlight" type="Sprite2D" parent="." unique_id=884876946]
+visible = false
 modulate = Color(1, 1, 1, 0.96862745)
 position = Vector2(1501, 324.25)
 scale = Vector2(0.45454547, 0.44659093)
@@ -241,6 +242,7 @@ text = "Press X to Record"
 autowrap_mode = 2
 
 [node name="YHighlight" type="Sprite2D" parent="." unique_id=869392754]
+visible = false
 modulate = Color(1, 1, 1, 0.96862745)
 position = Vector2(1597.9999, 326.24997)
 scale = Vector2(0.45454547, 0.44659093)
@@ -265,6 +267,7 @@ text = "Press B to Stop/Eject"
 autowrap_mode = 2
 
 [node name="BHighlight" type="Sprite2D" parent="." unique_id=999994128]
+visible = false
 modulate = Color(1, 1, 1, 0.96862745)
 position = Vector2(1692, 327.25)
 scale = Vector2(0.45454547, 0.44659093)
