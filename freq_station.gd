@@ -10,7 +10,7 @@ var current_track: Track
 @onready var tracks = freq.tracks
 var room
 
-# Called when the node enters the scene tree for the first time.
+
 func _ready() -> void:
     tracks.shuffle()
     finished.connect(_play_next_track)

@@ -43,7 +43,6 @@ func _run():
     var unique_freqs: Array[String] = []
     
     for track in tracks_array:
-        #print(track.frequency)
         if track.frequency not in unique_freqs:
             unique_freqs.append(track.frequency)
                 

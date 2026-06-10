@@ -3,7 +3,7 @@ extends Node2D
 var effect
 var recording
 
-var loaded_tape: Mixtape #the tape that was loaded (empty or recorded)
+var loaded_tape: Mixtape # the tape that was loaded (empty or recorded)
 var recordings = []
 var num_empty_tapes := 5
 var playback_position
@@ -46,6 +46,7 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func move_button_to_ys(btn, ys):
     var tween = create_tween()
+
     for y in ys:
         tween.tween_property(btn, "position:y", y, btn_move_duration)
 
@@ -72,11 +73,16 @@ func depress_disabled_button(btn):
 
 
 func _on_blank_tapes_box_pressed() -> void:
-    var empty_tape = MixtapeScene.instantiate()
+    var empty_tape = MixtapeScene.instantiate() as Mixtape
     empty_tape.is_recordable = true   
     empty_tape.visible = false
     add_child(empty_tape)
     _on_tape_loaded(empty_tape)
+
+
+func _on_tape_ended() -> void:
+    pop_button(play_button)
+    play_button.get_node("AudioStreamPlayer").play()
 
 
 func _on_record_btn_pressed() -> void:      
@@ -247,6 +253,7 @@ func _save_tape(text) -> void:
     print("Trying to save current tape: ", loaded_tape)
     
     var saved_tape = MixtapeScene.instantiate()
+    saved_tape.tape_ended.connect(_on_tape_ended)
     saved_tape.is_recordable = false
     saved_tape.recording = recordings
     

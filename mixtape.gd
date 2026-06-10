@@ -5,8 +5,11 @@ var recording = []
 var is_recordable: bool
 var current_index := -1
 var tape_name: String
-signal load_tape(tape)
+
 @onready var player := $PlayMix
+
+signal load_tape(tape)
+signal tape_ended
 
 
 func _ready() -> void:
@@ -24,8 +27,10 @@ func play_next_audio() -> void:
         player.stream = recording[current_index].audio
         
         player.play()
+
     else:
         current_index = -1
+        tape_ended.emit()
 
 
 func _on_button_pressed():
