@@ -575,7 +575,8 @@ position = Vector2(1374, 920.00006)
 scale = Vector2(0.84, 0.84)
 sprite_frames = SubResource("SpriteFrames_ycdy4")
 animation = &"new_animation"
-frame_progress = 0.9618202
+frame = 3
+frame_progress = 0.87828875
 script = ExtResource("9_ycdy4")
 
 [node name="DoorSound" type="AudioStreamPlayer" parent="Radio/TapeDoor" unique_id=1397722201]
@@ -742,6 +743,8 @@ region_enabled = true
 region_rect = Rect2(1052.2573, 697.4416, 398.6516, 279.4803)
 
 [node name="RecordedTapes" type="VFlowContainer" parent="UIElements" unique_id=1497847491]
+z_index = 11
+z_as_relative = false
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
