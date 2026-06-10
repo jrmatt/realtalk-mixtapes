@@ -13,13 +13,14 @@ resource_local_to_scene = true
 bg_color = Color(0.9133737, 0.00029679827, 0.11319666, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lbqvx"]
-bg_color = Color(0.9137255, 0.003921569, 0.11372549, 1)
+resource_local_to_scene = true
+bg_color = Color(0.9133737, 0.00029679827, 0.11319666, 1)
 
 [node name="Dial" type="Panel" unique_id=1296031382]
 offset_left = 128.0
-offset_top = 837.0
+offset_top = 839.0
 offset_right = 818.0
-offset_bottom = 948.0
+offset_bottom = 950.0
 theme_override_styles/panel = SubResource("StyleBoxEmpty_8er6q")
 script = ExtResource("1_6q106")
 
@@ -28,15 +29,17 @@ z_index = 1
 layout_mode = 0
 offset_left = -7.0
 offset_top = 43.0
-offset_right = 3.0
+offset_right = -4.0
 offset_bottom = 66.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_6q106")
 
-[node name="Panel" type="Panel" parent="Bar" unique_id=1275093922]
+[node name="Bar2" parent="Bar" unique_id=197410107 instance=ExtResource("2_8er6q")]
+z_index = 1
 layout_mode = 0
-offset_left = 19.0
-offset_right = 29.0
-offset_bottom = 23.0
+offset_left = -948.0
+offset_top = -372.0
+offset_right = -941.0
+offset_bottom = -196.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_lbqvx")
 
 [node name="Static" type="AudioStreamPlayer" parent="." unique_id=525667313]
