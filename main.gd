@@ -94,6 +94,8 @@ func _on_record_btn_pressed() -> void:
 
 
 func _on_stop_btn_pressed() -> void:
+    pop_button($UIElements/PlayAnchor/PlayBtn)
+    pop_button($UIElements/RecordAnchor/RecordBtn)
 
     if not currently_accepting_button_presses:
         return
@@ -110,8 +112,6 @@ func _on_stop_btn_pressed() -> void:
 
     elif not loaded_tape.is_recordable:
         depress_and_pop_button($UIElements/StopAnchor/StopBtn)
-        pop_button($UIElements/PlayAnchor/PlayBtn)
-        pop_button($UIElements/RecordAnchor/RecordBtn)
         print("Player is not playing, ejecting")
         $Radio.remove_child(loaded_tape)
         $UIElements/RecordedTapes.add_child(loaded_tape)
@@ -126,8 +126,6 @@ func _on_stop_btn_pressed() -> void:
 
     elif effect.is_recording_active():
         depress_and_pop_button($UIElements/StopAnchor/StopBtn)
-        pop_button($UIElements/PlayAnchor/PlayBtn)
-        pop_button($UIElements/RecordAnchor/RecordBtn)
         print("Stopping recording")
         effect.set_recording_active(false)
         $Radio/RadioBody/RecLight.visible = false
@@ -139,8 +137,6 @@ func _on_stop_btn_pressed() -> void:
             $Radio/Dial.cassette_mode = true
             $Radio/TapeDoor.open_door()
             depress_and_pop_button($UIElements/StopAnchor/StopBtn)
-            pop_button($UIElements/PlayAnchor/PlayBtn)
-            pop_button($UIElements/RecordAnchor/RecordBtn)
             
             await get_tree().create_timer(1.0).timeout
             
