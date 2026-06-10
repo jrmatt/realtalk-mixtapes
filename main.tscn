@@ -13,9 +13,10 @@
 [ext_resource type="Script" uid="uid://djs5r6lay0pix" path="res://play_btn.gd" id="10_w48qg"]
 [ext_resource type="Texture2D" uid="uid://dy6hnik4opjdx" path="res://sprites/door_open.png" id="11_qsp4k"]
 [ext_resource type="Script" uid="uid://cccc3tfe44jhf" path="res://stop_btn.gd" id="12_dg77c"]
+[ext_resource type="Texture2D" uid="uid://bvy3sjje6r65k" path="res://sprites/door_with_tape.png" id="12_h8e4i"]
 [ext_resource type="Texture2D" uid="uid://dxye56dvxlybc" path="res://sprites/door_closed.png" id="12_kq58d"]
 [ext_resource type="Shader" uid="uid://dh1cluiagll7b" path="res://blur.gdshader" id="12_ycdy4"]
-[ext_resource type="AudioStream" uid="uid://fnrrctg858oj" path="res://sounds/tape_door_open.mp3" id="13_facbu"]
+[ext_resource type="Texture2D" uid="uid://cfal7owsi74lg" path="res://sprites/door_closed_loaded.png" id="13_h8e4i"]
 [ext_resource type="Script" uid="uid://boswg3amidssu" path="res://rewind_shader.gd" id="13_w48qg"]
 [ext_resource type="AudioStream" uid="uid://bcnqyqxgugd5w" path="res://sounds/tape_door_closed.mp3" id="14_b1qrp"]
 [ext_resource type="AudioStream" uid="uid://dlox30syuyuu1" path="res://sounds/button_press.mp3" id="14_ok6jj"]
@@ -79,6 +80,12 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("12_kq58d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_h8e4i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_h8e4i")
 }],
 "loop": true,
 "name": &"new_animation",
@@ -564,19 +571,37 @@ theme_override_font_sizes/font_size = 70
 
 [node name="TapeDoor" type="AnimatedSprite2D" parent="Radio" unique_id=1264128355]
 z_index = 2
-position = Vector2(1375, 921.9999)
+position = Vector2(1374, 918.99994)
 scale = Vector2(0.85, 0.85)
 sprite_frames = SubResource("SpriteFrames_ycdy4")
 animation = &"new_animation"
-frame = 1
-frame_progress = 0.2393652
+frame = 2
+frame_progress = 0.75369275
 script = ExtResource("9_ycdy4")
 
-[node name="DoorOpenSound" type="AudioStreamPlayer" parent="Radio/TapeDoor" unique_id=1313292279]
-stream = ExtResource("13_facbu")
-
-[node name="DoorClosedSound" type="AudioStreamPlayer" parent="Radio/TapeDoor" unique_id=1397722201]
+[node name="DoorSound" type="AudioStreamPlayer" parent="Radio/TapeDoor" unique_id=1397722201]
 stream = ExtResource("14_b1qrp")
+
+[node name="TapeGears" type="Node2D" parent="Radio/TapeDoor" unique_id=614611568]
+visible = false
+position = Vector2(-2387.0588, -1208.2352)
+scale = Vector2(1.1764706, 1.1764706)
+
+[node name="Gear1" type="Sprite2D" parent="Radio/TapeDoor/TapeGears" unique_id=1776951753]
+z_index = 1
+position = Vector2(1967.5753, 1020.725)
+scale = Vector2(0.85, 0.85)
+texture = ExtResource("18_0rl1p")
+region_enabled = true
+region_rect = Rect2(812.46454, 720.49756, 62.133606, 61.626038)
+
+[node name="Gear2" type="Sprite2D" parent="Radio/TapeDoor/TapeGears" unique_id=44219863]
+z_index = 1
+position = Vector2(2089.5752, 1018.7249)
+scale = Vector2(0.85, 0.85)
+texture = ExtResource("18_0rl1p")
+region_enabled = true
+region_rect = Rect2(813.235, 721.428, 61.284546, 60.546143)
 
 [node name="UIElements" type="Control" parent="." unique_id=935732765]
 layout_mode = 3
@@ -652,6 +677,7 @@ position = Vector2(1434, 490)
 offset_right = 112.0
 offset_bottom = 61.0
 scale = Vector2(0.8, 0.8)
+focus_mode = 0
 theme_override_styles/normal = SubResource("StyleBoxEmpty_a6jrf")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_xuqvo")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_qsp4k")
@@ -747,39 +773,13 @@ text = "Show Controls"
 script = SubResource("GDScript_2cqfq")
 
 [node name="Sprite2D" type="Sprite2D" parent="UIElements/ShowControls" unique_id=539367201]
+visible = false
 modulate = Color(0.8994738, 0.8245544, 0.93386, 0.96862745)
 position = Vector2(-90.235054, 28.055552)
 scale = Vector2(0.7786061, 0.74907404)
 texture = ExtResource("21_0rl1p")
 region_enabled = true
 region_rect = Rect2(1538.1506, 39.130447, 198.66235, 120.17845)
-
-[node name="Tape" type="Node2D" parent="." unique_id=614611568]
-visible = false
-position = Vector2(-626, -111)
-
-[node name="Gear1" type="Sprite2D" parent="Tape" unique_id=1776951753]
-z_index = 1
-position = Vector2(1967.5753, 1020.725)
-scale = Vector2(0.85, 0.85)
-texture = ExtResource("18_0rl1p")
-region_enabled = true
-region_rect = Rect2(812.46454, 720.49756, 62.133606, 61.626038)
-
-[node name="Gear2" type="Sprite2D" parent="Tape" unique_id=44219863]
-z_index = 1
-position = Vector2(2089.5752, 1018.7249)
-scale = Vector2(0.85, 0.85)
-texture = ExtResource("18_0rl1p")
-region_enabled = true
-region_rect = Rect2(813.235, 721.428, 61.284546, 60.546143)
-
-[node name="TapeBody" type="Sprite2D" parent="Tape" unique_id=750665013]
-position = Vector2(2029.5751, 1028.725)
-scale = Vector2(0.85, 0.85)
-texture = ExtResource("18_0rl1p")
-region_enabled = true
-region_rect = Rect2(1051.8828, 697.91833, 399.44702, 277.4984)
 
 [node name="RewindShader" type="Sprite2D" parent="." unique_id=519319861]
 visible = false

@@ -133,13 +133,19 @@ func _on_stop_btn_pressed() -> void:
         depress_and_pop_button(stop_button)
         print("Player is not playing, ejecting")
         $Radio.remove_child(loaded_tape)
+        
+        # Animates the tape ejecting
+        $Radio/TapeDoor.open_door_loaded()
+        $Radio/TapeDoor.open_door_empty()  
+        
+        # Adds the tape to the stack of recorded tapes
         $UIElements/RecordedTapes.add_child(loaded_tape)
         loaded_tape.visible = true
-        loaded_tape = null
-        $Tape.visible = false
-        $Radio/Control/TapeLabel.text = ""
-        $Radio/TapeDoor.open_door()
         
+        loaded_tape = null
+        
+        # Sets the radio back to radio mode
+        $Radio/Control/TapeLabel.text = ""      
         $Radio/Dial.cassette_mode = false
         $Radio/Dial.set_volumes_and_label()
 
@@ -156,7 +162,7 @@ func _on_stop_btn_pressed() -> void:
 
             $Radio/Dial.mute()
             $Radio/Dial.cassette_mode = true
-            $Radio/TapeDoor.open_door()
+            $Radio/TapeDoor.open_door_loaded()
             depress_and_pop_button(stop_button)
             
             await get_tree().create_timer(0.8).timeout
@@ -171,9 +177,9 @@ func _on_stop_btn_pressed() -> void:
 
         else:
             depress_and_pop_button(stop_button)
-            $Radio/TapeDoor.open_door()
+            $Radio/TapeDoor.open_door_loaded()
+            $Radio/TapeDoor.open_door_empty() 
             loaded_tape = null
-            $Tape.visible = false
             $UIElements/BlankTapesBox.animate_replace_tape()
 
 
@@ -276,9 +282,9 @@ func _save_tape(text) -> void:
     print("Saved current tape: ", saved_tape.recording)
     
     loaded_tape = null
-    $Tape.visible = false
     recordings = []
     $Save.queue_free()
+    $Radio/TapeDoor.open_door_empty() 
     $Darken.visible = false
     $Radio/Dial.cassette_mode = false
     
@@ -290,9 +296,9 @@ func _save_tape(text) -> void:
 func _discard_tape() -> void:
     loaded_tape.queue_free()
     $Save.queue_free()
+    $Radio/TapeDoor.open_door_empty() 
     loaded_tape = null
     recordings = []
-    $Tape.visible = false
     $Darken.visible = false
 
     $Radio/Dial.cassette_mode = false
@@ -311,9 +317,9 @@ func _on_tape_loaded(tape):
         if tape.is_recordable:
             await get_tree().create_timer(1).timeout
 
-        $Tape.visible = true
-        $Radio/TapeDoor.load_tape()
-
+        $Radio/TapeDoor.open_door_loaded()
+        $Radio/TapeDoor.close_door_loaded()
+        
         if loaded_tape.is_recordable:
             print("Loading empty tape: ", loaded_tape, loaded_tape.is_recordable)
             button_to_focus = record_button
@@ -392,5 +398,5 @@ func _pause_recording() -> void:
         
 func _process(delta: float) -> void:
     if loaded_tape and (loaded_tape.player.playing or effect.is_recording_active()):
-        $Tape/Gear1.rotation += gear_rotation_direction * gear_rotation_speed * delta
-        $Tape/Gear2.rotation += gear_rotation_direction * gear_rotation_speed * delta
+        $Radio/TapeDoor/TapeGears/Gear1.rotation += gear_rotation_direction * gear_rotation_speed * delta
+        $Radio/TapeDoor/TapeGears/Gear2.rotation += gear_rotation_direction * gear_rotation_speed * delta
