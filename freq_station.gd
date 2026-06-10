@@ -2,7 +2,6 @@ class_name FreqStation
 extends AudioStreamPlayer
 
 var position_in_dial: float
-var has_been_discovered := false
 
 var freq: Frequency
 var current_index = -1
@@ -17,7 +16,7 @@ func _ready() -> void:
     finished.connect(_play_next_track)
     
     _play_next_track()
-    
+
 
 func _play_next_track() -> void:
     current_track_time = 0.0

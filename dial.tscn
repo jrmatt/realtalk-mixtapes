@@ -12,10 +12,6 @@
 resource_local_to_scene = true
 bg_color = Color(0.9133737, 0.00029679827, 0.11319666, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lbqvx"]
-resource_local_to_scene = true
-bg_color = Color(0.9133737, 0.00029679827, 0.11319666, 1)
-
 [node name="Dial" type="Panel" unique_id=1296031382]
 offset_left = 128.0
 offset_top = 839.0
@@ -33,22 +29,15 @@ offset_right = -4.0
 offset_bottom = 66.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_6q106")
 
-[node name="Bar2" parent="Bar" unique_id=197410107 instance=ExtResource("2_8er6q")]
-z_index = 1
-layout_mode = 0
-offset_left = -948.0
-offset_top = -372.0
-offset_right = -941.0
-offset_bottom = -196.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_lbqvx")
-
 [node name="Static" type="AudioStreamPlayer" parent="." unique_id=525667313]
 stream = ExtResource("2_w8tbn")
 autoplay = true
+bus = &"Recordable"
 
 [node name="Rewind" type="AudioStreamPlayer2D" parent="." unique_id=1044741829]
 stream = ExtResource("4_8er6q")
 volume_db = -14.0
+bus = &"Recordable"
 
 [node name="Knob" type="Sprite2D" parent="." unique_id=2130999480]
 z_index = -10

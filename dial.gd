@@ -6,6 +6,8 @@ extends Panel
 @onready var rewind: AudioStreamPlayer2D = $Rewind
 @onready var gremlin_knob: Sprite2D = $Knob
 
+@onready var bold_rooms = get_node("/root/Main/BackdropLayer/BoldRooms") as Control
+
 signal playing_track(new_track, alpha)
 signal playing_freq(new_freq, alpha)
 
@@ -13,6 +15,7 @@ signal start_rewind
 signal stop_rewind
 
 const BarScene = preload("res://bar.tscn")
+const FreqStationScene = preload("res://freq_station.tscn")
 
 var cassette_mode: bool
 
@@ -46,23 +49,26 @@ var bar_position := 0.:
 
         bar.position.x = bar_position * size.x - bar.size.x / 2
 
-func _ready() -> void:
-    bar_position = 0.3
+        if bold_rooms:
+            var big_bar = bold_rooms.get_node("Bar")
+            big_bar.position.x = bar_position * bold_rooms.size.x - big_bar.size.x / 2
 
-    var freq_interval: float = 1. / (freq_names.size() + 1)
+
+func _ready() -> void:
+
+    bar_position = 0.3
 
     for freq_i in freq_names.size():
         var freq = freq_names[freq_i]
 
+        var room = bold_rooms.get_node(freq.replace(" ", "")) as TextureRect
+
         var frequency: Frequency = load("res://resources/frequencies/frequency_%s.tres" % freq)
-        var station = FreqStation.new()
+        var station = FreqStationScene.instantiate()
         station.freq = frequency
-        station.position_in_dial = freq_interval * (freq_i + 1)
+        station.position_in_dial = (room.position.x + room.size.x / 2) / bold_rooms.size.x
         station.volume_linear = 0
         add_child(station)
-
-        var room_node_path = "/root/Main/BackdropLayer/BoldRooms/%s" % freq.replace(" ", "")
-        var room = get_node(room_node_path)
 
         station.room = room
 
@@ -90,13 +96,6 @@ func set_volumes_and_label():
     var current_station = get_current_station_for_label()
 
     if current_station:
-        #if not current_station.has_been_discovered:
-            #var tween = create_tween()
-            #tween.tween_property(current_station.bar.get_theme_stylebox('panel'), 'bg_color:a', 1, 1)
-            #tween.tween_property(current_station.bar.get_node('Label'), 'theme_override_colors/font_color:a', 1, 1)
-#
-            #current_station.has_been_discovered = true
-
         playing_freq.emit(current_station.freq.frequency_name, total_static_reduction)
         playing_track.emit(current_station.current_track, total_static_reduction)
     else:

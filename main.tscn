@@ -38,6 +38,7 @@
 [ext_resource type="FontFile" uid="uid://bqg5ao41gp82j" path="res://fonts/Hot-Mess.ttf" id="24_seu75"]
 [ext_resource type="Texture2D" uid="uid://demo453fcjg3j" path="res://sprites/PurpleRoom.png" id="25_kq58d"]
 [ext_resource type="Texture2D" uid="uid://dfo1p01ktd21t" path="res://sprites/TealRoom.png" id="26_seu75"]
+[ext_resource type="PackedScene" uid="uid://dibpwlycg8oyi" path="res://bar.tscn" id="39_come4"]
 
 [sub_resource type="Curve" id="Curve_vivmo"]
 _limits = [-1.0, 1.0, 0.0, 1.0]
@@ -69,27 +70,6 @@ hue_variation_curve = SubResource("CurveTexture_2cqfq")
 turbulence_enabled = true
 turbulence_noise_strength = 5.02
 turbulence_noise_scale = 5.68
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4k2k6"]
-bg_color = Color(0.8980392, 0.6392157, 0.46666667, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0rl1p"]
-bg_color = Color(0.3529412, 0.48235294, 1, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ok6jj"]
-bg_color = Color(0.47058824, 0.42745098, 0.79607844, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b1qrp"]
-bg_color = Color(0.53333336, 0.77254903, 0.654902, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_come4"]
-bg_color = Color(0.5882353, 0.7294118, 0.8039216, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h8e4i"]
-bg_color = Color(0.91764706, 0.6, 0.81960785, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4lmeg"]
-bg_color = Color(0.6156863, 0.7137255, 0.43529412, 1)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ycdy4"]
 animations = [{
@@ -193,7 +173,7 @@ corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 expand_margin_left = 8.0
-expand_margin_top = 8.0
+expand_margin_top = 200.0
 expand_margin_right = 8.0
 expand_margin_bottom = 8.0
 
@@ -240,6 +220,10 @@ shader_parameter/offset_per_time = Vector2(0.5, 0.5)
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_dg77c"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_come4"]
+resource_local_to_scene = true
+bg_color = Color(1, 0, 0, 1)
+
 [node name="Main" type="Node2D" unique_id=582703919]
 texture_filter = 1
 script = ExtResource("1_w48qg")
@@ -256,7 +240,7 @@ region_rect = Rect2(698.7012, 398.19308, 1107.2256, 607.48486)
 
 [node name="MagicSparkles" type="GPUParticles2D" parent="Radio/RadioBody" unique_id=1391715145]
 visible = false
-position = Vector2(47.368465, -334.73688)
+position = Vector2(84.7059, -334.11755)
 amount = 23
 process_material = SubResource("ParticleProcessMaterial_yaehf")
 
@@ -266,7 +250,7 @@ position = Vector2(-314, -85)
 texture = ExtResource("3_kq58d")
 
 [node name="LevelNeedle1" type="Sprite2D" parent="Radio/RadioBody" unique_id=1838539589]
-position = Vector2(-426, -211)
+position = Vector2(-438.82343, -203.52937)
 rotation = -0.3228859
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("4_htxhm")
@@ -524,49 +508,6 @@ theme_override_constants/shadow_outline_size = 4
 theme_override_font_sizes/font_size = 28
 text = "/EJECT"
 
-[node name="StationIndicators" type="HBoxContainer" parent="Radio/RadioBody" unique_id=370093359]
-offset_left = -350.58826
-offset_top = -252.9411
-offset_right = 84.70575
-offset_bottom = -226.9411
-theme_override_constants/separation = 47
-alignment = 1
-
-[node name="OrangeBar" type="Panel" parent="Radio/RadioBody/StationIndicators" unique_id=1946937126]
-custom_minimum_size = Vector2(10, 0)
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_4k2k6")
-
-[node name="IndigoBar" type="Panel" parent="Radio/RadioBody/StationIndicators" unique_id=2147055095]
-custom_minimum_size = Vector2(10, 0)
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_0rl1p")
-
-[node name="PurpleBar" type="Panel" parent="Radio/RadioBody/StationIndicators" unique_id=1176136465]
-custom_minimum_size = Vector2(10, 0)
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_ok6jj")
-
-[node name="TealBar" type="Panel" parent="Radio/RadioBody/StationIndicators" unique_id=1476941429]
-custom_minimum_size = Vector2(10, 0)
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_b1qrp")
-
-[node name="BlueBar" type="Panel" parent="Radio/RadioBody/StationIndicators" unique_id=1954515524]
-custom_minimum_size = Vector2(10, 0)
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_come4")
-
-[node name="PinkBar" type="Panel" parent="Radio/RadioBody/StationIndicators" unique_id=1018611291]
-custom_minimum_size = Vector2(10, 0)
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_h8e4i")
-
-[node name="GreenBar" type="Panel" parent="Radio/RadioBody/StationIndicators" unique_id=2125691469]
-custom_minimum_size = Vector2(10, 0)
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_4lmeg")
-
 [node name="RadioLabel" type="ScrollContainer" parent="Radio" unique_id=290878849]
 z_index = 1
 custom_minimum_size = Vector2(100, 0)
@@ -628,9 +569,11 @@ script = ExtResource("9_ycdy4")
 
 [node name="DoorOpenSound" type="AudioStreamPlayer" parent="Radio/TapeDoor" unique_id=1313292279]
 stream = ExtResource("13_facbu")
+bus = &"Non-recordable"
 
 [node name="DoorClosedSound" type="AudioStreamPlayer" parent="Radio/TapeDoor" unique_id=1397722201]
 stream = ExtResource("14_b1qrp")
+bus = &"Non-recordable"
 
 [node name="UIElements" type="Control" parent="." unique_id=935732765]
 layout_mode = 3
@@ -657,6 +600,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="UIElements/PlayAnchor/PlayBtn" unique_id=1954824907]
 stream = ExtResource("14_ok6jj")
+bus = &"Non-recordable"
 
 [node name="RecordAnchor" type="Node2D" parent="UIElements" unique_id=894432045]
 z_index = -1
@@ -677,6 +621,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="UIElements/RecordAnchor/RecordBtn" unique_id=1899181800]
 stream = ExtResource("14_ok6jj")
+bus = &"Non-recordable"
 
 [node name="StopAnchor" type="Node2D" parent="UIElements" unique_id=29596954]
 z_index = -1
@@ -697,6 +642,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="UIElements/StopAnchor/StopBtn" unique_id=513430411]
 stream = ExtResource("14_ok6jj")
+bus = &"Non-recordable"
 
 [node name="RwAnchor" type="Node2D" parent="UIElements" unique_id=1677658616]
 z_index = -1
@@ -1219,6 +1165,12 @@ offset_bottom = 220.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("21_a6jrf")
+
+[node name="Bar" parent="BackdropLayer/BoldRooms" unique_id=214478169 instance=ExtResource("39_come4")]
+layout_mode = 0
+offset_top = 7.0
+offset_bottom = 233.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_come4")
 
 [node name="LightRooms" type="Control" parent="BackdropLayer" unique_id=973724435]
 modulate = Color(1, 1, 1, 0.19215687)

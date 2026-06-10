@@ -26,13 +26,11 @@ const MixtapeScene = preload("res://mixtape.tscn")
 
 
 func _ready() -> void:
-    # Get the index of the Master bus
-    var idx = AudioServer.get_bus_index("Master")
-    # Retrieve its effect
+    var idx = AudioServer.get_bus_index("Recordable")
     effect = AudioServer.get_bus_effect(idx, 0)
     effect.set_recording_active(false)  
     
-    $UIElements/ShowControls.grab_focus()
+    $UIElements/BlankTapesBox.grab_focus()
  
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -77,14 +75,19 @@ func _on_blank_tapes_box_pressed() -> void:
     _on_tape_loaded(empty_tape)
 
 
+
 func _on_record_btn_pressed() -> void:      
     if not currently_accepting_button_presses:
+        return
+
+    if effect.is_recording_active():
         return
 
     if loaded_tape and loaded_tape.is_recordable:
         depress_button($UIElements/RecordAnchor/RecordBtn)
         depress_button($UIElements/PlayAnchor/PlayBtn)
         _start_recording()
+
     else:
         depress_disabled_button($UIElements/RecordAnchor/RecordBtn)
         depress_disabled_button($UIElements/PlayAnchor/PlayBtn)
@@ -271,16 +274,21 @@ func _discard_tape() -> void:
 
                
 func _on_tape_loaded(tape):
+
+    var button_to_focus
     
     if not loaded_tape:
         loaded_tape = tape
+
         if tape.is_recordable:
             await get_tree().create_timer(1).timeout
+
         $Tape.visible = true
         $Radio/TapeDoor.load_tape()
 
         if loaded_tape.is_recordable:
             print("Loading empty tape: ", loaded_tape, loaded_tape.is_recordable)
+            button_to_focus = $UIElements/RecordAnchor/RecordBtn
 
         else:
             print("Loading recorded tape: ", loaded_tape, loaded_tape.is_recordable)
@@ -296,6 +304,10 @@ func _on_tape_loaded(tape):
             
             $Radio/Dial.mute()
             $Radio/Dial.cassette_mode = true     
+
+            button_to_focus = $UIElements/PlayAnchor/PlayBtn
+
+        button_to_focus.grab_focus()
 
 
 func _check_text_safety(text):
@@ -351,7 +363,6 @@ func _pause_recording() -> void:
         
         
 func _process(delta: float) -> void:
-    print(get_viewport().gui_get_focus_owner())
     if loaded_tape and (loaded_tape.player.playing or effect.is_recording_active()):
         $Tape/Gear1.rotation += gear_rotation_direction * gear_rotation_speed * delta
         $Tape/Gear2.rotation += gear_rotation_direction * gear_rotation_speed * delta

@@ -337,8 +337,6 @@ func _ready() -> void:
                 profanity_list.append(line)
         file.close()
     
-    #print(profanity_list)
-
 
 func is_word_ok(word: String) -> bool:
     
@@ -348,6 +346,7 @@ func is_word_ok(word: String) -> bool:
         for s in word.split(d):
             if profanity_list.has(s):
                 return false
+
     return true
 
 
