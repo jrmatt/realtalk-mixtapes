@@ -88,10 +88,13 @@ func _on_record_btn_pressed() -> void:
 
     record_button.grab_focus()
 
-    if loaded_tape and loaded_tape.is_recordable:
-        depress_button(record_button)
-        depress_button(play_button)
-        _start_recording()
+    if loaded_tape:
+        if loaded_tape.is_recordable:
+            depress_button(record_button)
+            depress_button(play_button)
+            _start_recording()
+        else:
+            depress_disabled_button(record_button)
 
     else:
         depress_disabled_button(record_button)
@@ -182,11 +185,14 @@ func _on_play_btn_pressed() -> void:
         # Tape is loaded
 
         if loaded_tape.is_recordable:
-            depress_disabled_button(play_button)
+            if effect.is_recording_active():
+                pass
+            else:
+                depress_disabled_button(play_button)
 
         elif loaded_tape.player.playing:
             # TODO: new depress disabled
-            return
+            pass
             
         else:
             depress_button(play_button)
@@ -280,7 +286,9 @@ func _discard_tape() -> void:
     loaded_tape = null
     recordings = []
     $Tape.visible = false
+    $Darken.visible = false
 
+    $Radio/Dial.cassette_mode = false
     $Radio/Dial.set_volumes_and_label()
 
     currently_accepting_button_presses = true

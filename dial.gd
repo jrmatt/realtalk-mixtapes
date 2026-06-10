@@ -44,8 +44,7 @@ var bar_position := 0.:
 
         bar_position = clampf(new_position, 0, 1)
             
-        if not cassette_mode:
-            set_volumes_and_label()
+        set_volumes_and_label()
 
         bar.position.x = bar_position * size.x - bar.size.x / 2
 
@@ -85,17 +84,27 @@ func set_volumes_and_label():
 
     for station in stations:
         var distance = bar_distance_from_station(station)
-        var station_volume = (1 - distance)**2
+
+        var station_volume: float
+
+        if not cassette_mode:
+            station_volume = (1 - distance)**2
+        else:
+            station_volume = 0
+
         station.volume_linear = station_volume
         total_static_reduction += station_volume
 
         station.room.modulate.a = station_volume
 
+    if cassette_mode:
+        total_static_reduction = 1
+
     static_player.volume_linear = clampf(1 - total_static_reduction, 0, 1)**2
 
     var current_station = get_current_station_for_label()
 
-    if current_station:
+    if current_station and not cassette_mode:
         playing_freq.emit(current_station.freq.frequency_name, total_static_reduction)
         playing_track.emit(current_station.current_track, total_static_reduction)
     else:
