@@ -227,7 +227,7 @@ shader_parameter/offset_per_time = Vector2(0.5, 0.5)
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_dg77c"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_come4"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h8e4i"]
 resource_local_to_scene = true
 bg_color = Color(1, 0, 0, 1)
 
@@ -571,12 +571,11 @@ theme_override_font_sizes/font_size = 70
 
 [node name="TapeDoor" type="AnimatedSprite2D" parent="Radio" unique_id=1264128355]
 z_index = 2
-position = Vector2(1374, 918.99994)
-scale = Vector2(0.85, 0.85)
+position = Vector2(1374, 920.00006)
+scale = Vector2(0.84, 0.84)
 sprite_frames = SubResource("SpriteFrames_ycdy4")
 animation = &"new_animation"
-frame = 2
-frame_progress = 0.75369275
+frame_progress = 0.9618202
 script = ExtResource("9_ycdy4")
 
 [node name="DoorSound" type="AudioStreamPlayer" parent="Radio/TapeDoor" unique_id=1397722201]
@@ -1172,7 +1171,7 @@ texture = ExtResource("21_a6jrf")
 layout_mode = 0
 offset_top = 7.0
 offset_bottom = 233.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_come4")
+theme_override_styles/panel = SubResource("StyleBoxFlat_h8e4i")
 
 [node name="LightRooms" type="Control" parent="BackdropLayer" unique_id=973724435]
 modulate = Color(1, 1, 1, 0.078431375)
