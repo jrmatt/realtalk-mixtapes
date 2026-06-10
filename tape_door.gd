@@ -5,17 +5,16 @@ func _ready() -> void:
 
 
 func load_tape() -> void:
-    await get_tree().create_timer(0.3).timeout
-    frame = 1
-    $DoorClosedSound.play()
+    close_door()
     
     
 func open_door() -> void:
     frame = 0
-    $DoorOpenSound.play()
-
+    #$DoorOpenSound.play()
+    $DoorClosedSound.play()
 
 func close_door() -> void:
     await get_tree().create_timer(0.3).timeout
     frame = 1
+    #$DoorClosedSound.play()
     $DoorClosedSound.play()

@@ -115,7 +115,6 @@ func _on_stop_btn_pressed() -> void:
         print("Player is not playing, ejecting")
         $Radio.remove_child(loaded_tape)
         $UIElements/RecordedTapes.add_child(loaded_tape)
-        $Radio/TapeDoor.load_tape()
         loaded_tape.visible = true
         loaded_tape = null
         $Tape.visible = false
@@ -138,10 +137,13 @@ func _on_stop_btn_pressed() -> void:
         if loaded_tape.is_recordable and recordings.size() > 0:
             $Radio/Dial.mute()
             $Radio/Dial.cassette_mode = true
-            
+            $Radio/TapeDoor.open_door()
             depress_and_pop_button($UIElements/StopAnchor/StopBtn)
             pop_button($UIElements/PlayAnchor/PlayBtn)
             pop_button($UIElements/RecordAnchor/RecordBtn)
+            
+            await get_tree().create_timer(1.0).timeout
+            
             var new_save = SaveScene.instantiate()
             currently_accepting_button_presses = false
             add_child(new_save)
@@ -149,8 +151,6 @@ func _on_stop_btn_pressed() -> void:
             $Save/TextEditWithOnScreenKeyboard.on_submit_pressed.connect(_save_tape)
             $Save/TextEditWithOnScreenKeyboard.on_cancel_pressed.connect(_discard_tape)
             $Save/TextEditWithOnScreenKeyboard/MarginContainer/VBoxContainer/Controls/Keyboards/Qwerty/LettersBig/Q.grab_focus()
-            
-            $Radio/TapeDoor.open_door()
 
         else:
             depress_and_pop_button($UIElements/StopAnchor/StopBtn)
