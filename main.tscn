@@ -228,6 +228,11 @@ bg_color = Color(1, 0, 0, 1)
 texture_filter = 1
 script = ExtResource("1_w48qg")
 
+[node name="Darken" type="CanvasModulate" parent="." unique_id=968943987]
+visible = false
+z_index = 20
+color = Color(0.2231029, 0.2231029, 0.22310284, 1)
+
 [node name="Radio" type="Node2D" parent="." unique_id=782036082]
 position = Vector2(29, -3)
 
@@ -569,11 +574,9 @@ script = ExtResource("9_ycdy4")
 
 [node name="DoorOpenSound" type="AudioStreamPlayer" parent="Radio/TapeDoor" unique_id=1313292279]
 stream = ExtResource("13_facbu")
-bus = &"Non-recordable"
 
 [node name="DoorClosedSound" type="AudioStreamPlayer" parent="Radio/TapeDoor" unique_id=1397722201]
 stream = ExtResource("14_b1qrp")
-bus = &"Non-recordable"
 
 [node name="UIElements" type="Control" parent="." unique_id=935732765]
 layout_mode = 3
@@ -600,7 +603,6 @@ metadata/_edit_use_anchors_ = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="UIElements/PlayAnchor/PlayBtn" unique_id=1954824907]
 stream = ExtResource("14_ok6jj")
-bus = &"Non-recordable"
 
 [node name="RecordAnchor" type="Node2D" parent="UIElements" unique_id=894432045]
 z_index = -1
@@ -621,7 +623,6 @@ metadata/_edit_use_anchors_ = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="UIElements/RecordAnchor/RecordBtn" unique_id=1899181800]
 stream = ExtResource("14_ok6jj")
-bus = &"Non-recordable"
 
 [node name="StopAnchor" type="Node2D" parent="UIElements" unique_id=29596954]
 z_index = -1
@@ -642,7 +643,6 @@ metadata/_edit_use_anchors_ = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="UIElements/StopAnchor/StopBtn" unique_id=513430411]
 stream = ExtResource("14_ok6jj")
-bus = &"Non-recordable"
 
 [node name="RwAnchor" type="Node2D" parent="UIElements" unique_id=1677658616]
 z_index = -1
@@ -860,16 +860,18 @@ position = Vector2(102, 121)
 offset_right = 40.0
 offset_bottom = 23.0
 
-[node name="BackdropLayer" type="CanvasLayer" parent="." unique_id=558036222]
-layer = -100
+[node name="BackdropLayer" type="Control" parent="." unique_id=2119511171]
+z_index = -10
+layout_mode = 3
+anchors_preset = 0
 
 [node name="Gradient" type="TextureRect" parent="BackdropLayer" unique_id=1924085830]
+layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("19_82xsv")
 
 [node name="BoldRooms" type="Control" parent="BackdropLayer" unique_id=567806170]
-layout_mode = 3
 anchors_preset = 0
 offset_left = 56.0
 offset_top = 145.0
@@ -1174,7 +1176,6 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_come4")
 
 [node name="LightRooms" type="Control" parent="BackdropLayer" unique_id=973724435]
 modulate = Color(1, 1, 1, 0.19215687)
-layout_mode = 3
 anchors_preset = 0
 offset_left = 56.0
 offset_top = 145.0

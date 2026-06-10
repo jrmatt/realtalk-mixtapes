@@ -141,10 +141,11 @@ func _on_stop_btn_pressed() -> void:
             $Radio/TapeDoor.open_door()
             depress_and_pop_button($UIElements/StopAnchor/StopBtn)
             
-            await get_tree().create_timer(1.0).timeout
-            
+            await get_tree().create_timer(0.8).timeout
+                        
             var new_save = SaveScene.instantiate()
             currently_accepting_button_presses = false
+            $Darken.visible = true
             add_child(new_save)
             
             $Save/TextEditWithOnScreenKeyboard.on_submit_pressed.connect(_save_tape)
@@ -254,6 +255,7 @@ func _save_tape(text) -> void:
     $Tape.visible = false
     recordings = []
     $Save.queue_free()
+    $Darken.visible = false
     $Radio/Dial.cassette_mode = false
     
     $Radio/Dial.set_volumes_and_label()

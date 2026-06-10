@@ -9,15 +9,17 @@
 
 [node name="Save" type="CanvasLayer" unique_id=2092175325]
 layer = 10
+scale = Vector2(0.8, 0.8)
+transform = Transform2D(0.8, 0, 0, 0.8, 0, 0)
 
 [node name="SaveDialogue" type="Label" parent="." unique_id=475943774]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -279.5
-offset_top = 100.0
-offset_right = 279.5
-offset_bottom = 165.0
+offset_left = -47.0
+offset_top = 232.49998
+offset_right = 512.0
+offset_bottom = 297.5
 grow_horizontal = 2
 size_flags_horizontal = 0
 size_flags_vertical = 8
@@ -32,10 +34,10 @@ anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 0.0
-offset_top = -555.0
-offset_right = 0.0
-offset_bottom = 0.0
+offset_left = 232.49998
+offset_top = -422.5
+offset_right = 232.5
+offset_bottom = 132.5
 grow_horizontal = 2
 grow_vertical = 0
 size_flags_horizontal = 8
@@ -43,7 +45,7 @@ text_placeholder = "Name your tape"
 show_input = false
 
 [node name="TapePreview" type="Sprite2D" parent="." unique_id=892739047]
-position = Vector2(946, 404)
+position = Vector2(1178.5, 536.5)
 scale = Vector2(2, 2)
 texture = ExtResource("2_hcujw")
 region_enabled = true
@@ -59,14 +61,26 @@ theme_override_fonts/font = ExtResource("3_hcujw")
 theme_override_font_sizes/font_size = 40
 script = ExtResource("3_hjq3a")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2028355556]
-
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=872720108]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=872720108]
+z_index = -10
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 232.49998
+offset_top = 132.49998
+offset_right = 232.5
+offset_bottom = 132.5
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("4_w8f4x")
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1725719119]
+z_index = -11
+offset_left = 210.0
+offset_top = 111.25
+offset_right = 2178.7498
+offset_bottom = 1234.9999
+color = Color(0.0941389, 0.11539758, 0.14090851, 1)
 
 [connection signal="on_text_changed" from="TextEditWithOnScreenKeyboard" to="TapePreview/TapeNamePreview" method="_on_text_edit_with_on_screen_keyboard_on_text_changed"]
