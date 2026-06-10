@@ -229,7 +229,7 @@ shader_parameter/offset_per_time = Vector2(0.5, 0.5)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h8e4i"]
 resource_local_to_scene = true
-bg_color = Color(1, 0, 0, 1)
+bg_color = Color(0.9843137, 0.30588236, 0.25882354, 1)
 
 [node name="Main" type="Node2D" unique_id=582703919]
 texture_filter = 1
@@ -750,7 +750,7 @@ anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
 offset_left = 418.0
-offset_top = 412.0
+offset_top = 380.0
 offset_right = 805.0
 offset_bottom = 1056.0
 grow_horizontal = 0

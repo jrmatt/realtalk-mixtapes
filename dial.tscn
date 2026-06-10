@@ -10,7 +10,7 @@
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6q106"]
 resource_local_to_scene = true
-bg_color = Color(0.9133737, 0.00029679827, 0.11319666, 1)
+bg_color = Color(0.9843137, 0.30588236, 0.25882354, 1)
 
 [node name="Dial" type="Panel" unique_id=1296031382]
 offset_left = 128.0
