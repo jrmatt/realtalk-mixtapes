@@ -6,6 +6,5 @@ func _unhandled_input(_event: InputEvent) -> void:
 
 
 func _pressed() -> void:
-    grab_focus()
     pressed.emit()
     $AudioStreamPlayer.play()
