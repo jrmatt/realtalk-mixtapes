@@ -748,6 +748,7 @@ region_enabled = true
 region_rect = Rect2(1538.1506, 39.130447, 198.66235, 120.17845)
 
 [node name="RewindShader" type="Sprite2D" parent="." unique_id=519319861]
+visible = false
 z_index = 10
 material = SubResource("ShaderMaterial_efxa6")
 position = Vector2(499.00003, 773)
