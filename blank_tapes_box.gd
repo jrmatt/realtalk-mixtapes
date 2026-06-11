@@ -23,34 +23,35 @@ func _reset_tape() -> void:
     
 
 func _animate_tape_reveal() -> void:
+    print("Tape reveal called")
     var reveal_tape = create_tween()
     reveal_tape.tween_property($Control, "modulate:a", 0.0, 0.5)
-    $AudioStreamPlayer.play()
 
     await reveal_tape.finished
-
+        
     _reset_tape()
     release_focus()
     
     
 func _animate_tape_hint() -> void:
+    print("Tape hint called")
     $Control.modulate.a = 1
     var hint_tape_up = create_tween()
     hint_tape_up.tween_property($Control, "position:y", HINT_Y, 0.3)
-    $AudioStreamPlayer.play()
+    $TapeSound.play()
     
 
 func _animate_tape_hint_away() -> void:
+    print("Tape hint away called")
     var hint_away = create_tween()
     hint_away.tween_property($Control, "position:y", HIDDEN_Y, 0.3)
-    $AudioStreamPlayer.play()
     
     
 func animate_replace_tape() -> void:
+    print("Tape replace called")
     $Control.modulate.a = 100.0
     $Control.position.y = REVEAL_Y
     var replace_tape = create_tween()
     replace_tape.tween_property($Control, "position:y", HINT_Y, 0.3)
-    $AudioStreamPlayer.play()
 
     grab_focus()

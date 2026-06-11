@@ -720,7 +720,7 @@ texture = ExtResource("18_0rl1p")
 region_enabled = true
 region_rect = Rect2(1052.2573, 697.4416, 398.6516, 279.4803)
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="UIElements/BlankTapesBox" unique_id=1072645085]
+[node name="TapeSound" type="AudioStreamPlayer" parent="UIElements/BlankTapesBox" unique_id=1072645085]
 stream = ExtResource("25_0cp0l")
 
 [node name="RecordedTapes" type="VFlowContainer" parent="UIElements" unique_id=1497847491]
