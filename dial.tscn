@@ -25,7 +25,7 @@ z_index = 1
 layout_mode = 0
 offset_left = -7.0
 offset_top = 43.0
-offset_right = -4.0
+offset_right = -2.0
 offset_bottom = 66.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_6q106")
 

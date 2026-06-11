@@ -450,20 +450,6 @@ theme_override_constants/outline_size = 1
 theme_override_font_sizes/font_size = 24
 text = "FM"
 
-[node name="RecBtnLabel" type="Label" parent="Radio/RadioBody" unique_id=338692457]
-offset_left = 215.29419
-offset_top = -276.4705
-offset_right = 268.2942
-offset_bottom = -236.47049
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_shadow_color = Color(0.26666668, 0.28235295, 0.34117648, 0.46666667)
-theme_override_colors/font_outline_color = Color(0.27058825, 0.30588236, 0.34901962, 0.42352942)
-theme_override_constants/shadow_offset_x = 2
-theme_override_constants/shadow_offset_y = 2
-theme_override_constants/shadow_outline_size = 4
-theme_override_font_sizes/font_size = 28
-text = "REC"
-
 [node name="RecLightLabel" type="Label" parent="Radio/RadioBody" unique_id=1563384131]
 offset_left = -396.84216
 offset_top = -103.1579
@@ -477,48 +463,6 @@ theme_override_constants/shadow_offset_y = 2
 theme_override_constants/shadow_outline_size = 4
 theme_override_font_sizes/font_size = 28
 text = "REC"
-
-[node name="PlayBtnLabel" type="Label" parent="Radio/RadioBody" unique_id=2040113337]
-offset_left = 309.41177
-offset_top = -276.4705
-offset_right = 377.41177
-offset_bottom = -236.47049
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_shadow_color = Color(0.26666668, 0.28235295, 0.34117648, 0.46666667)
-theme_override_colors/font_outline_color = Color(0.27058825, 0.30588236, 0.34901962, 0.42352942)
-theme_override_constants/shadow_offset_x = 2
-theme_override_constants/shadow_offset_y = 2
-theme_override_constants/shadow_outline_size = 4
-theme_override_font_sizes/font_size = 28
-text = "PLAY"
-
-[node name="StopBtnLabel" type="Label" parent="Radio/RadioBody" unique_id=761919192]
-offset_left = 411.82654
-offset_top = -285.88223
-offset_right = 481.82654
-offset_bottom = -245.88223
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_shadow_color = Color(0.26666668, 0.28235295, 0.34117648, 0.46666667)
-theme_override_colors/font_outline_color = Color(0.27058825, 0.30588236, 0.34901962, 0.42352942)
-theme_override_constants/shadow_offset_x = 2
-theme_override_constants/shadow_offset_y = 2
-theme_override_constants/shadow_outline_size = 4
-theme_override_font_sizes/font_size = 28
-text = "STOP"
-
-[node name="EjectBtnLabel" type="Label" parent="Radio/RadioBody" unique_id=2110801148]
-offset_left = 402.3529
-offset_top = -255.35593
-offset_right = 486.3529
-offset_bottom = -215.35593
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_shadow_color = Color(0.26666668, 0.28235295, 0.34117648, 0.46666667)
-theme_override_colors/font_outline_color = Color(0.27058825, 0.30588236, 0.34901962, 0.42352942)
-theme_override_constants/shadow_offset_x = 2
-theme_override_constants/shadow_offset_y = 2
-theme_override_constants/shadow_outline_size = 4
-theme_override_font_sizes/font_size = 28
-text = "/EJECT"
 
 [node name="RadioLabel" type="ScrollContainer" parent="Radio" unique_id=290878849]
 z_index = 1
@@ -736,7 +680,7 @@ region_enabled = true
 region_rect = Rect2(813.33356, 720.9148, 61.11841, 61.422974)
 
 [node name="Sprite2D" type="Sprite2D" parent="UIElements/BlankTapesBox/Control" unique_id=53952062]
-position = Vector2(228.03868, -135.20276)
+position = Vector2(223.59427, -135.20276)
 scale = Vector2(0.85, 0.85)
 texture = ExtResource("18_0rl1p")
 region_enabled = true
