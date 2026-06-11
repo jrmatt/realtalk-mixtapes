@@ -38,6 +38,7 @@
 [ext_resource type="Texture2D" uid="uid://cpw1iw46slgjg" path="res://sprites/OrangeRoom.png" id="23_xuqvo"]
 [ext_resource type="Texture2D" uid="uid://dmwd05vuxkn7l" path="res://sprites/IndigoRoom.png" id="24_qsp4k"]
 [ext_resource type="FontFile" uid="uid://bqg5ao41gp82j" path="res://fonts/Hot-Mess.ttf" id="24_seu75"]
+[ext_resource type="AudioStream" uid="uid://djxr201lpb3r1" path="res://sounds/pull_tape.mp3" id="25_0cp0l"]
 [ext_resource type="Texture2D" uid="uid://demo453fcjg3j" path="res://sprites/PurpleRoom.png" id="25_kq58d"]
 [ext_resource type="Texture2D" uid="uid://dfo1p01ktd21t" path="res://sprites/TealRoom.png" id="26_seu75"]
 [ext_resource type="PackedScene" uid="uid://dibpwlycg8oyi" path="res://bar.tscn" id="39_come4"]
@@ -258,7 +259,7 @@ shader_parameter/offset_per_time = Vector2(0.5, 0.5)
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_dg77c"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h8e4i"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gngh3"]
 resource_local_to_scene = true
 bg_color = Color(0.9843137, 0.30588236, 0.25882354, 1)
 
@@ -719,6 +720,9 @@ texture = ExtResource("18_0rl1p")
 region_enabled = true
 region_rect = Rect2(1052.2573, 697.4416, 398.6516, 279.4803)
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="UIElements/BlankTapesBox" unique_id=1072645085]
+stream = ExtResource("25_0cp0l")
+
 [node name="RecordedTapes" type="VFlowContainer" parent="UIElements" unique_id=1497847491]
 z_index = 11
 z_as_relative = false
@@ -1153,7 +1157,7 @@ texture = ExtResource("21_a6jrf")
 layout_mode = 0
 offset_top = 7.0
 offset_bottom = 233.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_h8e4i")
+theme_override_styles/panel = SubResource("StyleBoxFlat_gngh3")
 
 [node name="LightRooms" type="Control" parent="BackdropLayer" unique_id=973724435]
 modulate = Color(1, 1, 1, 0.078431375)
