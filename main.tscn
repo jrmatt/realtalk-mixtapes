@@ -154,7 +154,22 @@ region = Rect2(1543.1206, 268.67465, 106.73413, 81.114044)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kq58d"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_seu75"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d2t1y"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color(1, 1, 1, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 6.0
+expand_margin_top = 12.0
+expand_margin_right = 6.0
+expand_margin_bottom = 6.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ok6jj"]
 atlas = ExtResource("2_4k2k6")
@@ -181,7 +196,7 @@ corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 expand_margin_left = 8.0
-expand_margin_top = 200.0
+expand_margin_top = 290.0
 expand_margin_right = 8.0
 expand_margin_bottom = 8.0
 
@@ -638,12 +653,11 @@ position = Vector2(539.4751, 494)
 offset_right = 112.0
 offset_bottom = 61.0
 scale = Vector2(0.8, 0.8)
-focus_mode = 0
 theme_override_styles/normal = SubResource("StyleBoxEmpty_a6jrf")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_xuqvo")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_qsp4k")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_kq58d")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_seu75")
+theme_override_styles/focus = SubResource("StyleBoxFlat_d2t1y")
 icon = SubResource("AtlasTexture_ok6jj")
 script = ExtResource("21_4lmeg")
 metadata/_edit_use_anchors_ = true
@@ -685,21 +699,21 @@ offset_right = 37.778
 offset_bottom = 326.0
 
 [node name="GearStatic1" type="Sprite2D" parent="UIElements/BlankTapesBox/Control" unique_id=35699377]
-position = Vector2(166.71648, -144.08612)
+position = Vector2(163.38322, -144.08612)
 scale = Vector2(0.85, 0.85)
 texture = ExtResource("18_0rl1p")
 region_enabled = true
 region_rect = Rect2(813.33356, 720.9148, 61.11841, 61.422974)
 
 [node name="GearStatic2" type="Sprite2D" parent="UIElements/BlankTapesBox/Control" unique_id=212624398]
-position = Vector2(287.8275, -145.1972)
+position = Vector2(284.49426, -145.1972)
 scale = Vector2(0.85, 0.85)
 texture = ExtResource("18_0rl1p")
 region_enabled = true
 region_rect = Rect2(813.33356, 720.9148, 61.11841, 61.422974)
 
 [node name="Sprite2D" type="Sprite2D" parent="UIElements/BlankTapesBox/Control" unique_id=53952062]
-position = Vector2(223.59427, -135.20276)
+position = Vector2(223.59412, -135.20276)
 scale = Vector2(0.85, 0.85)
 texture = ExtResource("18_0rl1p")
 region_enabled = true

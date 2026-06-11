@@ -1,7 +1,7 @@
 extends Button
 
 const HIDDEN_Y: float = 286
-const HINT_Y: float = 110
+const HINT_Y: float = 0
 const REVEAL_Y: float = 0
 
 
@@ -23,17 +23,13 @@ func _reset_tape() -> void:
     
 
 func _animate_tape_reveal() -> void:
-    release_focus()
-
-    $Control.modulate.a = 1
-
     var reveal_tape = create_tween()
-    reveal_tape.tween_property($Control, "position:y", REVEAL_Y, 0.4)
-    reveal_tape.tween_property($Control, "modulate:a", 0.0, 1)
+    reveal_tape.tween_property($Control, "modulate:a", 0.0, 0.5)
 
     await reveal_tape.finished
 
     _reset_tape()
+    release_focus()
     
     
 func _animate_tape_hint() -> void:

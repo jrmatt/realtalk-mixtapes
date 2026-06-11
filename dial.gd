@@ -133,6 +133,7 @@ func get_current_station_for_label():
 
     return current_station
 
+
 func _unhandled_input(event: InputEvent) -> void:
     var angle_delta
 
