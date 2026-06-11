@@ -184,7 +184,22 @@ expand_margin_top = 200.0
 expand_margin_right = 8.0
 expand_margin_bottom = 8.0
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ok6jj"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4lmeg"]
+bg_color = Color(0.4509804, 0.4509804, 0.4509804, 0.3019608)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.3553137, 0.35531354, 0.35531357, 0.6784314)
+border_blend = true
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_facbu"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -637,6 +652,7 @@ offset_top = 799.0
 offset_right = 1919.0001
 offset_bottom = 1092.0
 scale = Vector2(0.9, 0.9)
+focus_neighbor_top = NodePath("../ShowControls")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_htxhm")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_jq2sk")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_4k2k6")
@@ -709,6 +725,7 @@ offset_left = 1674.0
 offset_top = 59.0
 offset_right = 1890.0
 offset_bottom = 109.0
+focus_neighbor_bottom = NodePath("../BlankTapesBox")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("20_4k2k6")
