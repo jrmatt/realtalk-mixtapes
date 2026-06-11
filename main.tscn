@@ -113,7 +113,7 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 expand_margin_left = 6.0
-expand_margin_top = 6.0
+expand_margin_top = 12.0
 expand_margin_right = 6.0
 expand_margin_bottom = 6.0
 
@@ -643,6 +643,7 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_qsp4k")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_kq58d")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_seu75")
 icon = SubResource("AtlasTexture_ok6jj")
+script = ExtResource("21_4lmeg")
 metadata/_edit_use_anchors_ = true
 
 [node name="BlankTapesBox" type="Button" parent="UIElements" unique_id=416131326]
@@ -748,8 +749,8 @@ region_rect = Rect2(1538.1506, 39.130447, 198.66235, 120.17845)
 visible = false
 z_index = 10
 material = SubResource("ShaderMaterial_efxa6")
-position = Vector2(1336, 747)
-scale = Vector2(1212.0001, 730)
+position = Vector2(499.00003, 773)
+scale = Vector2(992, 613.99994)
 texture = SubResource("PlaceholderTexture2D_dg77c")
 script = ExtResource("13_w48qg")
 
@@ -837,9 +838,9 @@ texture = ExtResource("19_82xsv")
 
 [node name="BoldRooms" type="Control" parent="BackdropLayer" unique_id=567806170]
 anchors_preset = 0
-offset_left = 56.0
+offset_left = 68.0
 offset_top = 145.0
-offset_right = 1823.0
+offset_right = 1835.0
 offset_bottom = 360.0
 
 [node name="BlackArt" type="TextureRect" parent="BackdropLayer/BoldRooms" unique_id=2026009479]
@@ -1141,9 +1142,9 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_h8e4i")
 [node name="LightRooms" type="Control" parent="BackdropLayer" unique_id=973724435]
 modulate = Color(1, 1, 1, 0.078431375)
 anchors_preset = 0
-offset_left = 56.0
+offset_left = 68.0
 offset_top = 145.0
-offset_right = 1823.0
+offset_right = 1835.0
 offset_bottom = 360.0
 
 [node name="BlackArt" type="TextureRect" parent="BackdropLayer/LightRooms" unique_id=1181101699]
