@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://brsbf0hkg1vcy"]
 
 [ext_resource type="Script" uid="uid://ceif0x5qnf4pt" path="res://main.gd" id="1_w48qg"]
-[ext_resource type="Texture2D" uid="uid://b0f364dg46fkr" path="res://sprites/radio_final.png" id="2_4k2k6"]
 [ext_resource type="Texture2D" uid="uid://c5u73hv0he1ma" path="res://sprites/rec_light_on.png" id="3_kq58d"]
 [ext_resource type="Script" uid="uid://cbhsrotcos7u0" path="res://radio_label.gd" id="3_qsp4k"]
 [ext_resource type="FontFile" uid="uid://bmhytq3j5rers" path="res://fonts/digital-7 (mono).ttf" id="3_xuqvo"]
@@ -42,6 +41,9 @@
 [ext_resource type="Texture2D" uid="uid://demo453fcjg3j" path="res://sprites/PurpleRoom.png" id="25_kq58d"]
 [ext_resource type="Texture2D" uid="uid://dfo1p01ktd21t" path="res://sprites/TealRoom.png" id="26_seu75"]
 [ext_resource type="PackedScene" uid="uid://dibpwlycg8oyi" path="res://bar.tscn" id="39_come4"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4lmeg"]
+load_path = "res://.godot/imported/radio_final.png-2f00f68d8d639ffa5add91d9b51eed82.ctex"
 
 [sub_resource type="Curve" id="Curve_vivmo"]
 _limits = [-1.0, 1.0, 0.0, 1.0]
@@ -120,7 +122,7 @@ expand_margin_right = 6.0
 expand_margin_bottom = 6.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jq2sk"]
-atlas = ExtResource("2_4k2k6")
+atlas = SubResource("CompressedTexture2D_4lmeg")
 region = Rect2(1430.0787, 270.11234, 109.02515, 81.01395)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dg77c"]
@@ -132,7 +134,7 @@ region = Rect2(1430.0787, 270.11234, 109.02515, 81.01395)
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vivmo"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4k2k6"]
-atlas = ExtResource("2_4k2k6")
+atlas = SubResource("CompressedTexture2D_4lmeg")
 region = Rect2(1318.2892, 270.03952, 107.909546, 84.04724)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yaehf"]
@@ -144,7 +146,7 @@ region = Rect2(1318.2892, 270.03952, 107.909546, 84.04724)
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_82xsv"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0rl1p"]
-atlas = ExtResource("2_4k2k6")
+atlas = SubResource("CompressedTexture2D_4lmeg")
 region = Rect2(1543.1206, 268.67465, 106.73413, 81.114044)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a6jrf"]
@@ -173,7 +175,7 @@ expand_margin_right = 6.0
 expand_margin_bottom = 6.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ok6jj"]
-atlas = ExtResource("2_4k2k6")
+atlas = SubResource("CompressedTexture2D_4lmeg")
 region = Rect2(1126.7906, 272.22882, 105.89111, 81.62656)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_htxhm"]
@@ -278,7 +280,7 @@ position = Vector2(29, -3)
 [node name="RadioBody" type="Sprite2D" parent="Radio" unique_id=657849294]
 position = Vector2(479.475, 808.99994)
 scale = Vector2(0.85, 0.85)
-texture = ExtResource("2_4k2k6")
+texture = SubResource("CompressedTexture2D_4lmeg")
 region_enabled = true
 region_rect = Rect2(698.7012, 398.19308, 1107.2256, 607.48486)
 
@@ -305,182 +307,203 @@ script = ExtResource("5_jq2sk")
 [node name="DialLabels" type="Control" parent="Radio/RadioBody" unique_id=1985058792]
 layout_mode = 3
 anchors_preset = 0
-offset_left = -375.7895
+offset_left = -348.79413
 offset_top = -284.21054
-offset_right = 149.4737
+offset_right = 480.61774
 offset_bottom = -186.31577
 
-[node name="AM" type="Label" parent="Radio/RadioBody/DialLabels" unique_id=1537766204]
-layout_mode = 1
-offset_left = 9.90723
-offset_top = -2.8481612
-offset_right = 49.90723
-offset_bottom = 31.151838
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+[node name="KHZ" type="Label" parent="Radio/RadioBody/DialLabels" unique_id=1178707794]
+layout_mode = 0
+offset_left = 774.1176
+offset_top = 11.269442
+offset_right = 817.1176
+offset_bottom = 45.26944
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 0
-theme_override_constants/outline_size = 1
-theme_override_font_sizes/font_size = 24
+theme_override_font_sizes/font_size = 22
+text = "KHZ"
+
+[node name="MHZ" type="Label" parent="Radio/RadioBody/DialLabels" unique_id=310388612]
+layout_mode = 0
+offset_left = 774.1176
+offset_top = 47.74005
+offset_right = 823.1176
+offset_bottom = 81.74005
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 22
+text = "MHZ"
+
+[node name="AM" type="Label" parent="Radio/RadioBody/DialLabels" unique_id=1537766204]
+layout_mode = 1
+offset_left = 4.705886
+offset_top = 14.798899
+offset_right = 44.705887
+offset_bottom = 48.798897
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_font_sizes/font_size = 22
 text = "AM"
 
 [node name="AM Labels" type="Control" parent="Radio/RadioBody/DialLabels" unique_id=1226869303]
 anchors_preset = 0
-offset_left = 44.02488
-offset_top = -0.4952464
+offset_left = 43.529427
+offset_top = -1.671699
 offset_right = 84.02488
 offset_bottom = 39.504753
 
 [node name="54" type="Label" parent="Radio/RadioBody/DialLabels/AM Labels" unique_id=1599913552]
 layout_mode = 1
-offset_left = 17.646988
-offset_top = 2.8669834e-05
-offset_right = 57.646988
-offset_bottom = 57.00003
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+offset_left = 67.73984
+offset_top = 14.117677
+offset_right = 107.73984
+offset_bottom = 71.117676
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 19
 text = "54
 "
 
 [node name="60" type="Label" parent="Radio/RadioBody/DialLabels/AM Labels" unique_id=543973683]
 layout_mode = 1
-offset_left = 54.48903
-offset_top = 2.8669834e-05
-offset_right = 94.48903
-offset_bottom = 49.00003
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+offset_left = 124.2104
+offset_top = 14.117677
+offset_right = 164.21039
+offset_bottom = 63.117672
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 19
 text = "60"
 
 [node name="70" type="Label" parent="Radio/RadioBody/DialLabels/AM Labels" unique_id=1139777555]
 layout_mode = 1
-offset_left = 129.22585
-offset_top = 2.8669834e-05
-offset_right = 169.22585
-offset_bottom = 49.00003
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+offset_left = 201.85748
+offset_top = 12.941206
+offset_right = 241.85748
+offset_bottom = 61.941208
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 19
 text = "70"
 
 [node name="80" type="Label" parent="Radio/RadioBody/DialLabels/AM Labels" unique_id=586189024]
 layout_mode = 1
-offset_left = 168.17323
-offset_top = 2.8669834e-05
-offset_right = 208.17323
-offset_bottom = 49.00003
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+offset_left = 287.7398
+offset_top = 12.941206
+offset_right = 327.7398
+offset_bottom = 61.941208
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 19
 text = "80"
 
 [node name="100" type="Label" parent="Radio/RadioBody/DialLabels/AM Labels" unique_id=687631462]
 layout_mode = 1
-offset_left = 247.12062
-offset_top = 2.8669834e-05
-offset_right = 287.1206
-offset_bottom = 49.00003
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+offset_left = 383.03394
+offset_top = 12.941206
+offset_right = 423.03394
+offset_bottom = 61.941208
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 19
 text = "100"
 
 [node name="140" type="Label" parent="Radio/RadioBody/DialLabels/AM Labels" unique_id=1328222804]
 layout_mode = 1
-offset_left = 340.8048
-offset_top = 2.8669834e-05
-offset_right = 380.8048
-offset_bottom = 49.00003
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+offset_left = 532.4457
+offset_top = 11.764735
+offset_right = 572.4457
+offset_bottom = 60.764736
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 19
 text = "140"
 
 [node name="160" type="Label" parent="Radio/RadioBody/DialLabels/AM Labels" unique_id=1453022901]
 layout_mode = 1
-offset_left = 391.33118
-offset_top = 2.8669834e-05
-offset_right = 431.33118
-offset_bottom = 49.00003
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+offset_left = 617.15155
+offset_top = 11.764735
+offset_right = 657.15155
+offset_bottom = 60.764736
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 19
 text = "160"
 
 [node name="FM Labels" type="Control" parent="Radio/RadioBody/DialLabels" unique_id=1978908885]
 anchors_preset = 0
-offset_left = 44.02488
-offset_top = 59.504757
+offset_left = 47.058846
+offset_top = 61.857723
 offset_right = 84.02488
 offset_bottom = 99.50475
 
 [node name="88" type="Label" parent="Radio/RadioBody/DialLabels/FM Labels" unique_id=191024205]
 layout_mode = 1
-offset_left = 37.646988
-offset_top = 0.05264741
-offset_right = 77.64699
-offset_bottom = 57.052647
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+offset_left = 81.17644
+offset_top = -7.05881
+offset_right = 121.17644
+offset_bottom = 49.94119
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 19
 text = "88
 "
 
 [node name="92" type="Label" parent="Radio/RadioBody/DialLabels/FM Labels" unique_id=826627651]
 layout_mode = 1
-offset_left = 86.06798
-offset_top = 0.05264741
-offset_right = 126.06798
-offset_bottom = 49.052647
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+offset_left = 164.21043
+offset_top = -5.88234
+offset_right = 204.21043
+offset_bottom = 43.11766
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 19
 text = "92"
 
 [node name="96" type="Label" parent="Radio/RadioBody/DialLabels/FM Labels" unique_id=1007017034]
 layout_mode = 1
-offset_left = 180.8048
-offset_top = 1.105279
-offset_right = 220.8048
-offset_bottom = 58.105278
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+offset_left = 260.68103
+offset_top = -5.8823853
+offset_right = 300.68103
+offset_bottom = 51.117615
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 19
 text = "96
 "
 
 [node name="100" type="Label" parent="Radio/RadioBody/DialLabels/FM Labels" unique_id=877369989]
 layout_mode = 1
-offset_left = 268.17325
-offset_top = 0.05264741
-offset_right = 308.17325
-offset_bottom = 49.052647
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+offset_left = 370.09277
+offset_top = -7.0588107
+offset_right = 410.09277
+offset_bottom = 41.94119
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 19
 text = "100"
 
 [node name="104" type="Label" parent="Radio/RadioBody/DialLabels/FM Labels" unique_id=1506842610]
 layout_mode = 1
-offset_left = 310.2785
-offset_top = 0.05264741
-offset_right = 350.2785
-offset_bottom = 57.052647
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+offset_left = 474.11758
+offset_top = -7.05881
+offset_right = 514.11755
+offset_bottom = 49.94119
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 19
 text = "104
 "
 
 [node name="108" type="Label" parent="Radio/RadioBody/DialLabels/FM Labels" unique_id=311209242]
 layout_mode = 1
-offset_left = 390.27853
-offset_top = 0.05264741
-offset_right = 430.27853
-offset_bottom = 49.052647
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+offset_left = 578.32806
+offset_top = -7.05881
+offset_right = 618.32806
+offset_bottom = 41.94119
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 19
 text = "108"
 
 [node name="FM" type="Label" parent="Radio/RadioBody/DialLabels" unique_id=1004842026]
 layout_mode = 1
-offset_left = 9.90723
-offset_top = 57.151848
-offset_right = 49.90717
-offset_bottom = 91.15185
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 1
-theme_override_font_sizes/font_size = 24
+offset_left = 4.705886
+offset_top = 50.09302
+offset_right = 44.705826
+offset_bottom = 84.09302
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 22
 text = "FM"
 
 [node name="RecLightLabel" type="Label" parent="Radio/RadioBody" unique_id=1563384131]
@@ -529,10 +552,10 @@ script = ExtResource("5_kq58d")
 
 [node name="Dial" parent="Radio" unique_id=1296031382 instance=ExtResource("14_w48qg")]
 z_index = 1
-offset_left = 166.47513
-offset_top = 551.0
-offset_right = 549.4751
-offset_bottom = 591.0
+offset_left = 233.0
+offset_top = 554.0
+offset_right = 831.0
+offset_bottom = 592.0
 
 [node name="Control" type="HBoxContainer" parent="Radio" unique_id=204003008]
 clip_children = 1
