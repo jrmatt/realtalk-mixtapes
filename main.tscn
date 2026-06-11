@@ -31,6 +31,7 @@
 [ext_resource type="FontFile" uid="uid://878k53bmonof" path="res://fonts/NeueHaasGrotDispRound-75Bold copy.otf" id="20_4k2k6"]
 [ext_resource type="Texture2D" uid="uid://blpq1gw8qmvk7" path="res://sprites/BlueRoom.png" id="20_getpj"]
 [ext_resource type="Texture2D" uid="uid://ccp41yqnxy1kv" path="res://sprites/controls.png" id="21_0rl1p"]
+[ext_resource type="Script" uid="uid://bgb6j0ftx55c4" path="res://rw_btn.gd" id="21_4lmeg"]
 [ext_resource type="Texture2D" uid="uid://dvfgxf1mxvwpv" path="res://sprites/highlight.png" id="21_a6jrf"]
 [ext_resource type="Texture2D" uid="uid://btxyfaspxos15" path="res://sprites/PinkRoom.png" id="21_lswn8"]
 [ext_resource type="Texture2D" uid="uid://br3ayotk864hs" path="res://sprites/GreenRoom.png" id="22_a6jrf"]
@@ -54,8 +55,8 @@ particle_flag_disable_z = true
 emission_shape_scale = Vector3(5, 5, 5)
 emission_shape = 6
 emission_ring_axis = Vector3(0, 0, 1)
-emission_ring_height = 265.25
-emission_ring_radius = 16.54
+emission_ring_height = 89.89
+emission_ring_radius = 0.0
 emission_ring_inner_radius = 7.18
 emission_ring_cone_angle = 90.0
 angle_min = -203.9
@@ -269,6 +270,7 @@ region_rect = Rect2(698.7012, 398.19308, 1107.2256, 607.48486)
 visible = false
 position = Vector2(84.7059, -334.11755)
 amount = 23
+amount_ratio = 0.2784
 process_material = SubResource("ParticleProcessMaterial_yaehf")
 
 [node name="RecLight" type="Sprite2D" parent="Radio/RadioBody" unique_id=1357858205]
@@ -746,7 +748,6 @@ region_enabled = true
 region_rect = Rect2(1538.1506, 39.130447, 198.66235, 120.17845)
 
 [node name="RewindShader" type="Sprite2D" parent="." unique_id=519319861]
-visible = false
 z_index = 10
 material = SubResource("ShaderMaterial_efxa6")
 position = Vector2(499.00003, 773)
