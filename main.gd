@@ -136,6 +136,7 @@ func _on_stop_btn_pressed() -> void:
         
         # Animates the tape ejecting
         $Radio/TapeDoor.open_door_loaded()
+        await get_tree().create_timer(0.5).timeout
         $Radio/TapeDoor.open_door_empty()  
         
         # Adds the tape to the stack of recorded tapes
@@ -178,6 +179,7 @@ func _on_stop_btn_pressed() -> void:
         else:
             depress_and_pop_button(stop_button)
             $Radio/TapeDoor.open_door_loaded()
+            await get_tree().create_timer(0.5).timeout
             $Radio/TapeDoor.open_door_empty() 
             loaded_tape = null
             $UIElements/BlankTapesBox.animate_replace_tape()
