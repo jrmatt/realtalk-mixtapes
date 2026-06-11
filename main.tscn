@@ -1333,6 +1333,8 @@ text = "Beginnings"
 [connection signal="pressed" from="UIElements/PlayAnchor/PlayBtn" to="." method="_on_play_btn_pressed"]
 [connection signal="pressed" from="UIElements/RecordAnchor/RecordBtn" to="." method="_on_record_btn_pressed"]
 [connection signal="pressed" from="UIElements/StopAnchor/StopBtn" to="." method="_on_stop_btn_pressed"]
+[connection signal="button_down" from="UIElements/RwAnchor/RwBtn" to="UIElements/RwAnchor/RwBtn" method="_on_button_down"]
+[connection signal="button_up" from="UIElements/RwAnchor/RwBtn" to="UIElements/RwAnchor/RwBtn" method="_on_button_up"]
 [connection signal="focus_entered" from="UIElements/BlankTapesBox" to="UIElements/BlankTapesBox" method="_on_focus_entered"]
 [connection signal="focus_exited" from="UIElements/BlankTapesBox" to="UIElements/BlankTapesBox" method="_on_focus_exited"]
 [connection signal="pressed" from="UIElements/BlankTapesBox" to="." method="_on_blank_tapes_box_pressed"]
