@@ -130,17 +130,17 @@ scale = Vector2(1.1627841, 0.72709435)
 texture = ExtResource("3_ff64o")
 
 [node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="." unique_id=1355693770]
-position = Vector2(29.477276, 328.75)
-scale = Vector2(0.4088724, 0.40624994)
+position = Vector2(1511.5779, 297)
+scale = Vector2(0.45747966, 0.45454544)
 sprite_frames = SubResource("SpriteFrames_0bx74")
 frame_progress = 0.7507711
 speed_scale = 0.7
 
 [node name="LeftJoy" type="Label" parent="." unique_id=408122380]
-offset_left = 76.0
-offset_top = 314.0
-offset_right = 314.0
-offset_bottom = 413.0
+offset_left = 1563.1559
+offset_top = 278.0
+offset_right = 1801.1559
+offset_bottom = 377.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_ff64o")
 theme_override_font_sizes/font_size = 20
@@ -148,17 +148,17 @@ text = "Use Left Joystick to Navigate"
 autowrap_mode = 2
 
 [node name="Sprite2D4" type="Sprite2D" parent="." unique_id=1340465711]
-position = Vector2(32, 399.99997)
-scale = Vector2(0.76172584, 0.76172584)
+position = Vector2(1519.1104, 380)
+scale = Vector2(0.9467427, 0.9467426)
 texture = ExtResource("2_xwvqn")
 region_enabled = true
 region_rect = Rect2(1779.0605, 219.27463, 69.4989, 70.421844)
 
 [node name="A" type="Label" parent="." unique_id=531858746]
-offset_left = 74.0
-offset_top = 394.0
-offset_right = 330.95453
-offset_bottom = 459.0
+offset_left = 1561.1559
+offset_top = 358.0
+offset_right = 1818.1105
+offset_bottom = 423.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_ff64o")
 theme_override_font_sizes/font_size = 20
@@ -173,17 +173,17 @@ scale = Vector2(1.0159092, 0.65909094)
 texture = ExtResource("3_ff64o")
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="." unique_id=564414066]
-position = Vector2(911.74994, 370)
+position = Vector2(27.749968, 376)
 scale = Vector2(0.4452378, 0.45000017)
 sprite_frames = SubResource("SpriteFrames_dob1i")
 animation = &"new_animation"
 frame_progress = 0.75401956
 
 [node name="RightJoy" type="Label" parent="." unique_id=649521102]
-offset_left = 865.2499
-offset_top = 286.0
-offset_right = 1086.2499
-offset_bottom = 385.0
+offset_left = -18.750164
+offset_top = 292.0
+offset_right = 202.24983
+offset_bottom = 391.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_ff64o")
 theme_override_font_sizes/font_size = 20
@@ -198,7 +198,7 @@ scale = Vector2(0.8954544, 0.7079546)
 texture = ExtResource("3_ff64o")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=888118792]
-position = Vector2(1270, 372)
+position = Vector2(385.99997, 378)
 scale = Vector2(0.5144896, 0.51590925)
 sprite_frames = SubResource("SpriteFrames_dist8")
 animation = &"new_animation"
@@ -206,10 +206,10 @@ frame_progress = 0.20401154
 speed_scale = 0.5
 
 [node name="Rewind" type="Label" parent="." unique_id=1706237340]
-offset_left = 1196.0
-offset_top = 290.0
-offset_right = 1403.0
-offset_bottom = 389.0
+offset_left = 311.99997
+offset_top = 296.0
+offset_right = 519.0
+offset_bottom = 395.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_ff64o")
 theme_override_font_sizes/font_size = 20
@@ -224,7 +224,7 @@ scale = Vector2(0.45454547, 0.44659093)
 texture = ExtResource("3_ff64o")
 
 [node name="Sprite2D3" type="Sprite2D" parent="." unique_id=1407083996]
-position = Vector2(1502.0001, 328.00003)
+position = Vector2(625, 333.00003)
 scale = Vector2(0.74637604, 0.74637604)
 texture = ExtResource("2_xwvqn")
 region_enabled = true
@@ -249,7 +249,7 @@ scale = Vector2(0.45454547, 0.44659093)
 texture = ExtResource("3_ff64o")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=421763584]
-position = Vector2(1595.0001, 328)
+position = Vector2(711, 334.00003)
 scale = Vector2(0.80146796, 0.80146796)
 texture = ExtResource("2_xwvqn")
 region_enabled = true
@@ -274,17 +274,17 @@ scale = Vector2(0.45454547, 0.44659093)
 texture = ExtResource("3_ff64o")
 
 [node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1972135744]
-position = Vector2(1687, 327.04413)
+position = Vector2(794.99994, 334.00003)
 scale = Vector2(0.794117, 0.79411703)
 texture = ExtResource("2_xwvqn")
 region_enabled = true
 region_rect = Rect2(1705.7502, 220.32565, 68.42822, 69.84964)
 
 [node name="A2" type="Label" parent="." unique_id=605259952]
-offset_left = 1480.0
-offset_top = 264.0
-offset_right = 1736.9546
-offset_bottom = 329.0
+offset_left = 595.99994
+offset_top = 270.0
+offset_right = 852.9545
+offset_bottom = 335.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_ff64o")
 theme_override_font_sizes/font_size = 20

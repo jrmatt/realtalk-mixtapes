@@ -244,7 +244,7 @@ color = Color(0.2231029, 0.2231029, 0.22310284, 1)
 position = Vector2(29, -3)
 
 [node name="RadioBody" type="Sprite2D" parent="Radio" unique_id=657849294]
-position = Vector2(1374, 804.99994)
+position = Vector2(479.475, 808.99994)
 scale = Vector2(0.85, 0.85)
 texture = ExtResource("2_4k2k6")
 region_enabled = true
@@ -467,10 +467,10 @@ text = "REC"
 [node name="RadioLabel" type="ScrollContainer" parent="Radio" unique_id=290878849]
 z_index = 1
 custom_minimum_size = Vector2(100, 0)
-offset_left = 1151.0
-offset_top = 707.0
-offset_right = 1600.0
-offset_bottom = 780.0
+offset_left = 256.47513
+offset_top = 711.0
+offset_right = 705.4751
+offset_bottom = 784.0
 horizontal_scroll_mode = 3
 script = ExtResource("3_qsp4k")
 
@@ -496,17 +496,17 @@ script = ExtResource("5_kq58d")
 
 [node name="Dial" parent="Radio" unique_id=1296031382 instance=ExtResource("14_w48qg")]
 z_index = 1
-offset_left = 1061.0
-offset_top = 547.0
-offset_right = 1444.0
-offset_bottom = 587.0
+offset_left = 166.47513
+offset_top = 551.0
+offset_right = 549.4751
+offset_bottom = 591.0
 
 [node name="Control" type="HBoxContainer" parent="Radio" unique_id=204003008]
 clip_children = 1
-offset_left = 1145.0
-offset_top = 709.0
-offset_right = 1156.0
-offset_bottom = 763.0
+offset_left = 250.47513
+offset_top = 713.0
+offset_right = 261.47513
+offset_bottom = 767.0
 
 [node name="TapeLabel" type="Label" parent="Radio/Control" unique_id=1367407076]
 layout_mode = 2
@@ -515,7 +515,7 @@ theme_override_font_sizes/font_size = 70
 
 [node name="TapeDoor" type="AnimatedSprite2D" parent="Radio" unique_id=1264128355]
 z_index = 2
-position = Vector2(1374, 920.00006)
+position = Vector2(479.4752, 924.00006)
 scale = Vector2(0.84, 0.84)
 sprite_frames = SubResource("SpriteFrames_ycdy4")
 animation = &"new_animation"
@@ -555,7 +555,7 @@ offset_bottom = 40.0
 
 [node name="PlayAnchor" type="Node2D" parent="UIElements" unique_id=452582252]
 z_index = -1
-position = Vector2(1651, 487)
+position = Vector2(756.4751, 491)
 
 [node name="PlayBtn" type="Button" parent="UIElements/PlayAnchor" unique_id=684982014]
 offset_right = 112.0
@@ -575,7 +575,7 @@ stream = ExtResource("14_ok6jj")
 
 [node name="RecordAnchor" type="Node2D" parent="UIElements" unique_id=894432045]
 z_index = -1
-position = Vector2(1564, 487)
+position = Vector2(669.4751, 491)
 
 [node name="RecordBtn" type="Button" parent="UIElements/RecordAnchor" unique_id=310661157]
 offset_right = 87.0
@@ -595,7 +595,7 @@ stream = ExtResource("14_ok6jj")
 
 [node name="StopAnchor" type="Node2D" parent="UIElements" unique_id=29596954]
 z_index = -1
-position = Vector2(1739, 485)
+position = Vector2(844.4751, 489)
 
 [node name="StopBtn" type="Button" parent="UIElements/StopAnchor" unique_id=922399820]
 offset_right = 112.0
@@ -615,7 +615,7 @@ stream = ExtResource("14_ok6jj")
 
 [node name="RwAnchor" type="Node2D" parent="UIElements" unique_id=1677658616]
 z_index = -1
-position = Vector2(1434, 490)
+position = Vector2(539.4751, 494)
 
 [node name="RwBtn" type="Button" parent="UIElements/RwAnchor" unique_id=1938241678]
 offset_right = 112.0
@@ -632,10 +632,10 @@ metadata/_edit_use_anchors_ = true
 
 [node name="BlankTapesBox" type="Button" parent="UIElements" unique_id=416131326]
 layout_mode = 0
-offset_left = 24.0
-offset_top = 795.0
-offset_right = 466.0
-offset_bottom = 1088.0
+offset_left = 1477.0001
+offset_top = 799.0
+offset_right = 1919.0001
+offset_bottom = 1092.0
 scale = Vector2(0.9, 0.9)
 theme_override_styles/normal = SubResource("StyleBoxEmpty_htxhm")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_jq2sk")
@@ -693,10 +693,10 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = 418.0
-offset_top = 380.0
-offset_right = 805.0
-offset_bottom = 1056.0
+offset_left = 1012.0
+offset_top = 379.0
+offset_right = 1399.0
+offset_bottom = 1055.0
 grow_horizontal = 0
 theme_override_constants/h_separation = 0
 theme_override_constants/v_separation = 0
@@ -713,7 +713,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("20_4k2k6")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxEmpty_ok6jj")
+theme_override_styles/normal = SubResource("StyleBoxFlat_4lmeg")
 theme_override_styles/focus = SubResource("StyleBoxFlat_facbu")
 text = "Show Controls"
 script = SubResource("GDScript_2cqfq")
@@ -801,7 +801,7 @@ autowrap_mode = 2
 [node name="Controls" parent="." unique_id=1477886189 instance=ExtResource("17_074og")]
 visible = false
 z_index = 11
-position = Vector2(102, 121)
+position = Vector2(90, 125)
 
 [node name="Messages" type="Label" parent="." unique_id=571717112]
 offset_right = 40.0
