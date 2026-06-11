@@ -788,10 +788,11 @@ text = "dIO"
 [node name="Tagline" type="Label" parent="Logo" unique_id=1873276850]
 layout_mode = 0
 offset_left = 427.0
-offset_top = 10.0
+offset_top = -2.0
 offset_right = 1388.0
-offset_bottom = 95.0
+offset_bottom = 93.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 13
 theme_override_fonts/font = ExtResource("20_4k2k6")
 theme_override_font_sizes/font_size = 40
 text = "Tune in to real conversations with local Boston artists. Make a mixtape to share what resonates with you!"
